@@ -1,0 +1,859 @@
+
+<PrivilegesCatalog>
+	<PrivilegeSet comment="すべてへのアクセス" id="1" allowModifyPassword="True" manageAccounts="True" managedExtended="True" menu="All" idleDisconnect="False" overrideValidationWarning="True" exporting="True" printing="True" name="[完全アクセス]">
+		<Records value="CreateEditDelete"/>
+		<Layouts value="Modifiable" allowCreation="True"/>
+		<ValueLists value="Modifiable" allowCreation="True"/>
+		<Scripts value="Modifiable" allowCreation="True"/>
+	</PrivilegeSet>
+	<PrivilegeSet comment="すべてのレコードへの書き込みアクセス、デザインアクセスなし" id="2" allowModifyPassword="True" manageAccounts="False" managedExtended="False" menu="All" idleDisconnect="True" overrideValidationWarning="False" exporting="True" printing="True" name="[データ入力のみ]">
+		<Records value="CreateEditDelete"/>
+		<Layouts value="ViewOnly" allowCreation="False"/>
+		<ValueLists value="ViewOnly" allowCreation="False"/>
+		<Scripts value="ExecutableOnly" allowCreation="False"/>
+	</PrivilegeSet>
+	<PrivilegeSet comment="すべてのレコードへの読み取りアクセス、デザインアクセスなし、すべてのグローバルフィールドへの書き込みアクセス" id="3" allowModifyPassword="True" manageAccounts="False" managedExtended="False" menu="All" idleDisconnect="True" overrideValidationWarning="False" exporting="True" printing="True" name="[閲覧のみアクセス]">
+		<Records value="ViewOnly"/>
+		<Layouts value="ViewOnly" allowCreation="False"/>
+		<ValueLists value="ViewOnly" allowCreation="False"/>
+		<Scripts value="ExecutableOnly" allowCreation="False"/>
+	</PrivilegeSet>
+	<PrivilegeSet comment="" id="5" allowModifyPassword="False" manageAccounts="False" managedExtended="False" menu="EditOnly" idleDisconnect="True" overrideValidationWarning="False" exporting="False" printing="True" name="一般入力者">
+		<Records value="NoAccess"/>
+		<Layouts value="NoAccess" allowCreation="False"/>
+		<ValueLists value="NoAccess" allowCreation="False"/>
+		<Scripts value="NoAccess" allowCreation="False"/>
+	</PrivilegeSet>
+	<PrivilegeSet comment="" id="4" allowModifyPassword="False" manageAccounts="False" managedExtended="False" menu="Minimal" idleDisconnect="True" overrideValidationWarning="False" exporting="True" printing="False" name="tableau">
+		<Records value="ViewOnly"/>
+		<Layouts value="ViewOnly" allowCreation="False"/>
+		<ValueLists value="ViewOnly" allowCreation="False"/>
+		<Scripts value="ExecutableOnly" allowCreation="False"/>
+	</PrivilegeSet>
+	<PrivilegeSet comment="" id="6" allowModifyPassword="False" manageAccounts="False" managedExtended="False" menu="Minimal" idleDisconnect="True" overrideValidationWarning="False" exporting="False" printing="False" name="login">
+		<Records value="ViewOnly"/>
+		<Layouts value="Custom" allowCreation="False">
+			<LayoutList>
+				<Layout id="1" name="MT.top">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="2" name="MT.global">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="3" name="sytem">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="4" name="reserve2">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="5" name="reserve3">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="8" name="物件別管理データ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="19" name="UI">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="20" name="--">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="24" name="Maintenance(MT)">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="25" name="--">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="26" name="Top">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="28" name="売上集計表">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="29" name="受注残明細表">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="30" name="売上明細表">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="32" name="SV担当者入力データ月次｜詳細">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="33" name="MT.SV担当者入力データ週次">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="34" name="MT.委託取次店法人">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="37" name="MT.委託取次店">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="38" name="MT.SV担当者">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="39" name="MT.カテゴリ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="40" name="MT.タグ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="42" name="委託取次店法人">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="43" name="委託取次店">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="44" name="ユーザーマスタ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="45" name="カテゴリ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="46" name="タグ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="47" name="tagging中間テーブル">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="48" name="OBIC7">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="49" name="--">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="50" name="入力">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="51" name="--">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="52" name="マスタ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="53" name="--">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="54" name="MT.商品">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="55" name="商品">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="56" name="MT.タグ用テーブルマスタ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="57" name="タグ用テーブルマスタ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="58" name="全テーブル情報">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="59" name="全テーブル情報｜tmp">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="60" name="SV担当者入力データ月次｜一覧">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="61" name="MT.SV担当者入力データ月次">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="63" name="処理用">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="64" name="--">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="65" name="MT.tagging中間テーブル">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="66" name="MT.全テーブル情報">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="67" name="MT.全テーブル情報｜tmp">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="68" name="MT.物件別管理データ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="69" name="MT.売上集計表">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="70" name="MT.受注残明細表">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="71" name="MT.売上明細表">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="72" name="MT.営業担当者">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="73" name="MT.休日マスタ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="74" name="休日マスタ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="85" name="委託取次店｜カード">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="87" name="目標集計テーブル">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="88" name="実績集計テーブル">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="89" name="集計ソース元">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="90" name="--">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="91" name="login">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="93" name="loginLog">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="95" name="休日マスタ_処理用">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="97" name="MT.営業日マスタ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="99" name="global_処理用">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="101" name="集計対象タグカテゴリ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="102" name="稼働日情報テーブル">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="103" name="締日処理">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="105" name="csvImportLog">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="106" name="batExport">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="108" name="SV担当者入力データ一括作成Log">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="109" name="営業日テーブル">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="110" name="Log">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="111" name="--">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="112" name="SV担当者入力データ月次｜一覧_確認後削除">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="114" name="集計確認用_目標">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout name="[新規レイアウト]">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+			</LayoutList>
+		</Layouts>
+		<ValueLists value="NoAccess" allowCreation="False"/>
+		<Scripts value="Custom" allowCreation="False">
+			<ScriptList>
+				<Script runFullAccess="False" id="1" name="レイアウト切替_物件別管理データ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="2" name="レイアウト切替_売上集計表">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="3" name="レイアウト切替_受注残明細表">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="4" name="レイアウト切替_売上明細表">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="5" name="ズーム">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="6" name="検索">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="7" name="レイアウト切替_Top">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="8" name="SV担当者週次レコード一括作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="10" name="OBIC7_csv取込">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="11" name="全テーブル情報_データ更新">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="12" name="open">
+					<Access value="ViewOnly"/>
+				</Script>
+				<Script runFullAccess="False" id="13" name="レイアウト切替_カテゴリ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="14" name="レイアウト切替_タグ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="15" name="レイアウト切替_tagging中間テーブル">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="16" name="レイアウト切替_タグ用テーブル">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="17" name="レイアウト切替">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="18" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="19" name="共通">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="20" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="21" name="タグ関連">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="22" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="23" name="レイアウト切替_委託取次店法人">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="24" name="レイアウト切替_委託取次店">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="25" name="レイアウト切替_ユーザーマスタ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="26" name="レイアウト切替_商品">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="27" name="レイアウト切替_全テーブルマスタ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="28" name="set_BaseTableId">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="29" name="レコード確定">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="30" name="OBIC7_csv取込_ドキュメントパス取得">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="31" name="tesuto">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="32" name="レイアウト切替_SV担当者入力データ月次">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="33" name="改善中）OBIC7_csv取込_実行">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="34" name="ScriptFormat">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="35" name="改善中）OBIC7_csv取込_sub">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="36" name="新規レコード作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="38" name="レイアウト切替_休日マスタ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="39" name="コード入力_中間テーブルチェック">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="40" name="FileMakerServer開く">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="41" name="ダッシュボード">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="42" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="44" name="委託取次店_同一タグチェック">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="46" name="set_global">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="47" name="SV担当者入力データ｜委託取次店カードを開く">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="48" name="SV担当者入力データ｜委託取次店カード｜検索実行ボタン">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="49" name="SV担当者入力データ｜委託取次店カードを閉じる">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="50" name="SV担当者入力データ｜委託取次店カード｜グローバル設定">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="51" name="SV担当者入力データ｜委託取次店カード｜選択">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="52" name="ポータル行削除">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="56" name="集計用データ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="57" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="60" name="営業日計算">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="61" name="ログイン">
+					<Access value="ViewOnly"/>
+				</Script>
+				<Script runFullAccess="False" id="62" name="メニューバー設定">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="63" name="マスタ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="64" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="66" name="ユーザーマスタ_アカウント無効化">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="67" name="ユーザーマスタ_アカウント有効化">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="68" name="ユーザーマスタ_アカウント削除">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="69" name="Log">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="70" name="LogInLog_main">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="71" name="LogInLog_sub">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="72" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="73" name="open/close">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="74" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="75" name="LogIn">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="76" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="77" name="営業日数テーブル作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="78" name="集計用データ作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="84" name="委託取次店_その他タグセット">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="True" id="85" name="SV担当者週次レコード作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="86" name="締処理ウインドウ_使用しない（削除可）">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="87" name="締処理実行_使用しない（削除可）">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="88" name="OBIC7_csv取込_ログ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="90" name="SV担当者月次入力_一括作成_sub">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="91" name="SV担当者月次入力_一括作成_Main">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="92" name="SV担当者月次入力_一括作成_ログ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="93" name="集計用データ作成_全レコード作成し直しVer">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="94" name="集計用データ作成_ローカル作成Ver">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="96" name="ServerSideScript">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="97" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="99" name="SSS_締処理実行">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="100" name="OBIC7_csv取込_Schedule">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="101" name="ユーザーマスタ_タグ消去">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="105" name="集計用データ作成_全レコード作成し直しVer_BK20250204">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="107" name="SV担当者入力">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="108" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="109" name="OBIC7取込">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="110" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="112" name="Dev">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="113" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="119" name="SV担当者月次入力_検索切替 ★非公開中">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="120" name="SV担当者月次入力_担当絞込">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="121" name="ユーザーマスタ_パスワード変更制御">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="125" name="SSS_集計用データ作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="126" name="SSS_計用データ作成_全レコード作成し直し">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script name="[新規スクリプト]">
+					<Access value="NoAccess"/>
+				</Script>
+			</ScriptList>
+		</Scripts>
+	</PrivilegeSet>
+	<PrivilegeSet comment="SV担当者制限" id="7" allowModifyPassword="False" manageAccounts="False" managedExtended="False" menu="Minimal" idleDisconnect="True" overrideValidationWarning="False" exporting="False" printing="False" name="SV担当者制限">
+		<Records value="Custom">
+			<TableList>
+				<BaseTable id="129" name="top">
+					<Create value="False"/>
+					<View value="True"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="All"/>
+				</BaseTable>
+				<BaseTable id="130" name="global">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="131" name="sytem">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="136" name="物件別管理データ">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="138" name="売上集計表">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="140" name="受注残明細表">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="142" name="売上明細表">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="147" name="SV担当者入力データ月次">
+					<Create value="False"/>
+					<View value="True"/>
+					<Edit value="True"/>
+					<Delete value="False"/>
+					<FieldAccess value="All"/>
+				</BaseTable>
+				<BaseTable id="148" name="SV担当者入力データ週次">
+					<Create value="True"/>
+					<View value="True"/>
+					<Edit value="True"/>
+					<Delete value="True"/>
+					<FieldAccess value="All"/>
+				</BaseTable>
+				<BaseTable id="149" name="委託取次店法人">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="150" name="委託取次店">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="151" name="ユーザーマスタ">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="152" name="カテゴリ">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="153" name="タグ">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="154" name="tagging中間テーブル">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="155" name="商品">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="156" name="タグ用テーブルマスタ">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="157" name="全テーブル情報">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="158" name="全テーブル情報｜tmp">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="159" name="営業担当者">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="160" name="休日マスタ">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="162" name="目標集計テーブル">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="163" name="実績集計テーブル">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="165" name="loginLog">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="166" name="営業日マスタ">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="167" name="集計タグカテゴリテーブル">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="168" name="稼働日情報テーブル">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="169" name="csvImportLog">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="170" name="batExport">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="171" name="SV担当者入力データ一括作成Log">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable name="[新規テーブル]">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+			</TableList>
+		</Records>
+		<Layouts value="ViewOnly" allowCreation="False"/>
+		<ValueLists value="ViewOnly" allowCreation="False"/>
+		<Scripts value="NoAccess" allowCreation="False"/>
+	</PrivilegeSet>
+</PrivilegesCatalog>
