@@ -1,0 +1,516 @@
+
+<CustomMenuCatalog>
+	<CustomMenu id="1" name="[書式]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="書式(&amp;M)" value="6"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="2" name="[スクリプト]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="スクリプト(&amp;S)" value="8"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="3" name="[ウインドウ]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="ウインドウ(&amp;W)" value="9"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="4" name="[最近使ったファイルを開く]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="最近使ったファイルを開く(&amp;T)" value="32"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="5" name="[レコードのインポート]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="レコードのインポート(&amp;I)" value="155"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="6" name="[レコードの保存/送信]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="レコードの保存/送信(&amp;R)" value="168"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="7" name="[レイアウト切り替え]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="レイアウト切り替え(&amp;Y)" value="161"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="8" name="[テキスト配置]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="テキスト配置(&amp;A)" value="22"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="9" name="[管理]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="管理(&amp;G)" value="157"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="10" name="[検索/置換]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="検索/置換(&amp;L)" value="149"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="11" name="[フォント]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="フォント(&amp;F)" value="18"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="12" name="[行間]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="行間(&amp;L)" value="24"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="13" name="[共有設定]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="共有設定(&amp;H)" value="156"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="14" name="[検索条件へ移動]">
+		<Options previewMode="False" findMode="True" browseMode="False" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="検索条件へ移動(&amp;G)" value="172"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="15" name="[レコードへ移動]">
+		<Options previewMode="True" findMode="False" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="レコードへ移動(&amp;G)" value="159"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="16" name="[ウインドウを表示]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="ウインドウを表示(&amp;S)" value="38"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="17" name="[サイズ]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="サイズ(&amp;Z)" value="20"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="18" name="[英文スペルチェック]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="英文スペルチェック(&amp;N)" value="19"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="19" name="[スタイル]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="スタイル(&amp;S)" value="21"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="20" name="[文字色]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="文字色(&amp;X)" value="181"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="21" name="[保存済み検索]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="保存済み検索(&amp;V)" value="199"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="22" name="[送信]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="送信(&amp;D)" value="200"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="23" name="[お気に入り]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="お気に入り(&amp;A)" value="209"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="24" name="[ホスト]">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="ホスト" value="73"/>
+		<MenuItemList/>
+	</CustomMenu>
+	<CustomMenu id="25" name="編集_user">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="編集(&amp;E)" value="3"/>
+		<MenuItemList>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="元に戻す(&amp;U)" id="49320"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+				<Shortcut key="90" modifier="4"/>
+			</MenuItem>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="再実行(&amp;R)" id="49321"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+				<Shortcut key="89" modifier="4"/>
+			</MenuItem>
+			<MenuItem isSeparatorItem="True" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="False">
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+			</MenuItem>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="切り取り(&amp;T)	Ctrl+X" id="57635"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+				<Shortcut key="88" modifier="4"/>
+			</MenuItem>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="コピー(&amp;C)	Ctrl+C" id="57634"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+				<Shortcut key="67" modifier="4"/>
+			</MenuItem>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="貼り付け(&amp;P)	Ctrl+V" id="57637"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+				<Shortcut key="86" modifier="4"/>
+			</MenuItem>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="消去(&amp;E)	Del" id="57632"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+			</MenuItem>
+			<MenuItem isSeparatorItem="True" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="False">
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+			</MenuItem>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="すべてを選択(&amp;A)	Ctrl+A" id="57642"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+				<Shortcut key="65" modifier="4"/>
+			</MenuItem>
+			<MenuItem isSeparatorItem="True" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" overrideName="False" specifyScript="False">
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[If( Abs(Get( システムプラットフォーム )) = 2; 1; 0 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef">( </Chunk>
+							<Chunk type="FunctionRef">Abs</Chunk>
+							<Chunk type="NoRef">(</Chunk>
+							<Chunk type="FunctionRef">Get</Chunk>
+							<Chunk type="NoRef">( </Chunk>
+							<Chunk type="FunctionRef">システムプラットフォーム</Chunk>
+							<Chunk type="NoRef"> )) = 2; 1; 0 )</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+			</MenuItem>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" overrideName="False" specifyScript="True">
+				<Command name="設定(&amp;S)..." id="49153"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[If( Abs(Get( システムプラットフォーム )) = 2; 1; 0 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef">( </Chunk>
+							<Chunk type="FunctionRef">Abs</Chunk>
+							<Chunk type="NoRef">(</Chunk>
+							<Chunk type="FunctionRef">Get</Chunk>
+							<Chunk type="NoRef">( </Chunk>
+							<Chunk type="FunctionRef">システムプラットフォーム</Chunk>
+							<Chunk type="NoRef"> )) = 2; 1; 0 )</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+			</MenuItem>
+		</MenuItemList>
+	</CustomMenu>
+	<CustomMenu id="26" name="表示_user">
+		<Options previewMode="True" findMode="True" browseMode="True" overrideName="False"/>
+		<Conditions>
+			<Install>
+				<Calculation><![CDATA[1]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="NoRef">1</Chunk>
+				</DisplayCalculation>
+			</Install>
+		</Conditions>
+		<BaseMenu name="表示(&amp;V)" value="4"/>
+		<MenuItemList>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="実際のサイズ(&amp;Z)" id="55821"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+			</MenuItem>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="拡大表示(&amp;I)	F3" id="49254"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+				<Shortcut key="57357" modifier="0"/>
+			</MenuItem>
+			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
+				<Command name="縮小表示(&amp;U)	Shift+F3" id="49255"/>
+				<Conditions>
+					<Install>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Install>
+				</Conditions>
+				<Shortcut key="57357" modifier="1"/>
+			</MenuItem>
+		</MenuItemList>
+	</CustomMenu>
+</CustomMenuCatalog>

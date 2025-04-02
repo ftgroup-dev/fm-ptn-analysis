@@ -1,0 +1,14 @@
+
+<CustomMenuSetCatalog>
+	<CustomMenuSet id="1" name="[FileMaker の標準メニュー]">
+		<CustomMenuList/>
+	</CustomMenuSet>
+	<CustomMenuSet id="3" name="user">
+		<CustomMenuList>
+			<CustomMenu id="25" name="編集_user"/>
+			<CustomMenu id="26" name="表示_user"/>
+			<CustomMenu id="1" name="[書式]"/>
+			<CustomMenu id="17" name="[サイズ]"/>
+		</CustomMenuList>
+	</CustomMenuSet>
+</CustomMenuSetCatalog>
