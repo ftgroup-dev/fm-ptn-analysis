@@ -1,0 +1,45 @@
+
+<AccountCatalog>
+	<Account id="1" privilegeSet="[閲覧のみアクセス]" emptyPassword="True" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="[ゲスト]">
+		<Description/>
+	</Account>
+	<Account id="2" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="supportas">
+		<Description/>
+	</Account>
+	<Account id="3" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="ftadmin">
+		<Description/>
+	</Account>
+	<Account id="4" privilegeSet="tableau" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="tableau">
+		<Description/>
+	</Account>
+	<Account id="8" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="serverschedule">
+		<Description/>
+	</Account>
+	<Account id="19" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="321995">
+		<Description/>
+	</Account>
+	<Account id="20" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="327312">
+		<Description/>
+	</Account>
+	<Account id="21" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="327311">
+		<Description/>
+	</Account>
+	<Account id="23" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="008523">
+		<Description/>
+	</Account>
+	<Account id="39" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="001034">
+		<Description/>
+	</Account>
+	<Account id="40" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="323384">
+		<Description/>
+	</Account>
+	<Account id="42" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="000119">
+		<Description/>
+	</Account>
+	<Account id="44" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="002283">
+		<Description/>
+	</Account>
+	<Account id="45" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="999999">
+		<Description/>
+	</Account>
+</AccountCatalog>
