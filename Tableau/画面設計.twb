@@ -22,7 +22,7 @@
     <WindowsPersistSimpleIdentifiers />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/__17444397322330?rev=1.3' id='__17444397322330' path='/t/ftgroup/workbooks' revision='1.3' site='ftgroup' />
+  <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/___17444398011110?rev=1.3' id='___17444398011110' path='/t/ftgroup/workbooks' revision='1.3' site='ftgroup' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -36,8 +36,8 @@
   <datasources>
     <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
       <aliases enabled='yes' />
-      <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;表示&quot;'>
-        <calculation class='tableau' formula='&quot;表示&quot;' />
+      <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;非表示&quot;'>
+        <calculation class='tableau' formula='&quot;非表示&quot;' />
         <members>
           <member value='&quot;表示&quot;' />
           <member value='&quot;表示_詳細&quot;' />
@@ -3053,8 +3053,8 @@
         <semantic-value key='[Country].[Name]' value='&quot;日本&quot;' />
       </semantic-values>
       <datasource-dependencies datasource='Parameters'>
-        <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;表示&quot;'>
-          <calculation class='tableau' formula='&quot;表示&quot;' />
+        <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;非表示&quot;'>
+          <calculation class='tableau' formula='&quot;非表示&quot;' />
         </column>
       </datasource-dependencies>
       <object-graph>
@@ -3218,7 +3218,7 @@
         <param name='target-parameter' value='[Parameters].[パラメーター 1]' />
       </params>
     </edit-parameter-action>
-    <edit-parameter-action caption=' パラメータ_表示詳細用_OK' name='[Action4_1A68679FCB5C4BE0A5F1AF7A7AE8F818]'>
+    <edit-parameter-action caption='パラメータ_表示詳細用_OK' name='[Action4_1A68679FCB5C4BE0A5F1AF7A7AE8F818]'>
       <activation type='on-select' />
       <source dashboard='売上確認用' type='sheet' worksheet='OK②' />
       <agg-type type='attr' />
@@ -3327,14 +3327,14 @@
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='6'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
             <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
             <groupfilter function='member' level='[none:Calculation_238409371417276418:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='3'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;WEB&quot;' />
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;その他&quot;' />
@@ -3344,7 +3344,7 @@
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;西日本&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='4'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='5'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;ドゥオモ・インターナショナル&quot;' />
@@ -3353,7 +3353,7 @@
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;継続&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='5'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='6'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;上原&quot;' />
@@ -3362,7 +3362,7 @@
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;柴田&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]' filter-group='3'>
             <groupfilter function='level-members' level='[none:販売区分:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
@@ -3443,7 +3443,7 @@
               <lod column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_556757570444042252:nk]' />
             </encodings>
             <reference-line axis-column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='100％' label-type='custom' scope='per-pane' value='1.0' value-column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' z-order='1' />
-            <customized-tooltip>
+            <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -3471,6 +3471,9 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
@@ -3525,10 +3528,13 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-cull' value='true' />
                 <format attr='mark-labels-show' value='true' />
-                <format attr='size' value='1.4942541122436523' />
+                <format attr='size' value='1.4832596778869629' />
               </style-rule>
             </style>
           </pane>
@@ -3548,7 +3554,7 @@
               <text column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419901982:qk]' />
               <lod column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_556757570444042252:nk]' />
             </encodings>
-            <customized-tooltip>
+            <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -3600,7 +3606,7 @@
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
-                <format attr='size' value='1.4942541122436523' />
+                <format attr='size' value='1.4832596778869629' />
               </style-rule>
             </style>
           </pane>
@@ -3618,8 +3624,8 @@
             <datasource caption='パラメーター' name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;表示&quot;'>
-              <calculation class='tableau' formula='&quot;表示&quot;' />
+            <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;非表示&quot;'>
+              <calculation class='tableau' formula='&quot;非表示&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
@@ -3707,7 +3713,7 @@
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (key)]'>
             <groupfilter function='empty-level' member='[Calculation_238409371417276418]' user:ui-action-filter='[Action6_866F166C17B04EB1A55DE77F26A1A86F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='6'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
             <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
@@ -3717,7 +3723,7 @@
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420553250:nk]'>
             <groupfilter function='member' level='[none:Calculation_238409371420553250:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='3'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;WEB&quot;' />
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;その他&quot;' />
@@ -3727,7 +3733,7 @@
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;西日本&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='4'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='5'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;ドゥオモ・インターナショナル&quot;' />
@@ -3736,7 +3742,7 @@
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;継続&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='5'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='6'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;上原&quot;' />
@@ -3745,7 +3751,7 @@
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;柴田&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]' filter-group='3'>
             <groupfilter function='level-members' level='[none:販売区分:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
@@ -3774,7 +3780,7 @@
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='73' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='96' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='100' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -3869,6 +3875,9 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
@@ -3926,6 +3935,9 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-cull' value='true' />
                 <format attr='mark-labels-show' value='true' />
@@ -4022,8 +4034,8 @@
             <datasource caption='パラメーター' name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;表示&quot;'>
-              <calculation class='tableau' formula='&quot;表示&quot;' />
+            <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;非表示&quot;'>
+              <calculation class='tableau' formula='&quot;非表示&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
@@ -4112,7 +4124,7 @@
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]'>
             <groupfilter function='empty-level' member='[委託取次店法人名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='6'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
             <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
@@ -4122,7 +4134,7 @@
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420602403:nk]'>
             <groupfilter function='member' level='[none:Calculation_238409371420602403:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='3'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;WEB&quot;' />
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;その他&quot;' />
@@ -4132,7 +4144,7 @@
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;西日本&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='4'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='5'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;ドゥオモ・インターナショナル&quot;' />
@@ -4141,7 +4153,7 @@
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;継続&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='5'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='6'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;上原&quot;' />
@@ -4150,7 +4162,7 @@
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;柴田&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]' filter-group='3'>
             <groupfilter function='level-members' level='[none:販売区分:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
@@ -4179,7 +4191,7 @@
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='56' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='96' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='100' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -4271,6 +4283,9 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
@@ -4340,6 +4355,9 @@
               </formatted-text>
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-cull' value='true' />
                 <format attr='mark-labels-show' value='true' />
@@ -4392,19 +4410,19 @@
             </customized-tooltip>
             <customized-label>
               <formatted-text>
-                <run bold='true' fontalignment='0'>件数:&lt;</run>
-                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419353105:qk]</run>
-                <run bold='true' fontalignment='0'>&gt;  実績:&lt;</run>
-                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419439123:qk]</run>
-                <run bold='true' fontalignment='0'>&gt;  進捗率:&lt;</run>
-                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk]</run>
-                <run bold='true' fontalignment='0'>&gt;  目標:&lt;</run>
-                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419562006:qk]</run>
-                <run bold='true' fontalignment='0'>&gt;  残数:&lt;</run>
-                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419639832:qk]</run>
-                <run bold='true' fontalignment='0'>&gt;  達成率:&lt;</run>
-                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419901982:qk]</run>
-                <run bold='true' fontalignment='0'>&gt;</run>
+                <run bold='true'>件数:&lt;</run>
+                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419353105:qk]</run>
+                <run bold='true'>&gt;  実績:&lt;</run>
+                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419439123:qk]</run>
+                <run bold='true'>&gt;  進捗率:&lt;</run>
+                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk]</run>
+                <run bold='true'>&gt;  目標:&lt;</run>
+                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419562006:qk]</run>
+                <run bold='true'>&gt;  残数:&lt;</run>
+                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419639832:qk]</run>
+                <run bold='true'>&gt;  達成率:&lt;</run>
+                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419901982:qk]</run>
+                <run bold='true'>&gt;</run>
               </formatted-text>
             </customized-label>
             <style>
@@ -4468,11 +4486,11 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='6'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
             <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='3'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;WEB&quot;' />
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;その他&quot;' />
@@ -4482,7 +4500,7 @@
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;西日本&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='4'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='5'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;ドゥオモ・インターナショナル&quot;' />
@@ -4491,7 +4509,7 @@
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;継続&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='5'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='6'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;上原&quot;' />
@@ -4613,11 +4631,11 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='6'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
             <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='3'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;WEB&quot;' />
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;その他&quot;' />
@@ -4627,7 +4645,7 @@
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;西日本&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='4'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='5'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;ドゥオモ・インターナショナル&quot;' />
@@ -4636,7 +4654,7 @@
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;継続&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='5'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='6'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;上原&quot;' />
@@ -4755,11 +4773,11 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='6'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
             <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='3'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;WEB&quot;' />
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;その他&quot;' />
@@ -4769,7 +4787,7 @@
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;西日本&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='4'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='5'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;ドゥオモ・インターナショナル&quot;' />
@@ -4778,7 +4796,7 @@
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;継続&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='5'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='6'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;上原&quot;' />
@@ -5020,14 +5038,14 @@
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='6'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
             <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
             <groupfilter function='member' level='[none:Calculation_238409371417276418:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='3'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;WEB&quot;' />
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;その他&quot;' />
@@ -5037,7 +5055,7 @@
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;西日本&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='4'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='5'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;ドゥオモ・インターナショナル&quot;' />
@@ -5046,7 +5064,7 @@
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;継続&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='5'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='6'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;上原&quot;' />
@@ -5055,7 +5073,7 @@
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;柴田&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]' filter-group='3'>
             <groupfilter function='level-members' level='[none:販売区分:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
@@ -5173,23 +5191,12 @@
               </formatted-text>
             </customized-tooltip>
             <customized-label>
-              <formatted-text>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>件数:&lt;</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419402258:qk]</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>&gt;  実績:&lt;</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419475988:qk]</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>&gt;  進捗率:&lt;</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419766811:qk]</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>&gt;  目標:&lt;</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419602967:qk]</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>&gt;  残数:&lt;</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419680793:qk]</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>&gt;  達成率:&lt;</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420168223:qk]</run>
-                <run bold='true' fontalignment='0' fontcolor='#ffffff' fontsize='11'>&gt;</run>
-              </formatted-text>
+              <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
@@ -5244,10 +5251,13 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-cull' value='true' />
                 <format attr='mark-labels-show' value='true' />
-                <format attr='size' value='1.5272375345230103' />
+                <format attr='size' value='1.4392818212509155' />
               </style-rule>
             </style>
           </pane>
@@ -5319,7 +5329,7 @@
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
-                <format attr='size' value='1.5272375345230103' />
+                <format attr='size' value='1.4392818212509155' />
               </style-rule>
             </style>
           </pane>
@@ -5337,8 +5347,8 @@
             <datasource caption='パラメーター' name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;表示&quot;'>
-              <calculation class='tableau' formula='&quot;表示&quot;' />
+            <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;非表示&quot;'>
+              <calculation class='tableau' formula='&quot;非表示&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
@@ -5426,7 +5436,7 @@
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (key)]'>
             <groupfilter function='empty-level' member='[Calculation_238409371417276418]' user:ui-action-filter='[Action6_866F166C17B04EB1A55DE77F26A1A86F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='6'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
             <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
@@ -5436,7 +5446,7 @@
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420553250:nk]'>
             <groupfilter function='member' level='[none:Calculation_238409371420553250:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='3'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;WEB&quot;' />
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;その他&quot;' />
@@ -5446,7 +5456,7 @@
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;西日本&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='4'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='5'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;ドゥオモ・インターナショナル&quot;' />
@@ -5455,7 +5465,7 @@
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;継続&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='5'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='6'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;上原&quot;' />
@@ -5464,7 +5474,7 @@
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;柴田&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]' filter-group='3'>
             <groupfilter function='level-members' level='[none:販売区分:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
@@ -5590,6 +5600,9 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
@@ -5647,6 +5660,9 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-cull' value='true' />
                 <format attr='mark-labels-show' value='true' />
@@ -5743,8 +5759,8 @@
             <datasource caption='パラメーター' name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;表示&quot;'>
-              <calculation class='tableau' formula='&quot;表示&quot;' />
+            <column caption='表示用' datatype='string' name='[パラメーター 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;非表示&quot;'>
+              <calculation class='tableau' formula='&quot;非表示&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
@@ -5833,7 +5849,7 @@
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]'>
             <groupfilter function='empty-level' member='[委託取次店法人名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='6'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
             <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
@@ -5843,7 +5859,7 @@
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420602403:nk]'>
             <groupfilter function='member' level='[none:Calculation_238409371420602403:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='3'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;WEB&quot;' />
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;その他&quot;' />
@@ -5853,7 +5869,7 @@
               <groupfilter function='member' level='[none:タグ01:nk]' member='&quot;西日本&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='4'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' filter-group='5'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;ドゥオモ・インターナショナル&quot;' />
@@ -5862,7 +5878,7 @@
               <groupfilter function='member' level='[none:タグ02:nk]' member='&quot;継続&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='5'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' filter-group='6'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;その他&quot;' />
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;上原&quot;' />
@@ -5871,7 +5887,7 @@
               <groupfilter function='member' level='[none:タグ03:nk]' member='&quot;柴田&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]'>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]' filter-group='3'>
             <groupfilter function='level-members' level='[none:販売区分:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
@@ -5994,6 +6010,9 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
@@ -6051,6 +6070,9 @@
               <formatted-text />
             </customized-label>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-cull' value='true' />
                 <format attr='mark-labels-show' value='true' />
@@ -6103,19 +6125,19 @@
             </customized-tooltip>
             <customized-label>
               <formatted-text>
-                <run bold='true'>件数:&lt;</run>
-                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419402258:qk]</run>
-                <run bold='true'>&gt;  実績:&lt;</run>
-                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419475988:qk]</run>
-                <run bold='true'>&gt;  進捗率:&lt;</run>
-                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419766811:qk]</run>
-                <run bold='true'>&gt;  目標:&lt;</run>
-                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419602967:qk]</run>
-                <run bold='true'>&gt;  残数:&lt;</run>
-                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419680793:qk]</run>
-                <run bold='true'>&gt;  達成率:&lt;</run>
-                <run bold='true'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420168223:qk]</run>
-                <run bold='true'>&gt;</run>
+                <run bold='true' fontalignment='0'>件数:&lt;</run>
+                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419402258:qk]</run>
+                <run bold='true' fontalignment='0'>&gt;  実績:&lt;</run>
+                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419475988:qk]</run>
+                <run bold='true' fontalignment='0'>&gt;  進捗率:&lt;</run>
+                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419766811:qk]</run>
+                <run bold='true' fontalignment='0'>&gt;  目標:&lt;</run>
+                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419602967:qk]</run>
+                <run bold='true' fontalignment='0'>&gt;  残数:&lt;</run>
+                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419680793:qk]</run>
+                <run bold='true' fontalignment='0'>&gt;  達成率:&lt;</run>
+                <run bold='true' fontalignment='0'>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420168223:qk]</run>
+                <run bold='true' fontalignment='0'>&gt;</run>
               </formatted-text>
             </customized-label>
             <style>
@@ -6142,7 +6164,7 @@
   </worksheets>
   <dashboards>
     <dashboard enable-sort-zone-taborder='true' name='売上確認用'>
-      <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/__17444397322330/sheet0?rev=' id='19072575' path='/t/ftgroup/workbooks/__17444397322330' revision='' site='ftgroup' />
+      <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/___17444398011110/sheet0?rev=' id='19072591' path='/t/ftgroup/workbooks/___17444398011110' revision='' site='ftgroup' />
       <style>
         <style-rule element='dash-title'>
           <format attr='text-align' value='left' />
@@ -6163,9 +6185,11 @@
         <column-instance column='[タグ01]' derivation='None' name='[none:タグ01:nk]' pivot='key' type='nominal' />
         <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
         <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
+        <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
         <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
         <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
         <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+        <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       </datasource-dependencies>
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
@@ -6211,7 +6235,15 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='4138' id='56' type-v2='empty' w='47078' x='52307' y='4001'>
+              <zone h='4138' id='83' mode='dropdown' name='売上①' param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]' type-v2='filter' values='database' w='12923' x='52307' y='4001'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4138' id='56' type-v2='empty' w='34155' x='65230' y='4001'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -6361,10 +6393,10 @@
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='2000' minheight='2000' sizing-mode='vscroll' />
+          <size maxheight='2050' minheight='2050' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='108' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98896' id='107' param='vert' type-v2='layout-flow' w='98770' x='615' y='552'>
+            <zone h='100000' id='121' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98896' id='120' param='vert' type-v2='layout-flow' w='98770' x='615' y='552'>
                 <zone fixed-size='42' h='3449' id='52' type-v2='title' w='98770' x='615' y='552'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -6484,6 +6516,15 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
+                <zone h='4138' id='83' mode='dropdown' name='売上①' param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]' type-v2='filter' values='database' w='12923' x='52307' y='4001'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
                 <zone fixed-size='112' h='8276' id='3' is-fixed='true' name='売上①' show-title='false' w='49385' x='50000' y='20897'>
                   <layout-cache minwidth='100' type-h='cell' type-w='scalable' />
                   <zone-style>
@@ -6585,7 +6626,7 @@
         <viewpoint name='売上②' />
         <viewpoint name='売上③' />
       </viewpoints>
-      <active id='-1' />
+      <active id='83' />
       <simple-id uuid='{815D1759-1308-41AD-B495-CE204B705410}' />
     </window>
     <window class='worksheet' name='売上①' tab-color='#f66273'>
@@ -6751,7 +6792,7 @@
     <window class='worksheet' name='OK①' tab-color='#f66273'>
       <cards>
         <edge name='left'>
-          <strip size='282'>
+          <strip size='300'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -6856,7 +6897,7 @@
     <window class='worksheet' name='OK③' tab-color='#f66273'>
       <cards>
         <edge name='left'>
-          <strip size='269'>
+          <strip size='289'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -6879,9 +6920,9 @@
             <card param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' type='filter' />
             <card param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' type='filter' />
             <card param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' type='filter' />
-            <card mode='compact' param='[Parameters].[パラメーター 1]' type='parameter' />
             <card pane-specification-id='1' param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[:Measure Names]' type='color' />
             <card pane-specification-id='2' param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]' type='color' />
+            <card mode='compact' param='[Parameters].[パラメーター 1]' type='parameter' />
           </strip>
         </edge>
       </cards>
