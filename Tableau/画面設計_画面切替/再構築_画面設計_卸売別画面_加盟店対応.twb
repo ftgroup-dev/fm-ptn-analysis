@@ -22,7 +22,7 @@
     <WindowsPersistSimpleIdentifiers />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/__?rev=1.2' id='__' path='/t/ftgroup/workbooks' revision='1.2' site='ftgroup' />
+  <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/____17452933449150?rev=1.1' id='____17452933449150' path='/t/ftgroup/workbooks' revision='1.1' site='ftgroup' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -46,7 +46,7 @@
       </column>
     </datasource>
     <datasource caption='再構築_実績集計テーブル' inline='true' name='sqlproxy.09o271k04fehgu1f1fiss1lglpn0' version='18.1'>
-      <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/datasources/_?rev=1.0' id='_' path='/t/ftgroup/datasources' revision='1.2' site='ftgroup' />
+      <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/datasources/_?rev=1.2' id='_' path='/t/ftgroup/datasources' revision='1.1' site='ftgroup' />
       <connection channel='https' class='sqlproxy' dbname='_' directory='/dataserver' port='443' server='prod-apnortheast-a.online.tableau.com' server-oauth='' username='' workgroup-auth-mode='prompt'>
         <relation type='collection'>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
@@ -956,6 +956,158 @@
             </attributes>
             <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
           </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>加盟店CD (目標集計テーブル)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[加盟店CD (目標集計テーブル)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>加盟店CD (目標集計テーブル)</remote-alias>
+            <ordinal>56</ordinal>
+            <layered>true</layered>
+            <family>目標集計テーブル</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>加盟店CD</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[加盟店CD]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>加盟店CD</remote-alias>
+            <ordinal>5</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>加盟店名 (目標集計テーブル)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[加盟店名 (目標集計テーブル)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>加盟店名 (目標集計テーブル)</remote-alias>
+            <ordinal>65</ordinal>
+            <layered>true</layered>
+            <family>目標集計テーブル</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>加盟店名</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[加盟店名]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>加盟店名</remote-alias>
+            <ordinal>15</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>加盟店法人CD (目標集計テーブル)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[加盟店法人CD (目標集計テーブル)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>加盟店法人CD (目標集計テーブル)</remote-alias>
+            <ordinal>66</ordinal>
+            <layered>true</layered>
+            <family>目標集計テーブル</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>加盟店法人CD</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[加盟店法人CD]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>加盟店法人CD</remote-alias>
+            <ordinal>16</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>加盟店法人名 (目標集計テーブル)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[加盟店法人名 (目標集計テーブル)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>加盟店法人名 (目標集計テーブル)</remote-alias>
+            <ordinal>67</ordinal>
+            <layered>true</layered>
+            <family>目標集計テーブル</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>加盟店法人名</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[加盟店法人名]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>加盟店法人名</remote-alias>
+            <ordinal>17</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
           <metadata-record class='measure'>
             <remote-name>営業日日数</remote-name>
             <remote-type>5</remote-type>
@@ -1043,162 +1195,6 @@
               <attribute datatype='integer' name='field-type'>0</attribute>
             </attributes>
             <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>委託取次店CD (目標集計テーブル)</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[委託取次店CD (目標集計テーブル)]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>委託取次店CD (目標集計テーブル)</remote-alias>
-            <ordinal>56</ordinal>
-            <layered>true</layered>
-            <caption>委託取次店cd (目標集計テーブル)</caption>
-            <family>目標集計テーブル</family>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='integer' name='field-type'>2</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>委託取次店CD</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[委託取次店CD]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>委託取次店CD</remote-alias>
-            <ordinal>5</ordinal>
-            <layered>true</layered>
-            <caption>委託取次店cd</caption>
-            <family>実績集計テーブル</family>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='integer' name='field-type'>2</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>委託取次店名 (目標集計テーブル)</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[委託取次店名 (目標集計テーブル)]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>委託取次店名 (目標集計テーブル)</remote-alias>
-            <ordinal>65</ordinal>
-            <layered>true</layered>
-            <family>目標集計テーブル</family>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='integer' name='field-type'>2</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>委託取次店名</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[委託取次店名]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>委託取次店名</remote-alias>
-            <ordinal>15</ordinal>
-            <layered>true</layered>
-            <family>実績集計テーブル</family>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='integer' name='field-type'>2</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>委託取次店法人CD (目標集計テーブル)</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[委託取次店法人CD (目標集計テーブル)]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>委託取次店法人CD (目標集計テーブル)</remote-alias>
-            <ordinal>66</ordinal>
-            <layered>true</layered>
-            <caption>委託取次店法人cd (目標集計テーブル)</caption>
-            <family>目標集計テーブル</family>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='integer' name='field-type'>2</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>委託取次店法人CD</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[委託取次店法人CD]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>委託取次店法人CD</remote-alias>
-            <ordinal>16</ordinal>
-            <layered>true</layered>
-            <caption>委託取次店法人cd</caption>
-            <family>実績集計テーブル</family>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='integer' name='field-type'>2</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>委託取次店法人名 (目標集計テーブル)</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[委託取次店法人名 (目標集計テーブル)]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>委託取次店法人名 (目標集計テーブル)</remote-alias>
-            <ordinal>67</ordinal>
-            <layered>true</layered>
-            <family>目標集計テーブル</family>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='integer' name='field-type'>2</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>委託取次店法人名</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[委託取次店法人名]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>委託取次店法人名</remote-alias>
-            <ordinal>17</ordinal>
-            <layered>true</layered>
-            <family>実績集計テーブル</family>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <attributes>
-              <attribute datatype='integer' name='field-type'>2</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>年月 (営業日マスタ)</remote-name>
@@ -1527,7 +1523,7 @@
     <RelationshipCalculations />
     <SchemaViewerObjectModel />
   </document-format-change-manifest>
-  <repository-location derived-from='/t/ftgroup/datasources/_?rev=1.0' id='_' path='/t/ftgroup/datasources' revision='1.2' site='ftgroup' />
+  <repository-location derived-from='/t/ftgroup/datasources/_?rev=1.2' id='_' path='/t/ftgroup/datasources' revision='1.1' site='ftgroup' />
   <connection :databaseVariables='' channel='https' class='sqlproxy' dbname='_' local-dataserver='' port='443' server='prod-apnortheast-a.online.tableau.com'>
     <relation type='collection'>
       <relation name='sqlproxy' table='[sqlproxy]' type='table' />
@@ -1584,19 +1580,19 @@
       <map key='[修正者 (目標集計テーブル)]' value='[sqlproxy].[修正者 (目標集計テーブル)]' />
       <map key='[修正者 (稼働日情報テーブル)]' value='[sqlproxy].[修正者 (稼働日情報テーブル)]' />
       <map key='[修正者]' value='[sqlproxy].[修正者]' />
+      <map key='[加盟店CD (目標集計テーブル)]' value='[sqlproxy].[加盟店CD (目標集計テーブル)]' />
+      <map key='[加盟店CD]' value='[sqlproxy].[加盟店CD]' />
+      <map key='[加盟店名 (目標集計テーブル)]' value='[sqlproxy].[加盟店名 (目標集計テーブル)]' />
+      <map key='[加盟店名]' value='[sqlproxy].[加盟店名]' />
+      <map key='[加盟店法人CD (目標集計テーブル)]' value='[sqlproxy].[加盟店法人CD (目標集計テーブル)]' />
+      <map key='[加盟店法人CD]' value='[sqlproxy].[加盟店法人CD]' />
+      <map key='[加盟店法人名 (目標集計テーブル)]' value='[sqlproxy].[加盟店法人名 (目標集計テーブル)]' />
+      <map key='[加盟店法人名]' value='[sqlproxy].[加盟店法人名]' />
       <map key='[営業日日数]' value='[sqlproxy].[営業日日数]' />
       <map key='[売上実績]' value='[sqlproxy].[売上実績]' />
       <map key='[売上年月]' value='[sqlproxy].[売上年月]' />
       <map key='[売上日]' value='[sqlproxy].[売上日]' />
       <map key='[売上目標]' value='[sqlproxy].[売上目標]' />
-      <map key='[委託取次店CD (目標集計テーブル)]' value='[sqlproxy].[委託取次店CD (目標集計テーブル)]' />
-      <map key='[委託取次店CD]' value='[sqlproxy].[委託取次店CD]' />
-      <map key='[委託取次店名 (目標集計テーブル)]' value='[sqlproxy].[委託取次店名 (目標集計テーブル)]' />
-      <map key='[委託取次店名]' value='[sqlproxy].[委託取次店名]' />
-      <map key='[委託取次店法人CD (目標集計テーブル)]' value='[sqlproxy].[委託取次店法人CD (目標集計テーブル)]' />
-      <map key='[委託取次店法人CD]' value='[sqlproxy].[委託取次店法人CD]' />
-      <map key='[委託取次店法人名 (目標集計テーブル)]' value='[sqlproxy].[委託取次店法人名 (目標集計テーブル)]' />
-      <map key='[委託取次店法人名]' value='[sqlproxy].[委託取次店法人名]' />
       <map key='[年月 (営業日マスタ)]' value='[sqlproxy].[年月 (営業日マスタ)]' />
       <map key='[年月 (目標集計テーブル)]' value='[sqlproxy].[年月 (目標集計テーブル)]' />
       <map key='[年月]' value='[sqlproxy].[年月]' />
@@ -1625,10 +1621,6 @@
   <column aggregation='Count' caption='実績集計テーブル' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
   <column aggregation='Count' caption='目標集計テーブル' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
   <column aggregation='Count' caption='稼働日情報テーブル' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[稼働日情報テーブル_001570829F38412AA2E4FBA1F927A0A2]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-  <column aggregation='Count' caption='委託取次店cd (目標集計テーブル)' datatype='string' default-type='nominal' name='[委託取次店CD (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='委託取次店cd' datatype='string' default-type='nominal' name='[委託取次店CD]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='委託取次店法人cd (目標集計テーブル)' datatype='string' default-type='nominal' name='[委託取次店法人CD (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='委託取次店法人cd' datatype='string' default-type='nominal' name='[委託取次店法人CD]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
   <column aggregation='Count' caption='物件別管理データ 主キー' datatype='string' default-type='nominal' name='[物件別管理データ_主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
   <column aggregation='Sum' caption='集計 Ok実績' datatype='real' default-type='quantitative' name='[集計_OK実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
   <column aggregation='Sum' caption='集計 Ok目標' datatype='real' default-type='quantitative' name='[集計_OK目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
@@ -1689,16 +1681,16 @@
             <expression op='[年月 (目標集計テーブル)]' />
           </expression>
           <expression op='='>
-            <expression op='[委託取次店CD]' />
-            <expression op='[委託取次店CD (目標集計テーブル)]' />
+            <expression op='[加盟店CD]' />
+            <expression op='[加盟店CD (目標集計テーブル)]' />
           </expression>
           <expression op='='>
-            <expression op='[委託取次店法人CD]' />
-            <expression op='[委託取次店法人CD (目標集計テーブル)]' />
+            <expression op='[加盟店法人CD]' />
+            <expression op='[加盟店法人CD (目標集計テーブル)]' />
           </expression>
         </expression>
         <first-end-point object-id='実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335' />
-        <second-end-point guaranteed-value='true' object-id='目標集計テーブル_DCA7B35ED3914617875869AF03A676E9' unique-key='true' />
+        <second-end-point object-id='目標集計テーブル_DCA7B35ED3914617875869AF03A676E9' />
       </relationship>
       <relationship>
         <expression op='&lt;='>
@@ -1719,7 +1711,7 @@
 ]]>&quot;</attribute>
               <attribute datatype='boolean' name='extract-active'>true</attribute>
               <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
-              <attribute datatype='string' name='update-time'>&quot;4/14/2025 3:41:50 AM&quot;</attribute>
+              <attribute datatype='string' name='update-time'>&quot;4/25/2025 3:25:18 AM&quot;</attribute>
             </attributes>
           </metadata-record>
         </metadata-records>
@@ -1730,8 +1722,8 @@
         <default-calendar-type>Gregorian</default-calendar-type>
       </overridable-settings>
       <aliases enabled='yes' />
-      <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+      <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
       </column>
       <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
         <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -1890,19 +1882,19 @@
       <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[修正者 (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[修正者 (稼働日情報テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[修正者]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店CD (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店CD]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店名 (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人CD (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人CD]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名 (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
       <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
       <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[売上年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
       <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-      <column aggregation='Count' caption='委託取次店cd (目標集計テーブル)' datatype='string' default-type='nominal' layered='true' name='[委託取次店CD (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-      <column aggregation='Count' caption='委託取次店cd' datatype='string' default-type='nominal' layered='true' name='[委託取次店CD]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店名 (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-      <column aggregation='Count' caption='委託取次店法人cd (目標集計テーブル)' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人CD (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-      <column aggregation='Count' caption='委託取次店法人cd' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人CD]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名 (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月 (営業日マスタ)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月 (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -1919,6 +1911,7 @@
       <column aggregation='Sum' caption='集計 Ok目標' datatype='real' default-type='quantitative' layered='true' name='[集計_OK目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
       <column aggregation='Sum' caption='集計 売上実績' datatype='real' default-type='quantitative' layered='true' name='[集計_売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
       <column aggregation='Sum' caption='集計 売上目標' datatype='real' default-type='quantitative' layered='true' name='[集計_売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
       <column-instance column='[Calculation_238409371419729946]' derivation='User' name='[usr:Calculation_238409371419729946:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_238409371419766811]' derivation='User' name='[usr:Calculation_238409371419766811:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_238409371419807772]' derivation='User' name='[usr:Calculation_238409371419807772:nk]' pivot='key' type='nominal' />
@@ -1931,9 +1924,14 @@
           <groupfilter function='level-members' level='[Calculation_238409371417276418]' />
         </groupfilter>
       </group>
+      <group caption='アクション (加盟店法人名)' hidden='true' name='[Action (加盟店法人名)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[加盟店法人名]' />
+        </groupfilter>
+      </group>
       <group caption='アクション (委託取次店法人名)' hidden='true' name='[Action (委託取次店法人名)]' name-style='unqualified' user:auto-column='sheet_link'>
         <groupfilter function='crossjoin'>
-          <groupfilter function='level-members' level='[委託取次店法人名]' />
+          <groupfilter function='level-members' level='[none:加盟店法人名:nk]' />
         </groupfilter>
       </group>
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' object-id='' units='records'>
@@ -3120,16 +3118,16 @@
                 <expression op='[年月 (目標集計テーブル)]' />
               </expression>
               <expression op='='>
-                <expression op='[委託取次店CD]' />
-                <expression op='[委託取次店CD (目標集計テーブル)]' />
+                <expression op='[加盟店CD]' />
+                <expression op='[加盟店CD (目標集計テーブル)]' />
               </expression>
               <expression op='='>
-                <expression op='[委託取次店法人CD]' />
-                <expression op='[委託取次店法人CD (目標集計テーブル)]' />
+                <expression op='[加盟店法人CD]' />
+                <expression op='[加盟店法人CD (目標集計テーブル)]' />
               </expression>
             </expression>
             <first-end-point object-id='実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335' />
-            <second-end-point guaranteed-value='true' object-id='目標集計テーブル_DCA7B35ED3914617875869AF03A676E9' unique-key='true' />
+            <second-end-point object-id='目標集計テーブル_DCA7B35ED3914617875869AF03A676E9' />
           </relationship>
           <relationship>
             <expression op='&lt;='>
@@ -3144,7 +3142,7 @@
     </datasource>
   </datasources>
   <actions>
-    <action caption='フィルタ_売上確認画面_フィルタされた【委託取次店法人】' name='[Action6_866F166C17B04EB1A55DE77F26A1A86F]'>
+    <action caption='フィルタ_売上確認画面_フィルタされた【加盟店法人】_委託' name='[Action6_866F166C17B04EB1A55DE77F26A1A86F]'>
       <activation auto-clear='true' type='on-select' />
       <source dashboard='売上確認用' type='sheet'>
         <exclude-sheet name='売上②' />
@@ -3163,7 +3161,7 @@
         <param name='target' value='売上確認用' />
       </command>
     </action>
-    <action caption='フィルタ_売上確認画面_フィルタされた【委託取次店】' name='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]'>
+    <action caption='フィルタ_売上確認画面_フィルタされた【加盟店】_委託' name='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]'>
       <activation auto-clear='true' type='on-select' />
       <source dashboard='売上確認用' type='sheet'>
         <exclude-sheet name='OK①' />
@@ -3175,14 +3173,14 @@
         <exclude-sheet name='売上①' />
         <exclude-sheet name='売上③' />
       </source>
-      <link caption='フィルタ_売上確認画面_フィルタされた【委託取次店】' delimiter=',' escape='\' expression='tsl:%E5%A3%B2%E4%B8%8A%E7%A2%BA%E8%AA%8D%E7%94%A8?%5Bsqlproxy.09o271k04fehgu1f1fiss1lglpn0%5D.%5B%E5%A7%94%E8%A8%97%E5%8F%96%E6%AC%A1%E5%BA%97%E6%B3%95%E4%BA%BA%E5%90%8D%5D~s0=&lt;[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[委託取次店法人名]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <link caption='フィルタ_売上確認画面_フィルタされた【加盟店】_委託' delimiter=',' escape='\' expression='tsl:%E5%A3%B2%E4%B8%8A%E7%A2%BA%E8%AA%8D%E7%94%A8?%5Bsqlproxy.09o271k04fehgu1f1fiss1lglpn0%5D.%5B%E5%8A%A0%E7%9B%9F%E5%BA%97%E6%B3%95%E4%BA%BA%E5%90%8D%5D~s0=&lt;[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[加盟店法人名]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
       <command command='tsc:tsl-filter'>
         <param name='exclude' value='売上②,OK②,OK①,タグ03,タグ01,タグ02,リセットボタン,売上①' />
         <param name='on-empty' value='none' />
         <param name='target' value='売上確認用' />
       </command>
     </action>
-    <action caption='フィルタ_売上確認画面_フィルタされた【委託取次店】 _卸売' name='[Action8_4E1AC31648924BFD81816E3DA9FF51CD]'>
+    <action caption='フィルタ_売上確認画面_フィルタされた【加盟店】 _卸売' name='[Action8_4E1AC31648924BFD81816E3DA9FF51CD]'>
       <activation auto-clear='true' type='on-select' />
       <source dashboard='卸売売上確認用' type='sheet'>
         <exclude-sheet name='タグ03' />
@@ -3194,14 +3192,14 @@
         <exclude-sheet name='卸売売上①' />
         <exclude-sheet name='卸売売上③' />
       </source>
-      <link caption='フィルタ_売上確認画面_フィルタされた【委託取次店】 _卸売' delimiter=',' escape='\' expression='tsl:%E5%8D%B8%E5%A3%B2%E5%A3%B2%E4%B8%8A%E7%A2%BA%E8%AA%8D%E7%94%A8?%5Bsqlproxy.09o271k04fehgu1f1fiss1lglpn0%5D.%5B%E5%A7%94%E8%A8%97%E5%8F%96%E6%AC%A1%E5%BA%97%E6%B3%95%E4%BA%BA%E5%90%8D%5D~s0=&lt;[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[委託取次店法人名]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <link caption='フィルタ_売上確認画面_フィルタされた【加盟店】 _卸売' delimiter=',' escape='\' expression='tsl:%E5%8D%B8%E5%A3%B2%E5%A3%B2%E4%B8%8A%E7%A2%BA%E8%AA%8D%E7%94%A8?%5Bsqlproxy.09o271k04fehgu1f1fiss1lglpn0%5D.%5B%E5%8A%A0%E7%9B%9F%E5%BA%97%E6%B3%95%E4%BA%BA%E5%90%8D%5D~s0=&lt;[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[加盟店法人名]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
       <command command='tsc:tsl-filter'>
         <param name='exclude' value='タグ03,タグ01,タグ02,リセットボタン,卸売OK②,卸売OK①,卸売売上①,卸売売上②' />
         <param name='on-empty' value='none' />
         <param name='target' value='卸売売上確認用' />
       </command>
     </action>
-    <action caption='フィルタ_売上確認画面_フィルタされた【委託取次店法人】 _卸売' name='[Action9_09B2ECC124444985B39EC72EE9A6331F]'>
+    <action caption='フィルタ_売上確認画面_フィルタされた【加盟店法人】 _卸売' name='[Action9_09B2ECC124444985B39EC72EE9A6331F]'>
       <activation auto-clear='true' type='on-select' />
       <source dashboard='卸売売上確認用' type='sheet'>
         <exclude-sheet name='タグ03' />
@@ -3224,7 +3222,7 @@
       <datasource caption='再構築_実績集計テーブル' name='sqlproxy.09o271k04fehgu1f1fiss1lglpn0' />
     </datasources>
     <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
     </datasource-dependencies>
     <edit-parameter-action caption='パラメータ_表示用_売上_卸売' name='[Action11_36431DA242594D1EA7F0463658091E2A]'>
       <activation type='on-select' />
@@ -3335,8 +3333,8 @@
             <datasource caption='再構築_実績集計テーブル' name='sqlproxy.09o271k04fehgu1f1fiss1lglpn0' />
           </datasources>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -3407,8 +3405,8 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
@@ -3416,7 +3414,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -3711,8 +3709,8 @@
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -3769,7 +3767,7 @@
             <column-instance column='[タグ01]' derivation='None' name='[none:タグ01:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
-            <column-instance column='[委託取次店法人名]' derivation='None' name='[none:委託取次店法人名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419353105]' derivation='User' name='[usr:Calculation_238409371419353105:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419439123]' derivation='User' name='[usr:Calculation_238409371419439123:qk]' pivot='key' type='quantitative' />
@@ -3784,8 +3782,8 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
@@ -3793,10 +3791,10 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (key)]'>
-            <groupfilter function='empty-level' member='[Calculation_238409371417276418]' user:ui-action-filter='[Action6_866F166C17B04EB1A55DE77F26A1A86F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[Calculation_238409371417276418]' member='1' user:ui-action-filter='[Action6_866F166C17B04EB1A55DE77F26A1A86F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -3859,11 +3857,11 @@
           </style-rule>
           <style-rule element='cell'>
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='98' />
-            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='73' />
+            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='73' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='96' />
-            <format attr='text-align' data-class='subtotal' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='left' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='96' />
+            <format attr='text-align' data-class='subtotal' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='left' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -3874,10 +3872,10 @@
           <style-rule element='label'>
             <format attr='display' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='false' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' value='p0%' />
-            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='8' />
-            <format attr='vertical-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='center' />
-            <format attr='text-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='center' />
-            <format attr='wrap' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='on' />
+            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='8' />
+            <format attr='vertical-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='center' />
+            <format attr='text-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='center' />
+            <format attr='wrap' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='on' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
@@ -3930,7 +3928,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -3987,7 +3985,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -4041,7 +4039,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -4094,7 +4092,7 @@
             </style>
           </pane>
         </panes>
-        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk])</rows>
+        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk])</rows>
         <cols>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk] + [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk])</cols>
       </table>
       <simple-id uuid='{013172FB-96EE-4219-AB13-9A84A0CCD112}' />
@@ -4112,8 +4110,8 @@
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -4170,7 +4168,8 @@
             <column-instance column='[タグ01]' derivation='None' name='[none:タグ01:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
-            <column-instance column='[委託取次店名]' derivation='None' name='[none:委託取次店名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店名]' derivation='None' name='[none:加盟店名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419353105]' derivation='User' name='[usr:Calculation_238409371419353105:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419439123]' derivation='User' name='[usr:Calculation_238409371419439123:qk]' pivot='key' type='quantitative' />
@@ -4185,20 +4184,23 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (加盟店法人名)]'>
+            <groupfilter function='empty-level' member='[加盟店法人名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]'>
-            <groupfilter function='empty-level' member='[委託取次店法人名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='level-members' level='[none:加盟店法人名:nk]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -4247,6 +4249,7 @@
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]</column>
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420602403:nk]</column>
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]</column>
+            <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (加盟店法人名)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4261,10 +4264,10 @@
           </style-rule>
           <style-rule element='cell'>
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='98' />
-            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='56' />
+            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='56' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='96' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='96' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -4275,7 +4278,7 @@
           <style-rule element='label'>
             <format attr='display' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='false' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' value='p0%' />
-            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='8' />
+            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='8' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
@@ -4328,7 +4331,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -4385,7 +4388,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -4451,7 +4454,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -4508,7 +4511,7 @@
             </style>
           </pane>
         </panes>
-        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk])</rows>
+        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk])</rows>
         <cols>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk] + [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk])</cols>
       </table>
       <simple-id uuid='{8D6D4EEA-EBD3-4957-96BC-2982E451F461}' />
@@ -4554,7 +4557,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
@@ -4642,9 +4645,9 @@
                 <run>管轄</run>
               </formatted-text>
             </format>
-            <format attr='title' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' value='委託取次店法人'>
+            <format attr='title' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' value='加盟店法人'>
               <formatted-text>
-                <run>委託取次店法人</run>
+                <run>加盟店法人</run>
               </formatted-text>
             </format>
             <format attr='title' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' value='SV担当者'>
@@ -4721,7 +4724,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
@@ -4865,7 +4868,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' filter-group='4'>
@@ -5056,8 +5059,8 @@
             <datasource caption='再構築_実績集計テーブル' name='sqlproxy.09o271k04fehgu1f1fiss1lglpn0' />
           </datasources>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -5128,8 +5131,8 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
@@ -5137,7 +5140,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -5432,8 +5435,8 @@
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -5490,7 +5493,7 @@
             <column-instance column='[タグ01]' derivation='None' name='[none:タグ01:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
-            <column-instance column='[委託取次店法人名]' derivation='None' name='[none:委託取次店法人名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419353105]' derivation='User' name='[usr:Calculation_238409371419353105:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419439123]' derivation='User' name='[usr:Calculation_238409371419439123:qk]' pivot='key' type='quantitative' />
@@ -5505,8 +5508,8 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
@@ -5514,10 +5517,10 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (key)]'>
-            <groupfilter function='empty-level' member='[Calculation_238409371417276418]' user:ui-action-filter='[Action9_09B2ECC124444985B39EC72EE9A6331F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[Calculation_238409371417276418]' member='1' user:ui-action-filter='[Action9_09B2ECC124444985B39EC72EE9A6331F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -5580,10 +5583,10 @@
           </style-rule>
           <style-rule element='cell'>
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='98' />
-            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='73' />
+            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='73' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='96' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='96' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -5594,10 +5597,10 @@
           <style-rule element='label'>
             <format attr='display' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='false' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' value='p0%' />
-            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='8' />
-            <format attr='vertical-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='center' />
-            <format attr='text-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='center' />
-            <format attr='wrap' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='on' />
+            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='8' />
+            <format attr='vertical-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='center' />
+            <format attr='text-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='center' />
+            <format attr='wrap' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='on' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
@@ -5650,7 +5653,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -5707,7 +5710,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -5761,7 +5764,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -5818,7 +5821,7 @@
             </style>
           </pane>
         </panes>
-        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk])</rows>
+        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk])</rows>
         <cols>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk] + [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk])</cols>
       </table>
       <simple-id uuid='{FE230ED2-0DE6-4A89-8EF6-6C4CF38D6AF4}' />
@@ -5836,8 +5839,8 @@
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -5894,7 +5897,8 @@
             <column-instance column='[タグ01]' derivation='None' name='[none:タグ01:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
-            <column-instance column='[委託取次店名]' derivation='None' name='[none:委託取次店名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店名]' derivation='None' name='[none:加盟店名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419353105]' derivation='User' name='[usr:Calculation_238409371419353105:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419439123]' derivation='User' name='[usr:Calculation_238409371419439123:qk]' pivot='key' type='quantitative' />
@@ -5909,20 +5913,23 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (加盟店法人名)]'>
+            <groupfilter function='empty-level' member='[加盟店法人名]' user:ui-action-filter='[Action8_4E1AC31648924BFD81816E3DA9FF51CD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]'>
-            <groupfilter function='empty-level' member='[委託取次店法人名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='level-members' level='[none:加盟店法人名:nk]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -5971,6 +5978,7 @@
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420602403:nk]</column>
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]</column>
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]</column>
+            <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (加盟店法人名)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -5985,10 +5993,10 @@
           </style-rule>
           <style-rule element='cell'>
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='98' />
-            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='56' />
+            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='56' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='96' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='96' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -5999,7 +6007,7 @@
           <style-rule element='label'>
             <format attr='display' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='false' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' value='p0%' />
-            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='8' />
+            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='8' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
@@ -6052,7 +6060,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -6109,7 +6117,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -6175,7 +6183,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]>]]></run>
@@ -6232,7 +6240,7 @@
             </style>
           </pane>
         </panes>
-        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk])</rows>
+        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk])</rows>
         <cols>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk] + [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk])</cols>
       </table>
       <simple-id uuid='{ABC64C75-AED7-4BA9-BDB2-E023A34F73EB}' />
@@ -6244,8 +6252,8 @@
             <datasource caption='再構築_実績集計テーブル' name='sqlproxy.09o271k04fehgu1f1fiss1lglpn0' />
           </datasources>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -6313,11 +6321,11 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
@@ -6325,7 +6333,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -6646,8 +6654,8 @@
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -6701,7 +6709,7 @@
             <column-instance column='[タグ01]' derivation='None' name='[none:タグ01:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
-            <column-instance column='[委託取次店法人名]' derivation='None' name='[none:委託取次店法人名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419402258]' derivation='User' name='[usr:Calculation_238409371419402258:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419475988]' derivation='User' name='[usr:Calculation_238409371419475988:qk]' pivot='key' type='quantitative' />
@@ -6716,11 +6724,11 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
@@ -6728,10 +6736,10 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (key)]'>
-            <groupfilter function='empty-level' member='[Calculation_238409371417276418]' user:ui-action-filter='[Action9_09B2ECC124444985B39EC72EE9A6331F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[Calculation_238409371417276418]' member='1' user:ui-action-filter='[Action9_09B2ECC124444985B39EC72EE9A6331F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -6795,10 +6803,10 @@
           </style-rule>
           <style-rule element='cell'>
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='98' />
-            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='73' />
+            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='73' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='96' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='96' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -6810,10 +6818,10 @@
             <format attr='display' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='false' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420168223:qk]' value='p0%' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' value='p0%' />
-            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='8' />
-            <format attr='vertical-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='center' />
-            <format attr='text-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='center' />
-            <format attr='wrap' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='on' />
+            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='8' />
+            <format attr='vertical-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='center' />
+            <format attr='text-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='center' />
+            <format attr='wrap' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='on' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
@@ -6866,7 +6874,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -6923,7 +6931,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -6977,7 +6985,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -7034,7 +7042,7 @@
             </style>
           </pane>
         </panes>
-        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk])</rows>
+        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk])</rows>
         <cols>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk] + [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419766811:qk])</cols>
       </table>
       <simple-id uuid='{C87B7871-E3E3-4EA7-8CC6-8B15AEE72C49}' />
@@ -7052,8 +7060,8 @@
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -7107,7 +7115,8 @@
             <column-instance column='[タグ01]' derivation='None' name='[none:タグ01:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
-            <column-instance column='[委託取次店名]' derivation='None' name='[none:委託取次店名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店名]' derivation='None' name='[none:加盟店名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419402258]' derivation='User' name='[usr:Calculation_238409371419402258:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419475988]' derivation='User' name='[usr:Calculation_238409371419475988:qk]' pivot='key' type='quantitative' />
@@ -7122,23 +7131,26 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (加盟店法人名)]'>
+            <groupfilter function='empty-level' member='[加盟店法人名]' user:ui-action-filter='[Action8_4E1AC31648924BFD81816E3DA9FF51CD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]'>
-            <groupfilter function='empty-level' member='[委託取次店法人名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='level-members' level='[none:加盟店法人名:nk]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -7187,6 +7199,7 @@
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420602403:nk]</column>
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]</column>
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]</column>
+            <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (加盟店法人名)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -7202,10 +7215,10 @@
           </style-rule>
           <style-rule element='cell'>
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='98' />
-            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='56' />
+            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='56' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='96' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='96' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -7217,7 +7230,7 @@
             <format attr='display' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='false' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420168223:qk]' value='p0%' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' value='p0%' />
-            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='8' />
+            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='8' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
@@ -7270,7 +7283,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -7327,7 +7340,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -7381,7 +7394,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -7438,7 +7451,7 @@
             </style>
           </pane>
         </panes>
-        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk])</rows>
+        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk])</rows>
         <cols>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk] + [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419766811:qk])</cols>
       </table>
       <simple-id uuid='{3E065E8D-2923-4D29-9033-4720C3EA7843}' />
@@ -7450,8 +7463,8 @@
             <datasource caption='再構築_実績集計テーブル' name='sqlproxy.09o271k04fehgu1f1fiss1lglpn0' />
           </datasources>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -7519,11 +7532,11 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
@@ -7531,7 +7544,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -7625,9 +7638,9 @@
                 <run>管轄</run>
               </formatted-text>
             </format>
-            <format attr='title' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' value='委託取次店法人'>
+            <format attr='title' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' value='加盟店法人'>
               <formatted-text>
-                <run>委託取次店法人</run>
+                <run>加盟店法人</run>
               </formatted-text>
             </format>
             <format attr='title' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' value='SV担当者'>
@@ -7852,8 +7865,8 @@
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -7907,7 +7920,7 @@
             <column-instance column='[タグ01]' derivation='None' name='[none:タグ01:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
-            <column-instance column='[委託取次店法人名]' derivation='None' name='[none:委託取次店法人名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419402258]' derivation='User' name='[usr:Calculation_238409371419402258:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419475988]' derivation='User' name='[usr:Calculation_238409371419475988:qk]' pivot='key' type='quantitative' />
@@ -7922,11 +7935,11 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
@@ -7934,10 +7947,10 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (key)]'>
-            <groupfilter function='empty-level' member='[Calculation_238409371417276418]' user:ui-action-filter='[Action6_866F166C17B04EB1A55DE77F26A1A86F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[Calculation_238409371417276418]' member='1' user:ui-action-filter='[Action6_866F166C17B04EB1A55DE77F26A1A86F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -8001,11 +8014,11 @@
           </style-rule>
           <style-rule element='cell'>
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='98' />
-            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='73' />
+            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='73' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='96' />
-            <format attr='text-align' data-class='subtotal' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='left' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='96' />
+            <format attr='text-align' data-class='subtotal' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='left' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -8017,10 +8030,10 @@
             <format attr='display' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='false' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420168223:qk]' value='p0%' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' value='p0%' />
-            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='8' />
-            <format attr='vertical-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='center' />
-            <format attr='text-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='center' />
-            <format attr='wrap' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]' value='on' />
+            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='8' />
+            <format attr='vertical-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='center' />
+            <format attr='text-align' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='center' />
+            <format attr='wrap' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]' value='on' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
@@ -8073,7 +8086,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -8130,7 +8143,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -8184,7 +8197,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店法人名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -8241,7 +8254,7 @@
             </style>
           </pane>
         </panes>
-        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店法人名:nk])</rows>
+        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店法人名:nk])</rows>
         <cols>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk] + [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419766811:qk])</cols>
       </table>
       <simple-id uuid='{040CC018-D6A2-40B7-8E31-3E8DBFD0B8B7}' />
@@ -8259,8 +8272,8 @@
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='sqlproxy.09o271k04fehgu1f1fiss1lglpn0'>
-            <column aggregation='Sum' caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if isnull([委託取次店法人名]) then 0 else 1 end' />
+            <column caption='key' datatype='integer' name='[Calculation_238409371417276418]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
@@ -8314,7 +8327,8 @@
             <column-instance column='[タグ01]' derivation='None' name='[none:タグ01:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
-            <column-instance column='[委託取次店名]' derivation='None' name='[none:委託取次店名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店名]' derivation='None' name='[none:加盟店名:nk]' pivot='key' type='nominal' />
+            <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419402258]' derivation='User' name='[usr:Calculation_238409371419402258:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419475988]' derivation='User' name='[usr:Calculation_238409371419475988:qk]' pivot='key' type='quantitative' />
@@ -8329,23 +8343,26 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[主キー]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[委託取次店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
+          <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (加盟店法人名)]'>
+            <groupfilter function='empty-level' member='[加盟店法人名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]'>
-            <groupfilter function='empty-level' member='[委託取次店法人名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='level-members' level='[none:加盟店法人名:nk]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]'>
@@ -8394,6 +8411,7 @@
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:販売区分:nk]</column>
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420602403:nk]</column>
             <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (委託取次店法人名)]</column>
+            <column>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[Action (加盟店法人名)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -8409,10 +8427,10 @@
           </style-rule>
           <style-rule element='cell'>
             <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='98' />
-            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='56' />
+            <format attr='height' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='56' />
           </style-rule>
           <style-rule element='header'>
-            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='96' />
+            <format attr='width' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='96' />
           </style-rule>
           <style-rule element='field-labels'>
             <format attr='font-size' value='8' />
@@ -8424,7 +8442,7 @@
             <format attr='display' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]' value='false' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420168223:qk]' value='p0%' />
             <format attr='text-format' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk]' value='p0%' />
-            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]' value='8' />
+            <format attr='font-size' field='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]' value='8' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
@@ -8477,7 +8495,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -8534,7 +8552,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -8588,7 +8606,7 @@
             <customized-tooltip show-buttons='false'>
               <formatted-text>
                 <run fontcolor='#787878'>委託取次店名:&#9;</run>
-                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk]>]]></run>
+                <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>進捗ステータス:&#9;</run>
                 <run bold='true'><![CDATA[<[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]>]]></run>
@@ -8645,7 +8663,7 @@
             </style>
           </pane>
         </panes>
-        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:委託取次店名:nk])</rows>
+        <rows>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok] / [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:加盟店名:nk])</rows>
         <cols>([sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371420205088:qk] + [sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419766811:qk])</cols>
       </table>
       <simple-id uuid='{202CC782-39A7-47F2-9F10-BD8406AB2B3A}' />
@@ -8653,7 +8671,7 @@
   </worksheets>
   <dashboards>
     <dashboard enable-sort-zone-taborder='true' name='卸売売上確認用'>
-      <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/__/sheet1?rev=' id='19072454' path='/t/ftgroup/workbooks/__' revision='' site='ftgroup' />
+      <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/____17452933449150/sheet1?rev=' id='19225593' path='/t/ftgroup/workbooks/____17452933449150' revision='' site='ftgroup' />
       <style>
         <style-rule element='dash-title'>
           <format attr='text-align' value='left' />
@@ -8874,8 +8892,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2000' minheight='2000' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='128' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98896' id='127' param='vert' type-v2='layout-flow' w='98770' x='615' y='552'>
+            <zone h='100000' id='130' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98896' id='129' param='vert' type-v2='layout-flow' w='98770' x='615' y='552'>
                 <zone fixed-size='42' h='3449' id='52' type-v2='title' w='98770' x='615' y='552'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9059,7 +9077,7 @@
       <simple-id uuid='{7EBE293B-A4CF-4E2E-BD99-7F5692B0E25C}' />
     </dashboard>
     <dashboard enable-sort-zone-taborder='true' name='売上確認用'>
-      <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/__/sheet0?rev=' id='19072453' path='/t/ftgroup/workbooks/__' revision='' site='ftgroup' />
+      <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/____17452933449150/sheet0?rev=' id='19225592' path='/t/ftgroup/workbooks/____17452933449150' revision='' site='ftgroup' />
       <style>
         <style-rule element='dash-title'>
           <format attr='text-align' value='left' />
@@ -9280,8 +9298,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2000' minheight='2000' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='117' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98896' id='116' param='vert' type-v2='layout-flow' w='98770' x='615' y='552'>
+            <zone h='100000' id='119' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98896' id='118' param='vert' type-v2='layout-flow' w='98770' x='615' y='552'>
                 <zone fixed-size='42' h='3449' id='52' type-v2='title' w='98770' x='615' y='552'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9466,10 +9484,51 @@
     </dashboard>
   </dashboards>
   <windows source-height='30'>
-    <window class='dashboard' maximized='true' name='売上確認用' tab-color='#f66273'>
+    <window class='dashboard' name='売上確認用' tab-color='#f66273'>
       <viewpoints>
         <viewpoint name='OK①'>
           <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371421872165:nk]</field>
+                      <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371421872165:nk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_556757570444042252:nk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419353105:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419439123:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419562006:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419639832:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419901982:qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>1</value>
+                  <value>&quot;全体集計&quot;</value>
+                  <value>&quot;表示&quot;</value>
+                  <value>526</value>
+                  <value>572449.14399999997</value>
+                  <value>0.0</value>
+                  <value>0.0</value>
+                  <value>0.0</value>
+                  <value>&quot;未達&quot;</value>
+                  <value>0.0</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
         </viewpoint>
         <viewpoint name='OK②'>
           <highlight>
@@ -9490,6 +9549,21 @@
         </viewpoint>
         <viewpoint name='リセットボタン'>
           <zoom type='entire-view' />
+          <selection-collection>
+            <node-selection select-tuples='false'>
+              <oriented-node-reference orientation='vertical'>
+                <node-reference>
+                  <fields>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420508193:nk]</field>
+                  </fields>
+                  <multibucket>
+                    <bucket>&quot;選択リセット&quot;</bucket>
+                  </multibucket>
+                </node-reference>
+                <page-reference />
+              </oriented-node-reference>
+            </node-selection>
+          </selection-collection>
         </viewpoint>
         <viewpoint name='売上①'>
           <zoom type='entire-view' />
@@ -9502,7 +9576,7 @@
         <viewpoint name='売上②' />
         <viewpoint name='売上③' />
       </viewpoints>
-      <active id='-1' />
+      <active id='65' />
       <simple-id uuid='{815D1759-1308-41AD-B495-CE204B705410}' />
     </window>
     <window class='worksheet' name='売上①' tab-color='#f66273'>
@@ -9531,9 +9605,9 @@
             <card param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ01:nk]' type='filter' />
             <card param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ02:nk]' type='filter' />
             <card param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:タグ03:nk]' type='filter' />
+            <card mode='compact' param='[Parameters].[パラメーター 1]' type='parameter' />
             <card pane-specification-id='1' param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[:Measure Names]' type='color' />
             <card pane-specification-id='2' param='[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419852829:nk]' type='color' />
-            <card mode='compact' param='[Parameters].[パラメーター 1]' type='parameter' />
           </strip>
         </edge>
       </cards>
@@ -9824,7 +9898,7 @@
       </viewpoint>
       <simple-id uuid='{3BD97A21-F55C-448A-88AA-2315903E510E}' />
     </window>
-    <window class='dashboard' name='卸売売上確認用' tab-color='#4f779a'>
+    <window class='dashboard' maximized='true' name='卸売売上確認用' tab-color='#4f779a'>
       <viewpoints>
         <viewpoint name='タグ01'>
           <zoom type='entire-view' />
@@ -9837,9 +9911,65 @@
         </viewpoint>
         <viewpoint name='リセットボタン'>
           <zoom type='entire-view' />
+          <selection-collection>
+            <node-selection select-tuples='false'>
+              <oriented-node-reference orientation='vertical'>
+                <node-reference>
+                  <fields>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371420508193:nk]</field>
+                  </fields>
+                  <multibucket>
+                    <bucket>&quot;選択リセット&quot;</bucket>
+                  </multibucket>
+                </node-reference>
+                <page-reference />
+              </oriented-node-reference>
+            </node-selection>
+          </selection-collection>
         </viewpoint>
         <viewpoint name='卸売OK①'>
           <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371421872165:nk]</field>
+                      <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371417276418:ok]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_238409371421872165:nk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[none:Calculation_556757570444042252:nk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419353105:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419439123:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419562006:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419639832:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419729946:qk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419807772:nk]</field>
+                    <field>[sqlproxy.09o271k04fehgu1f1fiss1lglpn0].[usr:Calculation_238409371419901982:qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>1</value>
+                  <value>&quot;全体集計&quot;</value>
+                  <value>&quot;表示&quot;</value>
+                  <value>332</value>
+                  <value>29286.075000000001</value>
+                  <value>0.0</value>
+                  <value>0.0</value>
+                  <value>0.0</value>
+                  <value>&quot;未達&quot;</value>
+                  <value>0.0</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
         </viewpoint>
         <viewpoint name='卸売OK②'>
           <zoom type='fit-width' />
@@ -9857,7 +9987,7 @@
           <zoom type='fit-width' />
         </viewpoint>
       </viewpoints>
-      <active id='70' />
+      <active id='65' />
       <simple-id uuid='{E8DBAD43-649F-495E-9B45-006D1CB95193}' />
     </window>
     <window class='worksheet' name='卸売売上①' tab-color='#4f779a'>
