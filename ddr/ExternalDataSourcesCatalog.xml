@@ -1,0 +1,18 @@
+
+<ExternalDataSourcesCatalog>
+	<OdbcDataSource link="PartnerManagementSystem_fmp12.xml" useSso="False" promptForLogin="False" DSN="FMData" id="1" name="FMData">
+		<Username>
+			<DisplayCalculation>
+				<Chunk type="NoRef">&quot;supportas&quot;</Chunk>
+			</DisplayCalculation>
+			<Calculation><![CDATA["supportas"]]></Calculation>
+		</Username>
+		<Password>
+			<DisplayCalculation>
+				<Chunk type="NoRef">&quot;suP52265622&quot;</Chunk>
+			</DisplayCalculation>
+			<Calculation><![CDATA["suP52265622"]]></Calculation>
+		</Password>
+		<FilterTables retrieveSystemTables="False" retrieveViews="False" retrieveTables="True" typeBasedFilter="True" catalogName="" schemaName="" tableName=""/>
+	</OdbcDataSource>
+</ExternalDataSourcesCatalog>
