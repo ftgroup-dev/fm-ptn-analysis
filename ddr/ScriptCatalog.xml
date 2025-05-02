@@ -675,10 +675,10 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty (SV担当者入力データ月次_委託取次店::委託取次店名 ) and
+					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_委託取次店::委託取次店名 ) and
+					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<DisplayCalculation>
@@ -687,7 +687,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="9" name="委託取次店名"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="9" name="加盟店名"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -715,19 +715,19 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店CD; SV担当者入力データ月次::委託取次店CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店CD; SV担当者入力データ月次::加盟店CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次::加盟店CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+							<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
 
-#a = SV担当者入力データ月次_委託取次店::委託取次店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -736,7 +736,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店::委託取次店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -749,7 +749,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -763,22 +763,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="委託取次店名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人CD; SV担当者入力データ月次_委託取次店::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_委託取次店::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="7" name="委託取次店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="委託取次店法人CD"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -787,7 +787,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -800,7 +800,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -814,7 +814,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="委託取次店法人名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
@@ -876,7 +876,7 @@ FROM \&quot;tagging中間テーブル\&quot;
 WHERE \&quot;tagabble_id\&quot; = ?
 AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -895,7 +895,7 @@ FROM \"tagging中間テーブル\"
 WHERE \"tagabble_id\" = ?
 AND \"カテゴリID\" = ? ";
 "" ; "" ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -919,7 +919,7 @@ AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt]
@@ -960,7 +960,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -986,7 +986,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -1037,7 +1037,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -1191,19 +1191,19 @@ $カテゴリID[$cnt];
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店CD; 物件別管理データ::委託取次店CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店CD; 物件別管理データ::加盟店CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ::加盟店CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+							<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 物件別管理データ_委託取次店::委託取次店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -1212,7 +1212,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_委託取次店::委託取次店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -1225,7 +1225,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="物件別管理データ_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -1239,22 +1239,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店法人CD; 物件別管理データ::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="16" name="委託取次店法人CD"/>
+							<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 物件別管理データ_委託取次店法人::委託取次店法人名_略称;
+#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -1263,7 +1263,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_委託取次店法人::委託取次店法人名_略称;
+#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -1276,7 +1276,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="物件別管理データ_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -1290,7 +1290,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::OK実績; 物件別管理データ::受注金額 ]</StepText>
@@ -1366,13 +1366,13 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ IsEmpty ( 物件別管理データ_委託取次店::委託取次店CD ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_委託取次店::委託取次店CD )]]></Calculation>
+					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店" id="8" name="委託取次店CD"/>
+							<Field table="物件別管理データ_加盟店" id="8" name="加盟店CD"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
@@ -1389,11 +1389,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::販売区分; 物件別管理データ_委託取次店::販売区分 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ_委託取次店::販売区分]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::販売区分; 物件別管理データ_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店::販売区分]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店" id="25" name="販売区分"/>
+							<Field table="物件別管理データ_加盟店" id="25" name="販売区分"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
@@ -1434,7 +1434,7 @@ FROM \&quot;tagging中間テーブル\&quot;
 WHERE \&quot;tagabble_id\&quot; = ?
 AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -1453,7 +1453,7 @@ FROM \"tagging中間テーブル\"
 WHERE \"tagabble_id\" = ?
 AND \"カテゴリID\" = ? ";
 "" ; "" ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -1477,7 +1477,7 @@ AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt]
@@ -1515,7 +1515,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
 Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) )
@@ -1538,7 +1538,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
 Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) )
@@ -1566,7 +1566,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -1637,7 +1637,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -1663,7 +1663,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -1722,7 +1722,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -1841,19 +1841,19 @@ $カテゴリID[$cnt];
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::委託取次店CD; 売上集計表::顧客コード ]</StepText>
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店CD; 売上集計表::顧客コード ]</StepText>
 					<Calculation><![CDATA[売上集計表::顧客コード]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
 							<Field table="売上集計表" id="16" name="顧客コード"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="売上集計表_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 売上集計表_委託取次店::委託取次店名_略称;
+#a = 売上集計表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -1862,7 +1862,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 売上集計表_委託取次店::委託取次店名_略称;
+#a = 売上集計表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -1875,7 +1875,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="売上集計表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -1889,22 +1889,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="売上集計表_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::委託取次店法人CD; 売上集計表_委託取次店法人::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[売上集計表_委託取次店法人::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; 売上集計表_加盟店法人::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店法人::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店法人" id="7" name="委託取次店法人CD"/>
+							<Field table="売上集計表_加盟店法人" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 売上集計表_委託取次店法人::委託取次店法人名_略称;
+#a = 売上集計表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -1913,7 +1913,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 売上集計表_委託取次店法人::委託取次店法人名_略称;
+#a = 売上集計表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -1926,7 +1926,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="売上集計表_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -1940,7 +1940,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="売上集計表_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::売上実績; Sum(売上集計表::売上金額) ]</StepText>
@@ -1992,13 +1992,13 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ IsEmpty ( 売上集計表_委託取次店::委託取次店CD ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( 売上集計表_委託取次店::委託取次店CD )]]></Calculation>
+					<StepText>If [ IsEmpty ( 売上集計表_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店" id="8" name="委託取次店CD"/>
+							<Field table="売上集計表_加盟店" id="8" name="加盟店CD"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
@@ -2015,11 +2015,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::販売区分; 売上集計表_委託取次店::販売区分 ]</StepText>
-					<Calculation><![CDATA[売上集計表_委託取次店::販売区分]]></Calculation>
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::販売区分; 売上集計表_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店::販売区分]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店" id="25" name="販売区分"/>
+							<Field table="売上集計表_加盟店" id="25" name="販売区分"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
@@ -2459,19 +2459,19 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店CD; 受注残明細表::得意先コード ]</StepText>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店CD; 受注残明細表::得意先コード ]</StepText>
 					<Calculation><![CDATA[受注残明細表::得意先コード]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
 							<Field table="受注残明細表" id="12" name="得意先コード"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 受注残明細表_委託取次店::委託取次店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -2480,7 +2480,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_委託取次店::委託取次店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -2493,7 +2493,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="受注残明細表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -2507,22 +2507,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店法人CD; 受注残明細表_委託取次店::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[受注残明細表_委託取次店::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="7" name="委託取次店法人CD"/>
+							<Field table="受注残明細表_加盟店" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 受注残明細表_委託取次店法人::委託取次店法人名_略称;
+#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -2531,7 +2531,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_委託取次店法人::委託取次店法人名_略称;
+#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -2544,7 +2544,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="受注残明細表_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -2558,7 +2558,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::OK実績; $totalAmount ]</StepText>
@@ -2592,13 +2592,13 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ IsEmpty ( 受注残明細表_委託取次店::委託取次店CD ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( 受注残明細表_委託取次店::委託取次店CD )]]></Calculation>
+					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="8" name="委託取次店CD"/>
+							<Field table="受注残明細表_加盟店" id="8" name="加盟店CD"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
@@ -2615,11 +2615,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_委託取次店::販売区分 ]</StepText>
-					<Calculation><![CDATA[受注残明細表_委託取次店::販売区分]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店::販売区分]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="25" name="販売区分"/>
+							<Field table="受注残明細表_加盟店" id="25" name="販売区分"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
@@ -2988,19 +2988,19 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店CD; 受注残明細表::得意先コード ]</StepText>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店CD; 受注残明細表::得意先コード ]</StepText>
 					<Calculation><![CDATA[受注残明細表::得意先コード]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
 							<Field table="受注残明細表" id="12" name="得意先コード"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 受注残明細表_委託取次店::委託取次店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -3009,7 +3009,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_委託取次店::委託取次店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -3022,7 +3022,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="受注残明細表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -3036,22 +3036,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店法人CD; 受注残明細表_委託取次店::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[受注残明細表_委託取次店::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="7" name="委託取次店法人CD"/>
+							<Field table="受注残明細表_加盟店" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 受注残明細表_委託取次店法人::委託取次店法人名_略称;
+#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -3060,7 +3060,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_委託取次店法人::委託取次店法人名_略称;
+#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -3073,7 +3073,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="受注残明細表_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -3087,7 +3087,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::OK実績; $totalAmount ]</StepText>
@@ -3121,13 +3121,13 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ IsEmpty ( 受注残明細表_委託取次店::委託取次店CD ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( 受注残明細表_委託取次店::委託取次店CD )]]></Calculation>
+					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="8" name="委託取次店CD"/>
+							<Field table="受注残明細表_加盟店" id="8" name="加盟店CD"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
@@ -3144,11 +3144,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_委託取次店::販売区分 ]</StepText>
-					<Calculation><![CDATA[受注残明細表_委託取次店::販売区分]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店::販売区分]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="25" name="販売区分"/>
+							<Field table="受注残明細表_加盟店" id="25" name="販売区分"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
@@ -3795,10 +3795,10 @@ Case(
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty (SV担当者入力データ月次_委託取次店::委託取次店名 ) and
+					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_委託取次店::委託取次店名 ) and
+					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<DisplayCalculation>
@@ -3807,7 +3807,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="9" name="委託取次店名"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="9" name="加盟店名"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -3835,19 +3835,19 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店CD; SV担当者入力データ月次::委託取次店CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店CD; SV担当者入力データ月次::加盟店CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次::加盟店CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+							<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
 
-#a = SV担当者入力データ月次_委託取次店::委託取次店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -3856,7 +3856,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店::委託取次店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -3869,7 +3869,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -3883,22 +3883,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="委託取次店名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人CD; SV担当者入力データ月次_委託取次店::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_委託取次店::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="7" name="委託取次店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="委託取次店法人CD"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -3907,7 +3907,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -3920,7 +3920,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -3934,7 +3934,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="委託取次店法人名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
@@ -4011,7 +4011,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -4037,7 +4037,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -4088,7 +4088,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -4219,19 +4219,19 @@ $カテゴリID[$cnt];
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店CD; 物件別管理データ::委託取次店CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店CD; 物件別管理データ::加盟店CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ::加盟店CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+							<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 物件別管理データ_委託取次店::委託取次店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4240,7 +4240,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_委託取次店::委託取次店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4253,7 +4253,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="物件別管理データ_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -4267,22 +4267,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店法人CD; 物件別管理データ::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="16" name="委託取次店法人CD"/>
+							<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 物件別管理データ_委託取次店法人::委託取次店法人名_略称;
+#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4291,7 +4291,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_委託取次店法人::委託取次店法人名_略称;
+#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4304,7 +4304,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="物件別管理データ_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -4318,12 +4318,12 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4332,7 +4332,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4345,7 +4345,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -4359,7 +4359,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="委託取次店法人名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::OK実績; 物件別管理データ::受注金額 ]</StepText>
@@ -4445,13 +4445,13 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ IsEmpty ( 物件別管理データ_委託取次店::委託取次店CD ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_委託取次店::委託取次店CD )]]></Calculation>
+					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店" id="8" name="委託取次店CD"/>
+							<Field table="物件別管理データ_加盟店" id="8" name="加盟店CD"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
@@ -4468,11 +4468,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::販売区分; 物件別管理データ_委託取次店::販売区分 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ_委託取次店::販売区分]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::販売区分; 物件別管理データ_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店::販売区分]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店" id="25" name="販売区分"/>
+							<Field table="物件別管理データ_加盟店" id="25" name="販売区分"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
@@ -4518,7 +4518,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -4544,7 +4544,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -4603,7 +4603,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -4719,19 +4719,19 @@ $カテゴリID[$cnt];
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::委託取次店CD; 売上集計表::顧客コード ]</StepText>
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店CD; 売上集計表::顧客コード ]</StepText>
 					<Calculation><![CDATA[売上集計表::顧客コード]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
 							<Field table="売上集計表" id="16" name="顧客コード"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="売上集計表_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 売上集計表_委託取次店::委託取次店名_略称;
+#a = 売上集計表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4740,7 +4740,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 売上集計表_委託取次店::委託取次店名_略称;
+#a = 売上集計表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4753,7 +4753,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="売上集計表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -4767,22 +4767,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="売上集計表_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::委託取次店法人CD; 売上集計表_委託取次店法人::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[売上集計表_委託取次店法人::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; 売上集計表_加盟店法人::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店法人::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店法人" id="7" name="委託取次店法人CD"/>
+							<Field table="売上集計表_加盟店法人" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 売上集計表_委託取次店法人::委託取次店法人名_略称;
+#a = 売上集計表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4791,7 +4791,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 売上集計表_委託取次店法人::委託取次店法人名_略称;
+#a = 売上集計表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4804,7 +4804,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="売上集計表_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -4818,7 +4818,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="売上集計表_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::売上実績; Sum(売上集計表::売上金額) ]</StepText>
@@ -4880,13 +4880,13 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ IsEmpty ( 売上集計表_委託取次店::委託取次店CD ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( 売上集計表_委託取次店::委託取次店CD )]]></Calculation>
+					<StepText>If [ IsEmpty ( 売上集計表_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店" id="8" name="委託取次店CD"/>
+							<Field table="売上集計表_加盟店" id="8" name="加盟店CD"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
@@ -4903,11 +4903,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::販売区分; 売上集計表_委託取次店::販売区分 ]</StepText>
-					<Calculation><![CDATA[売上集計表_委託取次店::販売区分]]></Calculation>
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::販売区分; 売上集計表_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店::販売区分]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_委託取次店" id="25" name="販売区分"/>
+							<Field table="売上集計表_加盟店" id="25" name="販売区分"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
@@ -5347,19 +5347,19 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店CD; 受注残明細表::得意先コード ]</StepText>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店CD; 受注残明細表::得意先コード ]</StepText>
 					<Calculation><![CDATA[受注残明細表::得意先コード]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
 							<Field table="受注残明細表" id="12" name="得意先コード"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 受注残明細表_委託取次店::委託取次店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -5368,7 +5368,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_委託取次店::委託取次店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -5381,7 +5381,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="受注残明細表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -5395,22 +5395,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店法人CD; 受注残明細表_委託取次店::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[受注残明細表_委託取次店::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="7" name="委託取次店法人CD"/>
+							<Field table="受注残明細表_加盟店" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 受注残明細表_委託取次店法人::委託取次店法人名_略称;
+#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -5419,7 +5419,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_委託取次店法人::委託取次店法人名_略称;
+#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -5432,7 +5432,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="受注残明細表_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -5446,7 +5446,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::OK実績; $totalAmount ]</StepText>
@@ -5490,13 +5490,13 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ IsEmpty ( 受注残明細表_委託取次店::委託取次店CD ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( 受注残明細表_委託取次店::委託取次店CD )]]></Calculation>
+					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="8" name="委託取次店CD"/>
+							<Field table="受注残明細表_加盟店" id="8" name="加盟店CD"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
@@ -5513,11 +5513,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_委託取次店::販売区分 ]</StepText>
-					<Calculation><![CDATA[受注残明細表_委託取次店::販売区分]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店::販売区分]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="25" name="販売区分"/>
+							<Field table="受注残明細表_加盟店" id="25" name="販売区分"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
@@ -5886,19 +5886,19 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店CD; 受注残明細表::得意先コード ]</StepText>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店CD; 受注残明細表::得意先コード ]</StepText>
 					<Calculation><![CDATA[受注残明細表::得意先コード]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
 							<Field table="受注残明細表" id="12" name="得意先コード"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 受注残明細表_委託取次店::委託取次店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -5907,7 +5907,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_委託取次店::委託取次店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -5920,7 +5920,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="受注残明細表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -5934,22 +5934,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店法人CD; 受注残明細表_委託取次店::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[受注残明細表_委託取次店::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="7" name="委託取次店法人CD"/>
+							<Field table="受注残明細表_加盟店" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 受注残明細表_委託取次店法人::委託取次店法人名_略称;
+#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -5958,7 +5958,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_委託取次店法人::委託取次店法人名_略称;
+#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -5971,7 +5971,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="受注残明細表_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -5985,7 +5985,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::OK実績; $totalAmount ]</StepText>
@@ -6029,13 +6029,13 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ IsEmpty ( 受注残明細表_委託取次店::委託取次店CD ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( 受注残明細表_委託取次店::委託取次店CD )]]></Calculation>
+					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="8" name="委託取次店CD"/>
+							<Field table="受注残明細表_加盟店" id="8" name="加盟店CD"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
@@ -6052,11 +6052,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_委託取次店::販売区分 ]</StepText>
-					<Calculation><![CDATA[受注残明細表_委託取次店::販売区分]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店::販売区分]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_委託取次店" id="25" name="販売区分"/>
+							<Field table="受注残明細表_加盟店" id="25" name="販売区分"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
@@ -7176,8 +7176,8 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<Text>作成者	：Mika Shimomura</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#コメント	：</StepText>
-					<Text>コメント	：</Text>
+					<StepText>#コメント	：加盟店対応</StepText>
+					<Text>コメント	：加盟店対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -7238,12 +7238,12 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<Field table="global" id="21" name="カテゴリID_管轄_g"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ global::カテゴリID_委託_g; &quot;C0002&quot; ]</StepText>
+					<StepText>フィールド設定 [ global::カテゴリID_加盟_g; &quot;C0002&quot; ]</StepText>
 					<Calculation><![CDATA["C0002"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;C0002&quot;</Chunk>
 					</DisplayCalculation>
-					<Field table="global" id="22" name="カテゴリID_委託_g"/>
+					<Field table="global" id="22" name="カテゴリID_加盟_g"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ global::カテゴリID_SV担当者_g; &quot;C0003&quot; ]</StepText>
@@ -7257,32 +7257,32 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<StepText/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#委託取次店テーブルの各その他タグID</StepText>
-					<Text>委託取次店テーブルの各その他タグID</Text>
+					<StepText>#加盟店テーブルの各その他タグID</StepText>
+					<Text>加盟店テーブルの各その他タグID</Text>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店::その他タグID_管轄_g; &quot;tag_0006&quot; ]</StepText>
+					<StepText>フィールド設定 [ 加盟店::その他タグID_管轄_g; &quot;tag_0006&quot; ]</StepText>
 					<Calculation><![CDATA["tag_0006"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;tag_0006&quot;</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店" id="18" name="その他タグID_管轄_g"/>
+					<Field table="加盟店" id="18" name="その他タグID_管轄_g"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店::その他タグID_委託_g; &quot;tag_0012&quot; ]</StepText>
+					<StepText>フィールド設定 [ 加盟店::その他タグID_加盟_g; &quot;tag_0012&quot; ]</StepText>
 					<Calculation><![CDATA["tag_0012"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;tag_0012&quot;</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店" id="19" name="その他タグID_委託_g"/>
+					<Field table="加盟店" id="19" name="その他タグID_加盟_g"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店::その他タグID_SV担当者_g; &quot;tag_0017&quot; ]</StepText>
+					<StepText>フィールド設定 [ 加盟店::その他タグID_SV担当者_g; &quot;tag_0017&quot; ]</StepText>
 					<Calculation><![CDATA["tag_0017"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;tag_0017&quot;</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店" id="20" name="その他タグID_SV担当者_g"/>
+					<Field table="加盟店" id="20" name="その他タグID_SV担当者_g"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -7371,14 +7371,14 @@ GetValue ( #a ; #b )
 					<StepText>スクリプト実行 [ 「set_BaseTableId」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;target&quot;; JSONString ];
-[ &quot;layoutTable&quot;; &quot;委託取次店法人&quot;; JSONString ];
-[ &quot;targetField&quot;; GetFieldName ( 委託取次店法人::BaseTableID_g ); JSONString ]
+[ &quot;layoutTable&quot;; &quot;加盟店法人&quot;; JSONString ];
+[ &quot;targetField&quot;; GetFieldName ( 加盟店法人::BaseTableID_g ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "target"; JSONString ];
-[ "layoutTable"; "委託取次店法人"; JSONString ];
-[ "targetField"; GetFieldName ( 委託取次店法人::BaseTableID_g ); JSONString ]
+[ "layoutTable"; "加盟店法人"; JSONString ];
+[ "targetField"; GetFieldName ( 加盟店法人::BaseTableID_g ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -7387,14 +7387,14 @@ GetValue ( #a ; #b )
 [ &quot;type&quot;; &quot;target&quot;; </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
-[ &quot;layoutTable&quot;; &quot;委託取次店法人&quot;; </Chunk>
+[ &quot;layoutTable&quot;; &quot;加盟店法人&quot;; </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;targetField&quot;; </Chunk>
 						<Chunk type="FunctionRef">GetFieldName</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="委託取次店法人" id="13" name="BaseTableID_g"/>
+							<Field table="加盟店法人" id="13" name="BaseTableID_g"/>
 						</Chunk>
 						<Chunk type="NoRef"> ); </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
@@ -7407,14 +7407,14 @@ GetValue ( #a ; #b )
 					<StepText>スクリプト実行 [ 「set_BaseTableId」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;target&quot;; JSONString ];
-[ &quot;layoutTable&quot;; &quot;委託取次店&quot;; JSONString ];
-[ &quot;targetField&quot;; GetFieldName ( 委託取次店::BaseTableID_g ); JSONString ]
+[ &quot;layoutTable&quot;; &quot;加盟店&quot;; JSONString ];
+[ &quot;targetField&quot;; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "target"; JSONString ];
-[ "layoutTable"; "委託取次店"; JSONString ];
-[ "targetField"; GetFieldName ( 委託取次店::BaseTableID_g ); JSONString ]
+[ "layoutTable"; "加盟店"; JSONString ];
+[ "targetField"; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -7423,14 +7423,14 @@ GetValue ( #a ; #b )
 [ &quot;type&quot;; &quot;target&quot;; </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
-[ &quot;layoutTable&quot;; &quot;委託取次店&quot;; </Chunk>
+[ &quot;layoutTable&quot;; &quot;加盟店&quot;; </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;targetField&quot;; </Chunk>
 						<Chunk type="FunctionRef">GetFieldName</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="委託取次店" id="11" name="BaseTableID_g"/>
+							<Field table="加盟店" id="11" name="BaseTableID_g"/>
 						</Chunk>
 						<Chunk type="NoRef"> ); </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
@@ -7487,8 +7487,8 @@ GetValue ( #a ; #b )
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/04/25 真板 加盟店対応</StepText>
+					<Text>2025/04/25 真板 加盟店対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -10247,22 +10247,22 @@ WorkingDays (#b ; #c ; $休日リスト )
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ $table = &quot;委託取次店&quot; ]</StepText>
-					<Calculation><![CDATA[$table = "委託取次店"]]></Calculation>
+					<StepText>If [ $table = &quot;加盟店&quot; ]</StepText>
+					<Calculation><![CDATA[$table = "加盟店"]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">$table = &quot;委託取次店&quot;</Chunk>
+						<Chunk type="NoRef">$table = &quot;加盟店&quot;</Chunk>
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty( 委託取次店_tagging中間テーブル::ID ) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty( 委託取次店_tagging中間テーブル::ID )]]></Calculation>
+					<StepText>If [ not IsEmpty( 加盟店_tagging中間テーブル::ID ) ]</StepText>
+					<Calculation><![CDATA[not IsEmpty( 加盟店_tagging中間テーブル::ID )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
 						<Chunk type="NoRef"> </Chunk>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef">( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="委託取次店_tagging中間テーブル" id="6" name="ID"/>
+							<Field table="加盟店_tagging中間テーブル" id="6" name="ID"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
@@ -11154,7 +11154,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 					</Step>
 				</StepList>
 			</Script>
-			<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="23" name="レイアウト切替_委託取次店法人">
+			<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="23" name="レイアウト切替_加盟店法人">
 				<StepList>
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -11165,8 +11165,8 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<Text>◆作成情報◆</Text>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
-						<StepText>#機能概要	：委託取次店法人へ移動</StepText>
-						<Text>機能概要	：委託取次店法人へ移動</Text>
+						<StepText>#機能概要	：加盟店法人へ移動</StepText>
+						<Text>機能概要	：加盟店法人へ移動</Text>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#引数		：なし</StepText>
@@ -11196,20 +11196,20 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<StepText/>
 					</Step>
 					<Step enable="True" id="6" name="レイアウト切り替え">
-						<StepText>レイアウト切り替え [ 「委託取次店法人」 (委託取次店法人) ]</StepText>
+						<StepText>レイアウト切り替え [ 「加盟店法人」 (加盟店法人) ]</StepText>
 						<LayoutDestination value="SelectedLayout"/>
-						<Layout id="42" name="委託取次店法人"/>
+						<Layout id="42" name="加盟店法人"/>
 					</Step>
 					<Step enable="True" id="1" name="スクリプト実行">
 						<StepText>スクリプト実行 [ 「set_BaseTableId」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;layoutTable&quot;; Get( レイアウトテーブル名 ); JSONString ];
-[ &quot;targetField&quot;; GetFieldName ( 委託取次店法人::BaseTableID_g ); JSONString ]
+[ &quot;targetField&quot;; GetFieldName ( 加盟店法人::BaseTableID_g ); JSONString ]
  ) ]</StepText>
 						<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "layoutTable"; Get( レイアウトテーブル名 ); JSONString ];
-[ "targetField"; GetFieldName ( 委託取次店法人::BaseTableID_g ); JSONString ]
+[ "targetField"; GetFieldName ( 加盟店法人::BaseTableID_g ); JSONString ]
  )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -11226,7 +11226,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 							<Chunk type="FunctionRef">GetFieldName</Chunk>
 							<Chunk type="NoRef"> ( </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店法人" id="13" name="BaseTableID_g"/>
+								<Field table="加盟店法人" id="13" name="BaseTableID_g"/>
 							</Chunk>
 							<Chunk type="NoRef"> ); </Chunk>
 							<Chunk type="FunctionRef">JSONString</Chunk>
@@ -11259,8 +11259,8 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<Text>◆更新情報◆</Text>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
-						<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-						<Text>yyyy/mm/dd　更新者　更新内容</Text>
+						<StepText>#2025/04/25 真板 加盟店対応</StepText>
+						<Text>2025/04/25 真板 加盟店対応</Text>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -11268,7 +11268,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 					</Step>
 				</StepList>
 			</Script>
-			<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="24" name="レイアウト切替_委託取次店">
+			<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="24" name="レイアウト切替_加盟店">
 				<StepList>
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -11279,8 +11279,8 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<Text>◆作成情報◆</Text>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
-						<StepText>#機能概要	：委託取次店へ移動</StepText>
-						<Text>機能概要	：委託取次店へ移動</Text>
+						<StepText>#機能概要	：加盟店へ移動</StepText>
+						<Text>機能概要	：加盟店へ移動</Text>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#引数		：なし</StepText>
@@ -11310,20 +11310,20 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<StepText/>
 					</Step>
 					<Step enable="True" id="6" name="レイアウト切り替え">
-						<StepText>レイアウト切り替え [ 「委託取次店」 (委託取次店) ]</StepText>
+						<StepText>レイアウト切り替え [ 「加盟店」 (加盟店) ]</StepText>
 						<LayoutDestination value="SelectedLayout"/>
-						<Layout id="43" name="委託取次店"/>
+						<Layout id="43" name="加盟店"/>
 					</Step>
 					<Step enable="True" id="1" name="スクリプト実行">
 						<StepText>スクリプト実行 [ 「set_BaseTableId」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;layoutTable&quot;; Get( レイアウトテーブル名 ); JSONString ];
-[ &quot;targetField&quot;; GetFieldName ( 委託取次店::BaseTableID_g ); JSONString ]
+[ &quot;targetField&quot;; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
  ) ]</StepText>
 						<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "layoutTable"; Get( レイアウトテーブル名 ); JSONString ];
-[ "targetField"; GetFieldName ( 委託取次店::BaseTableID_g ); JSONString ]
+[ "targetField"; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
  )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -11340,7 +11340,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 							<Chunk type="FunctionRef">GetFieldName</Chunk>
 							<Chunk type="NoRef"> ( </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="11" name="BaseTableID_g"/>
+								<Field table="加盟店" id="11" name="BaseTableID_g"/>
 							</Chunk>
 							<Chunk type="NoRef"> ); </Chunk>
 							<Chunk type="FunctionRef">JSONString</Chunk>
@@ -11376,8 +11376,8 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<Text>◆更新情報◆</Text>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
-						<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-						<Text>yyyy/mm/dd　更新者　更新内容</Text>
+						<StepText>#2025/04/25 真板 加盟店対応</StepText>
+						<Text>2025/04/25 真板 加盟店対応</Text>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -13844,8 +13844,8 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 					<Text>作成者	：下村</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#コメント	：</StepText>
-					<Text>コメント	：</Text>
+					<StepText>#コメント	：加盟店対応</StepText>
+					<Text>コメント	：加盟店対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -13855,8 +13855,8 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 					<StepText/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#委託取次店テーブルに存在する委託取次店CDを基に生成</StepText>
-					<Text>委託取次店テーブルに存在する委託取次店CDを基に生成</Text>
+					<StepText>#加盟店テーブルに存在する加盟店CDを基に生成</StepText>
+					<Text>加盟店テーブルに存在する加盟店CDを基に生成</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#SV担当者はtagging中間テーブル ー　ユーザーテーブル　を基に判断する</StepText>
@@ -13932,22 +13932,22 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 					<StepText/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店::SV担当者月次入力作成用_年_g; Year ( $targetDate ) ]</StepText>
+					<StepText>フィールド設定 [ 加盟店::SV担当者月次入力作成用_年_g; Year ( $targetDate ) ]</StepText>
 					<Calculation><![CDATA[Year ( $targetDate )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Year</Chunk>
 						<Chunk type="NoRef"> ( $targetDate )</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店" id="21" name="SV担当者月次入力作成用_年_g"/>
+					<Field table="加盟店" id="21" name="SV担当者月次入力作成用_年_g"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店::SV担当者月次入力作成用_月_g; Month( $targetDate ) ]</StepText>
+					<StepText>フィールド設定 [ 加盟店::SV担当者月次入力作成用_月_g; Month( $targetDate ) ]</StepText>
 					<Calculation><![CDATA[Month( $targetDate )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Month</Chunk>
 						<Chunk type="NoRef">( $targetDate )</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店" id="22" name="SV担当者月次入力作成用_月_g"/>
+					<Field table="加盟店" id="22" name="SV担当者月次入力作成用_月_g"/>
 				</Step>
 				<Step enable="True" id="75" name="レコード/検索条件確定">
 					<StepText>レコード/検索条件確定
@@ -13971,8 +13971,8 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 					<Text>----------------------------------------------</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#委託取次店とSV担当者の紐づけをJSON化</StepText>
-					<Text>委託取次店とSV担当者の紐づけをJSON化</Text>
+					<StepText>#加盟店とSV担当者の紐づけをJSON化</StepText>
+					<Text>加盟店とSV担当者の紐づけをJSON化</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#----------------------------------------------</StepText>
@@ -13998,7 +13998,7 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 
 &quot;&quot;; &quot;&quot;;
 
-委託取次店::BaseTableID_g;
+加盟店::BaseTableID_g;
 global::カテゴリID_SV担当者_g
 
  ) ]</StepText>
@@ -14022,7 +14022,7 @@ global::カテゴリID_SV担当者_g
 
 ""; "";
 
-委託取次店::BaseTableID_g;
+加盟店::BaseTableID_g;
 global::カテゴリID_SV担当者_g
 
  )]]></Calculation>
@@ -14049,7 +14049,7 @@ global::カテゴリID_SV担当者_g
 
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="11" name="BaseTableID_g"/>
+								<Field table="加盟店" id="11" name="BaseTableID_g"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 </Chunk>
@@ -14461,17 +14461,17 @@ $cd_json;
 					<Text>----------------------------------------------</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#委託取次店を基にSV担当者月次入力レコードを生成</StepText>
-					<Text>委託取次店を基にSV担当者月次入力レコードを生成</Text>
+					<StepText>#加盟店を基にSV担当者月次入力レコードを生成</StepText>
+					<Text>加盟店を基にSV担当者月次入力レコードを生成</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#----------------------------------------------</StepText>
 					<Text>----------------------------------------------</Text>
 				</Step>
 				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「委託取次店」 (委託取次店) ]</StepText>
+					<StepText>レイアウト切り替え [ 「加盟店」 (加盟店) ]</StepText>
 					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="43" name="委託取次店"/>
+					<Layout id="43" name="加盟店"/>
 				</Step>
 				<Step enable="True" id="23" name="全レコードを表示">
 					<StepText>全レコードを表示</StepText>
@@ -14506,14 +14506,14 @@ $cd_json;
 					<StepText>スクリプト実行 [ 「SV担当者月次入力_一括作成_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;委託取次店レコードなし&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ];
+[ &quot;log&quot;; &quot;加盟店レコードなし&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ];
 [ &quot;logUUID&quot;; $logUUID; JSONString ];
 [ &quot;recordNum&quot;; $recordNum; JSONNumber ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "委託取次店レコードなし" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ];
+[ "log"; "加盟店レコードなし" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ];
 [ "logUUID"; $logUUID; JSONString ];
 [ "recordNum"; $recordNum; JSONNumber ]
  )]]></Calculation>
@@ -14524,7 +14524,7 @@ $cd_json;
 [ &quot;type&quot;; &quot;update&quot;; </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
-[ &quot;log&quot;; &quot;委託取次店レコードなし&quot; &amp; </Chunk>
+[ &quot;log&quot;; &quot;加盟店レコードなし&quot; &amp; </Chunk>
 						<Chunk type="FunctionRef">Char</Chunk>
 						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
@@ -14604,26 +14604,26 @@ $cd_json;
 					<Text>該当年月のレコードがまだなかったら作成する</Text>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ IsEmpty( 委託取次店_SV担当者入力データ月次｜一括作成用::主キー ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty( 委託取次店_SV担当者入力データ月次｜一括作成用::主キー )]]></Calculation>
+					<StepText>If [ IsEmpty( 加盟店_SV担当者入力データ月次｜一括作成用::主キー ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty( 加盟店_SV担当者入力データ月次｜一括作成用::主キー )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef">( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="委託取次店_SV担当者入力データ月次｜一括作成用" id="1" name="主キー"/>
+							<Field table="加盟店_SV担当者入力データ月次｜一括作成用" id="1" name="主キー"/>
 						</Chunk>
 						<Chunk type="NoRef"> )</Chunk>
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $CD; 値:JSONGetElement ( $cd_json; 委託取次店::委託取次店CD &amp; &quot;.CD&quot; ) ]</StepText>
+					<StepText>変数を設定 [ $CD; 値:JSONGetElement ( $cd_json; 加盟店::加盟店CD &amp; &quot;.CD&quot; ) ]</StepText>
 					<Value>
-						<Calculation><![CDATA[JSONGetElement ( $cd_json; 委託取次店::委託取次店CD & ".CD" )]]></Calculation>
+						<Calculation><![CDATA[JSONGetElement ( $cd_json; 加盟店::加盟店CD & ".CD" )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">JSONGetElement</Chunk>
 							<Chunk type="NoRef"> ( $cd_json; </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="8" name="委託取次店CD"/>
+								<Field table="加盟店" id="8" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef"> &amp; &quot;.CD&quot; )</Chunk>
 						</DisplayCalculation>
@@ -14641,20 +14641,20 @@ $cd_json;
 					<Text>SV担当者CDがなかったとしてもレコード生成のためにフィールド設定</Text>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店_SV担当者入力データ月次｜一括作成用::_sv担当者CD; $CD ]</StepText>
+					<StepText>フィールド設定 [ 加盟店_SV担当者入力データ月次｜一括作成用::_sv担当者CD; $CD ]</StepText>
 					<Calculation><![CDATA[$CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$CD</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店_SV担当者入力データ月次｜一括作成用" id="14" name="_sv担当者CD"/>
+					<Field table="加盟店_SV担当者入力データ月次｜一括作成用" id="14" name="_sv担当者CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店_SV担当者入力データ月次｜一括作成用::一括作成UUID; $一括作成UUID ]</StepText>
+					<StepText>フィールド設定 [ 加盟店_SV担当者入力データ月次｜一括作成用::一括作成UUID; $一括作成UUID ]</StepText>
 					<Calculation><![CDATA[$一括作成UUID]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$一括作成UUID</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店_SV担当者入力データ月次｜一括作成用" id="21" name="一括作成UUID"/>
+					<Field table="加盟店_SV担当者入力データ月次｜一括作成用" id="21" name="一括作成UUID"/>
 				</Step>
 				<Step enable="True" id="75" name="レコード/検索条件確定">
 					<StepText>レコード/検索条件確定
@@ -14702,7 +14702,7 @@ $cd_json;
 					<StepText>スクリプト実行 [ 「SV担当者月次入力_一括作成_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;委託取次店レコード作成&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ];
+[ &quot;log&quot;; &quot;加盟店レコード作成&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ];
 [ &quot;logUUID&quot;; $logUUID; JSONString ];
 [ &quot;recordNum&quot;; $recordNum; JSONNumber ];
 [ &quot;recordUUID&quot;; $一括作成UUID; JSONString ]
@@ -14710,7 +14710,7 @@ $cd_json;
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "委託取次店レコード作成" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ];
+[ "log"; "加盟店レコード作成" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ];
 [ "logUUID"; $logUUID; JSONString ];
 [ "recordNum"; $recordNum; JSONNumber ];
 [ "recordUUID"; $一括作成UUID; JSONString ]
@@ -14722,7 +14722,7 @@ $cd_json;
 [ &quot;type&quot;; &quot;update&quot;; </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
-[ &quot;log&quot;; &quot;委託取次店レコード作成&quot; &amp; </Chunk>
+[ &quot;log&quot;; &quot;加盟店レコード作成&quot; &amp; </Chunk>
 						<Chunk type="FunctionRef">Char</Chunk>
 						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
@@ -14798,8 +14798,8 @@ $cd_json;
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/04/25 真板 加盟店対応</StepText>
+					<Text>2025/04/25 真板 加盟店対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -15684,11 +15684,11 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( SV担当者入力データ月次::_sv担当者CD ) or
-IsEmpty ( SV担当者入力データ月次::委託取次店CD ) or
+IsEmpty ( SV担当者入力データ月次::加盟店CD ) or
 IsEmpty ( SV担当者入力データ月次::年 ) or
 IsEmpty ( SV担当者入力データ月次::月 ) ]</StepText>
 					<Calculation><![CDATA[IsEmpty ( SV担当者入力データ月次::_sv担当者CD ) or
-IsEmpty ( SV担当者入力データ月次::委託取次店CD ) or
+IsEmpty ( SV担当者入力データ月次::加盟店CD ) or
 IsEmpty ( SV担当者入力データ月次::年 ) or
 IsEmpty ( SV担当者入力データ月次::月 )]]></Calculation>
 					<DisplayCalculation>
@@ -15704,7 +15704,7 @@ IsEmpty ( SV担当者入力データ月次::月 )]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+							<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">or</Chunk>
@@ -15730,12 +15730,12 @@ IsEmpty ( SV担当者入力データ月次::月 )]]></Calculation>
 				<Step enable="True" id="87" name="カスタムダイアログを表示">
 					<StepText>カスタムダイアログを表示 [ タイトル: &quot;エラー&quot;; メッセージ: Let ([
 #a = SV担当者入力データ月次::_sv担当者CD ;
-#b = SV担当者入力データ月次::委託取次店CD
+#b = SV担当者入力データ月次::加盟店CD
 ];
 
 If(IsEmpty ( #a )  ; &quot;SV担当者&quot; ; &quot;&quot; ) &amp; 
 If(IsEmpty ( #a &amp; #b )  ; &quot;・&quot; ; &quot;&quot; ) &amp; 
-If(IsEmpty ( #b )  ; &quot;委託取次店CD&quot; ; &quot;&quot; ) &amp; 
+If(IsEmpty ( #b )  ; &quot;加盟店CD&quot; ; &quot;&quot; ) &amp; 
 &quot;が空欄のため、週次追加できません&quot;
 ); デフォルトボタン: 「OK」, 確定: 「はい」 ]</StepText>
 					<Title>
@@ -15747,12 +15747,12 @@ If(IsEmpty ( #b )  ; &quot;委託取次店CD&quot; ; &quot;&quot; ) &amp;
 					<Message>
 						<Calculation><![CDATA[Let ([
 #a = SV担当者入力データ月次::_sv担当者CD ;
-#b = SV担当者入力データ月次::委託取次店CD
+#b = SV担当者入力データ月次::加盟店CD
 ];
 
 If(IsEmpty ( #a )  ; "SV担当者" ; "" ) & 
 If(IsEmpty ( #a & #b )  ; "・" ; "" ) & 
-If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) & 
+If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) & 
 "が空欄のため、週次追加できません"
 )]]></Calculation>
 						<DisplayCalculation>
@@ -15765,7 +15765,7 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 							<Chunk type="NoRef"> ;
 #b = </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">
 ];
@@ -15784,7 +15784,7 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 							<Chunk type="FunctionRef">If</Chunk>
 							<Chunk type="NoRef">(</Chunk>
 							<Chunk type="FunctionRef">IsEmpty</Chunk>
-							<Chunk type="NoRef"> ( #b )  ; &quot;委託取次店CD&quot; ; &quot;&quot; ) &amp; 
+							<Chunk type="NoRef"> ( #b )  ; &quot;加盟店CD&quot; ; &quot;&quot; ) &amp; 
 &quot;が空欄のため、週次追加できません&quot;
 )</Chunk>
 						</DisplayCalculation>
@@ -16132,7 +16132,7 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="47" name="SV担当者入力データ｜委託取次店カードを開く">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="47" name="SV担当者入力データ｜加盟店カードを開く">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -16155,15 +16155,15 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「SV担当者入力データ｜委託取次店カード｜グローバル設定」; 引数: &quot;set&quot; ]</StepText>
+					<StepText>スクリプト実行 [ 「SV担当者入力データ｜加盟店カード｜グローバル設定」; 引数: &quot;set&quot; ]</StepText>
 					<Calculation><![CDATA["set"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;set&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="50" name="SV担当者入力データ｜委託取次店カード｜グローバル設定"/>
+					<Script id="50" name="SV担当者入力データ｜加盟店カード｜グローバル設定"/>
 				</Step>
 				<Step enable="True" id="122" name="新規ウインドウ">
-					<StepText>新規ウインドウ [ スタイル: カード; 使用するレイアウト: 「委託取次店｜カード」 (委託取次店); 高さ: 450; 閉じる: いいえ; 最小化: いいえ; 最大化: いいえ; サイズ変更: いいえ; メニューバー: いいえ; 親ウインドウを淡色表示: はい; ツールバー: いいえ ]</StepText>
+					<StepText>新規ウインドウ [ スタイル: カード; 使用するレイアウト: 「加盟店｜カード」 (加盟店); 高さ: 450; 閉じる: いいえ; 最小化: いいえ; 最大化: いいえ; サイズ変更: いいえ; メニューバー: いいえ; 親ウインドウを淡色表示: はい; ツールバー: いいえ ]</StepText>
 					<LayoutDestination value="SelectedLayout"/>
 					<Height>
 						<Calculation><![CDATA[450]]></Calculation>
@@ -16172,18 +16172,18 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 						</DisplayCalculation>
 					</Height>
 					<NewWndStyles DimParentWindow="はい" Toolbars="いいえ" MenuBar="いいえ" Style="Card" Close="いいえ" Minimize="いいえ" Maximize="いいえ" Resize="いいえ" Styles="3222274064"/>
-					<Layout id="85" name="委託取次店｜カード"/>
+					<Layout id="85" name="加盟店｜カード"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#SV担当者が紐づく委託取次店のみ表示する</StepText>
-					<Text>SV担当者が紐づく委託取次店のみ表示する</Text>
+					<StepText>#SV担当者が紐づく加盟店のみ表示する</StepText>
+					<Text>SV担当者が紐づく加盟店のみ表示する</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#入力画面の委託取次店CD欄に値がある場合はコードor名称で絞り込む　※フィールドはCDだが検索用に名称を入れてボタン押下する場合もあり</StepText>
-					<Text>入力画面の委託取次店CD欄に値がある場合はコードor名称で絞り込む　※フィールドはCDだが検索用に名称を入れてボタン押下する場合もあり</Text>
+					<StepText>#入力画面の加盟店CD欄に値がある場合はコードor名称で絞り込む　※フィールドはCDだが検索用に名称を入れてボタン押下する場合もあり</StepText>
+					<Text>入力画面の加盟店CD欄に値がある場合はコードor名称で絞り込む　※フィールドはCDだが検索用に名称を入れてボタン押下する場合もあり</Text>
 				</Step>
 				<Step enable="True" id="22" name="検索モードに切り替え">
 					<StepText>検索モードに切り替え [  ]</StepText>
@@ -16191,39 +16191,39 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 					<Restore state="False"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店_tagging中間テーブル::タグID; $$SV担当者入力データ｜SV担当者タグID ]</StepText>
+					<StepText>フィールド設定 [ 加盟店_tagging中間テーブル::タグID; $$SV担当者入力データ｜SV担当者タグID ]</StepText>
 					<Calculation><![CDATA[$$SV担当者入力データ｜SV担当者タグID]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$$SV担当者入力データ｜SV担当者タグID</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店_tagging中間テーブル" id="7" name="タグID"/>
+					<Field table="加盟店_tagging中間テーブル" id="7" name="タグID"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店::委託取次店CD; $$SV担当者入力データ｜委託取次店CD ]</StepText>
-					<Calculation><![CDATA[$$SV担当者入力データ｜委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ 加盟店::加盟店CD; $$SV担当者入力データ｜加盟店CD ]</StepText>
+					<Calculation><![CDATA[$$SV担当者入力データ｜加盟店CD]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">$$SV担当者入力データ｜委託取次店CD</Chunk>
+						<Chunk type="NoRef">$$SV担当者入力データ｜加盟店CD</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店" id="8" name="委託取次店CD"/>
+					<Field table="加盟店" id="8" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="7" name="新規レコード/検索条件">
 					<StepText>新規レコード/検索条件</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店_tagging中間テーブル::タグID; $$SV担当者入力データ｜SV担当者タグID ]</StepText>
+					<StepText>フィールド設定 [ 加盟店_tagging中間テーブル::タグID; $$SV担当者入力データ｜SV担当者タグID ]</StepText>
 					<Calculation><![CDATA[$$SV担当者入力データ｜SV担当者タグID]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$$SV担当者入力データ｜SV担当者タグID</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店_tagging中間テーブル" id="7" name="タグID"/>
+					<Field table="加盟店_tagging中間テーブル" id="7" name="タグID"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店::委託取次店名; $$SV担当者入力データ｜委託取次店CD ]</StepText>
-					<Calculation><![CDATA[$$SV担当者入力データ｜委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ 加盟店::加盟店名; $$SV担当者入力データ｜加盟店CD ]</StepText>
+					<Calculation><![CDATA[$$SV担当者入力データ｜加盟店CD]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">$$SV担当者入力データ｜委託取次店CD</Chunk>
+						<Chunk type="NoRef">$$SV担当者入力データ｜加盟店CD</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店" id="9" name="委託取次店名"/>
+					<Field table="加盟店" id="9" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -16237,7 +16237,7 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="49" name="SV担当者入力データ｜委託取次店カードを閉じる">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="49" name="SV担当者入力データ｜加盟店カードを閉じる">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -16250,12 +16250,12 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「SV担当者入力データ｜委託取次店カード｜グローバル設定」; 引数: &quot;reset&quot; ]</StepText>
+					<StepText>スクリプト実行 [ 「SV担当者入力データ｜加盟店カード｜グローバル設定」; 引数: &quot;reset&quot; ]</StepText>
 					<Calculation><![CDATA["reset"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;reset&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="50" name="SV担当者入力データ｜委託取次店カード｜グローバル設定"/>
+					<Script id="50" name="SV担当者入力データ｜加盟店カード｜グローバル設定"/>
 				</Step>
 				<Step enable="True" id="121" name="ウインドウを閉じる">
 					<StepText>ウインドウを閉じる [ 現在のウインドウ ]</StepText>
@@ -16264,7 +16264,7 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="48" name="SV担当者入力データ｜委託取次店カード｜検索実行ボタン">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="48" name="SV担当者入力データ｜加盟店カード｜検索実行ボタン">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -16296,12 +16296,12 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 					<Restore state="False"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店_tagging中間テーブル::タグID; $$SV担当者入力データ｜SV担当者タグID ]</StepText>
+					<StepText>フィールド設定 [ 加盟店_tagging中間テーブル::タグID; $$SV担当者入力データ｜SV担当者タグID ]</StepText>
 					<Calculation><![CDATA[$$SV担当者入力データ｜SV担当者タグID]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$$SV担当者入力データ｜SV担当者タグID</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店_tagging中間テーブル" id="7" name="タグID"/>
+					<Field table="加盟店_tagging中間テーブル" id="7" name="タグID"/>
 				</Step>
 				<Step enable="True" id="126" name="対象レコードの絞り込み">
 					<StepText>対象レコードの絞り込み [  ]</StepText>
@@ -16313,15 +16313,15 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="51" name="SV担当者入力データ｜委託取次店カード｜選択">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="51" name="SV担当者入力データ｜加盟店カード｜選択">
 			<StepList>
 				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $委託取次店CD; 値:委託取次店::委託取次店CD ]</StepText>
+					<StepText>変数を設定 [ $加盟店CD; 値:加盟店::加盟店CD ]</StepText>
 					<Value>
-						<Calculation><![CDATA[委託取次店::委託取次店CD]]></Calculation>
+						<Calculation><![CDATA[加盟店::加盟店CD]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="8" name="委託取次店CD"/>
+								<Field table="加盟店" id="8" name="加盟店CD"/>
 							</Chunk>
 						</DisplayCalculation>
 					</Value>
@@ -16331,25 +16331,25 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 							<Chunk type="NoRef">1</Chunk>
 						</DisplayCalculation>
 					</Repetition>
-					<Name>$委託取次店CD</Name>
+					<Name>$加盟店CD</Name>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「SV担当者入力データ｜委託取次店カードを閉じる」 ]</StepText>
-					<Script id="49" name="SV担当者入力データ｜委託取次店カードを閉じる"/>
+					<StepText>スクリプト実行 [ 「SV担当者入力データ｜加盟店カードを閉じる」 ]</StepText>
+					<Script id="49" name="SV担当者入力データ｜加盟店カードを閉じる"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::委託取次店CD; $委託取次店CD ]</StepText>
-					<Calculation><![CDATA[$委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次::加盟店CD; $加盟店CD ]</StepText>
+					<Calculation><![CDATA[$加盟店CD]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">$委託取次店CD</Chunk>
+						<Chunk type="NoRef">$加盟店CD</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+					<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="75" name="レコード/検索条件確定">
 					<StepText>レコード/検索条件確定
@@ -16360,7 +16360,7 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="50" name="SV担当者入力データ｜委託取次店カード｜グローバル設定">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="50" name="SV担当者入力データ｜加盟店カード｜グローバル設定">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -16413,12 +16413,12 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 					<Name>$$SV担当者入力データ｜SV担当者タグID</Name>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $$SV担当者入力データ｜委託取次店CD; 値:SV担当者入力データ月次::委託取次店CD ]</StepText>
+					<StepText>変数を設定 [ $$SV担当者入力データ｜加盟店CD; 値:SV担当者入力データ月次::加盟店CD ]</StepText>
 					<Value>
-						<Calculation><![CDATA[SV担当者入力データ月次::委託取次店CD]]></Calculation>
+						<Calculation><![CDATA[SV担当者入力データ月次::加盟店CD]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 							</Chunk>
 						</DisplayCalculation>
 					</Value>
@@ -16428,7 +16428,7 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 							<Chunk type="NoRef">1</Chunk>
 						</DisplayCalculation>
 					</Repetition>
-					<Name>$$SV担当者入力データ｜委託取次店CD</Name>
+					<Name>$$SV担当者入力データ｜加盟店CD</Name>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -16457,7 +16457,7 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 					<Name>$$SV担当者入力データ｜SV担当者タグID</Name>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $$SV担当者入力データ｜委託取次店CD; 値:&quot;&quot; ]</StepText>
+					<StepText>変数を設定 [ $$SV担当者入力データ｜加盟店CD; 値:&quot;&quot; ]</StepText>
 					<Value>
 						<Calculation><![CDATA[""]]></Calculation>
 						<DisplayCalculation>
@@ -16470,7 +16470,7 @@ If(IsEmpty ( #b )  ; "委託取次店CD" ; "" ) &
 							<Chunk type="NoRef">1</Chunk>
 						</DisplayCalculation>
 					</Repetition>
-					<Name>$$SV担当者入力データ｜委託取次店CD</Name>
+					<Name>$$SV担当者入力データ｜加盟店CD</Name>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -17112,10 +17112,10 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty (SV担当者入力データ月次_委託取次店::委託取次店名 ) and
+					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_委託取次店::委託取次店名 ) and
+					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<DisplayCalculation>
@@ -17124,7 +17124,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="9" name="委託取次店名"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="9" name="加盟店名"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -17152,44 +17152,44 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店CD; SV担当者入力データ月次::委託取次店CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店CD; SV担当者入力データ月次::加盟店CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次::加盟店CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+							<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店名; SV担当者入力データ月次_委託取次店::委託取次店名_略称 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_委託取次店::委託取次店名_略称]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; SV担当者入力データ月次_加盟店::加盟店名_略称 ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店名_略称]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="委託取次店名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人CD; SV担当者入力データ月次_委託取次店::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_委託取次店::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="7" name="委託取次店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="委託取次店法人CD"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人名; SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称 ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="委託取次店法人名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
@@ -17251,7 +17251,7 @@ FROM \&quot;tagging中間テーブル\&quot;
 WHERE \&quot;tagabble_id\&quot; = ?
 AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -17270,7 +17270,7 @@ FROM \"tagging中間テーブル\"
 WHERE \"tagabble_id\" = ?
 AND \"カテゴリID\" = ? ";
 "" ; "" ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -17294,7 +17294,7 @@ AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt]
@@ -17335,7 +17335,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -17361,7 +17361,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -17412,7 +17412,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -17553,29 +17553,29 @@ $カテゴリID[$cnt];
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店CD; 物件別管理データ::委託取次店CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店CD; 物件別管理データ::加盟店CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ::加盟店CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+							<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店名; 物件別管理データ_委託取次店::委託取次店名_略称 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ_委託取次店::委託取次店名_略称]]></Calculation>
+					<StepText>//  フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店名; 物件別管理データ_加盟店::加盟店名_略称 ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店::加盟店名_略称]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="物件別管理データ_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
 
-#a = SV担当者入力データ月次_委託取次店::委託取次店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -17584,7 +17584,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店::委託取次店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -17597,7 +17597,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -17611,32 +17611,32 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="委託取次店名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店法人CD; 物件別管理データ::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="16" name="委託取次店法人CD"/>
+							<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店法人名; 物件別管理データ_委託取次店法人::委託取次店法人名_略称 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ_委託取次店法人::委託取次店法人名_略称]]></Calculation>
+					<StepText>//  フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; 物件別管理データ_加盟店法人::加盟店法人名_略称 ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店法人::加盟店法人名_略称]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="物件別管理データ_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -17645,7 +17645,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -17658,7 +17658,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -17672,7 +17672,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="委託取次店法人名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::OK実績; 物件別管理データ::受注金額 ]</StepText>
@@ -17974,7 +17974,7 @@ FROM \&quot;tagging中間テーブル\&quot;
 WHERE \&quot;tagabble_id\&quot; = ?
 AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -17993,7 +17993,7 @@ FROM \"tagging中間テーブル\"
 WHERE \"tagabble_id\" = ?
 AND \"カテゴリID\" = ? ";
 "" ; "" ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -18017,7 +18017,7 @@ AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt]
@@ -18055,7 +18055,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
 Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) )
@@ -18078,7 +18078,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
 Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) )
@@ -18106,7 +18106,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -18177,7 +18177,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -18203,7 +18203,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -18262,7 +18262,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -19145,10 +19145,10 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty (SV担当者入力データ月次_委託取次店::委託取次店名 ) and
+					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_委託取次店::委託取次店名 ) and
+					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<DisplayCalculation>
@@ -19157,7 +19157,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="9" name="委託取次店名"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="9" name="加盟店名"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -19185,19 +19185,19 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店CD; SV担当者入力データ月次::委託取次店CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店CD; SV担当者入力データ月次::加盟店CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次::加盟店CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+							<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
 
-#a = SV担当者入力データ月次_委託取次店::委託取次店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19206,7 +19206,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店::委託取次店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19219,7 +19219,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -19233,22 +19233,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="委託取次店名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人CD; SV担当者入力データ月次_委託取次店::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_委託取次店::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店" id="7" name="委託取次店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店" id="7" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="委託取次店法人CD"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19257,7 +19257,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19270,7 +19270,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -19284,7 +19284,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="委託取次店法人名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
@@ -19346,7 +19346,7 @@ FROM \&quot;tagging中間テーブル\&quot;
 WHERE \&quot;tagabble_id\&quot; = ?
 AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -19365,7 +19365,7 @@ FROM \"tagging中間テーブル\"
 WHERE \"tagabble_id\" = ?
 AND \"カテゴリID\" = ? ";
 "" ; "" ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -19389,7 +19389,7 @@ AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt]
@@ -19430,7 +19430,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -19456,7 +19456,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次::委託取次店CD;
+SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -19507,7 +19507,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="委託取次店CD"/>
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -19638,19 +19638,19 @@ $カテゴリID[$cnt];
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店CD; 物件別管理データ::委託取次店CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店CD; 物件別管理データ::加盟店CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ::加盟店CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+							<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="6" name="委託取次店CD"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店名; Let(
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 物件別管理データ_委託取次店::委託取次店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19659,7 +19659,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_委託取次店::委託取次店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19672,7 +19672,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店" id="17" name="委託取次店名_略称"/>
+							<Field table="物件別管理データ_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -19686,22 +19686,22 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="委託取次店名"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店法人CD; 物件別管理データ::委託取次店法人CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::委託取次店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="16" name="委託取次店法人CD"/>
+							<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="委託取次店法人CD"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 物件別管理データ_委託取次店法人::委託取次店法人名_略称;
+#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19710,7 +19710,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_委託取次店法人::委託取次店法人名_略称;
+#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19723,7 +19723,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="物件別管理データ_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -19737,12 +19737,12 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="委託取次店法人名"/>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::委託取次店法人名; Let(
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19751,7 +19751,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_委託取次店_委託取次店法人::委託取次店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19764,7 +19764,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_委託取次店_委託取次店法人" id="16" name="委託取次店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -19778,7 +19778,7 @@ IsEmpty ( #a ) ; "その他" ;
 )
 )</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="委託取次店法人名"/>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::OK実績; 物件別管理データ::受注金額 ]</StepText>
@@ -19880,7 +19880,7 @@ FROM \&quot;tagging中間テーブル\&quot;
 WHERE \&quot;tagabble_id\&quot; = ?
 AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -19899,7 +19899,7 @@ FROM \"tagging中間テーブル\"
 WHERE \"tagabble_id\" = ?
 AND \"カテゴリID\" = ? ";
 "" ; "" ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt]
 );
 
@@ -19923,7 +19923,7 @@ AND \&quot;カテゴリID\&quot; = ? &quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt]
@@ -19964,7 +19964,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -19990,7 +19990,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::委託取次店CD;
+物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -20049,7 +20049,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -22046,10 +22046,10 @@ $json;
 ソースフィールド 8 のインポート 物件別管理データ::集計用店所名; 
 ソースフィールド 9 のインポート 物件別管理データ::集計用部課CD; 
 ソースフィールド 10 のインポート 物件別管理データ::集計用部課名; 
-ソースフィールド 11 のインポート 物件別管理データ::委託取次店法人CD; 
-ソースフィールド 12 のインポート 物件別管理データ::委託取次店法人名; 
-ソースフィールド 13 のインポート 物件別管理データ::委託取次店CD; 
-ソースフィールド 14 のインポート 物件別管理データ::委託取次店名; 
+ソースフィールド 11 のインポート 物件別管理データ::加盟店法人CD; 
+ソースフィールド 12 のインポート 物件別管理データ::加盟店法人名; 
+ソースフィールド 13 のインポート 物件別管理データ::加盟店CD; 
+ソースフィールド 14 のインポート 物件別管理データ::加盟店名; 
 ソースフィールド 15 のインポート 物件別管理データ::担当者CD; 
 ソースフィールド 16 のインポート 物件別管理データ::担当者名; 
 ソースフィールド 17 のインポート 物件別管理データ::P担当者CD; 
@@ -22157,10 +22157,10 @@ $json;
 						<Field FieldOptions="0" map="Import" id="13" name="集計用店所名"/>
 						<Field FieldOptions="0" map="Import" id="14" name="集計用部課CD"/>
 						<Field FieldOptions="0" map="Import" id="15" name="集計用部課名"/>
-						<Field FieldOptions="0" map="Import" id="16" name="委託取次店法人CD"/>
-						<Field FieldOptions="0" map="Import" id="17" name="委託取次店法人名"/>
-						<Field FieldOptions="0" map="Import" id="18" name="委託取次店CD"/>
-						<Field FieldOptions="0" map="Import" id="19" name="委託取次店名"/>
+						<Field FieldOptions="0" map="Import" id="16" name="加盟店法人CD"/>
+						<Field FieldOptions="0" map="Import" id="17" name="加盟店法人名"/>
+						<Field FieldOptions="0" map="Import" id="18" name="加盟店CD"/>
+						<Field FieldOptions="0" map="Import" id="19" name="加盟店名"/>
 						<Field FieldOptions="0" map="Import" id="20" name="担当者CD"/>
 						<Field FieldOptions="0" map="Import" id="21" name="担当者名"/>
 						<Field FieldOptions="0" map="Import" id="22" name="P担当者CD"/>
@@ -22419,14 +22419,14 @@ $json;
 					<Field table="物件別管理データ_営業担当者" id="8" name="担当者名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_営業担当者::委託取次店CD; 物件別管理データ::委託取次店CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::委託取次店CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_営業担当者::加盟店CD; 物件別管理データ::加盟店CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ::加盟店CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="18" name="委託取次店CD"/>
+							<Field table="物件別管理データ" id="18" name="加盟店CD"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="物件別管理データ_営業担当者" id="9" name="委託取次店CD"/>
+					<Field table="物件別管理データ_営業担当者" id="9" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="75" name="レコード/検索条件確定">
 					<StepText>レコード/検索条件確定
@@ -22834,8 +22834,8 @@ $json;
 ソースフィールド 6 のインポート 売上集計表::販売担当者名; 
 ソースフィールド 7 のインポート 売上集計表::売上番号; 
 ソースフィールド 8 のインポート 売上集計表::受注番号; 
-ソースフィールド 9 のインポート 売上集計表::委託取次店コード; 
-ソースフィールド 10 のインポート 売上集計表::委託取次店名; 
+ソースフィールド 9 のインポート 売上集計表::加盟店コード; 
+ソースフィールド 10 のインポート 売上集計表::加盟店名; 
 ソースフィールド 11 のインポート 売上集計表::顧客コード; 
 ソースフィールド 12 のインポート 売上集計表::顧客名; 
 ソースフィールド 13 のインポート 売上集計表::請求先コード; 
@@ -22871,8 +22871,8 @@ $json;
 						<Field FieldOptions="0" map="Import" id="11" name="販売担当者名"/>
 						<Field FieldOptions="0" map="Import" id="12" name="売上番号"/>
 						<Field FieldOptions="0" map="Import" id="13" name="受注番号"/>
-						<Field FieldOptions="0" map="Import" id="14" name="委託取次店コード"/>
-						<Field FieldOptions="0" map="Import" id="15" name="委託取次店名"/>
+						<Field FieldOptions="0" map="Import" id="14" name="加盟店コード"/>
+						<Field FieldOptions="0" map="Import" id="15" name="加盟店名"/>
 						<Field FieldOptions="0" map="Import" id="16" name="顧客コード"/>
 						<Field FieldOptions="0" map="Import" id="17" name="顧客名"/>
 						<Field FieldOptions="0" map="Import" id="18" name="請求先コード"/>
@@ -27382,10 +27382,10 @@ $json;
 ソースフィールド 8 のインポート 物件別管理データ::集計用店所名; 
 ソースフィールド 9 のインポート 物件別管理データ::集計用部課CD; 
 ソースフィールド 10 のインポート 物件別管理データ::集計用部課名; 
-ソースフィールド 11 のインポート 物件別管理データ::委託取次店法人CD; 
-ソースフィールド 12 のインポート 物件別管理データ::委託取次店法人名; 
-ソースフィールド 13 のインポート 物件別管理データ::委託取次店CD; 
-ソースフィールド 14 のインポート 物件別管理データ::委託取次店名; 
+ソースフィールド 11 のインポート 物件別管理データ::加盟店法人CD; 
+ソースフィールド 12 のインポート 物件別管理データ::加盟店法人名; 
+ソースフィールド 13 のインポート 物件別管理データ::加盟店CD; 
+ソースフィールド 14 のインポート 物件別管理データ::加盟店名; 
 ソースフィールド 15 のインポート 物件別管理データ::担当者CD; 
 ソースフィールド 16 のインポート 物件別管理データ::担当者名; 
 ソースフィールド 17 のインポート 物件別管理データ::P担当者CD; 
@@ -27492,10 +27492,10 @@ $json;
 						<Field FieldOptions="0" map="Import" id="13" name="集計用店所名"/>
 						<Field FieldOptions="0" map="Import" id="14" name="集計用部課CD"/>
 						<Field FieldOptions="0" map="Import" id="15" name="集計用部課名"/>
-						<Field FieldOptions="0" map="Import" id="16" name="委託取次店法人CD"/>
-						<Field FieldOptions="0" map="Import" id="17" name="委託取次店法人名"/>
-						<Field FieldOptions="0" map="Import" id="18" name="委託取次店CD"/>
-						<Field FieldOptions="0" map="Import" id="19" name="委託取次店名"/>
+						<Field FieldOptions="0" map="Import" id="16" name="加盟店法人CD"/>
+						<Field FieldOptions="0" map="Import" id="17" name="加盟店法人名"/>
+						<Field FieldOptions="0" map="Import" id="18" name="加盟店CD"/>
+						<Field FieldOptions="0" map="Import" id="19" name="加盟店名"/>
 						<Field FieldOptions="0" map="Import" id="20" name="担当者CD"/>
 						<Field FieldOptions="0" map="Import" id="21" name="担当者名"/>
 						<Field FieldOptions="0" map="Import" id="22" name="P担当者CD"/>
@@ -27649,8 +27649,8 @@ $json;
 ソースフィールド 6 のインポート 売上集計表::販売担当者名; 
 ソースフィールド 7 のインポート 売上集計表::売上番号; 
 ソースフィールド 8 のインポート 売上集計表::受注番号; 
-ソースフィールド 9 のインポート 売上集計表::委託取次店コード; 
-ソースフィールド 10 のインポート 売上集計表::委託取次店名; 
+ソースフィールド 9 のインポート 売上集計表::加盟店コード; 
+ソースフィールド 10 のインポート 売上集計表::加盟店名; 
 ソースフィールド 11 のインポート 売上集計表::顧客コード; 
 ソースフィールド 12 のインポート 売上集計表::顧客名; 
 ソースフィールド 13 のインポート 売上集計表::請求先コード; 
@@ -27685,8 +27685,8 @@ $json;
 						<Field FieldOptions="0" map="Import" id="11" name="販売担当者名"/>
 						<Field FieldOptions="0" map="Import" id="12" name="売上番号"/>
 						<Field FieldOptions="0" map="Import" id="13" name="受注番号"/>
-						<Field FieldOptions="0" map="Import" id="14" name="委託取次店コード"/>
-						<Field FieldOptions="0" map="Import" id="15" name="委託取次店名"/>
+						<Field FieldOptions="0" map="Import" id="14" name="加盟店コード"/>
+						<Field FieldOptions="0" map="Import" id="15" name="加盟店名"/>
 						<Field FieldOptions="0" map="Import" id="16" name="顧客コード"/>
 						<Field FieldOptions="0" map="Import" id="17" name="顧客名"/>
 						<Field FieldOptions="0" map="Import" id="18" name="請求先コード"/>
@@ -29119,7 +29119,7 @@ $json;
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="True" id="44" name="委託取次店_同一タグチェック">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="True" id="44" name="加盟店_同一タグチェック">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -29148,8 +29148,8 @@ $json;
 
 &quot;&quot;; &quot;&quot;;
 
-委託取次店::BaseTableID_g;
-委託取次店::委託取次店CD;
+加盟店::BaseTableID_g;
+加盟店::加盟店CD;
 global::カテゴリID_SV担当者_g
 
  ) ]</StepText>
@@ -29173,8 +29173,8 @@ global::カテゴリID_SV担当者_g
 
 ""; "";
 
-委託取次店::BaseTableID_g;
-委託取次店::委託取次店CD;
+加盟店::BaseTableID_g;
+加盟店::加盟店CD;
 global::カテゴリID_SV担当者_g
 
  )]]></Calculation>
@@ -29201,12 +29201,12 @@ global::カテゴリID_SV担当者_g
 
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="11" name="BaseTableID_g"/>
+								<Field table="加盟店" id="11" name="BaseTableID_g"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="8" name="委託取次店CD"/>
+								<Field table="加盟店" id="8" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 </Chunk>
@@ -29246,8 +29246,8 @@ global::カテゴリID_SV担当者_g
 
 &quot;&quot;; &quot;&quot;;
 
-委託取次店::BaseTableID_g;
-委託取次店::委託取次店CD;
+加盟店::BaseTableID_g;
+加盟店::加盟店CD;
 global::カテゴリID_管轄_g
 
  ) ]</StepText>
@@ -29271,8 +29271,8 @@ global::カテゴリID_管轄_g
 
 ""; "";
 
-委託取次店::BaseTableID_g;
-委託取次店::委託取次店CD;
+加盟店::BaseTableID_g;
+加盟店::加盟店CD;
 global::カテゴリID_管轄_g
 
  )]]></Calculation>
@@ -29299,12 +29299,12 @@ global::カテゴリID_管轄_g
 
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="11" name="BaseTableID_g"/>
+								<Field table="加盟店" id="11" name="BaseTableID_g"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="8" name="委託取次店CD"/>
+								<Field table="加盟店" id="8" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 </Chunk>
@@ -29325,7 +29325,7 @@ global::カテゴリID_管轄_g
 					<Name>$SV管轄タグ数</Name>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $SV委託タグ数; 値:ExecuteSQL ( 
+					<StepText>変数を設定 [ $SV加盟タグ数; 値:ExecuteSQL ( 
 &quot;
  select
   count(*)
@@ -29344,9 +29344,9 @@ global::カテゴリID_管轄_g
 
 &quot;&quot;; &quot;&quot;;
 
-委託取次店::BaseTableID_g;
-委託取次店::委託取次店CD;
-global::カテゴリID_委託_g
+加盟店::BaseTableID_g;
+加盟店::加盟店CD;
+global::カテゴリID_加盟_g
 
  ) ]</StepText>
 					<Value>
@@ -29369,9 +29369,9 @@ global::カテゴリID_委託_g
 
 ""; "";
 
-委託取次店::BaseTableID_g;
-委託取次店::委託取次店CD;
-global::カテゴリID_委託_g
+加盟店::BaseTableID_g;
+加盟店::加盟店CD;
+global::カテゴリID_加盟_g
 
  )]]></Calculation>
 						<DisplayCalculation>
@@ -29397,17 +29397,17 @@ global::カテゴリID_委託_g
 
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="11" name="BaseTableID_g"/>
+								<Field table="加盟店" id="11" name="BaseTableID_g"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="8" name="委託取次店CD"/>
+								<Field table="加盟店" id="8" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="global" id="22" name="カテゴリID_委託_g"/>
+								<Field table="global" id="22" name="カテゴリID_加盟_g"/>
 							</Chunk>
 							<Chunk type="NoRef">
 
@@ -29420,7 +29420,7 @@ global::カテゴリID_委託_g
 							<Chunk type="NoRef">1</Chunk>
 						</DisplayCalculation>
 					</Repetition>
-					<Name>$SV委託タグ数</Name>
+					<Name>$SV加盟タグ数</Name>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -29430,14 +29430,14 @@ global::カテゴリID_委託_g
 					<Text>この入力で1を超える(自分が2つ目以上になる)場合は止める</Text>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ $SV担当者タグ数 &gt; 1 or $SV管轄タグ数 &gt; 1 or $SV委託タグ数 &gt; 1 ]</StepText>
-					<Calculation><![CDATA[$SV担当者タグ数 > 1 or $SV管轄タグ数 > 1 or $SV委託タグ数 > 1]]></Calculation>
+					<StepText>If [ $SV担当者タグ数 &gt; 1 or $SV管轄タグ数 &gt; 1 or $SV加盟タグ数 &gt; 1 ]</StepText>
+					<Calculation><![CDATA[$SV担当者タグ数 > 1 or $SV管轄タグ数 > 1 or $SV加盟タグ数 > 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$SV担当者タグ数 &gt; 1 </Chunk>
 						<Chunk type="FunctionRef">or</Chunk>
 						<Chunk type="NoRef"> $SV管轄タグ数 &gt; 1 </Chunk>
 						<Chunk type="FunctionRef">or</Chunk>
-						<Chunk type="NoRef"> $SV委託タグ数 &gt; 1</Chunk>
+						<Chunk type="NoRef"> $SV加盟タグ数 &gt; 1</Chunk>
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="87" name="カスタムダイアログを表示">
@@ -29492,8 +29492,8 @@ global::カテゴリID_委託_g
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/04/25 真板 加盟店対応</StepText>
+					<Text>2025/04/25 真板 加盟店対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -29501,7 +29501,7 @@ global::カテゴリID_委託_g
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="84" name="委託取次店_その他タグセット">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="84" name="加盟店_その他タグセット">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -29512,16 +29512,16 @@ global::カテゴリID_委託_g
 					<Text>◆作成情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#機能概要	：委託取次店テーブルで委託取次店CDを入力する際に各カテゴリのその他タグを付与する</StepText>
-					<Text>機能概要	：委託取次店テーブルで委託取次店CDを入力する際に各カテゴリのその他タグを付与する</Text>
+					<StepText>#機能概要	：加盟店テーブルで加盟店CDを入力する際に各カテゴリのその他タグを付与する</StepText>
+					<Text>機能概要	：加盟店テーブルで加盟店CDを入力する際に各カテゴリのその他タグを付与する</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#引数		：なし</StepText>
 					<Text>引数		：なし</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#トリガ		：委託取次店レイアウト／委託取次店CDフィールドにExitトリガ(すり抜け防止のためExit)</StepText>
-					<Text>トリガ		：委託取次店レイアウト／委託取次店CDフィールドにExitトリガ(すり抜け防止のためExit)</Text>
+					<StepText>#トリガ		：加盟店レイアウト／加盟店CDフィールドにExitトリガ(すり抜け防止のためExit)</StepText>
+					<Text>トリガ		：加盟店レイアウト／加盟店CDフィールドにExitトリガ(すり抜け防止のためExit)</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#作成日	：2024/12/10</StepText>
@@ -29547,13 +29547,13 @@ global::カテゴリID_委託_g
 					<Text>タグ付与済なら終了　※すり抜け防止でExitトリガにしているため、カーソルインしただけの場合を考慮</Text>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ Count( 委託取次店_tagging中間テーブル::タグID ) &gt; 0 ]</StepText>
-					<Calculation><![CDATA[Count( 委託取次店_tagging中間テーブル::タグID ) > 0]]></Calculation>
+					<StepText>If [ Count( 加盟店_tagging中間テーブル::タグID ) &gt; 0 ]</StepText>
+					<Calculation><![CDATA[Count( 加盟店_tagging中間テーブル::タグID ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Count</Chunk>
 						<Chunk type="NoRef">( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="委託取次店_tagging中間テーブル" id="7" name="タグID"/>
+							<Field table="加盟店_tagging中間テーブル" id="7" name="タグID"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) &gt; 0</Chunk>
 					</DisplayCalculation>
@@ -29571,8 +29571,8 @@ global::カテゴリID_委託_g
 					<StepText/>
 				</Step>
 				<Step enable="True" id="87" name="カスタムダイアログを表示">
-					<StepText>カスタムダイアログを表示 [ タイトル: &quot;確認&quot;; メッセージ: &quot;委託取次店CDを &quot; &amp; 委託取次店::委託取次店CD &amp; &quot; に設定します&quot; &amp; ¶ &amp; 
-&quot;管轄、委託、SV担当者タグに \&quot;その他\&quot; を設定します&quot;; デフォルトボタン: 「確定する」, 確定: 「はい」; ボタン 2: 「訂正する」, 確定: 「いいえ」; ボタン 3: 「レコード削除」, 確定: 「いいえ」 ]</StepText>
+					<StepText>カスタムダイアログを表示 [ タイトル: &quot;確認&quot;; メッセージ: &quot;加盟店CDを &quot; &amp; 加盟店::加盟店CD &amp; &quot; に設定します&quot; &amp; ¶ &amp; 
+&quot;管轄、加盟、SV担当者タグに \&quot;その他\&quot; を設定します&quot;; デフォルトボタン: 「確定する」, 確定: 「はい」; ボタン 2: 「訂正する」, 確定: 「いいえ」; ボタン 3: 「レコード削除」, 確定: 「いいえ」 ]</StepText>
 					<Title>
 						<Calculation><![CDATA["確認"]]></Calculation>
 						<DisplayCalculation>
@@ -29580,15 +29580,15 @@ global::カテゴリID_委託_g
 						</DisplayCalculation>
 					</Title>
 					<Message>
-						<Calculation><![CDATA["委託取次店CDを " & 委託取次店::委託取次店CD & " に設定します" & ¶ & 
-"管轄、委託、SV担当者タグに \"その他\" を設定します"]]></Calculation>
+						<Calculation><![CDATA["加盟店CDを " & 加盟店::加盟店CD & " に設定します" & ¶ & 
+"管轄、加盟、SV担当者タグに \"その他\" を設定します"]]></Calculation>
 						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;委託取次店CDを &quot; &amp; </Chunk>
+							<Chunk type="NoRef">&quot;加盟店CDを &quot; &amp; </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="委託取次店" id="8" name="委託取次店CD"/>
+								<Field table="加盟店" id="8" name="加盟店CD"/>
 							</Chunk>
 							<Chunk type="NoRef"> &amp; &quot; に設定します&quot; &amp; ¶ &amp; 
-&quot;管轄、委託、SV担当者タグに \&quot;その他\&quot; を設定します&quot;</Chunk>
+&quot;管轄、加盟、SV担当者タグに \&quot;その他\&quot; を設定します&quot;</Chunk>
 						</DisplayCalculation>
 					</Message>
 					<Buttons>
@@ -29638,34 +29638,34 @@ global::カテゴリID_委託_g
 					<Text>※レコード生成用にフィールド設定　必要な情報は全てリレーションkeyになっているので使うフィールドは何でも良い</Text>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店_tagging中間テーブル｜その他タグ｜管轄::タグID; 委託取次店::その他タグID_管轄_g ]</StepText>
-					<Calculation><![CDATA[委託取次店::その他タグID_管轄_g]]></Calculation>
+					<StepText>フィールド設定 [ 加盟店_tagging中間テーブル｜その他タグ｜管轄::タグID; 加盟店::その他タグID_管轄_g ]</StepText>
+					<Calculation><![CDATA[加盟店::その他タグID_管轄_g]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="委託取次店" id="18" name="その他タグID_管轄_g"/>
+							<Field table="加盟店" id="18" name="その他タグID_管轄_g"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店_tagging中間テーブル｜その他タグ｜管轄" id="7" name="タグID"/>
+					<Field table="加盟店_tagging中間テーブル｜その他タグ｜管轄" id="7" name="タグID"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店_tagging中間テーブル｜その他タグ｜委託::タグID; 委託取次店::その他タグID_委託_g ]</StepText>
-					<Calculation><![CDATA[委託取次店::その他タグID_委託_g]]></Calculation>
+					<StepText>フィールド設定 [ 加盟店_tagging中間テーブル｜その他タグ｜加盟::タグID; 加盟店::その他タグID_加盟_g ]</StepText>
+					<Calculation><![CDATA[加盟店::その他タグID_加盟_g]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="委託取次店" id="19" name="その他タグID_委託_g"/>
+							<Field table="加盟店" id="19" name="その他タグID_加盟_g"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店_tagging中間テーブル｜その他タグ｜委託" id="7" name="タグID"/>
+					<Field table="加盟店_tagging中間テーブル｜その他タグ｜加盟" id="7" name="タグID"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 委託取次店_tagging中間テーブル｜その他タグ｜SV担当者::タグID; 委託取次店::その他タグID_SV担当者_g ]</StepText>
-					<Calculation><![CDATA[委託取次店::その他タグID_SV担当者_g]]></Calculation>
+					<StepText>フィールド設定 [ 加盟店_tagging中間テーブル｜その他タグ｜SV担当者::タグID; 加盟店::その他タグID_SV担当者_g ]</StepText>
+					<Calculation><![CDATA[加盟店::その他タグID_SV担当者_g]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="委託取次店" id="20" name="その他タグID_SV担当者_g"/>
+							<Field table="加盟店" id="20" name="その他タグID_SV担当者_g"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="委託取次店_tagging中間テーブル｜その他タグ｜SV担当者" id="7" name="タグID"/>
+					<Field table="加盟店_tagging中間テーブル｜その他タグ｜SV担当者" id="7" name="タグID"/>
 				</Step>
 				<Step enable="True" id="75" name="レコード/検索条件確定">
 					<StepText>レコード/検索条件確定
@@ -29750,8 +29750,8 @@ global::カテゴリID_委託_g
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/04/25 真板 加盟店対応</StepText>
+					<Text>2025/04/25 真板 加盟店対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>

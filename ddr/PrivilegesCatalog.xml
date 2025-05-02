@@ -98,11 +98,11 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="34" name="MT.委託取次店法人">
+				<Layout id="34" name="MT.加盟店法人">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="37" name="MT.委託取次店">
+				<Layout id="37" name="MT.加盟店">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
@@ -118,11 +118,11 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="42" name="委託取次店法人">
+				<Layout id="42" name="加盟店法人">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="43" name="委託取次店">
+				<Layout id="43" name="加盟店">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
@@ -246,7 +246,7 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="85" name="委託取次店｜カード">
+				<Layout id="85" name="加盟店｜カード">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
@@ -402,10 +402,10 @@
 				<Script runFullAccess="False" id="22" name="--">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="23" name="レイアウト切替_委託取次店法人">
+				<Script runFullAccess="False" id="23" name="レイアウト切替_加盟店法人">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="24" name="レイアウト切替_委託取次店">
+				<Script runFullAccess="False" id="24" name="レイアウト切替_加盟店">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="25" name="レイアウト切替_ユーザーマスタ">
@@ -459,25 +459,25 @@
 				<Script runFullAccess="False" id="42" name="--">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="True" id="44" name="委託取次店_同一タグチェック">
+				<Script runFullAccess="True" id="44" name="加盟店_同一タグチェック">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="46" name="set_global">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="47" name="SV担当者入力データ｜委託取次店カードを開く">
+				<Script runFullAccess="False" id="47" name="SV担当者入力データ｜加盟店カードを開く">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="48" name="SV担当者入力データ｜委託取次店カード｜検索実行ボタン">
+				<Script runFullAccess="False" id="48" name="SV担当者入力データ｜加盟店カード｜検索実行ボタン">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="49" name="SV担当者入力データ｜委託取次店カードを閉じる">
+				<Script runFullAccess="False" id="49" name="SV担当者入力データ｜加盟店カードを閉じる">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="50" name="SV担当者入力データ｜委託取次店カード｜グローバル設定">
+				<Script runFullAccess="False" id="50" name="SV担当者入力データ｜加盟店カード｜グローバル設定">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="51" name="SV担当者入力データ｜委託取次店カード｜選択">
+				<Script runFullAccess="False" id="51" name="SV担当者入力データ｜加盟店カード｜選択">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="True" id="52" name="ポータル行削除">
@@ -543,7 +543,7 @@
 				<Script runFullAccess="False" id="78" name="集計用データ作成">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="84" name="委託取次店_その他タグセット">
+				<Script runFullAccess="False" id="84" name="加盟店_その他タグセット">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="True" id="85" name="SV担当者週次レコード作成">
@@ -696,14 +696,14 @@
 					<Delete value="True"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
-				<BaseTable id="149" name="委託取次店法人">
+				<BaseTable id="149" name="加盟店法人">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="150" name="委託取次店">
+				<BaseTable id="150" name="加盟店">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>

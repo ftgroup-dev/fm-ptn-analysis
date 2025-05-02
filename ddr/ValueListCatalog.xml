@@ -37,18 +37,18 @@
 	<ValueList id="4" name="使わない）カテゴリ名">
 		<Source value="Custom"/>
 		<CustomValues>
-			<Text>委託先
+			<Text>加盟先
 SV担当者
 品種分類</Text>
 		</CustomValues>
 	</ValueList>
-	<ValueList id="5" name="委託取次店法人CD">
+	<ValueList id="5" name="加盟店法人CD">
 		<Source value="Field"/>
 		<PrimaryField show="True" sort="True">
-			<Field table="委託取次店法人" id="7" name="委託取次店法人CD"/>
+			<Field table="加盟店法人" id="7" name="加盟店法人CD"/>
 		</PrimaryField>
 		<SecondaryField show="False" sort="False">
-			<Field table="委託取次店法人" id="8" name="委託取次店法人名"/>
+			<Field table="加盟店法人" id="8" name="加盟店法人名"/>
 		</SecondaryField>
 		<ShowRelated value="False"/>
 	</ValueList>
@@ -72,13 +72,13 @@ SV担当者
 		</SecondaryField>
 		<ShowRelated value="False"/>
 	</ValueList>
-	<ValueList id="8" name="委託取次店CD">
+	<ValueList id="8" name="加盟店CD">
 		<Source value="Field"/>
 		<PrimaryField show="True" sort="True">
-			<Field table="委託取次店" id="8" name="委託取次店CD"/>
+			<Field table="加盟店" id="8" name="加盟店CD"/>
 		</PrimaryField>
 		<SecondaryField show="False" sort="False">
-			<Field table="委託取次店" id="9" name="委託取次店名"/>
+			<Field table="加盟店" id="9" name="加盟店名"/>
 		</SecondaryField>
 		<ShowRelated value="False"/>
 	</ValueList>
@@ -126,13 +126,13 @@ SV担当者
 			<Table id="1065090" name="global"/>
 		</ShowRelated>
 	</ValueList>
-	<ValueList id="13" name="SV担当者入力データ月次_委託取次店｜値一覧">
+	<ValueList id="13" name="SV担当者入力データ月次_加盟店｜値一覧">
 		<Source value="Field"/>
 		<PrimaryField show="True" sort="True">
-			<Field table="SV担当者入力データ月次_ユーザーマスタ_tagging中間テーブル_委託取次店" id="8" name="委託取次店CD"/>
+			<Field table="SV担当者入力データ月次_ユーザーマスタ_tagging中間テーブル_加盟店" id="8" name="加盟店CD"/>
 		</PrimaryField>
 		<SecondaryField show="False" sort="False">
-			<Field table="SV担当者入力データ月次_ユーザーマスタ_tagging中間テーブル_委託取次店" id="9" name="委託取次店名"/>
+			<Field table="SV担当者入力データ月次_ユーザーマスタ_tagging中間テーブル_加盟店" id="9" name="加盟店名"/>
 		</SecondaryField>
 		<ShowRelated value="True">
 			<Table id="1065107" name="SV担当者入力データ月次"/>
