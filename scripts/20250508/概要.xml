@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<FMPReport creationTime="9:12:49" creationDate="2025/05/02" type="Summary" version="21.1.1">
-	<File link=".//PartnerManagementSystem_fmp12.xml" name="PartnerManagementSystem.fmp12" path="C:\Users\327311\Desktop\">
-		<BaseTables count="30"/>
-		<Tables count="81"/>
-		<Relationships count="52"/>
+<FMPReport creationTime="11:49:29" creationDate="2025/05/08" type="Summary" version="21.1.1">
+	<File link=".//PartnerManagementSystem_fmp12.xml" name="PartnerManagementSystem.fmp12" path="ftg.irca-fm.com">
+		<BaseTables count="31"/>
+		<Tables count="87"/>
+		<Relationships count="57"/>
 		<Accounts count="14"/>
 		<Privileges count="7"/>
 		<ExtendedPrivileges count="11"/>
 		<FileAccess count="3"/>
-		<Layouts count="58"/>
-		<Scripts count="69"/>
+		<Layouts count="59"/>
+		<Scripts count="71"/>
 		<ValueLists count="15"/>
 		<CustomFunctions count="2"/>
 		<FileReferences count="1"/>

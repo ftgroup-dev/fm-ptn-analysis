@@ -78907,8 +78907,64 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="274" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="516.0000000" bottom="49.0000000" right="636.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::加盟店セットCD</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="加盟店セットCD" id="39" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="275" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="636.0000000" bottom="49.0000000" right="756.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::加盟店セット名</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="加盟店セット名" id="40" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="67" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="516.0000000" bottom="49.0000000" right="662.0000000"/>
+<Bounds top="26.0000000" left="756.0000000" bottom="49.0000000" right="902.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店法人CD</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78936,7 +78992,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="68" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="662.0000000" bottom="49.0000000" right="812.0000000"/>
+<Bounds top="26.0000000" left="902.0000000" bottom="49.0000000" right="1052.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店法人名</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78964,7 +79020,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="139" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="812.0000000" bottom="49.0000000" right="891.0000000"/>
+<Bounds top="26.0000000" left="1052.0000000" bottom="49.0000000" right="1131.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78992,7 +79048,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="23" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="891.0000000" bottom="49.0000000" right="1011.0000000"/>
+<Bounds top="26.0000000" left="1131.0000000" bottom="49.0000000" right="1251.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::OK実績</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79020,7 +79076,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="128" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1011.0000000" bottom="49.0000000" right="1131.0000000"/>
+<Bounds top="26.0000000" left="1251.0000000" bottom="49.0000000" right="1371.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::売上実績</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79048,7 +79104,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="179" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1131.0000000" bottom="49.0000000" right="1224.0000000"/>
+<Bounds top="26.0000000" left="1371.0000000" bottom="49.0000000" right="1464.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::OK日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79076,7 +79132,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="25" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1224.0000000" bottom="49.0000000" right="1295.0000000"/>
+<Bounds top="26.0000000" left="1464.0000000" bottom="49.0000000" right="1535.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::OK年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79104,7 +79160,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="180" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1295.0000000" bottom="49.0000000" right="1389.0000000"/>
+<Bounds top="26.0000000" left="1535.0000000" bottom="49.0000000" right="1629.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::売上日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79132,7 +79188,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="26" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1389.0000000" bottom="49.0000000" right="1456.0000000"/>
+<Bounds top="26.0000000" left="1629.0000000" bottom="49.0000000" right="1696.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::売上年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79160,7 +79216,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="181" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1456.0000000" bottom="49.0000000" right="1551.0000000"/>
+<Bounds top="26.0000000" left="1696.0000000" bottom="49.0000000" right="1791.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::キャンセル日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79188,7 +79244,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="182" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1551.0000000" bottom="49.0000000" right="1627.0000000"/>
+<Bounds top="26.0000000" left="1791.0000000" bottom="49.0000000" right="1867.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::キャンセル年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79216,7 +79272,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="183" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1627.0000000" bottom="49.0000000" right="1712.0000000"/>
+<Bounds top="26.0000000" left="1867.0000000" bottom="49.0000000" right="1952.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::撤去日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79244,7 +79300,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="184" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1712.0000000" bottom="49.0000000" right="1803.0000000"/>
+<Bounds top="26.0000000" left="1952.0000000" bottom="49.0000000" right="2043.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::撤去年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79272,7 +79328,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="28" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1803.0000000" bottom="49.0000000" right="1923.0000000"/>
+<Bounds top="26.0000000" left="2043.0000000" bottom="49.0000000" right="2163.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ01</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79300,7 +79356,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="29" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1923.0000000" bottom="49.0000000" right="2043.0000000"/>
+<Bounds top="26.0000000" left="2163.0000000" bottom="49.0000000" right="2283.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ02</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79328,7 +79384,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="30" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2043.0000000" bottom="49.0000000" right="2163.0000000"/>
+<Bounds top="26.0000000" left="2283.0000000" bottom="49.0000000" right="2403.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ03</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79356,7 +79412,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="31" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2163.0000000" bottom="49.0000000" right="2283.0000000"/>
+<Bounds top="26.0000000" left="2403.0000000" bottom="49.0000000" right="2523.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ04</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79384,7 +79440,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="32" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2283.0000000" bottom="49.0000000" right="2403.0000000"/>
+<Bounds top="26.0000000" left="2523.0000000" bottom="49.0000000" right="2643.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ05</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79412,7 +79468,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="94" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2403.0000000" bottom="49.0000000" right="2523.0000000"/>
+<Bounds top="26.0000000" left="2643.0000000" bottom="49.0000000" right="2763.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ06</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79440,7 +79496,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="95" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2523.0000000" bottom="49.0000000" right="2643.0000000"/>
+<Bounds top="26.0000000" left="2763.0000000" bottom="49.0000000" right="2883.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ07</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79468,7 +79524,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="96" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2643.0000000" bottom="49.0000000" right="2763.0000000"/>
+<Bounds top="26.0000000" left="2883.0000000" bottom="49.0000000" right="3003.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ08</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79496,7 +79552,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="97" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2763.0000000" bottom="49.0000000" right="2883.0000000"/>
+<Bounds top="26.0000000" left="3003.0000000" bottom="49.0000000" right="3123.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ09</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79524,7 +79580,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="98" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2883.0000000" bottom="49.0000000" right="3003.0000000"/>
+<Bounds top="26.0000000" left="3123.0000000" bottom="49.0000000" right="3243.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ10</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79552,7 +79608,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="34" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="26.0000000" left="3483.0000000" bottom="49.0000000" right="3603.0000000"/>
+<Bounds top="26.0000000" left="3723.0000000" bottom="49.0000000" right="3843.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::物件別管理データ_主キー</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79580,7 +79636,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="263" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3003.0000000" bottom="49.0000000" right="3123.0000000"/>
+<Bounds top="26.0000000" left="3243.0000000" bottom="49.0000000" right="3363.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::販売区分</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79608,7 +79664,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="146" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3123.0000000" bottom="49.0000000" right="3243.0000000"/>
+<Bounds top="26.0000000" left="3363.0000000" bottom="49.0000000" right="3483.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::締フラグ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">

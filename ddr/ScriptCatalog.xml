@@ -4967,9 +4967,6 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店::加盟店CD ) ]</StepText>
 					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店::加盟店CD )]]></Calculation>
@@ -6173,9 +6170,6 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
@@ -6790,9 +6784,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
