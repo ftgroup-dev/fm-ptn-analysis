@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<FMPReport link="概要.xml" creationTime="17:30:11" creationDate="2025/05/12" type="Report" version="21.1.1">
-<File name="PartnerManagementSystem.fmp12" path="C:\Users\327311\Desktop\タグ適用期間取得対応\">
+<FMPReport link="概要.xml" creationTime="16:21:23" creationDate="2025/05/08" type="Report" version="21.1.1">
+<File name="PartnerManagementSystem.fmp12" path="ftg.irca-fm.com">
 <BaseTableCatalog>
 	<BaseTable id="129" records="2" name="top">
 		<FieldCatalog>
@@ -509,7 +509,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="136" records="7514" name="物件別管理データ">
+	<BaseTable id="136" records="7503" name="物件別管理データ">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -1874,7 +1874,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="138" records="10255" name="売上集計表">
+	<BaseTable id="138" records="10241" name="売上集計表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2277,7 +2277,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="140" records="8129" name="受注残明細表">
+	<BaseTable id="140" records="8126" name="受注残明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2899,7 +2899,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="142" records="38865" name="売上明細表">
+	<BaseTable id="142" records="38777" name="売上明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -5103,7 +5103,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="151" records="12" name="ユーザーマスタ">
+	<BaseTable id="151" records="11" name="ユーザーマスタ">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -5182,7 +5182,7 @@
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="130" generate="OnCreation"/>
+					<Serial increment="1" nextValue="128" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -7206,7 +7206,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="165" records="608" name="loginLog">
+	<BaseTable id="165" records="590" name="loginLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -7362,7 +7362,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="162" records="3996" name="目標集計テーブル">
+	<BaseTable id="162" records="3997" name="目標集計テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -7709,7 +7709,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="163" records="12548" name="実績集計テーブル">
+	<BaseTable id="163" records="12520" name="実績集計テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -8672,7 +8672,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="169" records="113" name="csvImportLog">
+	<BaseTable id="169" records="112" name="csvImportLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -99661,13 +99661,6 @@ IsEmpty ( #a ) ; "その他" ;
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="8" name="年月"/>
 				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#タグ取得(適用期間に応じた取得)</StepText>
-					<Text>タグ取得(適用期間に応じた取得)</Text>
-				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $cnt; 値:1 ]</StepText>
 					<Value>
@@ -99684,62 +99677,94 @@ IsEmpty ( #a ) ; "その他" ;
 					</Repetition>
 					<Name>$cnt</Name>
 				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $start; 値:Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 ) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="16" name="月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 1 ; </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="15" name="年"/>
-							</Chunk>
-							<Chunk type="NoRef"> )</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$start</Name>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $end; 値:Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="16" name="月"/>
-							</Chunk>
-							<Chunk type="NoRef"> + 1 ; 1 ; </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="15" name="年"/>
-							</Chunk>
-							<Chunk type="NoRef"> ) -1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$end</Name>
-				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
 					<FlushType value="Defer"/>
 				</Step>
+				<Step enable="False" id="147" name="フィールドを名前で設定">
+					<StepText>//  フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ( 
+#a = 
+ExecuteSQL ( 
+
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? &quot;;
+&quot;&quot; ; &quot;&quot; ;
+SV担当者入力データ月次::加盟店CD;
+$カテゴリID[$cnt]
+);
+
+Case(
+IsEmpty ( #a ); &quot;その他&quot;;
+#a
+)
+) ]</StepText>
+					<Result>
+						<Calculation><![CDATA[Let ( 
+#a = 
+ExecuteSQL ( 
+
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? ";
+"" ; "" ;
+SV担当者入力データ月次::加盟店CD;
+$カテゴリID[$cnt]
+);
+
+Case(
+IsEmpty ( #a ); "その他";
+#a
+)
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef"> ( 
+#a = 
+</Chunk>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef"> ( 
+
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? &quot;;
+&quot;&quot; ; &quot;&quot; ;
+</Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
+							</Chunk>
+							<Chunk type="NoRef">;
+$カテゴリID[$cnt]
+);
+
+</Chunk>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef">(
+</Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( #a ); &quot;その他&quot;;
+#a
+)
+)</Chunk>
+						</DisplayCalculation>
+					</Result>
+					<TargetName>
+						<Calculation><![CDATA["SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
+						</DisplayCalculation>
+					</TargetName>
+				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let (
+					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
@@ -99752,9 +99777,9 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); &quot;その他&quot;;
@@ -99762,7 +99787,10 @@ IsEmpty ( #a ); &quot;その他&quot;;
 )
 ) ]</StepText>
 					<Result>
-						<Calculation><![CDATA[Let (
+						<Calculation><![CDATA[Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
@@ -99775,9 +99803,9 @@ AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
 SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); "その他";
@@ -99786,7 +99814,30 @@ IsEmpty ( #a ); "その他";
 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> (
+							<Chunk type="NoRef"> ([
+#start = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> );
+#end = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> + 1 ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> ) -1 ;
+
 #a = 
 </Chunk>
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
@@ -99805,9 +99856,9 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 </Chunk>
 							<Chunk type="FunctionRef">Case</Chunk>
@@ -99854,9 +99905,6 @@ $end
 				</Step>
 				<Step enable="True" id="73" name="End Loop">
 					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -100289,10 +100337,6 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#タグ取得(適用期間に応じた取得)</StepText>
-					<Text>タグ取得(適用期間に応じた取得)</Text>
-				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $cnt; 値:1 ]</StepText>
 					<Value>
@@ -100309,70 +100353,91 @@ IsEmpty ( #a ) ; "その他" ;
 					</Repetition>
 					<Name>$cnt</Name>
 				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $start; 値:Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="104" name="年月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 2 ) ; 1 ; </Chunk>
-							<Chunk type="FunctionRef">Left</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="104" name="年月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 4 ) )</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$start</Name>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $end; 値:Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="104" name="年月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 2 ) + 1 ; 1 ; </Chunk>
-							<Chunk type="FunctionRef">Left</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="104" name="年月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 4 ) ) - 1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$end</Name>
-				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let (
+					<StepText>フィールドを名前で設定 [ &quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ( 
+#a = 
+ExecuteSQL ( 
+
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? &quot;;
+&quot;&quot; ; &quot;&quot; ;
+物件別管理データ::加盟店CD;
+$カテゴリID[$cnt]
+);
+
+Case(
+IsEmpty ( #a ); &quot;その他&quot;;
+#a
+)
+) ]</StepText>
+					<Result>
+						<Calculation><![CDATA[Let ( 
+#a = 
+ExecuteSQL ( 
+
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? ";
+"" ; "" ;
+物件別管理データ::加盟店CD;
+$カテゴリID[$cnt]
+);
+
+Case(
+IsEmpty ( #a ); "その他";
+#a
+)
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef"> ( 
+#a = 
+</Chunk>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef"> ( 
+
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? &quot;;
+&quot;&quot; ; &quot;&quot; ;
+</Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
+							</Chunk>
+							<Chunk type="NoRef">;
+$カテゴリID[$cnt]
+);
+
+</Chunk>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef">(
+</Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( #a ); &quot;その他&quot;;
+#a
+)
+)</Chunk>
+						</DisplayCalculation>
+					</Result>
+					<TargetName>
+						<Calculation><![CDATA["物件別管理データ_実績集計テーブル｜作成許可::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
+						</DisplayCalculation>
+					</TargetName>
+				</Step>
+				<Step enable="True" id="147" name="フィールドを名前で設定">
+					<StepText>フィールドを名前で設定 [ &quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ( 
 #a = 
 ExecuteSQL ( 
 
@@ -100385,8 +100450,8 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
-$start;
-$end
+Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
+Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) )
 );
 
 Case(
@@ -100395,7 +100460,7 @@ IsEmpty ( #a ); &quot;その他&quot;;
 )
 ) ]</StepText>
 					<Result>
-						<Calculation><![CDATA[Let (
+						<Calculation><![CDATA[Let ( 
 #a = 
 ExecuteSQL ( 
 
@@ -100408,8 +100473,8 @@ AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
 物件別管理データ::加盟店CD;
 $カテゴリID[$cnt];
-$start;
-$end
+Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
+Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) )
 );
 
 Case(
@@ -100419,7 +100484,7 @@ IsEmpty ( #a ); "その他";
 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> (
+							<Chunk type="NoRef"> ( 
 #a = 
 </Chunk>
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
@@ -100438,9 +100503,165 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
-$start;
-$end
+</Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="104" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 2 ) ; 1 ; </Chunk>
+							<Chunk type="FunctionRef">Left</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="104" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 4 ) );
+</Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="104" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 2 ) ; 1 ; </Chunk>
+							<Chunk type="FunctionRef">Left</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="104" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 4 ) )
 );
+
+</Chunk>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef">(
+</Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( #a ); &quot;その他&quot;;
+#a
+)
+)</Chunk>
+						</DisplayCalculation>
+					</Result>
+					<TargetName>
+						<Calculation><![CDATA["物件別管理データ_実績集計テーブル｜作成許可::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
+						</DisplayCalculation>
+					</TargetName>
+				</Step>
+				<Step enable="True" id="147" name="フィールドを名前で設定">
+					<StepText>フィールドを名前で設定 [ &quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([ 
+#start =  Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
+#end =  Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1;
+
+#a = 
+ExecuteSQL ( 
+
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;&quot; ; &quot;&quot; ;
+物件別管理データ::加盟店CD;
+$カテゴリID[$cnt];
+#start;
+#end
+)];
+
+Case(
+IsEmpty ( #a ); &quot;その他&quot;;
+#a
+)
+) ]</StepText>
+					<Result>
+						<Calculation><![CDATA[Let ([ 
+#start =  Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
+#end =  Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1;
+
+#a = 
+ExecuteSQL ( 
+
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
+"" ; "" ;
+物件別管理データ::加盟店CD;
+$カテゴリID[$cnt];
+#start;
+#end
+)];
+
+Case(
+IsEmpty ( #a ); "その他";
+#a
+)
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef"> ([ 
+#start =  </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="104" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 2 ) ; 1 ; </Chunk>
+							<Chunk type="FunctionRef">Left</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="104" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 4 ) );
+#end =  </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="104" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 2 ) + 1 ; 1 ; </Chunk>
+							<Chunk type="FunctionRef">Left</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="104" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 4 ) ) - 1;
+
+#a = 
+</Chunk>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef"> ( 
+
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;&quot; ; &quot;&quot; ;
+</Chunk>
+							<Chunk type="FieldRef">
+								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
+							</Chunk>
+							<Chunk type="NoRef">;
+$カテゴリID[$cnt];
+#start;
+#end
+)];
 
 </Chunk>
 							<Chunk type="FunctionRef">Case</Chunk>
@@ -100487,9 +100708,6 @@ $end
 				</Step>
 				<Step enable="True" id="73" name="End Loop">
 					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
 				</Step>
 				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
 					<StepText>レコード/検索条件/ページへ移動
@@ -102445,10 +102663,6 @@ $カテゴリID[$cnt];
 					<Text>2025/05/08　真板　合算集計対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#2025/05/11　川畑　タグ取得の期間に応じた取得の仕様見直し</StepText>
-					<Text>2025/05/11　川畑　タグ取得の期間に応じた取得の仕様見直し</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
 					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
 				</Step>
@@ -103017,13 +103231,6 @@ IsEmpty ( #a ) ; "その他" ;
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="27" name="締フラグ"/>
 				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#タグ取得(適用期間に応じた取得)</StepText>
-					<Text>タグ取得(適用期間に応じた取得)</Text>
-				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $cnt; 値:1 ]</StepText>
 					<Value>
@@ -103040,62 +103247,15 @@ IsEmpty ( #a ) ; "その他" ;
 					</Repetition>
 					<Name>$cnt</Name>
 				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $start; 値:Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 ) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="16" name="月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 1 ; </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="15" name="年"/>
-							</Chunk>
-							<Chunk type="NoRef"> )</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$start</Name>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $end; 値:Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="16" name="月"/>
-							</Chunk>
-							<Chunk type="NoRef"> + 1 ; 1 ; </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="15" name="年"/>
-							</Chunk>
-							<Chunk type="NoRef"> ) -1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$end</Name>
-				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let (
+					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
@@ -103108,9 +103268,9 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); &quot;その他&quot;;
@@ -103118,7 +103278,10 @@ IsEmpty ( #a ); &quot;その他&quot;;
 )
 ) ]</StepText>
 					<Result>
-						<Calculation><![CDATA[Let (
+						<Calculation><![CDATA[Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
@@ -103131,9 +103294,9 @@ AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
 SV担当者入力データ月次::加盟店CD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); "その他";
@@ -103142,7 +103305,30 @@ IsEmpty ( #a ); "その他";
 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> (
+							<Chunk type="NoRef"> ([
+#start = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> );
+#end = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> + 1 ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> ) -1 ;
+
 #a = 
 </Chunk>
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
@@ -103161,9 +103347,9 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 </Chunk>
 							<Chunk type="FunctionRef">Case</Chunk>
@@ -103210,9 +103396,6 @@ $end
 				</Step>
 				<Step enable="True" id="73" name="End Loop">
 					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -103634,10 +103817,6 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#タグ取得(適用期間に応じた取得)</StepText>
-					<Text>タグ取得(適用期間に応じた取得)</Text>
-				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $cnt; 値:1 ]</StepText>
 					<Value>
@@ -103654,11 +103833,66 @@ IsEmpty ( #a ) ; "その他" ;
 					</Repetition>
 					<Name>$cnt</Name>
 				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $start; 値:Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) )]]></Calculation>
+				<Step enable="True" id="71" name="Loop">
+					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
+					<FlushType value="Defer"/>
+				</Step>
+				<Step enable="True" id="147" name="フィールドを名前で設定">
+					<StepText>フィールドを名前で設定 [ &quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([ 
+#start =  Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
+#end =  Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1;
+
+#a = 
+ExecuteSQL ( 
+
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;&quot; ; &quot;&quot; ;
+物件別管理データ::加盟店CD;
+$カテゴリID[$cnt];
+#start;
+#end
+)];
+
+Case(
+IsEmpty ( #a ); &quot;その他&quot;;
+#a
+)
+) ]</StepText>
+					<Result>
+						<Calculation><![CDATA[Let ([ 
+#start =  Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
+#end =  Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1;
+
+#a = 
+ExecuteSQL ( 
+
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
+"" ; "" ;
+物件別管理データ::加盟店CD;
+$カテゴリID[$cnt];
+#start;
+#end
+)];
+
+Case(
+IsEmpty ( #a ); "その他";
+#a
+)
+)]]></Calculation>
 						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef"> ([ 
+#start =  </Chunk>
 							<Chunk type="FunctionRef">Date</Chunk>
 							<Chunk type="NoRef"> ( </Chunk>
 							<Chunk type="FunctionRef">Right</Chunk>
@@ -103672,22 +103906,8 @@ IsEmpty ( #a ) ; "その他" ;
 							<Chunk type="FieldRef">
 								<Field table="物件別管理データ" id="104" name="年月"/>
 							</Chunk>
-							<Chunk type="NoRef"> ; 4 ) )</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$start</Name>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $end; 値:Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1]]></Calculation>
-						<DisplayCalculation>
+							<Chunk type="NoRef"> ; 4 ) );
+#end =  </Chunk>
 							<Chunk type="FunctionRef">Date</Chunk>
 							<Chunk type="NoRef"> ( </Chunk>
 							<Chunk type="FunctionRef">Right</Chunk>
@@ -103701,70 +103921,8 @@ IsEmpty ( #a ) ; "その他" ;
 							<Chunk type="FieldRef">
 								<Field table="物件別管理データ" id="104" name="年月"/>
 							</Chunk>
-							<Chunk type="NoRef"> ; 4 ) ) - 1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$end</Name>
-				</Step>
-				<Step enable="True" id="71" name="Loop">
-					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<FlushType value="Defer"/>
-				</Step>
-				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let (
-#a = 
-ExecuteSQL ( 
+							<Chunk type="NoRef"> ; 4 ) ) - 1;
 
-&quot;SELECT \&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; 
-WHERE \&quot;tagabble_id\&quot; = ?
-AND \&quot;カテゴリID\&quot; = ? 
-AND \&quot;適用期間_開始日\&quot; &lt;= ? 
-AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
-&quot;&quot; ; &quot;&quot; ;
-物件別管理データ::加盟店CD;
-$カテゴリID[$cnt];
-$start;
-$end
-);
-
-Case(
-IsEmpty ( #a ); &quot;その他&quot;;
-#a
-)
-) ]</StepText>
-					<Result>
-						<Calculation><![CDATA[Let (
-#a = 
-ExecuteSQL ( 
-
-"SELECT \"タグ_表示用\"
-FROM \"tagging中間テーブル\" 
-WHERE \"tagabble_id\" = ?
-AND \"カテゴリID\" = ? 
-AND \"適用期間_開始日\" <= ? 
-AND \"適用期間_連携用終了日\" >= ?";
-"" ; "" ;
-物件別管理データ::加盟店CD;
-$カテゴリID[$cnt];
-$start;
-$end
-);
-
-Case(
-IsEmpty ( #a ); "その他";
-#a
-)
-)]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> (
 #a = 
 </Chunk>
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
@@ -103783,9 +103941,9 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 </Chunk>
 							<Chunk type="FunctionRef">Case</Chunk>
@@ -103832,9 +103990,6 @@ $end
 				</Step>
 				<Step enable="True" id="73" name="End Loop">
 					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
 				</Step>
 				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
 					<StepText>レコード/検索条件/ページへ移動
@@ -105710,10 +105865,6 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#2025/05/08　真板　合算集計対応</StepText>
 					<Text>2025/05/08　真板　合算集計対応</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#2025/05/11　川畑　タグ取得の期間に応じた取得の仕様見直し</StepText>
-					<Text>2025/05/11　川畑　タグ取得の期間に応じた取得の仕様見直し</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -130564,9 +130715,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 		<Description/>
 	</Account>
 	<Account id="45" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="999999">
-		<Description/>
-	</Account>
-	<Account id="46" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="323391">
 		<Description/>
 	</Account>
 </AccountCatalog>
