@@ -191,12 +191,12 @@
 					<Text>作成者	：Yuta Kawabata</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#改修日　　　 ：2025/04/08</StepText>
-					<Text>改修日　　　 ：2025/04/08</Text>
+					<StepText>#改修日　　　 ：2025/05/08</StepText>
+					<Text>改修日　　　 ：2025/05/08</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#コメント　　　 ：卸集計テストのスクリプト内容の追加(受注残明細表・売上明細表)</StepText>
-					<Text>コメント　　　 ：卸集計テストのスクリプト内容の追加(受注残明細表・売上明細表)</Text>
+					<StepText>#コメント　　　 ：合算集計対応</StepText>
+					<Text>コメント　　　 ：合算集計対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -727,7 +727,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
 
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; SV担当者入力データ月次_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -736,7 +736,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称 & "(" & SV担当者入力データ月次_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -751,7 +751,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="SV担当者入力データ月次_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -766,11 +770,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="7" name="加盟店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
@@ -778,7 +782,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -787,7 +791,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -800,7 +804,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -1203,7 +1207,7 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 物件別管理データ_加盟店::加盟店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; 物件別管理データ_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -1212,7 +1216,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_加盟店::加盟店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称 & "(" & 物件別管理データ_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -1227,7 +1231,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="物件別管理データ_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -1242,11 +1250,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
@@ -1254,7 +1262,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
+#a = 物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -1263,7 +1271,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
+#a = 物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -1276,7 +1284,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="物件別管理データ_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -1361,6 +1369,120 @@ IsEmpty ( #a ) ; "その他" ;
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="31" name="撤去日"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セットCD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セット名; &quot;その他加盟店セット&quot; ]</StepText>
+					<Calculation><![CDATA["その他加盟店セット"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;その他加盟店セット&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セットCD; 物件別管理データ_加盟店_加盟店セット::加盟店セットCD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店_加盟店セット::加盟店セットCD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セット名; 物件別管理データ_加盟店_加盟店セット::加盟店セット名_略称 ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店_加盟店セット::加盟店セット名_略称]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="9" name="加盟店セット名_略称"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店::加盟店CD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店" id="8" name="加盟店CD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::販売区分; &quot;委託&quot; ]</StepText>
+					<Calculation><![CDATA["委託"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;委託&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::販売区分; 物件別管理データ_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店::販売区分]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -1853,7 +1975,7 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 売上集計表_加盟店::加盟店名_略称;
+#a = 売上集計表_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; 売上集計表_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -1862,7 +1984,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 売上集計表_加盟店::加盟店名_略称;
+#a = 売上集計表_加盟店::加盟店名_略称 & "(" & 売上集計表_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -1877,7 +1999,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="売上集計表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -1892,11 +2018,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; 売上集計表_加盟店法人::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[売上集計表_加盟店法人::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; 売上集計表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_加盟店法人" id="7" name="加盟店法人CD"/>
+							<Field table="売上集計表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
@@ -1904,7 +2030,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 売上集計表_加盟店法人::加盟店法人名_略称;
+#a = 売上集計表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -1913,7 +2039,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 売上集計表_加盟店法人::加盟店法人名_略称;
+#a = 売上集計表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -1926,7 +2052,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="売上集計表_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -1987,6 +2113,120 @@ IsEmpty ( #a ) ; "その他" ;
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="33" name="売上日"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 売上集計表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セットCD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セット名; &quot;その他加盟店セット&quot; ]</StepText>
+					<Calculation><![CDATA["その他加盟店セット"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;その他加盟店セット&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セットCD; 売上集計表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店_加盟店セット::加盟店セットCD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セット名; 売上集計表_加盟店_加盟店セット::加盟店セット名_略称 ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店_加盟店セット::加盟店セット名_略称]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店_加盟店セット" id="9" name="加盟店セット名_略称"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; 売上集計表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 売上集計表_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店::加盟店CD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店" id="8" name="加盟店CD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::販売区分; &quot;卸売&quot; ]</StepText>
+					<Calculation><![CDATA["卸売"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;卸売&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::販売区分; 売上集計表_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店::販売区分]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -2471,7 +2711,7 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 受注残明細表_加盟店::加盟店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; 受注残明細表_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -2480,7 +2720,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_加盟店::加盟店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称 & "(" & 受注残明細表_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -2495,7 +2735,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="受注残明細表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -2510,11 +2754,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[受注残明細表_加盟店::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_加盟店" id="7" name="加盟店法人CD"/>
+							<Field table="受注残明細表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
@@ -2522,7 +2766,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
+#a = 受注残明細表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -2531,7 +2775,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
+#a = 受注残明細表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -2544,7 +2788,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="受注残明細表_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -2587,6 +2831,123 @@ IsEmpty ( #a ) ; "その他" ;
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="32" name="OK日"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セット名; &quot;その他加盟店セット&quot; ]</StepText>
+					<Calculation><![CDATA["その他加盟店セット"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;その他加盟店セット&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; 受注残明細表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店セットCD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セット名; 受注残明細表_加盟店_加盟店セット::加盟店セット名_略称 ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店セット名_略称]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="9" name="加盟店セット名_略称"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店" id="8" name="加盟店CD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; &quot;卸売&quot; ]</StepText>
+					<Calculation><![CDATA["卸売"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;卸売&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店::販売区分]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -3000,7 +3361,7 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 受注残明細表_加盟店::加盟店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; 受注残明細表_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -3009,7 +3370,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_加盟店::加盟店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称 & "(" & 受注残明細表_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -3024,7 +3385,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="受注残明細表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -3039,11 +3404,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[受注残明細表_加盟店::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_加盟店" id="7" name="加盟店法人CD"/>
+							<Field table="受注残明細表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
@@ -3051,7 +3416,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
+#a = 受注残明細表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -3060,7 +3425,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
+#a = 受注残明細表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -3073,7 +3438,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="受注残明細表_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -3116,6 +3481,81 @@ IsEmpty ( #a ) ; "その他" ;
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="32" name="OK日"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セット名; &quot;その他加盟店セット&quot; ]</StepText>
+					<Calculation><![CDATA["その他加盟店セット"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;その他加盟店セット&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; 受注残明細表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店セットCD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セット名; 受注残明細表_加盟店_加盟店セット::加盟店セット名_略称 ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店セット名_略称]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="9" name="加盟店セット名_略称"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -3408,8 +3848,8 @@ $カテゴリID[$cnt];
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#2025/04/08　真板　卸集計テストのスクリプト内容の追加(受注残明細表・売上明細表)</StepText>
-					<Text>2025/04/08　真板　卸集計テストのスクリプト内容の追加(受注残明細表・売上明細表)</Text>
+					<StepText>#2025/05/08　真板　合算集計対応</StepText>
+					<Text>2025/05/08　真板　合算集計対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -3451,12 +3891,12 @@ $カテゴリID[$cnt];
 					<Text>作成者	：Yuta Kawabata</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#改修日　　　 ：2025/04/08</StepText>
-					<Text>改修日　　　 ：2025/04/08</Text>
+					<StepText>#改修日　　　 ：2025/05/08</StepText>
+					<Text>改修日　　　 ：2025/05/08</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#コメント　　　 ：卸集計テストのスクリプト内容の追加(受注残明細表・売上明細表)</StepText>
-					<Text>コメント　　　 ：卸集計テストのスクリプト内容の追加(受注残明細表・売上明細表)</Text>
+					<StepText>#コメント　　　 ：合算集計対応</StepText>
+					<Text>コメント　　　 ：合算集計対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -3847,7 +4287,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
 
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; SV担当者入力データ月次_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -3856,7 +4296,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
+#a = SV担当者入力データ月次_加盟店::加盟店名_略称 & "(" & SV担当者入力データ月次_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -3871,7 +4311,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="SV担当者入力データ月次_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -3886,11 +4330,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="7" name="加盟店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
@@ -3898,7 +4342,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -3907,7 +4351,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -3920,7 +4364,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -4231,7 +4675,7 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 物件別管理データ_加盟店::加盟店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; 物件別管理データ_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4240,7 +4684,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_加盟店::加盟店名_略称;
+#a = 物件別管理データ_加盟店::加盟店名_略称 & "(" & 物件別管理データ_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4255,7 +4699,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="物件別管理データ_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -4270,11 +4718,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
@@ -4282,7 +4730,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
+#a = 物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4291,7 +4739,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
+#a = 物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4304,7 +4752,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="物件別管理データ_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -4323,7 +4771,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4332,7 +4780,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4345,7 +4793,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -4440,6 +4888,81 @@ IsEmpty ( #a ) ; "その他" ;
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="29" name="締フラグ"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セットCD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セット名; &quot;その他加盟店セット&quot; ]</StepText>
+					<Calculation><![CDATA["その他加盟店セット"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;その他加盟店セット&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セットCD; 物件別管理データ_加盟店_加盟店セット::加盟店セットCD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店_加盟店セット::加盟店セットCD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セット名; 物件別管理データ_加盟店_加盟店セット::加盟店セット名_略称 ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店_加盟店セット::加盟店セット名_略称]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="9" name="加盟店セット名_略称"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="物件別管理データ_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -4731,7 +5254,7 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 売上集計表_加盟店::加盟店名_略称;
+#a = 売上集計表_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; 売上集計表_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4740,7 +5263,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 売上集計表_加盟店::加盟店名_略称;
+#a = 売上集計表_加盟店::加盟店名_略称 & "(" & 売上集計表_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4755,7 +5278,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="売上集計表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -4770,11 +5297,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; 売上集計表_加盟店法人::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[売上集計表_加盟店法人::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; 売上集計表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_加盟店法人" id="7" name="加盟店法人CD"/>
+							<Field table="売上集計表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
@@ -4782,7 +5309,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 売上集計表_加盟店法人::加盟店法人名_略称;
+#a = 売上集計表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4791,7 +5318,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 売上集計表_加盟店法人::加盟店法人名_略称;
+#a = 売上集計表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4804,7 +5331,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="売上集計表_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="売上集計表_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -4875,6 +5402,81 @@ IsEmpty ( #a ) ; "その他" ;
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="29" name="締フラグ"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 売上集計表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セットCD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セット名; &quot;その他加盟店セット&quot; ]</StepText>
+					<Calculation><![CDATA["その他加盟店セット"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;その他加盟店セット&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セットCD; 売上集計表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店_加盟店セット::加盟店セットCD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セット名; 売上集計表_加盟店_加盟店セット::加盟店セット名_略称 ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店_加盟店セット::加盟店セット名_略称]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店_加盟店セット" id="9" name="加盟店セット名_略称"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店法人CD; 売上集計表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[売上集計表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="売上集計表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -5359,7 +5961,7 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 受注残明細表_加盟店::加盟店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; 受注残明細表_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -5368,7 +5970,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_加盟店::加盟店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称 & "(" & 受注残明細表_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -5383,7 +5985,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="受注残明細表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -5398,11 +6004,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[受注残明細表_加盟店::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_加盟店" id="7" name="加盟店法人CD"/>
+							<Field table="受注残明細表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
@@ -5410,7 +6016,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
+#a = 受注残明細表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -5419,7 +6025,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
+#a = 受注残明細表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -5432,7 +6038,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="受注残明細表_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -5485,6 +6091,81 @@ IsEmpty ( #a ) ; "その他" ;
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="29" name="締フラグ"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セット名; &quot;その他加盟店セット&quot; ]</StepText>
+					<Calculation><![CDATA["その他加盟店セット"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;その他加盟店セット&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; 受注残明細表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店セットCD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セット名; 受注残明細表_加盟店_加盟店セット::加盟店セット名_略称 ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店セット名_略称]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="9" name="加盟店セット名_略称"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -5898,7 +6579,7 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店名; Let(
 
-#a = 受注残明細表_加盟店::加盟店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; 受注残明細表_加盟店::販売区分 &amp; &quot;)&quot;;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -5907,7 +6588,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_加盟店::加盟店名_略称;
+#a = 受注残明細表_加盟店::加盟店名_略称 & "(" & 受注残明細表_加盟店::販売区分 & ")";
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -5922,7 +6603,11 @@ IsEmpty ( #a ) ; "その他" ;
 						<Chunk type="FieldRef">
 							<Field table="受注残明細表_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
-						<Chunk type="NoRef">;
+						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店" id="25" name="販売区分"/>
+						</Chunk>
+						<Chunk type="NoRef"> &amp; &quot;)&quot;;
 
 </Chunk>
 						<Chunk type="FunctionRef">Case</Chunk>
@@ -5937,11 +6622,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[受注残明細表_加盟店::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_加盟店" id="7" name="加盟店法人CD"/>
+							<Field table="受注残明細表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
@@ -5949,7 +6634,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
+#a = 受注残明細表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -5958,7 +6643,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 受注残明細表_加盟店法人::加盟店法人名_略称;
+#a = 受注残明細表_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -5971,7 +6656,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="受注残明細表_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="受注残明細表_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -6024,6 +6709,81 @@ IsEmpty ( #a ) ; "その他" ;
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="29" name="締フラグ"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
+					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+						<Chunk type="NoRef"> )</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セット名; &quot;その他加盟店セット&quot; ]</StepText>
+					<Calculation><![CDATA["その他加盟店セット"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;その他加盟店セット&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; &quot;99999999&quot; ]</StepText>
+					<Calculation><![CDATA["99999999"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;99999999&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; 受注残明細表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店セットCD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="39" name="加盟店セットCD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セット名; 受注残明細表_加盟店_加盟店セット::加盟店セット名_略称 ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店セット名_略称]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="9" name="加盟店セット名_略称"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="40" name="加盟店セット名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店法人CD; 受注残明細表_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[受注残明細表_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="受注残明細表_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -6292,8 +7052,8 @@ $カテゴリID[$cnt];
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#2025/04/08　真板　卸集計テストのスクリプト内容の追加(受注残明細表・売上明細表)</StepText>
-					<Text>2025/04/08　真板　卸集計テストのスクリプト内容の追加(受注残明細表・売上明細表)</Text>
+					<StepText>#2025/05/08　真板　合算集計対応</StepText>
+					<Text>2025/05/08　真板　合算集計対応</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -7009,6 +7769,23 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 		</Script>
 	</Group>
 	<Group groupCollapsed="False" includeInMenu="False" id="73" name="open/close">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="134" name="加盟店ソート">
+			<StepList>
+				<Step enable="True" id="39" name="レコードのソート">
+					<StepText>レコードのソート [ ソートされた順位でレコードを保持; 特定のソート順: 加盟店::加盟店セットCD; 昇順 ]
+[ 記憶する; ダイアログなし ]</StepText>
+					<NoInteract state="True"/>
+					<Restore state="True"/>
+					<SortList Maintain="True" value="True">
+						<Sort type="Ascending">
+							<PrimaryField>
+								<Field table="加盟店" id="26" name="加盟店セットCD"/>
+							</PrimaryField>
+						</Sort>
+					</SortList>
+				</Step>
+			</StepList>
+		</Script>
 		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="True" id="12" name="open">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -11378,6 +12155,123 @@ WorkingDays (#b ; #c ; $休日リスト )
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#2025/04/25 真板 加盟店対応</StepText>
 						<Text>2025/04/25 真板 加盟店対応</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+						<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+					</Step>
+				</StepList>
+			</Script>
+			<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="135" name="レイアウト切替_加盟店セット">
+				<StepList>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+						<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#◆作成情報◆</StepText>
+						<Text>◆作成情報◆</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#機能概要	：加盟店セットへ移動</StepText>
+						<Text>機能概要	：加盟店セットへ移動</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#引数		：なし</StepText>
+						<Text>引数		：なし</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#トリガ	：なし</StepText>
+						<Text>トリガ	：なし</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#作成日	：2025/05/08</StepText>
+						<Text>作成日	：2025/05/08</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#作成者	：maita</StepText>
+						<Text>作成者	：maita</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#コメント	：</StepText>
+						<Text>コメント	：</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+						<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="6" name="レイアウト切り替え">
+						<StepText>レイアウト切り替え [ 「加盟店セット」 (加盟店セット) ]</StepText>
+						<LayoutDestination value="SelectedLayout"/>
+						<Layout id="117" name="加盟店セット"/>
+					</Step>
+					<Step enable="False" id="1" name="スクリプト実行">
+						<StepText>//  スクリプト実行 [ 「set_BaseTableId」; 引数: JSONSetElement ( 
+&quot;&quot;;
+[ &quot;layoutTable&quot;; Get( レイアウトテーブル名 ); JSONString ];
+[ &quot;targetField&quot;; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
+ ) ]</StepText>
+						<Calculation><![CDATA[JSONSetElement ( 
+"";
+[ "layoutTable"; Get( レイアウトテーブル名 ); JSONString ];
+[ "targetField"; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
+ )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">JSONSetElement</Chunk>
+							<Chunk type="NoRef"> ( 
+&quot;&quot;;
+[ &quot;layoutTable&quot;; </Chunk>
+							<Chunk type="FunctionRef">Get</Chunk>
+							<Chunk type="NoRef">( </Chunk>
+							<Chunk type="FunctionRef">レイアウトテーブル名</Chunk>
+							<Chunk type="NoRef"> ); </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ];
+[ &quot;targetField&quot;; </Chunk>
+							<Chunk type="FunctionRef">GetFieldName</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="加盟店" id="11" name="BaseTableID_g"/>
+							</Chunk>
+							<Chunk type="NoRef"> ); </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ]
+ )</Chunk>
+						</DisplayCalculation>
+						<Script id="28" name="set_BaseTableId"/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="23" name="全レコードを表示">
+						<StepText>全レコードを表示</StepText>
+					</Step>
+					<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
+						<StepText>レコード/検索条件/ページへ移動
+[ 最初の ]</StepText>
+						<NoInteract state="False"/>
+						<RowPageLocation value="First"/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+						<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#◆更新情報◆</StepText>
+						<Text>◆更新情報◆</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#2025/05/08 真板 合算集計対応</StepText>
+						<Text>2025/05/08 真板 合算集計対応</Text>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -16575,18 +17469,6 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「&lt;不明&gt;」; 引数: global::締日年月_g ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
-					<Calculation><![CDATA[global::締日年月_g]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="global" id="24" name="締日年月_g"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Script id="98" name="&lt;不明&gt;"/>
-				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#2025/04/01 スクリプトリンク切れの再設定　y.kawabata</StepText>
 					<Text>2025/04/01 スクリプトリンク切れの再設定　y.kawabata</Text>
@@ -17172,21 +18054,21 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="7" name="加盟店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称 ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
@@ -17624,11 +18506,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; 物件別管理データ_加盟店法人::加盟店法人名_略称 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ_加盟店法人::加盟店法人名_略称]]></Calculation>
+					<StepText>//  フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; 物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称 ]</StepText>
+					<Calculation><![CDATA[物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="物件別管理データ_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
@@ -17636,7 +18518,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -17645,7 +18527,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -17658,7 +18540,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -19236,11 +20118,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="7" name="加盟店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
@@ -19248,7 +20130,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19257,7 +20139,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19270,7 +20152,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -19701,7 +20583,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
+#a = 物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19710,7 +20592,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = 物件別管理データ_加盟店法人::加盟店法人名_略称;
+#a = 物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19723,7 +20605,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="物件別管理データ_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -19742,7 +20624,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19751,7 +20633,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19764,7 +20646,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 

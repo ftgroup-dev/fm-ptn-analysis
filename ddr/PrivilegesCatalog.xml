@@ -330,6 +330,10 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
+				<Layout id="117" name="加盟店セット">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
 				<Layout name="[新規レイアウト]">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
@@ -624,6 +628,12 @@
 				<Script runFullAccess="False" id="126" name="SSS_計用データ作成_全レコード作成し直し">
 					<Access value="NoAccess"/>
 				</Script>
+				<Script runFullAccess="False" id="134" name="加盟店ソート">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="135" name="レイアウト切替_加盟店セット">
+					<Access value="NoAccess"/>
+				</Script>
 				<Script name="[新規スクリプト]">
 					<Access value="NoAccess"/>
 				</Script>
@@ -837,6 +847,13 @@
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
 				<BaseTable id="171" name="SV担当者入力データ一括作成Log">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="172" name="加盟店セット">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
