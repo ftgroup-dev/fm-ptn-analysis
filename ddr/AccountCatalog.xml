@@ -42,4 +42,7 @@
 	<Account id="45" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="999999">
 		<Description/>
 	</Account>
+	<Account id="46" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="323391">
+		<Description/>
+	</Account>
 </AccountCatalog>
