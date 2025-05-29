@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<!-- build 20251.25.0423.1659                               -->
-<workbook original-version='18.1' source-build='2024.3.4 (20243.25.0208.0338)' source-platform='win' version='18.1' xml:base='https://prod-apnortheast-a.online.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<!-- build 20251.25.0415.1018                               -->
+<workbook original-version='18.1' source-build='2025.1.1 (20251.25.0415.1018)' source-platform='win' version='18.1' xml:base='https://prod-apnortheast-a.online.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <AccessibleZoneTabOrder />
     <AnimationOnByDefault />
@@ -20,7 +20,7 @@
     <WindowsPersistSimpleIdentifiers />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/__17444397322330?rev=1.4' id='__17444397322330' path='/t/ftgroup/workbooks' revision='1.4' site='ftgroup' />
+  <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/workbooks/__17444397322330?rev=1.4' id='__17444397322330' path='/t/ftgroup/workbooks' revision='1.5' site='ftgroup' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -44,8 +44,8 @@
       </column>
     </datasource>
     <datasource caption='再構築_実績集計テーブル' inline='true' name='sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r' version='18.1'>
-      <repository-location derived-from='https://prod-apnortheast-a.online.tableau.com/t/ftgroup/datasources/_?rev=1.2' id='_' path='/t/ftgroup/datasources' revision='1.4' site='ftgroup' />
-      <connection channel='https' class='sqlproxy' dbname='_' directory='/dataserver' port='443' server='prod-apnortheast-a.online.tableau.com' server-oauth='' username='' workgroup-auth-mode='prompt'>
+      <repository-location id='_' path='/t/ftgroup/datasources' revision='1.3' site='ftgroup' />
+      <connection channel='https' class='sqlproxy' dbname='_' directory='/dataserver' local-dataserver='' port='443' server='prod-apnortheast-a.online.tableau.com' server-oauth='' username='' workgroup-auth-mode='prompt'>
         <relation type='collection'>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
@@ -59,7 +59,7 @@
             <local-name>[ID]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>ID</remote-alias>
-            <ordinal>42</ordinal>
+            <ordinal>48</ordinal>
             <layered>true</layered>
             <family>営業日マスタ</family>
             <local-type>real</local-type>
@@ -133,7 +133,7 @@
             <local-name>[OK目標]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>OK目標</remote-alias>
-            <ordinal>59</ordinal>
+            <ordinal>70</ordinal>
             <layered>true</layered>
             <caption>Ok目標</caption>
             <family>目標集計テーブル</family>
@@ -151,7 +151,7 @@
             <local-name>[SV担当者入力データ月次_主キー]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>SV担当者入力データ月次_主キー</remote-alias>
-            <ordinal>66</ordinal>
+            <ordinal>77</ordinal>
             <layered>true</layered>
             <caption>Sv担当者入力データ月次 主キー</caption>
             <family>目標集計テーブル</family>
@@ -164,6 +164,240 @@
               <attribute datatype='integer' name='role'>0</attribute>
             </attributes>
             <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_OK日</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_OK日]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_OK日</remote-alias>
+            <ordinal>39</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_キャンセル日</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_キャンセル日]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_キャンセル日</remote-alias>
+            <ordinal>41</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_作成情報タイムスタンプ (営業日マスタ)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_作成情報タイムスタンプ (営業日マスタ)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_作成情報タイムスタンプ (営業日マスタ)</remote-alias>
+            <ordinal>51</ordinal>
+            <layered>true</layered>
+            <family>営業日マスタ</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[営業日マスタ_50F98E94B5024373A84D16B21A5C812B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_作成情報タイムスタンプ (目標集計テーブル)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_作成情報タイムスタンプ (目標集計テーブル)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_作成情報タイムスタンプ (目標集計テーブル)</remote-alias>
+            <ordinal>90</ordinal>
+            <layered>true</layered>
+            <family>目標集計テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_作成情報タイムスタンプ (稼働日情報テーブル)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_作成情報タイムスタンプ (稼働日情報テーブル)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_作成情報タイムスタンプ (稼働日情報テーブル)</remote-alias>
+            <ordinal>61</ordinal>
+            <layered>true</layered>
+            <family>稼働日情報テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[稼働日情報テーブル_001570829F38412AA2E4FBA1F927A0A2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_作成情報タイムスタンプ</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_作成情報タイムスタンプ]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_作成情報タイムスタンプ</remote-alias>
+            <ordinal>37</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_修正情報タイムスタンプ (営業日マスタ)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_修正情報タイムスタンプ (営業日マスタ)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_修正情報タイムスタンプ (営業日マスタ)</remote-alias>
+            <ordinal>52</ordinal>
+            <layered>true</layered>
+            <family>営業日マスタ</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[営業日マスタ_50F98E94B5024373A84D16B21A5C812B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_修正情報タイムスタンプ (目標集計テーブル)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_修正情報タイムスタンプ (目標集計テーブル)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_修正情報タイムスタンプ (目標集計テーブル)</remote-alias>
+            <ordinal>91</ordinal>
+            <layered>true</layered>
+            <family>目標集計テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_修正情報タイムスタンプ (稼働日情報テーブル)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_修正情報タイムスタンプ (稼働日情報テーブル)]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_修正情報タイムスタンプ (稼働日情報テーブル)</remote-alias>
+            <ordinal>62</ordinal>
+            <layered>true</layered>
+            <family>稼働日情報テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[稼働日情報テーブル_001570829F38412AA2E4FBA1F927A0A2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_修正情報タイムスタンプ</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_修正情報タイムスタンプ]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_修正情報タイムスタンプ</remote-alias>
+            <ordinal>38</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_売上日</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_売上日]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_売上日</remote-alias>
+            <ordinal>40</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_撤去日</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_撤去日]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_撤去日</remote-alias>
+            <ordinal>42</ordinal>
+            <layered>true</layered>
+            <family>実績集計テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t_本日</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[t_本日]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>t_本日</remote-alias>
+            <ordinal>63</ordinal>
+            <layered>true</layered>
+            <family>稼働日情報テーブル</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[稼働日情報テーブル_001570829F38412AA2E4FBA1F927A0A2]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>キャンセル年月</remote-name>
@@ -208,7 +442,7 @@
             <local-name>[タグ01 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ01 (目標集計テーブル)</remote-alias>
-            <ordinal>61</ordinal>
+            <ordinal>72</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -246,7 +480,7 @@
             <local-name>[タグ02 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ02 (目標集計テーブル)</remote-alias>
-            <ordinal>62</ordinal>
+            <ordinal>73</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -284,7 +518,7 @@
             <local-name>[タグ03 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ03 (目標集計テーブル)</remote-alias>
-            <ordinal>63</ordinal>
+            <ordinal>74</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -322,7 +556,7 @@
             <local-name>[タグ04 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ04 (目標集計テーブル)</remote-alias>
-            <ordinal>64</ordinal>
+            <ordinal>75</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -360,7 +594,7 @@
             <local-name>[タグ05 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ05 (目標集計テーブル)</remote-alias>
-            <ordinal>65</ordinal>
+            <ordinal>76</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -398,7 +632,7 @@
             <local-name>[タグ06 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ06 (目標集計テーブル)</remote-alias>
-            <ordinal>70</ordinal>
+            <ordinal>81</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -436,7 +670,7 @@
             <local-name>[タグ07 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ07 (目標集計テーブル)</remote-alias>
-            <ordinal>71</ordinal>
+            <ordinal>82</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -474,7 +708,7 @@
             <local-name>[タグ08 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ08 (目標集計テーブル)</remote-alias>
-            <ordinal>72</ordinal>
+            <ordinal>83</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -512,7 +746,7 @@
             <local-name>[タグ09 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ09 (目標集計テーブル)</remote-alias>
-            <ordinal>73</ordinal>
+            <ordinal>84</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -550,7 +784,7 @@
             <local-name>[タグ10 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>タグ10 (目標集計テーブル)</remote-alias>
-            <ordinal>74</ordinal>
+            <ordinal>85</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -588,7 +822,7 @@
             <local-name>[主キー (営業日マスタ)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>主キー (営業日マスタ)</remote-alias>
-            <ordinal>37</ordinal>
+            <ordinal>43</ordinal>
             <layered>true</layered>
             <family>営業日マスタ</family>
             <local-type>string</local-type>
@@ -607,7 +841,7 @@
             <local-name>[主キー (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>主キー (目標集計テーブル)</remote-alias>
-            <ordinal>53</ordinal>
+            <ordinal>64</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -626,7 +860,7 @@
             <local-name>[主キー (稼働日情報テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>主キー (稼働日情報テーブル)</remote-alias>
-            <ordinal>45</ordinal>
+            <ordinal>53</ordinal>
             <layered>true</layered>
             <family>稼働日情報テーブル</family>
             <local-type>string</local-type>
@@ -664,7 +898,7 @@
             <local-name>[作成情報タイムスタンプ (営業日マスタ)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>作成情報タイムスタンプ (営業日マスタ)</remote-alias>
-            <ordinal>38</ordinal>
+            <ordinal>44</ordinal>
             <layered>true</layered>
             <family>営業日マスタ</family>
             <local-type>datetime</local-type>
@@ -682,7 +916,7 @@
             <local-name>[作成情報タイムスタンプ (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>作成情報タイムスタンプ (目標集計テーブル)</remote-alias>
-            <ordinal>54</ordinal>
+            <ordinal>65</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>datetime</local-type>
@@ -700,7 +934,7 @@
             <local-name>[作成情報タイムスタンプ (稼働日情報テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>作成情報タイムスタンプ (稼働日情報テーブル)</remote-alias>
-            <ordinal>46</ordinal>
+            <ordinal>54</ordinal>
             <layered>true</layered>
             <family>稼働日情報テーブル</family>
             <local-type>datetime</local-type>
@@ -736,7 +970,7 @@
             <local-name>[作成者 (営業日マスタ)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>作成者 (営業日マスタ)</remote-alias>
-            <ordinal>39</ordinal>
+            <ordinal>45</ordinal>
             <layered>true</layered>
             <family>営業日マスタ</family>
             <local-type>string</local-type>
@@ -755,7 +989,7 @@
             <local-name>[作成者 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>作成者 (目標集計テーブル)</remote-alias>
-            <ordinal>55</ordinal>
+            <ordinal>66</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -774,7 +1008,7 @@
             <local-name>[作成者 (稼働日情報テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>作成者 (稼働日情報テーブル)</remote-alias>
-            <ordinal>47</ordinal>
+            <ordinal>55</ordinal>
             <layered>true</layered>
             <family>稼働日情報テーブル</family>
             <local-type>string</local-type>
@@ -812,7 +1046,7 @@
             <local-name>[修正情報タイムスタンプ (営業日マスタ)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>修正情報タイムスタンプ (営業日マスタ)</remote-alias>
-            <ordinal>40</ordinal>
+            <ordinal>46</ordinal>
             <layered>true</layered>
             <family>営業日マスタ</family>
             <local-type>datetime</local-type>
@@ -830,7 +1064,7 @@
             <local-name>[修正情報タイムスタンプ (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>修正情報タイムスタンプ (目標集計テーブル)</remote-alias>
-            <ordinal>56</ordinal>
+            <ordinal>67</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>datetime</local-type>
@@ -848,7 +1082,7 @@
             <local-name>[修正情報タイムスタンプ (稼働日情報テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>修正情報タイムスタンプ (稼働日情報テーブル)</remote-alias>
-            <ordinal>48</ordinal>
+            <ordinal>56</ordinal>
             <layered>true</layered>
             <family>稼働日情報テーブル</family>
             <local-type>datetime</local-type>
@@ -884,7 +1118,7 @@
             <local-name>[修正者 (営業日マスタ)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>修正者 (営業日マスタ)</remote-alias>
-            <ordinal>41</ordinal>
+            <ordinal>47</ordinal>
             <layered>true</layered>
             <family>営業日マスタ</family>
             <local-type>string</local-type>
@@ -903,7 +1137,7 @@
             <local-name>[修正者 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>修正者 (目標集計テーブル)</remote-alias>
-            <ordinal>57</ordinal>
+            <ordinal>68</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -922,7 +1156,7 @@
             <local-name>[修正者 (稼働日情報テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>修正者 (稼働日情報テーブル)</remote-alias>
-            <ordinal>49</ordinal>
+            <ordinal>57</ordinal>
             <layered>true</layered>
             <family>稼働日情報テーブル</family>
             <local-type>string</local-type>
@@ -960,7 +1194,7 @@
             <local-name>[加盟店CD (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>加盟店CD (目標集計テーブル)</remote-alias>
-            <ordinal>58</ordinal>
+            <ordinal>69</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -1036,7 +1270,7 @@
             <local-name>[加盟店名 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>加盟店名 (目標集計テーブル)</remote-alias>
-            <ordinal>67</ordinal>
+            <ordinal>78</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -1074,7 +1308,7 @@
             <local-name>[加盟店法人CD (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>加盟店法人CD (目標集計テーブル)</remote-alias>
-            <ordinal>68</ordinal>
+            <ordinal>79</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -1112,7 +1346,7 @@
             <local-name>[加盟店法人名 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>加盟店法人名 (目標集計テーブル)</remote-alias>
-            <ordinal>69</ordinal>
+            <ordinal>80</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -1150,7 +1384,7 @@
             <local-name>[営業日日数]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>営業日日数</remote-alias>
-            <ordinal>44</ordinal>
+            <ordinal>50</ordinal>
             <layered>true</layered>
             <family>営業日マスタ</family>
             <local-type>real</local-type>
@@ -1221,7 +1455,7 @@
             <local-name>[売上目標]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>売上目標</remote-alias>
-            <ordinal>75</ordinal>
+            <ordinal>86</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>real</local-type>
@@ -1238,7 +1472,7 @@
             <local-name>[年月 (営業日マスタ)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>年月 (営業日マスタ)</remote-alias>
-            <ordinal>43</ordinal>
+            <ordinal>49</ordinal>
             <layered>true</layered>
             <family>営業日マスタ</family>
             <local-type>string</local-type>
@@ -1257,7 +1491,7 @@
             <local-name>[年月 (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>年月 (目標集計テーブル)</remote-alias>
-            <ordinal>60</ordinal>
+            <ordinal>71</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>string</local-type>
@@ -1332,7 +1566,7 @@
             <local-name>[本日]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>本日</remote-alias>
-            <ordinal>50</ordinal>
+            <ordinal>58</ordinal>
             <layered>true</layered>
             <family>稼働日情報テーブル</family>
             <local-type>date</local-type>
@@ -1370,7 +1604,7 @@
             <local-name>[稼働日]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>稼働日</remote-alias>
-            <ordinal>51</ordinal>
+            <ordinal>59</ordinal>
             <layered>true</layered>
             <family>稼働日情報テーブル</family>
             <local-type>real</local-type>
@@ -1387,7 +1621,7 @@
             <local-name>[総稼働日数]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>総稼働日数</remote-alias>
-            <ordinal>52</ordinal>
+            <ordinal>60</ordinal>
             <layered>true</layered>
             <family>稼働日情報テーブル</family>
             <local-type>real</local-type>
@@ -1404,7 +1638,7 @@
             <local-name>[締フラグ (目標集計テーブル)]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>締フラグ (目標集計テーブル)</remote-alias>
-            <ordinal>76</ordinal>
+            <ordinal>87</ordinal>
             <layered>true</layered>
             <family>目標集計テーブル</family>
             <local-type>real</local-type>
@@ -1475,7 +1709,7 @@
             <local-name>[集計_OK目標]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>集計_OK目標</remote-alias>
-            <ordinal>77</ordinal>
+            <ordinal>88</ordinal>
             <layered>true</layered>
             <caption>集計 Ok目標</caption>
             <family>目標集計テーブル</family>
@@ -1511,7 +1745,7 @@
             <local-name>[集計_売上目標]</local-name>
             <parent-name>[sqlproxy]</parent-name>
             <remote-alias>集計_売上目標</remote-alias>
-            <ordinal>78</ordinal>
+            <ordinal>89</ordinal>
             <layered>true</layered>
             <caption>集計 売上目標</caption>
             <family>目標集計テーブル</family>
@@ -1559,7 +1793,7 @@
     <RelationshipCalculations />
     <SchemaViewerObjectModel />
   </document-format-change-manifest>
-  <repository-location derived-from='/t/ftgroup/datasources/_?rev=1.2' id='_' path='/t/ftgroup/datasources' revision='1.4' site='ftgroup' />
+  <repository-location id='_' path='/t/ftgroup/datasources' revision='1.3' site='ftgroup' />
   <connection :databaseVariables='' channel='https' class='sqlproxy' dbname='_' local-dataserver='' port='443' server='prod-apnortheast-a.online.tableau.com'>
     <relation type='collection'>
       <relation name='sqlproxy' table='[sqlproxy]' type='table' />
@@ -1574,6 +1808,19 @@
       <map key='[OK日]' value='[sqlproxy].[OK日]' />
       <map key='[OK目標]' value='[sqlproxy].[OK目標]' />
       <map key='[SV担当者入力データ月次_主キー]' value='[sqlproxy].[SV担当者入力データ月次_主キー]' />
+      <map key='[t_OK日]' value='[sqlproxy].[t_OK日]' />
+      <map key='[t_キャンセル日]' value='[sqlproxy].[t_キャンセル日]' />
+      <map key='[t_作成情報タイムスタンプ (営業日マスタ)]' value='[sqlproxy].[t_作成情報タイムスタンプ (営業日マスタ)]' />
+      <map key='[t_作成情報タイムスタンプ (目標集計テーブル)]' value='[sqlproxy].[t_作成情報タイムスタンプ (目標集計テーブル)]' />
+      <map key='[t_作成情報タイムスタンプ (稼働日情報テーブル)]' value='[sqlproxy].[t_作成情報タイムスタンプ (稼働日情報テーブル)]' />
+      <map key='[t_作成情報タイムスタンプ]' value='[sqlproxy].[t_作成情報タイムスタンプ]' />
+      <map key='[t_修正情報タイムスタンプ (営業日マスタ)]' value='[sqlproxy].[t_修正情報タイムスタンプ (営業日マスタ)]' />
+      <map key='[t_修正情報タイムスタンプ (目標集計テーブル)]' value='[sqlproxy].[t_修正情報タイムスタンプ (目標集計テーブル)]' />
+      <map key='[t_修正情報タイムスタンプ (稼働日情報テーブル)]' value='[sqlproxy].[t_修正情報タイムスタンプ (稼働日情報テーブル)]' />
+      <map key='[t_修正情報タイムスタンプ]' value='[sqlproxy].[t_修正情報タイムスタンプ]' />
+      <map key='[t_売上日]' value='[sqlproxy].[t_売上日]' />
+      <map key='[t_撤去日]' value='[sqlproxy].[t_撤去日]' />
+      <map key='[t_本日]' value='[sqlproxy].[t_本日]' />
       <map key='[キャンセル年月]' value='[sqlproxy].[キャンセル年月]' />
       <map key='[キャンセル日]' value='[sqlproxy].[キャンセル日]' />
       <map key='[タグ01 (目標集計テーブル)]' value='[sqlproxy].[タグ01 (目標集計テーブル)]' />
@@ -1749,7 +1996,7 @@
 ]]>&quot;</attribute>
               <attribute datatype='boolean' name='extract-active'>true</attribute>
               <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
-              <attribute datatype='string' name='update-time'>&quot;5/8/2025 3:26:10 AM&quot;</attribute>
+              <attribute datatype='string' name='update-time'>&quot;5/22/2025 1:10:45 AM&quot;</attribute>
             </attributes>
           </metadata-record>
         </metadata-records>
@@ -1764,19 +2011,19 @@
         <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
       </column>
       <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
+        <calculation class='tableau' formula='if NOT ISNULL([t_キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([t_撤去日]) then 1&#13;&#10;else 0 end' />
       </column>
       <column caption='集計対象月' datatype='date' name='[Calculation_238409371417587717]' role='dimension' type='ordinal'>
         <calculation class='tableau' formula='date(left([年月],4)+&quot;-&quot;+right([年月],2)+&quot;-01&quot;)' />
       </column>
       <column aggregation='Sum' caption='選択した年月_売上' datatype='integer' name='[Calculation_238409371417640966]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[売上日])) then 1 else 0 end' />
+        <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[t_売上日])) then 1 else 0 end' />
       </column>
       <column aggregation='Sum' caption='選択した年月_年月' datatype='integer' name='[Calculation_238409371418009607]' role='dimension' type='ordinal'>
         <calculation class='tableau' formula='IF [Calculation_238409371417587717] = DATETRUNC(&apos;month&apos;, DATEPARSE(&apos;yyyyMM&apos;, [年月])) THEN 1 ELSE 0 END' />
       </column>
       <column caption='年月_稼働日' datatype='string' name='[Calculation_238409371418284040]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='str(year([本日])) +&#13;&#10;right((&apos;00&apos; + str(month([本日]))),2)' />
+        <calculation class='tableau' formula='str(year([t_本日])) +&#13;&#10;right((&apos;00&apos; + str(month([t_本日]))),2)' />
       </column>
       <column caption='♯稼働日' datatype='real' name='[Calculation_238409371418357769]' role='measure' type='ordinal'>
         <calculation class='tableau' formula='{ FIXED  [年月] : max(if [年月] = [Calculation_238409371418284040] then [稼働日]&#13;&#10;else [営業日日数] end) }' />
@@ -1818,7 +2065,7 @@
         <calculation class='tableau' formula='count(if [売上実績] &gt;= 0 and [Calculation_238409371417640966] = 1 and [Calculation_238409371417354243] = 0  then [主キー] else null end)' />
       </column>
       <column caption='実績_OK' datatype='real' name='[Calculation_238409371419439123]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
+        <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([t_OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
       </column>
       <column caption='実績_売上' datatype='real' name='[Calculation_238409371419475988]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='sum(if [Calculation_238409371417640966] = 1 and [Calculation_238409371417354243] = 0 then [売上実績] else 0 end)&#13;&#10;/1000' />
@@ -1875,6 +2122,19 @@
       <column aggregation='Count' caption='実績集計テーブル' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[実績集計テーブル_3102B9379DC64B5EAF6C3CD87F189335]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
       <column aggregation='Count' caption='目標集計テーブル' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[目標集計テーブル_DCA7B35ED3914617875869AF03A676E9]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
       <column aggregation='Count' caption='稼働日情報テーブル' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[稼働日情報テーブル_001570829F38412AA2E4FBA1F927A0A2]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_OK日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_作成情報タイムスタンプ (営業日マスタ)]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_作成情報タイムスタンプ (目標集計テーブル)]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_作成情報タイムスタンプ (稼働日情報テーブル)]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_作成情報タイムスタンプ]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_修正情報タイムスタンプ (営業日マスタ)]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_修正情報タイムスタンプ (目標集計テーブル)]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_修正情報タイムスタンプ (稼働日情報テーブル)]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_修正情報タイムスタンプ]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_本日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
       <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[キャンセル年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
       <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01 (目標集計テーブル)]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -2263,7 +2523,7 @@
               <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
+              <calculation class='tableau' formula='if NOT ISNULL([t_キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([t_撤去日]) then 1&#13;&#10;else 0 end' />
             </column>
             <column caption='集計対象月' datatype='date' name='[Calculation_238409371417587717]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='date(left([年月],4)+&quot;-&quot;+right([年月],2)+&quot;-01&quot;)' />
@@ -2272,7 +2532,7 @@
               <calculation class='tableau' formula='IF [Calculation_238409371417587717] = DATETRUNC(&apos;month&apos;, DATEPARSE(&apos;yyyyMM&apos;, [年月])) THEN 1 ELSE 0 END' />
             </column>
             <column caption='年月_稼働日' datatype='string' name='[Calculation_238409371418284040]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='str(year([本日])) +&#13;&#10;right((&apos;00&apos; + str(month([本日]))),2)' />
+              <calculation class='tableau' formula='str(year([t_本日])) +&#13;&#10;right((&apos;00&apos; + str(month([t_本日]))),2)' />
             </column>
             <column caption='♯稼働日' datatype='real' name='[Calculation_238409371418357769]' role='measure' type='ordinal'>
               <calculation class='tableau' formula='{ FIXED  [年月] : max(if [年月] = [Calculation_238409371418284040] then [稼働日]&#13;&#10;else [営業日日数] end) }' />
@@ -2281,7 +2541,7 @@
               <calculation class='tableau' formula='count(if [OK実績] &gt;= 0 and [Calculation_238409371418009607] = 1 and [Calculation_238409371417354243] = 0 then [主キー] else null end)' />
             </column>
             <column caption='実績_OK' datatype='real' name='[Calculation_238409371419439123]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
+              <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([t_OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
             </column>
             <column caption='目標_OK' datatype='real' name='[Calculation_238409371419562006]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='ifnull(SUM([OK目標]),0)' />
@@ -2308,7 +2568,6 @@
               <calculation class='tableau' formula='&apos;表示_詳細&apos;' />
             </column>
             <column aggregation='Sum' caption='Ok実績' datatype='real' default-type='quantitative' layered='true' name='[OK実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[OK日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' caption='Ok目標' datatype='real' default-type='quantitative' layered='true' name='[OK目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column-instance column='[Calculation_238409371417587717]' derivation='MY' name='[my:Calculation_238409371417587717:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Calculation_238409371417276418]' derivation='None' name='[none:Calculation_238409371417276418:ok]' pivot='key' type='ordinal' />
@@ -2320,6 +2579,10 @@
             <column-instance column='[加盟店セット名]' derivation='None' name='[none:加盟店セット名:nk]' pivot='key' type='nominal' />
             <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_OK日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_本日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
             <column-instance column='[Calculation_238409371419353105]' derivation='User' name='[usr:Calculation_238409371419353105:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419439123]' derivation='User' name='[usr:Calculation_238409371419439123:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419562006]' derivation='User' name='[usr:Calculation_238409371419562006:qk]' pivot='key' type='quantitative' />
@@ -2328,7 +2591,6 @@
             <column-instance column='[Calculation_238409371419807772]' derivation='User' name='[usr:Calculation_238409371419807772:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419901982]' derivation='User' name='[usr:Calculation_238409371419901982:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371420205088]' derivation='User' name='[usr:Calculation_238409371420205088:qk]' pivot='key' type='quantitative' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -2337,8 +2599,6 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
@@ -2346,7 +2606,7 @@
             <groupfilter function='empty-level' member='[加盟店法人名]' user:ui-action-filter='[Action8_B43E34B7194043FDBCDC0D3FA21BBC31]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:Calculation_238409371417276418:ok]'>
@@ -2683,7 +2943,7 @@
               <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
+              <calculation class='tableau' formula='if NOT ISNULL([t_キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([t_撤去日]) then 1&#13;&#10;else 0 end' />
             </column>
             <column caption='集計対象月' datatype='date' name='[Calculation_238409371417587717]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='date(left([年月],4)+&quot;-&quot;+right([年月],2)+&quot;-01&quot;)' />
@@ -2692,7 +2952,7 @@
               <calculation class='tableau' formula='IF [Calculation_238409371417587717] = DATETRUNC(&apos;month&apos;, DATEPARSE(&apos;yyyyMM&apos;, [年月])) THEN 1 ELSE 0 END' />
             </column>
             <column caption='年月_稼働日' datatype='string' name='[Calculation_238409371418284040]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='str(year([本日])) +&#13;&#10;right((&apos;00&apos; + str(month([本日]))),2)' />
+              <calculation class='tableau' formula='str(year([t_本日])) +&#13;&#10;right((&apos;00&apos; + str(month([t_本日]))),2)' />
             </column>
             <column caption='♯稼働日' datatype='real' name='[Calculation_238409371418357769]' role='measure' type='ordinal'>
               <calculation class='tableau' formula='{ FIXED  [年月] : max(if [年月] = [Calculation_238409371418284040] then [稼働日]&#13;&#10;else [営業日日数] end) }' />
@@ -2701,7 +2961,7 @@
               <calculation class='tableau' formula='count(if [OK実績] &gt;= 0 and [Calculation_238409371418009607] = 1 and [Calculation_238409371417354243] = 0 then [主キー] else null end)' />
             </column>
             <column caption='実績_OK' datatype='real' name='[Calculation_238409371419439123]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
+              <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([t_OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
             </column>
             <column caption='目標_OK' datatype='real' name='[Calculation_238409371419562006]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='ifnull(SUM([OK目標]),0)' />
@@ -2728,7 +2988,6 @@
               <calculation class='tableau' formula='&apos;表示&apos;' />
             </column>
             <column aggregation='Sum' caption='Ok実績' datatype='real' default-type='quantitative' layered='true' name='[OK実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[OK日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' caption='Ok目標' datatype='real' default-type='quantitative' layered='true' name='[OK目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column-instance column='[Calculation_238409371417587717]' derivation='MY' name='[my:Calculation_238409371417587717:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Calculation_238409371417276418]' derivation='None' name='[none:Calculation_238409371417276418:ok]' pivot='key' type='ordinal' />
@@ -2738,6 +2997,10 @@
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_OK日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_本日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
             <column-instance column='[Calculation_238409371419353105]' derivation='User' name='[usr:Calculation_238409371419353105:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419439123]' derivation='User' name='[usr:Calculation_238409371419439123:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419562006]' derivation='User' name='[usr:Calculation_238409371419562006:qk]' pivot='key' type='quantitative' />
@@ -2746,7 +3009,6 @@
             <column-instance column='[Calculation_238409371419807772]' derivation='User' name='[usr:Calculation_238409371419807772:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419901982]' derivation='User' name='[usr:Calculation_238409371419901982:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371420205088]' derivation='User' name='[usr:Calculation_238409371420205088:qk]' pivot='key' type='quantitative' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -2754,13 +3016,11 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:Calculation_238409371417276418:ok]'>
@@ -3065,7 +3325,7 @@
               <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
+              <calculation class='tableau' formula='if NOT ISNULL([t_キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([t_撤去日]) then 1&#13;&#10;else 0 end' />
             </column>
             <column caption='集計対象月' datatype='date' name='[Calculation_238409371417587717]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='date(left([年月],4)+&quot;-&quot;+right([年月],2)+&quot;-01&quot;)' />
@@ -3074,7 +3334,7 @@
               <calculation class='tableau' formula='IF [Calculation_238409371417587717] = DATETRUNC(&apos;month&apos;, DATEPARSE(&apos;yyyyMM&apos;, [年月])) THEN 1 ELSE 0 END' />
             </column>
             <column caption='年月_稼働日' datatype='string' name='[Calculation_238409371418284040]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='str(year([本日])) +&#13;&#10;right((&apos;00&apos; + str(month([本日]))),2)' />
+              <calculation class='tableau' formula='str(year([t_本日])) +&#13;&#10;right((&apos;00&apos; + str(month([t_本日]))),2)' />
             </column>
             <column caption='♯稼働日' datatype='real' name='[Calculation_238409371418357769]' role='measure' type='ordinal'>
               <calculation class='tableau' formula='{ FIXED  [年月] : max(if [年月] = [Calculation_238409371418284040] then [稼働日]&#13;&#10;else [営業日日数] end) }' />
@@ -3083,7 +3343,7 @@
               <calculation class='tableau' formula='count(if [OK実績] &gt;= 0 and [Calculation_238409371418009607] = 1 and [Calculation_238409371417354243] = 0 then [主キー] else null end)' />
             </column>
             <column caption='実績_OK' datatype='real' name='[Calculation_238409371419439123]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
+              <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([t_OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
             </column>
             <column caption='目標_OK' datatype='real' name='[Calculation_238409371419562006]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='ifnull(SUM([OK目標]),0)' />
@@ -3110,7 +3370,6 @@
               <calculation class='tableau' formula='&apos;表示_詳細&apos;' />
             </column>
             <column aggregation='Sum' caption='Ok実績' datatype='real' default-type='quantitative' layered='true' name='[OK実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[OK日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' caption='Ok目標' datatype='real' default-type='quantitative' layered='true' name='[OK目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column-instance column='[Calculation_238409371417587717]' derivation='MY' name='[my:Calculation_238409371417587717:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Calculation_238409371417276418]' derivation='None' name='[none:Calculation_238409371417276418:ok]' pivot='key' type='ordinal' />
@@ -3121,6 +3380,10 @@
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
             <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_OK日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_本日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
             <column-instance column='[Calculation_238409371419353105]' derivation='User' name='[usr:Calculation_238409371419353105:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419439123]' derivation='User' name='[usr:Calculation_238409371419439123:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419562006]' derivation='User' name='[usr:Calculation_238409371419562006:qk]' pivot='key' type='quantitative' />
@@ -3129,7 +3392,6 @@
             <column-instance column='[Calculation_238409371419807772]' derivation='User' name='[usr:Calculation_238409371419807772:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419901982]' derivation='User' name='[usr:Calculation_238409371419901982:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371420205088]' derivation='User' name='[usr:Calculation_238409371420205088:qk]' pivot='key' type='quantitative' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -3137,8 +3399,6 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
@@ -3146,7 +3406,7 @@
             <groupfilter function='member' level='[Calculation_238409371417276418]' member='1' user:ui-action-filter='[Action6_866F166C17B04EB1A55DE77F26A1A86F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:Calculation_238409371417276418:ok]'>
@@ -3532,7 +3792,7 @@
               <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
+              <calculation class='tableau' formula='if NOT ISNULL([t_キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([t_撤去日]) then 1&#13;&#10;else 0 end' />
             </column>
             <column caption='集計対象月' datatype='date' name='[Calculation_238409371417587717]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='date(left([年月],4)+&quot;-&quot;+right([年月],2)+&quot;-01&quot;)' />
@@ -3541,7 +3801,7 @@
               <calculation class='tableau' formula='IF [Calculation_238409371417587717] = DATETRUNC(&apos;month&apos;, DATEPARSE(&apos;yyyyMM&apos;, [年月])) THEN 1 ELSE 0 END' />
             </column>
             <column caption='年月_稼働日' datatype='string' name='[Calculation_238409371418284040]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='str(year([本日])) +&#13;&#10;right((&apos;00&apos; + str(month([本日]))),2)' />
+              <calculation class='tableau' formula='str(year([t_本日])) +&#13;&#10;right((&apos;00&apos; + str(month([t_本日]))),2)' />
             </column>
             <column caption='♯稼働日' datatype='real' name='[Calculation_238409371418357769]' role='measure' type='ordinal'>
               <calculation class='tableau' formula='{ FIXED  [年月] : max(if [年月] = [Calculation_238409371418284040] then [稼働日]&#13;&#10;else [営業日日数] end) }' />
@@ -3550,7 +3810,7 @@
               <calculation class='tableau' formula='count(if [OK実績] &gt;= 0 and [Calculation_238409371418009607] = 1 and [Calculation_238409371417354243] = 0 then [主キー] else null end)' />
             </column>
             <column caption='実績_OK' datatype='real' name='[Calculation_238409371419439123]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
+              <calculation class='tableau' formula='sum(&#13;&#10;    if [Calculation_238409371418009607] = 1&#13;&#10;       and NOT ISNULL([t_OK日]) &#13;&#10;       and [Calculation_238409371417354243] = 0 &#13;&#10;    then [OK実績]&#13;&#10;    else 0 &#13;&#10;    end&#13;&#10;)&#13;&#10;/1000' />
             </column>
             <column caption='目標_OK' datatype='real' name='[Calculation_238409371419562006]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='ifnull(SUM([OK目標]),0)' />
@@ -3577,7 +3837,6 @@
               <calculation class='tableau' formula='&apos;表示_詳細&apos;' />
             </column>
             <column aggregation='Sum' caption='Ok実績' datatype='real' default-type='quantitative' layered='true' name='[OK実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[OK日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' caption='Ok目標' datatype='real' default-type='quantitative' layered='true' name='[OK目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column-instance column='[Calculation_238409371417587717]' derivation='MY' name='[my:Calculation_238409371417587717:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Calculation_238409371417276418]' derivation='None' name='[none:Calculation_238409371417276418:ok]' pivot='key' type='ordinal' />
@@ -3589,6 +3848,10 @@
             <column-instance column='[加盟店セット名]' derivation='None' name='[none:加盟店セット名:nk]' pivot='key' type='nominal' />
             <column-instance column='[加盟店名]' derivation='None' name='[none:加盟店名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_OK日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_本日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
             <column-instance column='[Calculation_238409371419353105]' derivation='User' name='[usr:Calculation_238409371419353105:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419439123]' derivation='User' name='[usr:Calculation_238409371419439123:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419562006]' derivation='User' name='[usr:Calculation_238409371419562006:qk]' pivot='key' type='quantitative' />
@@ -3597,7 +3860,6 @@
             <column-instance column='[Calculation_238409371419807772]' derivation='User' name='[usr:Calculation_238409371419807772:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371419901982]' derivation='User' name='[usr:Calculation_238409371419901982:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371420205088]' derivation='User' name='[usr:Calculation_238409371420205088:qk]' pivot='key' type='quantitative' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -3607,8 +3869,6 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
@@ -3616,7 +3876,7 @@
             <groupfilter function='empty-level' member='[加盟店セット名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:Calculation_238409371417276418:ok]'>
@@ -3994,7 +4254,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:タグ01:nk]' filter-group='4'>
@@ -4139,7 +4399,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:タグ01:nk]' filter-group='4'>
@@ -4281,7 +4541,7 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:タグ01:nk]' filter-group='4'>
@@ -4475,16 +4735,16 @@
               <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
+              <calculation class='tableau' formula='if NOT ISNULL([t_キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([t_撤去日]) then 1&#13;&#10;else 0 end' />
             </column>
             <column caption='集計対象月' datatype='date' name='[Calculation_238409371417587717]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='date(left([年月],4)+&quot;-&quot;+right([年月],2)+&quot;-01&quot;)' />
             </column>
             <column aggregation='Sum' caption='選択した年月_売上' datatype='integer' name='[Calculation_238409371417640966]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[売上日])) then 1 else 0 end' />
+              <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[t_売上日])) then 1 else 0 end' />
             </column>
             <column caption='年月_稼働日' datatype='string' name='[Calculation_238409371418284040]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='str(year([本日])) +&#13;&#10;right((&apos;00&apos; + str(month([本日]))),2)' />
+              <calculation class='tableau' formula='str(year([t_本日])) +&#13;&#10;right((&apos;00&apos; + str(month([t_本日]))),2)' />
             </column>
             <column caption='♯稼働日' datatype='real' name='[Calculation_238409371418357769]' role='measure' type='ordinal'>
               <calculation class='tableau' formula='{ FIXED  [年月] : max(if [年月] = [Calculation_238409371418284040] then [稼働日]&#13;&#10;else [営業日日数] end) }' />
@@ -4529,6 +4789,10 @@
             <column-instance column='[加盟店セット名]' derivation='None' name='[none:加盟店セット名:nk]' pivot='key' type='nominal' />
             <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_本日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
             <column-instance column='[Calculation_238409371419402258]' derivation='User' name='[usr:Calculation_238409371419402258:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419475988]' derivation='User' name='[usr:Calculation_238409371419475988:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419602967]' derivation='User' name='[usr:Calculation_238409371419602967:qk]' pivot='key' type='quantitative' />
@@ -4537,7 +4801,6 @@
             <column-instance column='[Calculation_238409371419852829]' derivation='User' name='[usr:Calculation_238409371419852829:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371420168223]' derivation='User' name='[usr:Calculation_238409371420168223:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371420205088]' derivation='User' name='[usr:Calculation_238409371420205088:qk]' pivot='key' type='quantitative' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -4546,11 +4809,8 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
@@ -4558,7 +4818,7 @@
             <groupfilter function='empty-level' member='[加盟店法人名]' user:ui-action-filter='[Action8_B43E34B7194043FDBCDC0D3FA21BBC31]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:Calculation_238409371417276418:ok]'>
@@ -4880,16 +5140,16 @@
               <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
+              <calculation class='tableau' formula='if NOT ISNULL([t_キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([t_撤去日]) then 1&#13;&#10;else 0 end' />
             </column>
             <column caption='集計対象月' datatype='date' name='[Calculation_238409371417587717]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='date(left([年月],4)+&quot;-&quot;+right([年月],2)+&quot;-01&quot;)' />
             </column>
             <column aggregation='Sum' caption='選択した年月_売上' datatype='integer' name='[Calculation_238409371417640966]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[売上日])) then 1 else 0 end' />
+              <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[t_売上日])) then 1 else 0 end' />
             </column>
             <column caption='年月_稼働日' datatype='string' name='[Calculation_238409371418284040]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='str(year([本日])) +&#13;&#10;right((&apos;00&apos; + str(month([本日]))),2)' />
+              <calculation class='tableau' formula='str(year([t_本日])) +&#13;&#10;right((&apos;00&apos; + str(month([t_本日]))),2)' />
             </column>
             <column caption='♯稼働日' datatype='real' name='[Calculation_238409371418357769]' role='measure' type='ordinal'>
               <calculation class='tableau' formula='{ FIXED  [年月] : max(if [年月] = [Calculation_238409371418284040] then [稼働日]&#13;&#10;else [営業日日数] end) }' />
@@ -4932,6 +5192,10 @@
             <column-instance column='[タグ02]' derivation='None' name='[none:タグ02:nk]' pivot='key' type='nominal' />
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_本日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
             <column-instance column='[Calculation_238409371419402258]' derivation='User' name='[usr:Calculation_238409371419402258:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419475988]' derivation='User' name='[usr:Calculation_238409371419475988:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419602967]' derivation='User' name='[usr:Calculation_238409371419602967:qk]' pivot='key' type='quantitative' />
@@ -4940,7 +5204,6 @@
             <column-instance column='[Calculation_238409371419852829]' derivation='User' name='[usr:Calculation_238409371419852829:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371420168223]' derivation='User' name='[usr:Calculation_238409371420168223:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371420205088]' derivation='User' name='[usr:Calculation_238409371420205088:qk]' pivot='key' type='quantitative' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -4948,16 +5211,13 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:Calculation_238409371417276418:ok]'>
@@ -5274,16 +5534,16 @@
               <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
+              <calculation class='tableau' formula='if NOT ISNULL([t_キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([t_撤去日]) then 1&#13;&#10;else 0 end' />
             </column>
             <column caption='集計対象月' datatype='date' name='[Calculation_238409371417587717]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='date(left([年月],4)+&quot;-&quot;+right([年月],2)+&quot;-01&quot;)' />
             </column>
             <column aggregation='Sum' caption='選択した年月_売上' datatype='integer' name='[Calculation_238409371417640966]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[売上日])) then 1 else 0 end' />
+              <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[t_売上日])) then 1 else 0 end' />
             </column>
             <column caption='年月_稼働日' datatype='string' name='[Calculation_238409371418284040]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='str(year([本日])) +&#13;&#10;right((&apos;00&apos; + str(month([本日]))),2)' />
+              <calculation class='tableau' formula='str(year([t_本日])) +&#13;&#10;right((&apos;00&apos; + str(month([t_本日]))),2)' />
             </column>
             <column caption='♯稼働日' datatype='real' name='[Calculation_238409371418357769]' role='measure' type='ordinal'>
               <calculation class='tableau' formula='{ FIXED  [年月] : max(if [年月] = [Calculation_238409371418284040] then [稼働日]&#13;&#10;else [営業日日数] end) }' />
@@ -5327,6 +5587,10 @@
             <column-instance column='[タグ03]' derivation='None' name='[none:タグ03:nk]' pivot='key' type='nominal' />
             <column-instance column='[加盟店法人名]' derivation='None' name='[none:加盟店法人名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_本日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
             <column-instance column='[Calculation_238409371419402258]' derivation='User' name='[usr:Calculation_238409371419402258:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419475988]' derivation='User' name='[usr:Calculation_238409371419475988:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419602967]' derivation='User' name='[usr:Calculation_238409371419602967:qk]' pivot='key' type='quantitative' />
@@ -5335,7 +5599,6 @@
             <column-instance column='[Calculation_238409371419852829]' derivation='User' name='[usr:Calculation_238409371419852829:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371420168223]' derivation='User' name='[usr:Calculation_238409371420168223:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371420205088]' derivation='User' name='[usr:Calculation_238409371420205088:qk]' pivot='key' type='quantitative' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -5343,11 +5606,8 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
@@ -5355,7 +5615,7 @@
             <groupfilter function='member' level='[Calculation_238409371417276418]' member='1' user:ui-action-filter='[Action6_866F166C17B04EB1A55DE77F26A1A86F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:Calculation_238409371417276418:ok]'>
@@ -5686,16 +5946,16 @@
               <calculation class='tableau' formula='if isnull([加盟店法人名]) then 0 else 1 end' />
             </column>
             <column aggregation='Sum' caption='キャンセル_撤去_flag' datatype='integer' name='[Calculation_238409371417354243]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if NOT ISNULL([キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([撤去日]) then 1&#13;&#10;else 0 end' />
+              <calculation class='tableau' formula='if NOT ISNULL([t_キャンセル日]) then 1&#13;&#10;elseif NOT ISNULL([t_撤去日]) then 1&#13;&#10;else 0 end' />
             </column>
             <column caption='集計対象月' datatype='date' name='[Calculation_238409371417587717]' role='dimension' type='ordinal'>
               <calculation class='tableau' formula='date(left([年月],4)+&quot;-&quot;+right([年月],2)+&quot;-01&quot;)' />
             </column>
             <column aggregation='Sum' caption='選択した年月_売上' datatype='integer' name='[Calculation_238409371417640966]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[売上日])) then 1 else 0 end' />
+              <calculation class='tableau' formula='if [Calculation_238409371417587717] = DATE(DATETRUNC(&apos;month&apos;,[t_売上日])) then 1 else 0 end' />
             </column>
             <column caption='年月_稼働日' datatype='string' name='[Calculation_238409371418284040]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='str(year([本日])) +&#13;&#10;right((&apos;00&apos; + str(month([本日]))),2)' />
+              <calculation class='tableau' formula='str(year([t_本日])) +&#13;&#10;right((&apos;00&apos; + str(month([t_本日]))),2)' />
             </column>
             <column caption='♯稼働日' datatype='real' name='[Calculation_238409371418357769]' role='measure' type='ordinal'>
               <calculation class='tableau' formula='{ FIXED  [年月] : max(if [年月] = [Calculation_238409371418284040] then [稼働日]&#13;&#10;else [営業日日数] end) }' />
@@ -5740,6 +6000,10 @@
             <column-instance column='[加盟店セット名]' derivation='None' name='[none:加盟店セット名:nk]' pivot='key' type='nominal' />
             <column-instance column='[加盟店名]' derivation='None' name='[none:加盟店名:nk]' pivot='key' type='nominal' />
             <column-instance column='[販売区分]' derivation='None' name='[none:販売区分:nk]' pivot='key' type='nominal' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[t_本日]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
             <column-instance column='[Calculation_238409371419402258]' derivation='User' name='[usr:Calculation_238409371419402258:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419475988]' derivation='User' name='[usr:Calculation_238409371419475988:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371419602967]' derivation='User' name='[usr:Calculation_238409371419602967:qk]' pivot='key' type='quantitative' />
@@ -5748,7 +6012,6 @@
             <column-instance column='[Calculation_238409371419852829]' derivation='User' name='[usr:Calculation_238409371419852829:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_238409371420168223]' derivation='User' name='[usr:Calculation_238409371420168223:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_238409371420205088]' derivation='User' name='[usr:Calculation_238409371420205088:qk]' pivot='key' type='quantitative' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[キャンセル日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ01]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ02]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[タグ03]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -5758,11 +6021,8 @@
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[加盟店法人名]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[営業日日数]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上実績]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[売上日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[売上目標]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[年月]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[撤去日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-            <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[本日]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
             <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[稼働日]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
             <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[販売区分]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
           </datasource-dependencies>
@@ -5770,7 +6030,7 @@
             <groupfilter function='empty-level' member='[加盟店セット名]' user:ui-action-filter='[Action7_41F1F0DE86FF4DD8821C6E3D1A23259A]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[my:Calculation_238409371417587717:ok]' filter-group='7'>
-            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202504' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[my:Calculation_238409371417587717:ok]' member='202505' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
             <preset type='last-values' />
           </filter>
           <filter class='categorical' column='[sqlproxy.0adlcfy1b6psuh1e2nhf419z0j8r].[none:Calculation_238409371417276418:ok]'>
@@ -6345,8 +6605,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2600' minheight='2600' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='219' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98896' id='218' param='vert' type-v2='layout-flow' w='98770' x='615' y='552'>
+            <zone h='100000' id='223' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98896' id='222' param='vert' type-v2='layout-flow' w='98770' x='615' y='552'>
                 <zone fixed-size='42' h='3449' id='52' type-v2='title' w='98770' x='615' y='552'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -6595,13 +6855,13 @@
                   <value>1</value>
                   <value>&quot;全体集計&quot;</value>
                   <value>&quot;表示&quot;</value>
-                  <value>858</value>
-                  <value>601735.21900000004</value>
-                  <value>0.0</value>
-                  <value>0.0</value>
-                  <value>0.0</value>
-                  <value>&quot;未達&quot;</value>
-                  <value>0.0</value>
+                  <value>602</value>
+                  <value>473387.26899999997</value>
+                  <value>423100.0</value>
+                  <value>-50287.268999999971</value>
+                  <value>1.5384247101748996</value>
+                  <value>&quot;達成&quot;</value>
+                  <value>1.118854334672654</value>
                 </tuple>
               </tuple-reference>
             </tuple-selection>
@@ -6655,7 +6915,7 @@
         <viewpoint name='売上②' />
         <viewpoint name='売上③' />
       </viewpoints>
-      <active id='70' />
+      <active id='65' />
       <simple-id uuid='{815D1759-1308-41AD-B495-CE204B705410}' />
     </window>
     <window class='worksheet' name='売上①' tab-color='#f66273'>
@@ -7253,4 +7513,279 @@
       <simple-id uuid='{79A29D68-5332-44A7-AED3-693F5DF9E82A}' />
     </window>
   </windows>
+  <thumbnails>
+    <thumbnail height='122' name='売上①' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='売上確認用' width='192'>
+      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
+      UFG939UAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
 </workbook>
