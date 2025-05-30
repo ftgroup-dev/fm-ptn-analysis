@@ -5536,10 +5536,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="417" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -8182,10 +8179,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="399" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -10759,10 +10753,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="409" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -13476,10 +13467,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="418" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -15977,10 +15965,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="442" LabelKey="0" flags="65796" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -19120,10 +19105,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="363" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -22616,10 +22598,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="404" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -24988,10 +24967,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="427" LabelKey="0" flags="65796" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -27286,10 +27262,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="464" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -30059,10 +30032,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="405" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -32411,10 +32381,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="433" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -34635,10 +34602,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="425" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -37936,10 +37900,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="425" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -40269,10 +40230,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="422" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -43126,10 +43084,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="485" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -45542,10 +45497,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="400" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -77702,10 +77654,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="425" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="17.0000000" left="149.0000000" bottom="47.0000000" right="269.0000000"/>
@@ -78031,7 +77980,7 @@ self:normal .self&#10;{&#10;&#09;text-align: left;&#10;}&#10;self:normal .inner_
 <Theme name="アペックスブルー" id="01"/>
 <Options showRecordIndicator="True" showFieldFramesCurrentRecord="True" showFieldFrames="False" saveRecord="True"/>
 <Object type="Field" key="27" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="24.0000000" left="0.0000000" bottom="45.0000000" right="120.0000000"/>
+<Bounds top="26.0000000" left="0.0000000" bottom="49.0000000" right="120.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::主キー</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78059,7 +78008,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="33" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="0.0000000" bottom="45.0000000" right="120.0000000"/>
+<Bounds top="26.0000000" left="0.0000000" bottom="49.0000000" right="120.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::加盟店CD</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78087,7 +78036,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="69" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="120.0000000" bottom="45.0000000" right="240.0000000"/>
+<Bounds top="26.0000000" left="120.0000000" bottom="49.0000000" right="240.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::加盟店名</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78115,7 +78064,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="76" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="240.0000000" bottom="45.0000000" right="360.0000000"/>
+<Bounds top="26.0000000" left="240.0000000" bottom="49.0000000" right="360.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::加盟店法人CD</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78143,7 +78092,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="77" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="360.0000000" bottom="45.0000000" right="480.0000000"/>
+<Bounds top="26.0000000" left="360.0000000" bottom="49.0000000" right="480.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::加盟店法人名</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78171,7 +78120,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="35" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="480.0000000" bottom="45.0000000" right="600.0000000"/>
+<Bounds top="26.0000000" left="480.0000000" bottom="49.0000000" right="600.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78199,7 +78148,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="34" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="600.0000000" bottom="45.0000000" right="720.0000000"/>
+<Bounds top="26.0000000" left="600.0000000" bottom="49.0000000" right="720.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::OK目標</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78227,7 +78176,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="112" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="720.0000000" bottom="45.0000000" right="840.0000000"/>
+<Bounds top="26.0000000" left="720.0000000" bottom="49.0000000" right="840.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::売上目標</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78255,7 +78204,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="36" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="840.0000000" bottom="45.0000000" right="960.0000000"/>
+<Bounds top="26.0000000" left="840.0000000" bottom="49.0000000" right="960.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ01</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78283,7 +78232,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="37" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="960.0000000" bottom="45.0000000" right="1080.0000000"/>
+<Bounds top="26.0000000" left="960.0000000" bottom="49.0000000" right="1080.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ02</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78311,7 +78260,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="38" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="1080.0000000" bottom="45.0000000" right="1200.0000000"/>
+<Bounds top="26.0000000" left="1080.0000000" bottom="49.0000000" right="1200.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ03</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78339,7 +78288,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="39" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="1200.0000000" bottom="45.0000000" right="1320.0000000"/>
+<Bounds top="26.0000000" left="1200.0000000" bottom="49.0000000" right="1320.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ04</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78367,7 +78316,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="40" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="1320.0000000" bottom="45.0000000" right="1440.0000000"/>
+<Bounds top="26.0000000" left="1320.0000000" bottom="49.0000000" right="1440.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ05</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78395,7 +78344,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="90" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="1440.0000000" bottom="45.0000000" right="1560.0000000"/>
+<Bounds top="26.0000000" left="1440.0000000" bottom="49.0000000" right="1560.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ06</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78423,7 +78372,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="91" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="1560.0000000" bottom="45.0000000" right="1680.0000000"/>
+<Bounds top="26.0000000" left="1560.0000000" bottom="49.0000000" right="1680.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ07</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78451,7 +78400,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="92" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="1680.0000000" bottom="45.0000000" right="1800.0000000"/>
+<Bounds top="26.0000000" left="1680.0000000" bottom="49.0000000" right="1800.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ08</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78479,7 +78428,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="93" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="1800.0000000" bottom="45.0000000" right="1920.0000000"/>
+<Bounds top="26.0000000" left="1800.0000000" bottom="49.0000000" right="1920.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ09</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78507,7 +78456,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="94" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="1920.0000000" bottom="45.0000000" right="2040.0000000"/>
+<Bounds top="26.0000000" left="1920.0000000" bottom="49.0000000" right="2040.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::タグ10</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78535,7 +78484,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="50" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="24.0000000" left="2160.0000000" bottom="45.0000000" right="2280.0000000"/>
+<Bounds top="26.0000000" left="2160.0000000" bottom="49.0000000" right="2280.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::SV担当者入力データ月次_主キー</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78563,7 +78512,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="125" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="2040.0000000" bottom="45.0000000" right="2160.0000000"/>
+<Bounds top="26.0000000" left="2040.0000000" bottom="49.0000000" right="2160.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::締フラグ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78590,9 +78539,9 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
-<Object type="Field" key="135" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="24.0000000" left="2400.0000000" bottom="45.0000000" right="2520.0000000"/>
-<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
+<Object type="Field" key="135" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="2160.0000000" bottom="49.0000000" right="2324.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::作成情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
@@ -78618,8 +78567,36 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="161" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="2324.0000000" bottom="49.0000000" right="2493.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>目標集計テーブル::t_作成情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_作成情報タイムスタンプ" id="31" repetition="1" maxRepetition="1" table="目標集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="136" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="24.0000000" left="2520.0000000" bottom="45.0000000" right="2640.0000000"/>
+<Bounds top="26.0000000" left="2733.0000000" bottom="49.0000000" right="2853.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::作成者</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78646,9 +78623,9 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
-<Object type="Field" key="137" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="24.0000000" left="2640.0000000" bottom="45.0000000" right="2760.0000000"/>
-<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
+<Object type="Field" key="137" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="2493.0000000" bottom="49.0000000" right="2646.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::修正情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
@@ -78674,8 +78651,36 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="162" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="2646.0000000" bottom="49.0000000" right="2795.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>目標集計テーブル::t_修正情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_修正情報タイムスタンプ" id="32" repetition="1" maxRepetition="1" table="目標集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="138" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="24.0000000" left="2760.0000000" bottom="45.0000000" right="2880.0000000"/>
+<Bounds top="26.0000000" left="3155.0000000" bottom="49.0000000" right="3275.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
 <Name>目標集計テーブル::修正者</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78739,10 +78744,38 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
-<Object type="Field" key="18" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="26.0000000" left="120.0000000" bottom="49.0000000" right="240.0000000"/>
-<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
+<Object type="Field" key="18" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="0.0000000" bottom="49.0000000" right="162.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::作成情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="作成情報タイムスタンプ" id="2" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="287" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="162.0000000" bottom="49.0000000" right="317.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::t_作成情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -78763,12 +78796,12 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="作成情報タイムスタンプ" id="2" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+<Field name="t_作成情報タイムスタンプ" id="41" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
 </DDRInfo>
 </FieldObj>
 </Object>
 <Object type="Field" key="19" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="26.0000000" left="240.0000000" bottom="49.0000000" right="360.0000000"/>
+<Bounds top="26.0000000" left="437.0000000" bottom="49.0000000" right="557.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::作成者</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78796,7 +78829,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="20" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="0.0000000" bottom="49.0000000" right="207.0000000"/>
+<Bounds top="26.0000000" left="317.0000000" bottom="49.0000000" right="482.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::修正情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78816,15 +78849,43 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </ExtendedAttributes>
 <Styles>
 <LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
 <Field name="修正情報タイムスタンプ" id="4" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="288" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="482.0000000" bottom="49.0000000" right="654.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::t_修正情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_修正情報タイムスタンプ" id="42" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="21" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="26.0000000" left="567.0000000" bottom="49.0000000" right="687.0000000"/>
+<Bounds top="26.0000000" left="894.0000000" bottom="49.0000000" right="1014.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::修正者</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78852,7 +78913,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="22" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="207.0000000" bottom="49.0000000" right="327.0000000"/>
+<Bounds top="26.0000000" left="654.0000000" bottom="49.0000000" right="774.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店CD</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78880,7 +78941,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="79" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="327.0000000" bottom="49.0000000" right="516.0000000"/>
+<Bounds top="26.0000000" left="774.0000000" bottom="49.0000000" right="963.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店名</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78908,7 +78969,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="274" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="516.0000000" bottom="49.0000000" right="636.0000000"/>
+<Bounds top="26.0000000" left="963.0000000" bottom="49.0000000" right="1083.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店セットCD</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78936,7 +78997,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="275" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="636.0000000" bottom="49.0000000" right="756.0000000"/>
+<Bounds top="26.0000000" left="1083.0000000" bottom="49.0000000" right="1203.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店セット名</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78964,7 +79025,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="67" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="756.0000000" bottom="49.0000000" right="902.0000000"/>
+<Bounds top="26.0000000" left="1203.0000000" bottom="49.0000000" right="1349.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店法人CD</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -78992,7 +79053,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="68" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="902.0000000" bottom="49.0000000" right="1052.0000000"/>
+<Bounds top="26.0000000" left="1349.0000000" bottom="49.0000000" right="1499.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店法人名</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79020,7 +79081,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="139" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1052.0000000" bottom="49.0000000" right="1131.0000000"/>
+<Bounds top="26.0000000" left="1499.0000000" bottom="49.0000000" right="1578.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79048,7 +79109,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="23" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1131.0000000" bottom="49.0000000" right="1251.0000000"/>
+<Bounds top="26.0000000" left="1578.0000000" bottom="49.0000000" right="1698.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::OK実績</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79076,7 +79137,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="128" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1251.0000000" bottom="49.0000000" right="1371.0000000"/>
+<Bounds top="26.0000000" left="1698.0000000" bottom="49.0000000" right="1818.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::売上実績</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79104,7 +79165,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="179" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1371.0000000" bottom="49.0000000" right="1464.0000000"/>
+<Bounds top="26.0000000" left="1818.0000000" bottom="49.0000000" right="1917.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::OK日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79131,8 +79192,36 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="291" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="1917.0000000" bottom="49.0000000" right="2067.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::t_OK日</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_OK日" id="43" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="25" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1464.0000000" bottom="49.0000000" right="1535.0000000"/>
+<Bounds top="26.0000000" left="2067.0000000" bottom="49.0000000" right="2160.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::OK年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79160,7 +79249,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="180" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1535.0000000" bottom="49.0000000" right="1629.0000000"/>
+<Bounds top="26.0000000" left="2160.0000000" bottom="49.0000000" right="2270.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::売上日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79187,8 +79276,36 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="292" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="2270.0000000" bottom="49.0000000" right="2390.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::t_売上日</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_売上日" id="44" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="26" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1629.0000000" bottom="49.0000000" right="1696.0000000"/>
+<Bounds top="26.0000000" left="2390.0000000" bottom="49.0000000" right="2457.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::売上年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79216,7 +79333,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="181" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1696.0000000" bottom="49.0000000" right="1791.0000000"/>
+<Bounds top="26.0000000" left="2457.0000000" bottom="49.0000000" right="2564.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::キャンセル日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79243,8 +79360,36 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="289" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="2564.0000000" bottom="49.0000000" right="2721.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::t_キャンセル日</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_キャンセル日" id="45" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="182" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1791.0000000" bottom="49.0000000" right="1867.0000000"/>
+<Bounds top="26.0000000" left="2721.0000000" bottom="49.0000000" right="2810.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::キャンセル年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79272,7 +79417,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="183" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1867.0000000" bottom="49.0000000" right="1952.0000000"/>
+<Bounds top="26.0000000" left="2810.0000000" bottom="49.0000000" right="2895.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::撤去日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79299,8 +79444,36 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="290" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="2895.0000000" bottom="49.0000000" right="3015.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::t_撤去日</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_撤去日" id="46" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="184" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1952.0000000" bottom="49.0000000" right="2043.0000000"/>
+<Bounds top="26.0000000" left="3015.0000000" bottom="49.0000000" right="3106.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::撤去年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79328,7 +79501,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="28" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2043.0000000" bottom="49.0000000" right="2163.0000000"/>
+<Bounds top="26.0000000" left="3106.0000000" bottom="49.0000000" right="3226.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ01</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79356,7 +79529,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="29" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2163.0000000" bottom="49.0000000" right="2283.0000000"/>
+<Bounds top="26.0000000" left="3226.0000000" bottom="49.0000000" right="3346.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ02</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79384,7 +79557,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="30" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2283.0000000" bottom="49.0000000" right="2403.0000000"/>
+<Bounds top="26.0000000" left="3346.0000000" bottom="49.0000000" right="3466.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ03</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79412,7 +79585,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="31" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2403.0000000" bottom="49.0000000" right="2523.0000000"/>
+<Bounds top="26.0000000" left="3466.0000000" bottom="49.0000000" right="3586.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ04</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79440,7 +79613,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="32" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2523.0000000" bottom="49.0000000" right="2643.0000000"/>
+<Bounds top="26.0000000" left="3586.0000000" bottom="49.0000000" right="3706.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ05</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79468,7 +79641,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="94" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2643.0000000" bottom="49.0000000" right="2763.0000000"/>
+<Bounds top="26.0000000" left="3706.0000000" bottom="49.0000000" right="3826.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ06</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79496,7 +79669,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="95" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2763.0000000" bottom="49.0000000" right="2883.0000000"/>
+<Bounds top="26.0000000" left="3826.0000000" bottom="49.0000000" right="3946.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ07</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79524,7 +79697,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="96" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2883.0000000" bottom="49.0000000" right="3003.0000000"/>
+<Bounds top="26.0000000" left="3946.0000000" bottom="49.0000000" right="4066.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ08</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79552,7 +79725,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="97" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3003.0000000" bottom="49.0000000" right="3123.0000000"/>
+<Bounds top="26.0000000" left="4066.0000000" bottom="49.0000000" right="4186.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ09</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79580,7 +79753,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="98" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3123.0000000" bottom="49.0000000" right="3243.0000000"/>
+<Bounds top="26.0000000" left="4186.0000000" bottom="49.0000000" right="4306.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ10</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79608,7 +79781,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="34" LabelKey="0" flags="12416" rotation="0">
-<Bounds top="26.0000000" left="3723.0000000" bottom="49.0000000" right="3843.0000000"/>
+<Bounds top="26.0000000" left="4666.0000000" bottom="49.0000000" right="4786.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::物件別管理データ_主キー</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79636,7 +79809,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="263" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3243.0000000" bottom="49.0000000" right="3363.0000000"/>
+<Bounds top="26.0000000" left="4306.0000000" bottom="49.0000000" right="4426.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::販売区分</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79664,7 +79837,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="146" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3363.0000000" bottom="49.0000000" right="3483.0000000"/>
+<Bounds top="26.0000000" left="4426.0000000" bottom="49.0000000" right="4546.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::締フラグ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -79990,7 +80163,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 <Theme name="アペックスブルー" id="01"/>
 <Options showRecordIndicator="True" showFieldFramesCurrentRecord="True" showFieldFrames="False" saveRecord="True"/>
 <Object type="Field" key="8" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="0.0000000" bottom="45.0000000" right="120.0000000"/>
+<Bounds top="26.0000000" left="0.0000000" bottom="49.0000000" right="120.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>稼働日情報テーブル::本日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -80017,8 +80190,36 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="19" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="120.0000000" bottom="49.0000000" right="250.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>稼働日情報テーブル::t_本日</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_本日" id="11" repetition="1" maxRepetition="1" table="稼働日情報テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="9" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="120.0000000" bottom="45.0000000" right="240.0000000"/>
+<Bounds top="26.0000000" left="250.0000000" bottom="49.0000000" right="370.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>稼働日情報テーブル::稼働日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -80046,7 +80247,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="10" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="240.0000000" bottom="45.0000000" right="360.0000000"/>
+<Bounds top="26.0000000" left="370.0000000" bottom="49.0000000" right="490.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>稼働日情報テーブル::総稼働日数</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -80073,6 +80274,118 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </DDRInfo>
 </FieldObj>
 </Object>
+<Object type="Field" key="15" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="490.0000000" bottom="49.0000000" right="628.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>稼働日情報テーブル::作成情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="作成情報タイムスタンプ" id="2" repetition="1" maxRepetition="1" table="稼働日情報テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="16" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="628.0000000" bottom="49.0000000" right="767.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>稼働日情報テーブル::t_作成情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_作成情報タイムスタンプ" id="9" repetition="1" maxRepetition="1" table="稼働日情報テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="17" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="767.0000000" bottom="49.0000000" right="907.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>稼働日情報テーブル::修正情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="修正情報タイムスタンプ" id="4" repetition="1" maxRepetition="1" table="稼働日情報テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="18" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="907.0000000" bottom="49.0000000" right="1052.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>稼働日情報テーブル::t_修正情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_修正情報タイムスタンプ" id="10" repetition="1" maxRepetition="1" table="稼働日情報テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 </Layout>
 <Layout width="1024" quickFind="True" includeInMenu="True" id="109" name="営業日テーブル">
 <Table id="1065176" name="営業日マスタ"/>
@@ -80083,7 +80396,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 <Theme name="アペックスブルー" id="01"/>
 <Options showRecordIndicator="True" showFieldFramesCurrentRecord="True" showFieldFrames="False" saveRecord="True"/>
 <Object type="Field" key="19" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="0.0000000" bottom="45.0000000" right="120.0000000"/>
+<Bounds top="26.0000000" left="0.0000000" bottom="49.0000000" right="120.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>営業日マスタ::ID</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -80111,7 +80424,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="20" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="120.0000000" bottom="45.0000000" right="240.0000000"/>
+<Bounds top="26.0000000" left="120.0000000" bottom="49.0000000" right="240.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>営業日マスタ::年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -80139,7 +80452,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="21" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="24.0000000" left="240.0000000" bottom="45.0000000" right="360.0000000"/>
+<Bounds top="26.0000000" left="240.0000000" bottom="49.0000000" right="360.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>営業日マスタ::営業日日数</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -80163,6 +80476,118 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </Styles>
 <DDRInfo>
 <Field name="営業日日数" id="8" repetition="1" maxRepetition="1" table="営業日マスタ"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="26" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="360.0000000" bottom="49.0000000" right="519.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>営業日マスタ::作成情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="作成情報タイムスタンプ" id="2" repetition="1" maxRepetition="1" table="営業日マスタ"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="27" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="519.0000000" bottom="49.0000000" right="674.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>営業日マスタ::t_作成情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_作成情報タイムスタンプ" id="10" repetition="1" maxRepetition="1" table="営業日マスタ"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="28" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="674.0000000" bottom="49.0000000" right="864.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>営業日マスタ::修正情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="修正情報タイムスタンプ" id="4" repetition="1" maxRepetition="1" table="営業日マスタ"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="29" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="864.0000000" bottom="49.0000000" right="1031.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>営業日マスタ::t_修正情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="t_修正情報タイムスタンプ" id="11" repetition="1" maxRepetition="1" table="営業日マスタ"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -83150,10 +83575,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="442" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -86122,10 +86544,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="417" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
