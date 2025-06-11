@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<FMPReport link="概要.xml" creationTime="16:17:43" creationDate="2025/06/11" type="Report" version="21.1.1">
-<File name="PartnerManagementSystem.fmp12" path="C:\Users\327311\Desktop\新しいフォルダー (2)\タグ情報変更作業\">
+<FMPReport link="概要.xml" creationTime="15:10:24" creationDate="2025/06/11" type="Report" version="21.1.1">
+<File name="PartnerManagementSystem.fmp12" path="ftg.irca-fm.com">
 <BaseTableCatalog>
 	<BaseTable id="129" records="2" name="top">
 		<FieldCatalog>
@@ -509,7 +509,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="136" records="8068" name="物件別管理データ">
+	<BaseTable id="136" records="8172" name="物件別管理データ">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -1874,7 +1874,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="138" records="10840" name="売上集計表">
+	<BaseTable id="138" records="10937" name="売上集計表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2277,7 +2277,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="140" records="9662" name="受注残明細表">
+	<BaseTable id="140" records="10030" name="受注残明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2899,7 +2899,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="142" records="41316" name="売上明細表">
+	<BaseTable id="142" records="41714" name="売上明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -4738,7 +4738,7 @@
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
 				</AutoEnter>
-				<Validation messageCalc="True" message="True" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+				<Validation messageCalc="True" message="True" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="Always">
 					<NotEmpty value="True"/>
 					<Unique value="True"/>
 					<Existing value="False"/>
@@ -4820,7 +4820,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="150" records="719" name="加盟店">
+	<BaseTable id="150" records="715" name="加盟店">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -4915,12 +4915,18 @@
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
 				</AutoEnter>
-				<Validation messageCalc="False" message="True" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+				<Validation messageCalc="True" message="True" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="Always">
 					<NotEmpty value="True"/>
 					<Unique value="True"/>
 					<Existing value="False"/>
 					<StrictValidation value="True"/>
-					<ErrorMessage>空欄不可・重複不可の項目です</ErrorMessage>
+					<ErrorMessage>&quot;空欄不可・重複不可の項目です&quot;</ErrorMessage>
+					<MessageCalculation>
+						<Calculation table="加盟店"><![CDATA["空欄不可・重複不可の項目です"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;空欄不可・重複不可の項目です&quot;</Chunk>
+						</DisplayCalculation>
+					</MessageCalculation>
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
@@ -5138,11 +5144,18 @@
 					<Serial increment="1" nextValue="00000380" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
+				<Validation messageCalc="True" message="True" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="Always">
+					<NotEmpty value="True"/>
+					<Unique value="True"/>
 					<Existing value="False"/>
-					<StrictValidation value="False"/>
+					<StrictValidation value="True"/>
+					<ErrorMessage>&quot;空欄不可・重複不可の項目です&quot;</ErrorMessage>
+					<MessageCalculation>
+						<Calculation table="加盟店セット"><![CDATA["空欄不可・重複不可の項目です"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;空欄不可・重複不可の項目です&quot;</Chunk>
+						</DisplayCalculation>
+					</MessageCalculation>
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
@@ -5685,7 +5698,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="153" records="25" name="タグ">
+	<BaseTable id="153" records="26" name="タグ">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -5764,7 +5777,7 @@
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="26" generate="OnCreation"/>
+					<Serial increment="1" nextValue="27" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -5778,7 +5791,7 @@
 			<Field id="7" dataType="Text" fieldType="Normal" name="タグID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="tag_0048" generate="OnCreation"/>
+					<Serial increment="1" nextValue="tag_0100" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -6006,7 +6019,7 @@ v$return
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="154" records="4396" name="tagging中間テーブル">
+	<BaseTable id="154" records="4410" name="tagging中間テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6085,7 +6098,7 @@ v$return
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="4403" generate="OnCreation"/>
+					<Serial increment="1" nextValue="4411" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -6328,7 +6341,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="155" records="3256" name="商品">
+	<BaseTable id="155" records="3270" name="商品">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6407,7 +6420,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="4204" generate="OnCreation"/>
+					<Serial increment="1" nextValue="4218" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -6541,7 +6554,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="156" records="4" name="タグ用テーブルマスタ">
+	<BaseTable id="156" records="5" name="タグ用テーブルマスタ">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6620,7 +6633,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="5" generate="OnCreation"/>
+					<Serial increment="1" nextValue="6" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -6978,7 +6991,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="159" records="356" name="営業担当者">
+	<BaseTable id="159" records="360" name="営業担当者">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -7057,7 +7070,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="463" generate="OnCreation"/>
+					<Serial increment="1" nextValue="467" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -7439,7 +7452,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="165" records="651" name="loginLog">
+	<BaseTable id="165" records="668" name="loginLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -7595,7 +7608,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="162" records="4515" name="目標集計テーブル">
+	<BaseTable id="162" records="4513" name="目標集計テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -7966,7 +7979,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="163" records="13463" name="実績集計テーブル">
+	<BaseTable id="163" records="13634" name="実績集計テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -8691,6 +8704,45 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
+			<Field id="47" dataType="Text" fieldType="Normal" name="フィールド 47">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="48" dataType="Text" fieldType="Normal" name="フィールド 48">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="49" dataType="Text" fieldType="Normal" name="フィールド 49">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
 		</FieldCatalog>
 	</BaseTable>
 	<BaseTable id="167" records="1" name="集計タグカテゴリテーブル">
@@ -9058,7 +9110,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="169" records="136" name="csvImportLog">
+	<BaseTable id="169" records="141" name="csvImportLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -9654,6 +9706,13 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 </BaseDirectoryCatalog>
 <RelationshipGraph>
 	<TableList>
+		<Table id="1065138" color="#787878" baseTableId="150" baseTable="加盟店" name="SV担当者入力データ月次_加盟店"/>
+		<Table id="1065177" color="#777777" baseTableId="166" baseTable="営業日マスタ" name="休日マスタ_営業日マスタ | 作成許可"/>
+		<Table id="1065165" color="#787878" baseTableId="162" baseTable="目標集計テーブル" name="SV担当者入力データ月次_目標集計テーブル｜作成許可"/>
+		<Table id="1065200" color="#787878" baseTableId="147" baseTable="SV担当者入力データ月次" name="SV担当者入力データ月次 | 自己リレ"/>
+		<Table id="1065127" color="#787878" baseTableId="151" baseTable="ユーザーマスタ" name="SV担当者入力データ月次_ユーザーマスタ"/>
+		<Table id="1065157" color="#787878" baseTableId="153" baseTable="タグ" name="ユーザーマスタ_タグ"/>
+		<Table id="1065107" color="#787878" baseTableId="147" baseTable="SV担当者入力データ月次" name="SV担当者入力データ月次"/>
 		<Table id="1065123" color="#787878" baseTableId="157" baseTable="全テーブル情報" name="カテゴリ_全テーブル情報｜テーブル名表示用"/>
 		<Table id="1065130" color="#787878" baseTableId="154" baseTable="tagging中間テーブル" name="加盟店セット_tagging中間テーブル"/>
 		<Table id="1065180" color="#787878" baseTableId="154" baseTable="tagging中間テーブル" name="加盟店セット_tagging中間テーブル｜その他タグ｜SV担当者"/>
@@ -9668,8 +9727,6 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 		<Table id="1065195" color="#787878" baseTableId="154" baseTable="tagging中間テーブル" name="加盟店セット_tagging中間テーブル_終了日あり"/>
 		<Table id="1065209" color="#787878" baseTableId="172" baseTable="加盟店セット" name="加盟店セット"/>
 		<Table id="1065110" color="#787878" baseTableId="150" baseTable="加盟店" name="加盟店"/>
-		<Table id="1065138" color="#787878" baseTableId="150" baseTable="加盟店" name="SV担当者入力データ月次_加盟店"/>
-		<Table id="1065177" color="#777777" baseTableId="166" baseTable="営業日マスタ" name="休日マスタ_営業日マスタ | 作成許可"/>
 		<Table id="1065108" color="#787878" baseTableId="148" baseTable="SV担当者入力データ週次" name="SV担当者入力データ週次"/>
 		<Table id="1065173" color="#787878" baseTableId="149" baseTable="加盟店法人" name="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人"/>
 		<Table id="1065214" color="#777777" baseTableId="172" baseTable="加盟店セット" name="SV担当者入力データ月次_加盟店_加盟店セット"/>
@@ -9688,7 +9745,6 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 		<Table id="1065183" color="#787878" baseTableId="149" baseTable="加盟店法人" name="物件別管理データ_加盟店_加盟店セット_加盟店法人"/>
 		<Table id="1065184" color="#787878" baseTableId="150" baseTable="加盟店" name="物件別管理データ_加盟店"/>
 		<Table id="1065160" color="#787878" baseTableId="150" baseTable="加盟店" name="SV担当者入力データ月次_ユーザーマスタ_tagging中間テーブル_加盟店"/>
-		<Table id="1065165" color="#787878" baseTableId="162" baseTable="目標集計テーブル" name="SV担当者入力データ月次_目標集計テーブル｜作成許可"/>
 		<Table id="1065098" color="#787878" baseTableId="138" baseTable="売上集計表" name="売上集計表"/>
 		<Table id="1065182" color="#787878" baseTableId="154" baseTable="tagging中間テーブル" name="売上明細表_商品_tagging中間テーブル"/>
 		<Table id="1065102" color="#787878" baseTableId="142" baseTable="売上明細表" name="売上明細表"/>
@@ -9696,10 +9752,6 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 		<Table id="1065204" color="#787878" baseTableId="163" baseTable="実績集計テーブル" name="受注残明細表_実績集計テーブル｜作成許可"/>
 		<Table id="1065142" color="#787878" baseTableId="159" baseTable="営業担当者" name="物件別管理データ_営業担当者"/>
 		<Table id="1065169" color="#787878" baseTableId="163" baseTable="実績集計テーブル" name="物件別管理データ_実績集計テーブル｜作成許可"/>
-		<Table id="1065200" color="#787878" baseTableId="147" baseTable="SV担当者入力データ月次" name="SV担当者入力データ月次 | 自己リレ"/>
-		<Table id="1065127" color="#787878" baseTableId="151" baseTable="ユーザーマスタ" name="SV担当者入力データ月次_ユーザーマスタ"/>
-		<Table id="1065157" color="#787878" baseTableId="153" baseTable="タグ" name="ユーザーマスタ_タグ"/>
-		<Table id="1065107" color="#787878" baseTableId="147" baseTable="SV担当者入力データ月次" name="SV担当者入力データ月次"/>
 		<Table id="1065111" color="#787878" baseTableId="151" baseTable="ユーザーマスタ" name="ユーザーマスタ"/>
 		<Table id="1065135" color="#787878" baseTableId="154" baseTable="tagging中間テーブル" name="商品_tagging中間テーブル"/>
 		<Table id="1065134" color="#787878" baseTableId="152" baseTable="カテゴリ" name="中間テーブル_タグ_カテゴリ"/>
@@ -9740,7 +9792,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 		<Table id="1065175" color="#787878" baseTableId="165" baseTable="loginLog" name="loginLog"/>
 		<Table id="1065190" color="#787878" baseTableId="170" baseTable="batExport" name="batExport"/>
 		<Table id="1065194" color="#787878" baseTableId="171" baseTable="SV担当者入力データ一括作成Log" name="SV担当者入力データ一括作成Log"/>
-		<Table id="1065216" color="#777777" baseTableId="173" baseTable="メンテナンス" name="メンテナンス"/>
+		<Table id="1065216" color="#787878" baseTableId="173" baseTable="メンテナンス" name="メンテナンス"/>
 	</TableList>
 	<RelationshipList>
 		<Relationship id="1">
@@ -89957,38 +90009,10 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </LocalTheme>
 <Theme name="アペックスブルー" id="01"/>
 <Options showRecordIndicator="True" showFieldFramesCurrentRecord="True" showFieldFrames="False" saveRecord="True"/>
-<Object type="Field" key="17" LabelKey="0" flags="12416" rotation="0">
+<Object type="Field" key="17" LabelKey="0" flags="8320" rotation="0">
 <Bounds top="26.0000000" left="0.0000000" bottom="49.0000000" right="120.0000000"/>
-<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="1" quickFind="1" pictFormat="5">
-<Name>実績集計テーブル::主キー</Name>
-<ExtendedAttributes fontHeight="14" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
-</Styles>
-<DDRInfo>
-<Field name="主キー" id="1" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Field" key="18" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="0.0000000" bottom="49.0000000" right="162.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
-<Name>実績集計テーブル::作成情報タイムスタンプ</Name>
+<Name>実績集計テーブル::主キー</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -90009,12 +90033,40 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
+<Field name="主キー" id="1" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="18" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="120.0000000" bottom="49.0000000" right="282.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::作成情報タイムスタンプ</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
 <Field name="作成情報タイムスタンプ" id="2" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
 </DDRInfo>
 </FieldObj>
 </Object>
 <Object type="Field" key="287" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="162.0000000" bottom="49.0000000" right="317.0000000"/>
+<Bounds top="26.0000000" left="282.0000000" bottom="49.0000000" right="437.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::t_作成情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90070,7 +90122,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="20" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="317.0000000" bottom="49.0000000" right="482.0000000"/>
+<Bounds top="26.0000000" left="437.0000000" bottom="49.0000000" right="602.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::修正情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90098,7 +90150,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="288" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="482.0000000" bottom="49.0000000" right="654.0000000"/>
+<Bounds top="26.0000000" left="602.0000000" bottom="49.0000000" right="774.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::t_修正情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90154,7 +90206,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="22" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="654.0000000" bottom="49.0000000" right="774.0000000"/>
+<Bounds top="26.0000000" left="774.0000000" bottom="49.0000000" right="894.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店CD</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90182,7 +90234,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="79" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="774.0000000" bottom="49.0000000" right="963.0000000"/>
+<Bounds top="26.0000000" left="894.0000000" bottom="49.0000000" right="1083.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店名</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90210,7 +90262,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="274" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="963.0000000" bottom="49.0000000" right="1083.0000000"/>
+<Bounds top="26.0000000" left="1083.0000000" bottom="49.0000000" right="1203.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店セットCD</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90238,7 +90290,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="275" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1083.0000000" bottom="49.0000000" right="1203.0000000"/>
+<Bounds top="26.0000000" left="1203.0000000" bottom="49.0000000" right="1323.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店セット名</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90266,7 +90318,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="67" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1203.0000000" bottom="49.0000000" right="1349.0000000"/>
+<Bounds top="26.0000000" left="1323.0000000" bottom="49.0000000" right="1469.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店法人CD</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90294,7 +90346,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="68" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1349.0000000" bottom="49.0000000" right="1499.0000000"/>
+<Bounds top="26.0000000" left="1469.0000000" bottom="49.0000000" right="1619.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::加盟店法人名</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90322,7 +90374,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="139" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1499.0000000" bottom="49.0000000" right="1578.0000000"/>
+<Bounds top="26.0000000" left="1619.0000000" bottom="49.0000000" right="1698.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90350,7 +90402,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="23" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1578.0000000" bottom="49.0000000" right="1698.0000000"/>
+<Bounds top="26.0000000" left="1698.0000000" bottom="49.0000000" right="1818.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::OK実績</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90378,7 +90430,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="128" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1698.0000000" bottom="49.0000000" right="1818.0000000"/>
+<Bounds top="26.0000000" left="1818.0000000" bottom="49.0000000" right="1938.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::売上実績</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90406,7 +90458,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="179" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1818.0000000" bottom="49.0000000" right="1917.0000000"/>
+<Bounds top="26.0000000" left="1938.0000000" bottom="49.0000000" right="2037.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::OK日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90434,7 +90486,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="291" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="1917.0000000" bottom="49.0000000" right="2067.0000000"/>
+<Bounds top="26.0000000" left="2037.0000000" bottom="49.0000000" right="2187.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::t_OK日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90462,7 +90514,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="25" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2067.0000000" bottom="49.0000000" right="2160.0000000"/>
+<Bounds top="26.0000000" left="2187.0000000" bottom="49.0000000" right="2280.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::OK年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90490,7 +90542,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="180" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2160.0000000" bottom="49.0000000" right="2270.0000000"/>
+<Bounds top="26.0000000" left="2280.0000000" bottom="49.0000000" right="2390.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::売上日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90518,7 +90570,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="292" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2270.0000000" bottom="49.0000000" right="2390.0000000"/>
+<Bounds top="26.0000000" left="2390.0000000" bottom="49.0000000" right="2510.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::t_売上日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90546,7 +90598,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="26" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2390.0000000" bottom="49.0000000" right="2457.0000000"/>
+<Bounds top="26.0000000" left="2510.0000000" bottom="49.0000000" right="2577.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::売上年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90574,7 +90626,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="181" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2457.0000000" bottom="49.0000000" right="2564.0000000"/>
+<Bounds top="26.0000000" left="2577.0000000" bottom="49.0000000" right="2684.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::キャンセル日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90602,7 +90654,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="289" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2564.0000000" bottom="49.0000000" right="2721.0000000"/>
+<Bounds top="26.0000000" left="2684.0000000" bottom="49.0000000" right="2841.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::t_キャンセル日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90630,7 +90682,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="182" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2721.0000000" bottom="49.0000000" right="2810.0000000"/>
+<Bounds top="26.0000000" left="2841.0000000" bottom="49.0000000" right="2930.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::キャンセル年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90658,7 +90710,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="183" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2810.0000000" bottom="49.0000000" right="2895.0000000"/>
+<Bounds top="26.0000000" left="2930.0000000" bottom="49.0000000" right="3015.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::撤去日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90686,7 +90738,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="290" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="2895.0000000" bottom="49.0000000" right="3015.0000000"/>
+<Bounds top="26.0000000" left="3015.0000000" bottom="49.0000000" right="3135.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::t_撤去日</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90714,7 +90766,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="184" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3015.0000000" bottom="49.0000000" right="3106.0000000"/>
+<Bounds top="26.0000000" left="3135.0000000" bottom="49.0000000" right="3226.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::撤去年月</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90742,7 +90794,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="28" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3106.0000000" bottom="49.0000000" right="3226.0000000"/>
+<Bounds top="26.0000000" left="3226.0000000" bottom="49.0000000" right="3346.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ01</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90770,7 +90822,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="29" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3226.0000000" bottom="49.0000000" right="3346.0000000"/>
+<Bounds top="26.0000000" left="3346.0000000" bottom="49.0000000" right="3466.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ02</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90798,7 +90850,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="30" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3346.0000000" bottom="49.0000000" right="3466.0000000"/>
+<Bounds top="26.0000000" left="3466.0000000" bottom="49.0000000" right="3586.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ03</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90826,7 +90878,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="31" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3466.0000000" bottom="49.0000000" right="3586.0000000"/>
+<Bounds top="26.0000000" left="3586.0000000" bottom="49.0000000" right="3706.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ04</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90854,7 +90906,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="32" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3586.0000000" bottom="49.0000000" right="3706.0000000"/>
+<Bounds top="26.0000000" left="3706.0000000" bottom="49.0000000" right="3826.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ05</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90882,7 +90934,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="94" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3706.0000000" bottom="49.0000000" right="3826.0000000"/>
+<Bounds top="26.0000000" left="3826.0000000" bottom="49.0000000" right="3946.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ06</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90910,7 +90962,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="95" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3826.0000000" bottom="49.0000000" right="3946.0000000"/>
+<Bounds top="26.0000000" left="3946.0000000" bottom="49.0000000" right="4066.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ07</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90938,7 +90990,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="96" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="3946.0000000" bottom="49.0000000" right="4066.0000000"/>
+<Bounds top="26.0000000" left="4066.0000000" bottom="49.0000000" right="4186.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ08</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90966,7 +91018,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="97" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="4066.0000000" bottom="49.0000000" right="4186.0000000"/>
+<Bounds top="26.0000000" left="4186.0000000" bottom="49.0000000" right="4306.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ09</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -90994,7 +91046,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="98" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="4186.0000000" bottom="49.0000000" right="4306.0000000"/>
+<Bounds top="26.0000000" left="4306.0000000" bottom="49.0000000" right="4426.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::タグ10</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -91050,7 +91102,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="263" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="4306.0000000" bottom="49.0000000" right="4426.0000000"/>
+<Bounds top="26.0000000" left="4426.0000000" bottom="49.0000000" right="4546.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::販売区分</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -91078,7 +91130,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 <Object type="Field" key="146" LabelKey="0" flags="8320" rotation="0">
-<Bounds top="26.0000000" left="4426.0000000" bottom="49.0000000" right="4546.0000000"/>
+<Bounds top="26.0000000" left="4546.0000000" bottom="49.0000000" right="4666.0000000"/>
 <FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>実績集計テーブル::締フラグ</Name>
 <ExtendedAttributes fontHeight="14" graphicFormat="5">
@@ -91102,6 +91154,90 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </Styles>
 <DDRInfo>
 <Field name="締フラグ" id="29" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="347" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="4666.0000000" bottom="49.0000000" right="4786.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::フィールド 47</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="フィールド 47" id="47" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="350" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="4786.0000000" bottom="49.0000000" right="4906.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::フィールド 48</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="フィールド 48" id="48" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="353" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="26.0000000" left="4906.0000000" bottom="49.0000000" right="5026.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>実績集計テーブル::フィールド 49</Name>
+<ExtendedAttributes fontHeight="14" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;border-bottom-right-radius: 0pt 0pt;&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;border-top-left-radius: 0pt 0pt;&#10;&#09;font-family: -fm-font-family(HelveticaNeue,HelveticaNeue);&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:hover .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="フィールド 49" id="49" repetition="1" maxRepetition="1" table="実績集計テーブル"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -100815,27 +100951,25 @@ IsEmpty ( #a ) ; "その他" ;
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let (
+					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::加盟店CD;
+SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); &quot;その他&quot;;
@@ -100843,27 +100977,25 @@ IsEmpty ( #a ); &quot;その他&quot;;
 )
 ) ]</StepText>
 					<Result>
-						<Calculation><![CDATA[Let (
+						<Calculation><![CDATA[Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE 
-    c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次::加盟店CD;
+SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); "その他";
@@ -100872,33 +101004,51 @@ IsEmpty ( #a ); "その他";
 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> (
+							<Chunk type="NoRef"> ([
+#start = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> );
+#end = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> + 1 ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> ) -1 ;
+
 #a = 
 </Chunk>
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
+								<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 </Chunk>
 							<Chunk type="FunctionRef">Case</Chunk>
@@ -101467,21 +101617,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    b.\&quot;加盟店法人CD\&quot; = ?
-AND c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::加盟店法人CD;
-物件別管理データ::加盟店CD;
+物件別管理データ_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 $start;
 $end
@@ -101497,21 +101640,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE 
-    b.\"加盟店法人CD\" = ?
-AND c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::加盟店法人CD;
-物件別管理データ::加盟店CD;
+物件別管理データ_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 $start;
 $end
@@ -101530,27 +101666,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    b.\&quot;加盟店法人CD\&quot; = ?
-AND c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
-							</Chunk>
-							<Chunk type="NoRef">;
-</Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
+								<Field table="物件別管理データ_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -102007,18 +102132,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-売上集計表::顧客コード;
+売上集計表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -102037,18 +102158,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-売上集計表::顧客コード;
+売上集計表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -102098,20 +102215,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="売上集計表" id="16" name="顧客コード"/>
+								<Field table="売上集計表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -102740,18 +102853,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -102770,18 +102879,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -102831,20 +102936,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="受注残明細表" id="12" name="得意先コード"/>
+								<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -103360,18 +103461,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -103390,18 +103487,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -103451,20 +103544,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="受注残明細表" id="12" name="得意先コード"/>
+								<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -104251,27 +104340,25 @@ IsEmpty ( #a ) ; "その他" ;
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let (
+					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::加盟店CD;
+SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); &quot;その他&quot;;
@@ -104279,27 +104366,25 @@ IsEmpty ( #a ); &quot;その他&quot;;
 )
 ) ]</StepText>
 					<Result>
-						<Calculation><![CDATA[Let (
+						<Calculation><![CDATA[Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE 
-    c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次::加盟店CD;
+SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); "その他";
@@ -104308,33 +104393,51 @@ IsEmpty ( #a ); "その他";
 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> (
+							<Chunk type="NoRef"> ([
+#start = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> );
+#end = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> + 1 ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> ) -1 ;
+
 #a = 
 </Chunk>
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
+								<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 </Chunk>
 							<Chunk type="FunctionRef">Case</Chunk>
@@ -104892,21 +104995,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    b.\&quot;加盟店法人CD\&quot; = ?
-AND c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::加盟店法人CD;
-物件別管理データ::加盟店CD;
+物件別管理データ_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 $start;
 $end
@@ -104922,21 +105018,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE 
-    b.\"加盟店法人CD\" = ?
-AND c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::加盟店法人CD;
-物件別管理データ::加盟店CD;
+物件別管理データ_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 $start;
 $end
@@ -104955,27 +105044,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    b.\&quot;加盟店法人CD\&quot; = ?
-AND c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
-							</Chunk>
-							<Chunk type="NoRef">;
-</Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
+								<Field table="物件別管理データ_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -105400,18 +105478,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-売上集計表::顧客コード;
+売上集計表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -105430,18 +105504,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-売上集計表::顧客コード;
+売上集計表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -105491,20 +105561,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="売上集計表" id="16" name="顧客コード"/>
+								<Field table="売上集計表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -106101,18 +106167,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -106131,18 +106193,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -106192,20 +106250,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="受注残明細表" id="12" name="得意先コード"/>
+								<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -106731,18 +106785,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -106761,18 +106811,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -106822,20 +106868,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="受注残明細表" id="12" name="得意先コード"/>
+								<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -113441,16 +113483,16 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 						<LayoutDestination value="SelectedLayout"/>
 						<Layout id="117" name="加盟店セット"/>
 					</Step>
-					<Step enable="False" id="1" name="スクリプト実行">
-						<StepText>//  スクリプト実行 [ 「set_BaseTableId」; 引数: JSONSetElement ( 
+					<Step enable="True" id="1" name="スクリプト実行">
+						<StepText>スクリプト実行 [ 「set_BaseTableId」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;layoutTable&quot;; Get( レイアウトテーブル名 ); JSONString ];
-[ &quot;targetField&quot;; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
+[ &quot;targetField&quot;; GetFieldName ( 加盟店セット::BaseTableID_g ); JSONString ]
  ) ]</StepText>
 						<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "layoutTable"; Get( レイアウトテーブル名 ); JSONString ];
-[ "targetField"; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
+[ "targetField"; GetFieldName ( 加盟店セット::BaseTableID_g ); JSONString ]
  )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -113467,7 +113509,7 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 							<Chunk type="FunctionRef">GetFieldName</Chunk>
 							<Chunk type="NoRef"> ( </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="加盟店" id="28" name="BaseTableID_g"/>
+								<Field table="加盟店セット" id="12" name="BaseTableID_g"/>
 							</Chunk>
 							<Chunk type="NoRef"> ); </Chunk>
 							<Chunk type="FunctionRef">JSONString</Chunk>
@@ -134769,7 +134811,7 @@ v$return
 				<Shortcut key="67" modifier="4"/>
 			</MenuItem>
 			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
-				<Command name="貼り付け(&amp;P)	Ctrl+V" id="57637"/>
+				<Command name="貼り付け(&amp;P) 	Ctrl+V" id="57637"/>
 				<Conditions>
 					<Install>
 						<Calculation><![CDATA[1]]></Calculation>

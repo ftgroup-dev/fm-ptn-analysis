@@ -928,27 +928,25 @@ IsEmpty ( #a ) ; "その他" ;
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let (
+					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::加盟店CD;
+SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); &quot;その他&quot;;
@@ -956,27 +954,25 @@ IsEmpty ( #a ); &quot;その他&quot;;
 )
 ) ]</StepText>
 					<Result>
-						<Calculation><![CDATA[Let (
+						<Calculation><![CDATA[Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE 
-    c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次::加盟店CD;
+SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); "その他";
@@ -985,33 +981,51 @@ IsEmpty ( #a ); "その他";
 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> (
+							<Chunk type="NoRef"> ([
+#start = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> );
+#end = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> + 1 ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> ) -1 ;
+
 #a = 
 </Chunk>
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
+								<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 </Chunk>
 							<Chunk type="FunctionRef">Case</Chunk>
@@ -1580,21 +1594,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    b.\&quot;加盟店法人CD\&quot; = ?
-AND c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::加盟店法人CD;
-物件別管理データ::加盟店CD;
+物件別管理データ_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 $start;
 $end
@@ -1610,21 +1617,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE 
-    b.\"加盟店法人CD\" = ?
-AND c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::加盟店法人CD;
-物件別管理データ::加盟店CD;
+物件別管理データ_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 $start;
 $end
@@ -1643,27 +1643,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    b.\&quot;加盟店法人CD\&quot; = ?
-AND c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
-							</Chunk>
-							<Chunk type="NoRef">;
-</Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
+								<Field table="物件別管理データ_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -2120,18 +2109,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-売上集計表::顧客コード;
+売上集計表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -2150,18 +2135,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-売上集計表::顧客コード;
+売上集計表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -2211,20 +2192,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="売上集計表" id="16" name="顧客コード"/>
+								<Field table="売上集計表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -2853,18 +2830,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -2883,18 +2856,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -2944,20 +2913,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="受注残明細表" id="12" name="得意先コード"/>
+								<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -3473,18 +3438,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -3503,18 +3464,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -3564,20 +3521,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="受注残明細表" id="12" name="得意先コード"/>
+								<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -4364,27 +4317,25 @@ IsEmpty ( #a ) ; "その他" ;
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let (
+					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::加盟店CD;
+SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); &quot;その他&quot;;
@@ -4392,27 +4343,25 @@ IsEmpty ( #a ); &quot;その他&quot;;
 )
 ) ]</StepText>
 					<Result>
-						<Calculation><![CDATA[Let (
+						<Calculation><![CDATA[Let ([
+#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
+#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
+
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE 
-    c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次::加盟店CD;
+SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 Case(
 IsEmpty ( #a ); "その他";
@@ -4421,33 +4370,51 @@ IsEmpty ( #a ); "その他";
 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> (
+							<Chunk type="NoRef"> ([
+#start = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> );
+#end = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> + 1 ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> ) -1 ;
+
 #a = 
 </Chunk>
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
+								<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
-$start;
-$end
-);
+#start;
+#end
+)];
 
 </Chunk>
 							<Chunk type="FunctionRef">Case</Chunk>
@@ -5005,21 +4972,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    b.\&quot;加盟店法人CD\&quot; = ?
-AND c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-物件別管理データ::加盟店法人CD;
-物件別管理データ::加盟店CD;
+物件別管理データ_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 $start;
 $end
@@ -5035,21 +4995,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE 
-    b.\"加盟店法人CD\" = ?
-AND c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-物件別管理データ::加盟店法人CD;
-物件別管理データ::加盟店CD;
+物件別管理データ_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 $start;
 $end
@@ -5068,27 +5021,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE 
-    b.\&quot;加盟店法人CD\&quot; = ?
-AND c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
-							</Chunk>
-							<Chunk type="NoRef">;
-</Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
+								<Field table="物件別管理データ_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -5513,18 +5455,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-売上集計表::顧客コード;
+売上集計表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -5543,18 +5481,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-売上集計表::顧客コード;
+売上集計表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -5604,20 +5538,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="売上集計表" id="16" name="顧客コード"/>
+								<Field table="売上集計表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -6214,18 +6144,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -6244,18 +6170,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -6305,20 +6227,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="受注残明細表" id="12" name="得意先コード"/>
+								<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -6844,18 +6762,14 @@ IsEmpty ( #a ) ; "その他" ;
 #a = 
 ExecuteSQL ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -6874,18 +6788,14 @@ IsEmpty ( #a ); &quot;その他&quot;;
 #a = 
 ExecuteSQL ( 
 
-"SELECT a.\"タグ_表示用\"
-FROM \"tagging中間テーブル\" a
-left join \"加盟店セット\" b
-on a.\"tagabble_id\" = b.\"加盟店セットCD\"
-left join \"加盟店\" c
-on b.\"加盟店セットCD\" = c.\"加盟店セットCD\"
-WHERE c.\"加盟店CD\" = ?
-AND a.\"カテゴリID\" = ? 
-AND a.\"適用期間_開始日\" <= ? 
-AND a.\"適用期間_連携用終了日\" >= ?";
+"SELECT \"タグ_表示用\"
+FROM \"tagging中間テーブル\" 
+WHERE \"tagabble_id\" = ?
+AND \"カテゴリID\" = ? 
+AND \"適用期間_開始日\" <= ? 
+AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-受注残明細表::得意先コード;
+受注残明細表_加盟店_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -6935,20 +6845,16 @@ IsEmpty ( #a ); "その他";
 							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 							<Chunk type="NoRef"> ( 
 
-&quot;SELECT a.\&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; a
-left join \&quot;加盟店セット\&quot; b
-on a.\&quot;tagabble_id\&quot; = b.\&quot;加盟店セットCD\&quot;
-left join \&quot;加盟店\&quot; c
-on b.\&quot;加盟店セットCD\&quot; = c.\&quot;加盟店セットCD\&quot;
-WHERE c.\&quot;加盟店CD\&quot; = ?
-AND a.\&quot;カテゴリID\&quot; = ? 
-AND a.\&quot;適用期間_開始日\&quot; &lt;= ? 
-AND a.\&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
+&quot;SELECT \&quot;タグ_表示用\&quot;
+FROM \&quot;tagging中間テーブル\&quot; 
+WHERE \&quot;tagabble_id\&quot; = ?
+AND \&quot;カテゴリID\&quot; = ? 
+AND \&quot;適用期間_開始日\&quot; &lt;= ? 
+AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="受注残明細表" id="12" name="得意先コード"/>
+								<Field table="受注残明細表_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -13554,16 +13460,16 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 						<LayoutDestination value="SelectedLayout"/>
 						<Layout id="117" name="加盟店セット"/>
 					</Step>
-					<Step enable="False" id="1" name="スクリプト実行">
-						<StepText>//  スクリプト実行 [ 「set_BaseTableId」; 引数: JSONSetElement ( 
+					<Step enable="True" id="1" name="スクリプト実行">
+						<StepText>スクリプト実行 [ 「set_BaseTableId」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;layoutTable&quot;; Get( レイアウトテーブル名 ); JSONString ];
-[ &quot;targetField&quot;; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
+[ &quot;targetField&quot;; GetFieldName ( 加盟店セット::BaseTableID_g ); JSONString ]
  ) ]</StepText>
 						<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "layoutTable"; Get( レイアウトテーブル名 ); JSONString ];
-[ "targetField"; GetFieldName ( 加盟店::BaseTableID_g ); JSONString ]
+[ "targetField"; GetFieldName ( 加盟店セット::BaseTableID_g ); JSONString ]
  )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -13580,7 +13486,7 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 							<Chunk type="FunctionRef">GetFieldName</Chunk>
 							<Chunk type="NoRef"> ( </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="加盟店" id="28" name="BaseTableID_g"/>
+								<Field table="加盟店セット" id="12" name="BaseTableID_g"/>
 							</Chunk>
 							<Chunk type="NoRef"> ); </Chunk>
 							<Chunk type="FunctionRef">JSONString</Chunk>
