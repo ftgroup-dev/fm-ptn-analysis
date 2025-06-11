@@ -334,6 +334,14 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
+				<Layout id="119" name="メンテナンス">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="120" name="メンテナンス">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
 				<Layout name="[新規レイアウト]">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
@@ -869,6 +877,13 @@
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
 				<BaseTable id="172" name="加盟店セット">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="173" name="メンテナンス">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
