@@ -5536,7 +5536,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="417" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -8179,7 +8182,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="399" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -10753,7 +10759,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="409" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -13467,7 +13476,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="418" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -15515,7 +15527,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </Object>
 </Layout>
 </Group><Group groupCollapsed="False" includeInMenu="True" id="50" name="入力">
-<Layout width="1281" quickFind="True" includeInMenu="True" id="60" name="SV担当者入力データ月次｜一覧">
+<Layout width="1386" quickFind="True" includeInMenu="True" id="60" name="SV担当者入力データ月次｜一覧">
 <Table id="1065107" name="SV担当者入力データ月次"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
@@ -15524,7 +15536,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 <Theme name="FT" id="02"/>
 <Options showRecordIndicator="False" showFieldFramesCurrentRecord="False" showFieldFrames="False" saveRecord="True"/>
 <Object type="Field" key="430" LabelKey="431" flags="0" rotation="0">
-<Bounds top="152.0000000" left="0.0000000" bottom="182.0000000" right="105.0000000"/>
+<Bounds top="182.0000000" left="105.0000000" bottom="212.0000000" right="210.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::加盟店CD</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -15552,7 +15564,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </FieldObj>
 </Object>
 <Object type="Text" key="431" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="0.0000000" bottom="152.0000000" right="105.0000000"/>
+<Bounds top="152.0000000" left="105.0000000" bottom="182.0000000" right="210.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -15594,7 +15606,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </TextObj>
 </Object>
 <Object type="Field" key="432" LabelKey="433" flags="0" rotation="0">
-<Bounds top="152.0000000" left="355.0000000" bottom="182.0000000" right="415.0000000"/>
+<Bounds top="182.0000000" left="460.0000000" bottom="212.0000000" right="520.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::年</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -15622,7 +15634,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </FieldObj>
 </Object>
 <Object type="Text" key="433" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="355.0000000" bottom="152.0000000" right="475.0000000"/>
+<Bounds top="152.0000000" left="460.0000000" bottom="182.0000000" right="580.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -15664,7 +15676,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </TextObj>
 </Object>
 <Object type="Field" key="434" LabelKey="435" flags="0" rotation="0">
-<Bounds top="152.0000000" left="105.0000000" bottom="182.0000000" right="355.0000000"/>
+<Bounds top="182.0000000" left="210.0000000" bottom="212.0000000" right="460.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次_加盟店::加盟店名</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -15694,7 +15706,7 @@ self:normal .self&#10;{&#10;&#09;text-align: left;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Text" key="435" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="105.0000000" bottom="152.0000000" right="355.0000000"/>
+<Bounds top="152.0000000" left="210.0000000" bottom="182.0000000" right="460.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -15736,7 +15748,7 @@ self:normal .self&#10;{&#10;&#09;text-align: left;&#10;}&#10;</LocalCSS>
 </TextObj>
 </Object>
 <Object type="Field" key="436" LabelKey="437" flags="0" rotation="0">
-<Bounds top="152.0000000" left="475.0000000" bottom="182.0000000" right="580.0000000"/>
+<Bounds top="182.0000000" left="580.0000000" bottom="212.0000000" right="685.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::_sv担当者CD</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -15764,7 +15776,7 @@ self:normal .self&#10;{&#10;&#09;text-align: left;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Text" key="437" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="475.0000000" bottom="152.0000000" right="580.0000000"/>
+<Bounds top="152.0000000" left="580.0000000" bottom="182.0000000" right="685.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -15965,7 +15977,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="442" LabelKey="0" flags="65796" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -16015,7 +16030,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Calculation><![CDATA[Get( ウインドウモード ) ≠ 1]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) ≠ 1</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Field" key="445" LabelKey="0" flags="0" rotation="0">
-<Bounds top="152.0000000" left="415.0000000" bottom="182.0000000" right="475.0000000"/>
+<Bounds top="182.0000000" left="520.0000000" bottom="212.0000000" right="580.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::月</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -16043,7 +16058,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Field" key="446" LabelKey="447" flags="0" rotation="0">
-<Bounds top="152.0000000" left="580.0000000" bottom="182.0000000" right="685.0000000"/>
+<Bounds top="182.0000000" left="685.0000000" bottom="212.0000000" right="790.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次_ユーザーマスタ::SV担当者名</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -16071,7 +16086,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Text" key="447" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="580.0000000" bottom="152.0000000" right="685.0000000"/>
+<Bounds top="152.0000000" left="685.0000000" bottom="182.0000000" right="790.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -16113,7 +16128,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 </TextObj>
 </Object>
 <Object type="Line" key="449" LabelKey="0" flags="1073745920" rotation="0">
-<Bounds top="64.0000000" left="0.0000000" bottom="64.0000000" right="3995.0000000"/>
+<Bounds top="64.0000000" left="100.0000000" bottom="64.0000000" right="4095.0000000"/>
 <Styles>
 <CustomStyles>
 <Name>上部ナビゲーション_下線</Name></CustomStyles>
@@ -16186,7 +16201,7 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(53.3333%,53.3333%,53.333
 </Styles>
 <RenderFormat renderType="0"></RenderFormat></Object>
 <Object type="Text" key="477" LabelKey="0" flags="1073741824" rotation="0">
-<Bounds top="122.0000000" left="895.0000000" bottom="152.0000000" right="1281.0000000"/>
+<Bounds top="152.0000000" left="1000.0000000" bottom="182.0000000" right="1386.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -16230,7 +16245,7 @@ self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;}&#10;</LocalCSS>
 </TextObj>
 </Object>
 <Object type="Field" key="478" LabelKey="0" flags="1073741824" rotation="0">
-<Bounds top="152.0000000" left="895.0000000" bottom="182.0000000" right="1281.0000000"/>
+<Bounds top="182.0000000" left="1000.0000000" bottom="212.0000000" right="1386.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::備考</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -16492,7 +16507,7 @@ self:normal .self&#10;{&#10;&#09;border-left-style: none;&#10;&#09;border-bottom
 </ButtonObj>
 </Object>
 <Object type="Field" key="545" LabelKey="0" flags="-1610612736" rotation="0">
-<Bounds top="190.0000000" left="371.0000000" bottom="213.0000000" right="517.0000000"/>
+<Bounds top="220.0000000" left="371.0000000" bottom="243.0000000" right="517.0000000"/>
 <FieldObj numOfReps="1" flags="131108" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::作成情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -16520,14 +16535,14 @@ self:normal .self&#10;{&#10;&#09;border-left-style: none;&#10;&#09;border-bottom
 </FieldObj>
 </Object>
 <Object type="Line" key="546" LabelKey="0" flags="-1610600448" rotation="0">
-<Bounds top="210.0000000" left="253.0000000" bottom="210.0000000" right="605.0000000"/>
+<Bounds top="240.0000000" left="253.0000000" bottom="240.0000000" right="605.0000000"/>
 <Styles>
 <LocalCSS>
 self:normal .self&#10;{&#10;&#09;border-top-color: rgba(100%,100%,100%,1);&#10;&#09;border-right-color: rgba(100%,100%,100%,1);&#10;&#09;border-bottom-color: rgba(100%,100%,100%,1);&#10;&#09;border-left-color: rgba(100%,100%,100%,1);&#10;}&#10;</LocalCSS>
 </Styles>
 <RenderFormat renderType="0"></RenderFormat></Object>
 <Object type="Text" key="547" LabelKey="0" flags="-1610612736" rotation="0">
-<Bounds top="190.0000000" left="247.0000000" bottom="214.0000000" right="371.0000000"/>
+<Bounds top="220.0000000" left="247.0000000" bottom="244.0000000" right="371.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="14" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -16569,7 +16584,7 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(100%,100%,100%,1);&#10;&
 </TextObj>
 </Object>
 <Object type="Field" key="549" LabelKey="0" flags="-1610612736" rotation="0">
-<Bounds top="190.0000000" left="517.0000000" bottom="213.0000000" right="605.0000000"/>
+<Bounds top="220.0000000" left="517.0000000" bottom="243.0000000" right="605.0000000"/>
 <FieldObj numOfReps="1" flags="131108" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::作成者</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -16597,7 +16612,7 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(100%,100%,100%,1);&#10;&
 </FieldObj>
 </Object>
 <Object type="Field" key="550" LabelKey="0" flags="-1610612736" rotation="0">
-<Bounds top="190.0000000" left="735.0000000" bottom="213.0000000" right="881.0000000"/>
+<Bounds top="220.0000000" left="735.0000000" bottom="243.0000000" right="881.0000000"/>
 <FieldObj numOfReps="1" flags="131108" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::修正情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -16625,14 +16640,14 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(100%,100%,100%,1);&#10;&
 </FieldObj>
 </Object>
 <Object type="Line" key="551" LabelKey="0" flags="-1610600448" rotation="0">
-<Bounds top="210.0000000" left="617.0000000" bottom="210.0000000" right="970.0000000"/>
+<Bounds top="240.0000000" left="617.0000000" bottom="240.0000000" right="970.0000000"/>
 <Styles>
 <LocalCSS>
 self:normal .self&#10;{&#10;&#09;border-top-color: rgba(100%,100%,100%,1);&#10;&#09;border-right-color: rgba(100%,100%,100%,1);&#10;&#09;border-bottom-color: rgba(100%,100%,100%,1);&#10;&#09;border-left-color: rgba(100%,100%,100%,1);&#10;}&#10;</LocalCSS>
 </Styles>
 <RenderFormat renderType="0"></RenderFormat></Object>
 <Object type="Text" key="552" LabelKey="0" flags="-1610612736" rotation="0">
-<Bounds top="190.0000000" left="611.0000000" bottom="214.0000000" right="735.0000000"/>
+<Bounds top="220.0000000" left="611.0000000" bottom="244.0000000" right="735.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="14" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -16674,7 +16689,7 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(100%,100%,100%,1);&#10;&
 </TextObj>
 </Object>
 <Object type="Field" key="554" LabelKey="0" flags="-1610612736" rotation="0">
-<Bounds top="190.0000000" left="881.0000000" bottom="213.0000000" right="969.0000000"/>
+<Bounds top="220.0000000" left="881.0000000" bottom="243.0000000" right="969.0000000"/>
 <FieldObj numOfReps="1" flags="131108" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::修正者</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -16702,7 +16717,7 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(100%,100%,100%,1);&#10;&
 </FieldObj>
 </Object>
 <Object type="Text" key="556" LabelKey="0" flags="0" rotation="0">
-<Bounds top="196.0000000" left="1063.0000000" bottom="217.0000000" right="1190.0000000"/>
+<Bounds top="226.0000000" left="1063.0000000" bottom="247.0000000" right="1190.0000000"/>
 <TextObj flags="10" tableViewVisibility="0">
 <ExtendedAttributes fontHeight="14" graphicFormat="0">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
@@ -17571,7 +17586,7 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(80.3922%,80.3922%,80.392
 <Calculation><![CDATA[$$access ≠ "[Full Access]"]]></Calculation><DisplayCalculation><Chunk type="NoRef">$$access ≠ &quot;[Full Access]&quot;</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="617" LabelKey="0" flags="65536" rotation="0">
-<Bounds top="187.0000000" left="7.0000000" bottom="217.0000000" right="37.0000000"/>
+<Bounds top="217.0000000" left="7.0000000" bottom="247.0000000" right="37.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="13" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -17617,7 +17632,7 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(80.3922%,80.3922%,80.392
 </ButtonObj>
 </Object>
 <Object type="Button" key="618" LabelKey="0" flags="65536" rotation="0">
-<Bounds top="187.0000000" left="81.0000000" bottom="217.0000000" right="111.0000000"/>
+<Bounds top="217.0000000" left="81.0000000" bottom="247.0000000" right="111.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="13" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -17663,7 +17678,7 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(80.3922%,80.3922%,80.392
 </ButtonObj>
 </Object>
 <Object type="Button" key="619" LabelKey="0" flags="65536" rotation="0">
-<Bounds top="187.0000000" left="36.0000000" bottom="217.0000000" right="82.0000000"/>
+<Bounds top="217.0000000" left="36.0000000" bottom="247.0000000" right="82.0000000"/>
 <TextObj flags="10">
 <ExtendedAttributes fontHeight="13" graphicFormat="0">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
@@ -17708,12 +17723,12 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(80.3922%,80.3922%,80.392
 </ButtonObj>
 </Object>
 <Object type="GroupButton" key="620" LabelKey="0" flags="65800" rotation="0">
-<Bounds top="17.0000000" left="839.0000000" bottom="47.0000000" right="1244.0000000"/>
+<Bounds top="17.0000000" left="939.0000000" bottom="47.0000000" right="1344.0000000"/>
 <GroupButtonObj numOfObjs="1">
 <Styles>
 </Styles>
 <Object type="Text" key="621" LabelKey="0" flags="1342177280" rotation="0">
-<Bounds top="17.0000000" left="839.0000000" bottom="47.0000000" right="1244.0000000"/>
+<Bounds top="17.0000000" left="939.0000000" bottom="47.0000000" right="1344.0000000"/>
 <TextObj flags="10" tableViewVisibility="0">
 <ExtendedAttributes fontHeight="14" graphicFormat="0">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
@@ -17811,7 +17826,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </GroupButtonObj>
 </Object>
 <Object type="Button" key="622" LabelKey="0" flags="65796" rotation="0">
-<Bounds top="78.0000000" left="1130.0000000" bottom="108.0000000" right="1270.0000000"/>
+<Bounds top="78.0000000" left="1230.0000000" bottom="108.0000000" right="1370.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="13" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -17859,7 +17874,7 @@ self:normal .self&#10;{&#10;&#09;color: rgba(0%,33.7255%,61.5686%,1);&#10;}&#10;
 <Calculation><![CDATA[$$access ≠ "[Full Access]" or Get( ウインドウモード ) = 1]]></Calculation><DisplayCalculation><Chunk type="NoRef">$$access ≠ &quot;[Full Access]&quot; </Chunk><Chunk type="FunctionRef">or</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 1</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="448" LabelKey="0" flags="1073807620" rotation="0">
-<Bounds top="152.0000000" left="0.0000000" bottom="182.0000000" right="1281.0000000"/>
+<Bounds top="182.0000000" left="0.0000000" bottom="212.0000000" right="1387.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="13" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -17908,7 +17923,7 @@ self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;}&#10;self:hover
 <Calculation><![CDATA[Get( ウインドウモード ) = 1]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 1</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Field" key="623" LabelKey="624" flags="0" rotation="0">
-<Bounds top="152.0000000" left="685.0000000" bottom="182.0000000" right="790.0000000"/>
+<Bounds top="182.0000000" left="790.0000000" bottom="212.0000000" right="895.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::当月目標金額_月初</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -17938,7 +17953,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Text" key="624" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="685.0000000" bottom="152.0000000" right="790.0000000"/>
+<Bounds top="152.0000000" left="790.0000000" bottom="182.0000000" right="895.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -17980,7 +17995,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 </TextObj>
 </Object>
 <Object type="Field" key="625" LabelKey="626" flags="0" rotation="0">
-<Bounds top="152.0000000" left="790.0000000" bottom="182.0000000" right="895.0000000"/>
+<Bounds top="182.0000000" left="895.0000000" bottom="212.0000000" right="1000.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>SV担当者入力データ月次::月次着地額_月次</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -18010,7 +18025,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Text" key="626" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="790.0000000" bottom="152.0000000" right="895.0000000"/>
+<Bounds top="152.0000000" left="895.0000000" bottom="182.0000000" right="1000.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -18052,7 +18067,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 </TextObj>
 </Object>
 <Object type="Button" key="634" LabelKey="0" flags="0" rotation="0">
-<Bounds top="78.0000000" left="1398.0000000" bottom="108.0000000" right="1491.0000000"/>
+<Bounds top="78.0000000" left="1495.0000000" bottom="108.0000000" right="1588.0000000"/>
 <TextObj flags="10">
 <ExtendedAttributes fontHeight="13" graphicFormat="0">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
@@ -18097,7 +18112,7 @@ self:normal .self&#10;{&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;bord
 </ButtonObj>
 </Object>
 <Object type="Button" key="635" LabelKey="0" flags="0" rotation="0">
-<Bounds top="78.0000000" left="1365.0000000" bottom="108.0000000" right="1399.0000000"/>
+<Bounds top="78.0000000" left="1462.0000000" bottom="108.0000000" right="1496.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="10" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -18143,7 +18158,7 @@ self:normal .self&#10;{&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;bord
 </ButtonObj>
 </Object>
 <Object type="Button" key="636" LabelKey="0" flags="0" rotation="0">
-<Bounds top="78.0000000" left="1490.0000000" bottom="108.0000000" right="1524.0000000"/>
+<Bounds top="78.0000000" left="1587.0000000" bottom="108.0000000" right="1621.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="10" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -18189,7 +18204,7 @@ self:normal .self&#10;{&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;bord
 </ButtonObj>
 </Object>
 <Object type="Button" key="637" LabelKey="0" flags="0" rotation="0">
-<Bounds top="78.0000000" left="1332.0000000" bottom="108.0000000" right="1366.0000000"/>
+<Bounds top="78.0000000" left="1429.0000000" bottom="108.0000000" right="1463.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="10" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -18235,7 +18250,7 @@ self:normal .self&#10;{&#10;&#09;border-top-right-radius: 0pt 0pt;&#10;&#09;bord
 </ButtonObj>
 </Object>
 <Object type="Button" key="638" LabelKey="0" flags="0" rotation="0">
-<Bounds top="78.0000000" left="1523.0000000" bottom="108.0000000" right="1557.0000000"/>
+<Bounds top="78.0000000" left="1620.0000000" bottom="108.0000000" right="1654.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="10" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -18281,7 +18296,7 @@ self:normal .self&#10;{&#10;&#09;border-bottom-left-radius: 0pt 0pt;&#10;&#09;bo
 </ButtonObj>
 </Object>
 <Object type="Button" key="640" LabelKey="0" flags="8" rotation="0">
-<Bounds top="78.0000000" left="1304.0000000" bottom="107.0000000" right="1332.0000000"/>
+<Bounds top="78.0000000" left="1401.0000000" bottom="107.0000000" right="1429.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="14" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -18324,6 +18339,279 @@ self:normal .self&#10;{&#10;&#09;border-top-style: none;&#10;&#09;border-right-s
 <ButtonObj buttonFlags="0" iconSize="15" displayType="1">
 <Image name="a59_filter.svg"/>
 </ButtonObj>
+</Object>
+<Object type="Field" key="641" LabelKey="0" flags="0" rotation="0">
+<ScriptTriggers>
+<Trigger event="OnObjectModify" id="3" triggerFlags="1">
+<Script id="142" name="年月検索">
+</Script>
+<TriggerText>&quot;年月検索&quot;</TriggerText>
+</Trigger>
+</ScriptTriggers>
+<Bounds top="127.0000000" left="564.0000000" bottom="153.0000000" right="685.0000000"/>
+<FieldObj numOfReps="1" flags="656416" inputMode="0" keyboardType="1" displayType="2" tableViewVisibility="0" quickFind="0" pictFormat="5">
+<Name>global::SV入力検索用年月_g</Name>
+<ValueList>年月_検索用</ValueList>
+<ExtendedAttributes fontHeight="16" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-top-style: solid;&#10;&#09;border-left-style: solid;&#10;&#09;font-size: 14pt;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="SV入力検索用年月_g" id="25" repetition="1" maxRepetition="1" table="global"/>
+<ValueList name="年月_検索用" id="18"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="642" LabelKey="0" flags="0" rotation="0">
+<ScriptTriggers>
+<Trigger event="OnObjectModify" id="3" triggerFlags="1">
+<Script id="143" name="担当者検索">
+</Script>
+<TriggerText>&quot;担当者検索&quot;</TriggerText>
+</Trigger>
+</ScriptTriggers>
+<Bounds top="127.0000000" left="684.0000000" bottom="153.0000000" right="895.0000000"/>
+<FieldObj numOfReps="1" flags="525344" inputMode="0" keyboardType="1" displayType="2" tableViewVisibility="0" quickFind="0" pictFormat="5">
+<Name>global::カテゴリID_SV担当者_g</Name>
+<ValueList>SV担当者_検索用</ValueList>
+<ExtendedAttributes fontHeight="16" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-top-style: solid;&#10;&#09;border-left-style: solid;&#10;&#09;font-size: 14pt;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="カテゴリID_SV担当者_g" id="13" repetition="1" maxRepetition="1" table="global"/>
+<ValueList name="SV担当者_検索用" id="19"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="643" LabelKey="0" flags="0" rotation="0">
+<ScriptTriggers>
+<Trigger event="OnObjectModify" id="3" triggerFlags="1">
+<Script id="140" name="加盟店検索">
+</Script>
+<TriggerText>&quot;加盟店検索&quot;</TriggerText>
+</Trigger>
+</ScriptTriggers>
+<Bounds top="127.0000000" left="209.0000000" bottom="153.0000000" right="565.0000000"/>
+<FieldObj numOfReps="1" flags="656416" inputMode="0" keyboardType="1" displayType="2" tableViewVisibility="0" quickFind="0" pictFormat="5">
+<Name>global::カテゴリID_加盟_g</Name>
+<ValueList>加盟店CD_検索用</ValueList>
+<ExtendedAttributes fontHeight="16" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-top-style: solid;&#10;&#09;border-left-style: solid;&#10;&#09;font-size: 14pt;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="カテゴリID_加盟_g" id="22" repetition="1" maxRepetition="1" table="global"/>
+<ValueList name="加盟店CD_検索用" id="20"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Button" key="644" LabelKey="0" flags="65544" rotation="0">
+<Bounds top="78.0000000" left="276.0000000" bottom="108.0000000" right="336.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="13" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>サブボタン_青_中央</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>当月</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>12</Font-size>
+<Face>0</Face>
+<Color>#FFFFFF</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>当月</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+<ButtonObj buttonFlags="0" iconSize="13" displayType="4">
+<Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「当月検索」 ]</StepText><CurrentScript value="Pause"></CurrentScript><Script id="144" name="当月検索"></Script></Step>
+<Image name="a109_date.svg"/>
+</ButtonObj>
+</Object>
+<Object type="Button" key="645" LabelKey="0" flags="65544" rotation="0">
+<Bounds top="78.0000000" left="339.0000000" bottom="108.0000000" right="399.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="13" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>サブボタン_青_中央</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>前月</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>12</Font-size>
+<Face>0</Face>
+<Color>#FFFFFF</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>前月</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+<ButtonObj buttonFlags="0" iconSize="13" displayType="4">
+<Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「前月検索」 ]</StepText><CurrentScript value="Pause"></CurrentScript><Script id="141" name="前月検索"></Script></Step>
+<Image name="a109_date.svg"/>
+</ButtonObj>
+</Object>
+<Object type="Text" key="646" LabelKey="0" flags="0" rotation="0">
+<Bounds top="152.0000000" left="0.0000000" bottom="182.0000000" right="105.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>加盟店セットCD</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>加盟店セットCD</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Field" key="647" LabelKey="0" flags="0" rotation="0">
+<Bounds top="182.0000000" left="0.0000000" bottom="212.0000000" right="105.0000000"/>
+<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>SV担当者入力データ月次_加盟店::加盟店セットCD</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>リスト　_フィールド_中</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="加盟店セットCD" id="26" repetition="1" maxRepetition="1" table="SV担当者入力データ月次_加盟店"/>
+</DDRInfo>
+</FieldObj>
 </Object>
 </Layout>
 <Layout width="1360" quickFind="True" includeInMenu="True" id="32" name="SV担当者入力データ月次｜詳細">
@@ -19105,7 +19393,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="363" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -22598,7 +22889,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="404" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -24967,7 +25261,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="427" LabelKey="0" flags="65796" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -27262,7 +27559,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="464" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -30032,7 +30332,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="405" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -32381,7 +32684,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="433" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -34215,18 +34521,6 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </TextObj>
 </Object>
 <Object type="Field" key="337" LabelKey="338" flags="8" rotation="0">
-<ScriptTriggers>
-<Trigger event="OnObjectExit" id="2" triggerFlags="1">
-<Script id="84" name="加盟店_その他タグセット">
-</Script>
-<TriggerText>&quot;加盟店_その他タグセット&quot;</TriggerText>
-</Trigger>
-<Trigger event="OnObjectKeystroke" id="5" triggerFlags="1">
-<Script id="39" name="コード入力_中間テーブルチェック">
-</Script>
-<TriggerText>&quot;コード入力_中間テーブルチェック&quot;</TriggerText>
-</Trigger>
-</ScriptTriggers>
 <Bounds top="152.0000000" left="142.0000000" bottom="182.0000000" right="247.0000000"/>
 <FieldObj numOfReps="1" flags="1048800" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>加盟店::加盟店CD</Name>
@@ -34296,80 +34590,8 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </ParagraphStyleVector>
 </TextObj>
 </Object>
-<Object type="Field" key="392" LabelKey="393" flags="8" rotation="0">
-<Bounds top="152.0000000" left="815.0000000" bottom="182.0000000" right="1107.0000000"/>
-<FieldObj numOfReps="1" flags="1048804" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店::タグ_表示用</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>リスト_入力不可</Name></CustomStyles>
-</Styles>
-<DDRInfo>
-<Field name="タグ_表示用" id="16" repetition="1" maxRepetition="1" table="加盟店"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Text" key="393" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="815.0000000" bottom="152.0000000" right="1195.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>タグ</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>タグ</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
 <Object type="Field" key="418" LabelKey="0" flags="1073741832" rotation="0">
-<Bounds top="152.0000000" left="1194.0000000" bottom="182.0000000" right="1444.0000000"/>
+<Bounds top="152.0000000" left="815.0000000" bottom="182.0000000" right="1375.0000000"/>
 <FieldObj numOfReps="1" flags="1048800" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>加盟店::備考</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -34399,7 +34621,7 @@ self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Text" key="420" LabelKey="0" flags="1073741824" rotation="0">
-<Bounds top="122.0000000" left="1195.0000000" bottom="152.0000000" right="1445.0000000"/>
+<Bounds top="122.0000000" left="815.0000000" bottom="152.0000000" right="1375.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -34602,7 +34824,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="425" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -36128,1015 +36353,6 @@ self:normal .self&#10;{&#10;&#09;border-top-color: rgba(80.3922%,80.3922%,80.392
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「ズーム」; 引数: &quot;100&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["100"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;100&quot;</Chunk></DisplayCalculation><Script id="5" name="ズーム"></Script></Step>
 </ButtonObj>
 </Object>
-<Object type="Rect" key="522" LabelKey="0" flags="0" rotation="0">
-<Bounds top="152.0000000" left="1107.0000000" bottom="182.0000000" right="1195.0000000"/>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-top-color: rgba(0%,0%,0%,1);&#10;&#09;border-right-color: rgba(0%,0%,0%,1);&#10;&#09;border-bottom-color: rgba(0%,0%,0%,1);&#10;&#09;border-left-color: rgba(0%,0%,0%,1);&#10;&#09;box-shadow: 0pt 0pt 2pt 1pt rgba(0%,43.9216%,81.1765%,1);&#10;}&#10;self:normal .inner_border&#10;{&#10;&#09;padding-right: 5pt;&#10;&#09;padding-left: 5pt;&#10;}&#10;</LocalCSS>
-</Styles>
-<RenderFormat renderType="0"></RenderFormat></Object>
-<Object type="PopoverButton" key="406" LabelKey="0" flags="8" rotation="0">
-<Bounds top="153.0000000" left="1107.0000000" bottom="181.0000000" right="1192.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="13" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>ボタン_文字小_白_枠なし</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>タグ入力</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>12</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>タグ入力</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-<PopoverButtonObj buttonFlags="0" key="407" iconSize="12" displayType="4">
-<Image name="a5_menu.svg"/>
-<Object type="Popover" key="407" LabelKey="0" flags="0" rotation="0">
-<Bounds top="5.0000000" left="1168.0000000" bottom="370.0000000" right="1828.0000000"/>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-top-color: rgba(80.3922%,80.3922%,80.3922%,1);&#10;&#09;border-right-color: rgba(80.3922%,80.3922%,80.3922%,1);&#10;&#09;border-bottom-color: rgba(80.3922%,80.3922%,80.3922%,1);&#10;&#09;border-left-color: rgba(80.3922%,80.3922%,80.3922%,1);&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>複数タグ</Name></CustomStyles>
-</Styles>
-<TitleCalc>
-</TitleCalc>
-<PopoverObj flags="0" position="0" key="406">
-<Object type="Portal" key="408" LabelKey="0" flags="0" rotation="0">
-<Bounds top="89.0000000" left="1203.0000000" bottom="177.0000000" right="1800.0000000"/>
-<PortalObj portalFlags="17" numOfRows="3" initialRow="1">
-<TableAliasKey>加盟店_tagging中間テーブル_終了日なし</TableAliasKey>
-<FieldList><Field table="加盟店_tagging中間テーブル_終了日なし" id="10" name="タグ_表示用"></Field><Field table="加盟店_tagging中間テーブル_終了日なし" id="7" name="タグID"></Field><Field table="加盟店_tagging中間テーブル_終了日なし" id="9" name="カテゴリ_表示用"></Field><Field table="加盟店_tagging中間テーブル_終了日なし" id="18" name="適用期間_開始日"></Field><Field table="加盟店_tagging中間テーブル_終了日なし" id="19" name="適用期間_終了日"></Field></FieldList>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-top-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-right-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-bottom-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-left-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-top-style: solid;&#10;}&#10;self:normal .row_alt&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;&#09;border-image-source: none;&#10;}&#10;</LocalCSS>
-</Styles>
-<Object type="Field" key="409" LabelKey="414" flags="8" rotation="0">
-<Bounds top="89.0000000" left="1403.0000000" bottom="119.0000000" right="1603.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日なし::タグ_表示用</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>リスト_入力不可</Name></CustomStyles>
-</Styles>
-<DDRInfo>
-<Field name="タグ_表示用" id="10" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日なし"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Field" key="411" LabelKey="413" flags="8" rotation="0">
-<ScriptTriggers>
-<Trigger event="OnObjectModify" id="3" triggerFlags="1">
-<Script id="44" name="加盟店_同一タグチェック">
-</Script>
-<TriggerText>&quot;加盟店_同一タグチェック&quot;</TriggerText>
-</Trigger>
-<Trigger event="OnObjectSave" id="4" triggerFlags="1">
-<Script id="29" name="レコード確定">
-</Script>
-<TriggerText>&quot;レコード確定&quot;</TriggerText>
-</Trigger>
-</ScriptTriggers>
-<Bounds top="89.0000000" left="1203.0000000" bottom="119.0000000" right="1303.0000000"/>
-<FieldObj numOfReps="1" flags="1573920" inputMode="0" keyboardType="1" displayType="2" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日なし::タグID</Name>
-<ValueList>global_カテゴリ_タグ</ValueList>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-image-source: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
-</Styles>
-<DDRInfo>
-<Field name="タグID" id="7" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日なし"/>
-<ValueList name="global_カテゴリ_タグ" id="11"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Field" key="410" LabelKey="415" flags="8" rotation="0">
-<Bounds top="89.0000000" left="1303.0000000" bottom="119.0000000" right="1403.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日なし::カテゴリ_表示用</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>リスト_入力不可</Name></CustomStyles>
-</Styles>
-<DDRInfo>
-<Field name="カテゴリ_表示用" id="9" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日なし"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Field" key="538" LabelKey="539" flags="8" rotation="0">
-<Bounds top="89.0000000" left="1603.0000000" bottom="119.0000000" right="1693.0000000"/>
-<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="6" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日なし::適用期間_開始日</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>リスト_入力不可</Name></CustomStyles>
-</Styles>
-<DDRInfo>
-<Field name="適用期間_開始日" id="18" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日なし"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Field" key="544" LabelKey="545" flags="8" rotation="0">
-<ScriptTriggers>
-<Trigger event="OnObjectSave" id="4" triggerFlags="1">
-<Script id="29" name="レコード確定">
-</Script>
-<TriggerText>&quot;レコード確定&quot;</TriggerText>
-</Trigger>
-</ScriptTriggers>
-<Bounds top="89.0000000" left="1693.0000000" bottom="119.0000000" right="1783.0000000"/>
-<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="6" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日なし::適用期間_終了日</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>リスト_入力不可</Name></CustomStyles>
-</Styles>
-<DDRInfo>
-<Field name="適用期間_終了日" id="19" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日なし"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-</PortalObj>
-</Object>
-<Object type="Text" key="413" LabelKey="0" flags="0" rotation="0">
-<Bounds top="60.0000000" left="1203.0000000" bottom="90.0000000" right="1303.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-left-style: solid;&#10;&#09;border-top-left-radius: 3pt 3pt;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>タグ</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>タグ</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="414" LabelKey="0" flags="0" rotation="0">
-<Bounds top="60.0000000" left="1403.0000000" bottom="90.0000000" right="1603.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>タグ</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>タグ</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="415" LabelKey="0" flags="0" rotation="0">
-<Bounds top="60.0000000" left="1303.0000000" bottom="90.0000000" right="1403.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>カテゴリ</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>カテゴリ</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="417" LabelKey="0" flags="0" rotation="0">
-<Bounds top="60.0000000" left="1783.0000000" bottom="90.0000000" right="1800.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-top-right-radius: 3pt 3pt;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data></Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data></Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Portal" key="530" LabelKey="0" flags="0" rotation="0">
-<Bounds top="254.0000000" left="1203.0000000" bottom="342.0000000" right="1800.0000000"/>
-<PortalObj portalFlags="17" numOfRows="3" initialRow="1">
-<TableAliasKey>加盟店_tagging中間テーブル_終了日あり</TableAliasKey>
-<FieldList><Field table="加盟店_tagging中間テーブル_終了日あり" id="10" name="タグ_表示用"></Field><Field table="加盟店_tagging中間テーブル_終了日あり" id="9" name="カテゴリ_表示用"></Field><Field table="加盟店_tagging中間テーブル_終了日あり" id="7" name="タグID"></Field><Field table="加盟店_tagging中間テーブル_終了日あり" id="18" name="適用期間_開始日"></Field><Field table="加盟店_tagging中間テーブル_終了日あり" id="19" name="適用期間_終了日"></Field></FieldList>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-top-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-right-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-bottom-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-left-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-top-style: solid;&#10;}&#10;self:normal .row_alt&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;&#09;border-image-source: none;&#10;}&#10;</LocalCSS>
-</Styles>
-<Object type="Field" key="531" LabelKey="535" flags="8" rotation="0">
-<Bounds top="254.0000000" left="1403.0000000" bottom="284.0000000" right="1603.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日あり::タグ_表示用</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>リスト_入力不可</Name></CustomStyles>
-</Styles>
-<DDRInfo>
-<Field name="タグ_表示用" id="10" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日あり"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Field" key="532" LabelKey="536" flags="8" rotation="0">
-<Bounds top="254.0000000" left="1303.0000000" bottom="284.0000000" right="1403.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日あり::カテゴリ_表示用</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>リスト_入力不可</Name></CustomStyles>
-</Styles>
-<DDRInfo>
-<Field name="カテゴリ_表示用" id="9" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日あり"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Field" key="533" LabelKey="534" flags="8" rotation="0">
-<Bounds top="254.0000000" left="1203.0000000" bottom="284.0000000" right="1303.0000000"/>
-<FieldObj numOfReps="1" flags="1572900" inputMode="0" keyboardType="1" displayType="2" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日あり::タグID</Name>
-<ValueList>global_カテゴリ_タグ</ValueList>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-top-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;font-size: 11pt;&#10;&#09;color: rgba(20.3922%,20.3922%,20.3922%,1);&#10;&#09;text-align: center;&#10;&#09;-fm-text-vertical-align: center;&#10;}&#10;self:pressed .self&#10;{&#10;&#09;background-color: rgba(92.1569%,92.1569%,92.1569%,1);&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-top-color: rgba(0%,0%,0%,1);&#10;&#09;border-right-color: rgba(0%,0%,0%,1);&#10;&#09;border-bottom-color: rgba(0%,0%,0%,1);&#10;&#09;border-left-color: rgba(0%,0%,0%,1);&#10;&#09;box-shadow: 0pt 0pt 2pt 1pt rgba(0%,43.9216%,81.1765%,1);&#10;}&#10;self:normal .text&#10;{&#10;&#09;margin-top: 0pt;&#10;&#09;margin-right: 5pt;&#10;&#09;margin-bottom: 0pt;&#10;&#09;margin-left: 5pt;&#10;}&#10;</LocalCSS>
-</Styles>
-<DDRInfo>
-<Field name="タグID" id="7" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日あり"/>
-<ValueList name="global_カテゴリ_タグ" id="11"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Field" key="540" LabelKey="541" flags="8" rotation="0">
-<Bounds top="254.0000000" left="1603.0000000" bottom="284.0000000" right="1693.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日あり::適用期間_開始日</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>リスト_入力不可</Name></CustomStyles>
-</Styles>
-<DDRInfo>
-<Field name="適用期間_開始日" id="18" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日あり"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Field" key="542" LabelKey="543" flags="8" rotation="0">
-<ScriptTriggers>
-<Trigger event="OnObjectSave" id="4" triggerFlags="1">
-<Script id="44" name="加盟店_同一タグチェック">
-</Script>
-<TriggerText>&quot;加盟店_同一タグチェック&quot;</TriggerText>
-</Trigger>
-</ScriptTriggers>
-<Bounds top="254.0000000" left="1693.0000000" bottom="284.0000000" right="1783.0000000"/>
-<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="6" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_tagging中間テーブル_終了日あり::適用期間_終了日</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>リスト_入力不可</Name></CustomStyles>
-</Styles>
-<DDRInfo>
-<Field name="適用期間_終了日" id="19" repetition="1" maxRepetition="1" table="加盟店_tagging中間テーブル_終了日あり"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-</PortalObj>
-</Object>
-<Object type="Text" key="534" LabelKey="0" flags="0" rotation="0">
-<Bounds top="225.0000000" left="1203.0000000" bottom="255.0000000" right="1303.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-left-style: solid;&#10;&#09;border-top-left-radius: 3pt 3pt;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>タグ</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>タグ</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="535" LabelKey="0" flags="0" rotation="0">
-<Bounds top="225.0000000" left="1403.0000000" bottom="255.0000000" right="1603.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>タグ</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>タグ</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="536" LabelKey="0" flags="0" rotation="0">
-<Bounds top="225.0000000" left="1303.0000000" bottom="255.0000000" right="1403.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>カテゴリ</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>カテゴリ</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="537" LabelKey="0" flags="0" rotation="0">
-<Bounds top="225.0000000" left="1783.0000000" bottom="255.0000000" right="1800.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;border-top-right-radius: 3pt 3pt;&#10;}&#10;</LocalCSS>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data></Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data></Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="539" LabelKey="0" flags="0" rotation="0">
-<Bounds top="60.0000000" left="1603.0000000" bottom="90.0000000" right="1693.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>適用開始日</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>適用開始日</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="541" LabelKey="0" flags="0" rotation="0">
-<Bounds top="225.0000000" left="1603.0000000" bottom="255.0000000" right="1693.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>適用開始日</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>適用開始日</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="543" LabelKey="0" flags="0" rotation="0">
-<Bounds top="225.0000000" left="1693.0000000" bottom="255.0000000" right="1783.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>適用終了日</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>適用終了日</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="545" LabelKey="0" flags="0" rotation="0">
-<Bounds top="60.0000000" left="1693.0000000" bottom="90.0000000" right="1783.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<CustomStyles>
-<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>適用終了日</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>11</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>適用終了日</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="546" LabelKey="0" flags="0" rotation="0">
-<Bounds top="35.0000000" left="1203.0000000" bottom="60.0000000" right="1303.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="13" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;font-size: 14pt;&#10;}&#10;</LocalCSS>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>＜現在のタグ＞</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>14</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>＜現在のタグ＞</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-<Object type="Text" key="547" LabelKey="0" flags="0" rotation="0">
-<Bounds top="200.0000000" left="1203.0000000" bottom="225.0000000" right="1303.0000000"/>
-<TextObj flags="2">
-<ExtendedAttributes fontHeight="13" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;font-size: 14pt;&#10;}&#10;</LocalCSS>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>＜過去のタグ＞</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
-<Font-size>14</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>＜過去のタグ＞</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
-</PopoverObj>
-</Object>
-</PopoverButtonObj>
-</Object>
 <Object type="GroupButton" key="523" LabelKey="0" flags="65800" rotation="0">
 <Bounds top="17.0000000" left="839.0000000" bottom="47.0000000" right="1244.0000000"/>
 <GroupButtonObj numOfObjs="1">
@@ -37499,7 +36715,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </FieldObj>
 </Object>
 </Layout>
-<Layout width="1375" quickFind="True" includeInMenu="True" id="117" name="加盟店セット">
+<Layout width="1757" quickFind="True" includeInMenu="True" id="117" name="加盟店セット">
 <Table id="1065209" name="加盟店セット"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
@@ -37667,7 +36883,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </TextObj>
 </Object>
 <Object type="Field" key="418" LabelKey="0" flags="1073741832" rotation="0">
-<Bounds top="152.0000000" left="727.0000000" bottom="182.0000000" right="1379.0000000"/>
+<Bounds top="152.0000000" left="1105.0000000" bottom="182.0000000" right="1757.0000000"/>
 <FieldObj numOfReps="1" flags="1048800" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>加盟店セット::備考</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -37697,7 +36913,7 @@ self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Text" key="420" LabelKey="0" flags="1073741824" rotation="0">
-<Bounds top="122.0000000" left="729.0000000" bottom="152.0000000" right="1381.0000000"/>
+<Bounds top="122.0000000" left="1107.0000000" bottom="152.0000000" right="1759.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -37900,7 +37116,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="425" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -39717,9 +38936,1088 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </ParagraphStyleVector>
 </TextObj>
 </Object>
+<Object type="Text" key="567" LabelKey="0" flags="0" rotation="0">
+<Bounds top="122.0000000" left="727.0000000" bottom="152.0000000" right="1107.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>タグ</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>タグ</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Rect" key="568" LabelKey="0" flags="0" rotation="0">
+<Bounds top="152.0000000" left="1019.0000000" bottom="182.0000000" right="1107.0000000"/>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-top-color: rgba(0%,0%,0%,1);&#10;&#09;border-right-color: rgba(0%,0%,0%,1);&#10;&#09;border-bottom-color: rgba(0%,0%,0%,1);&#10;&#09;border-left-color: rgba(0%,0%,0%,1);&#10;&#09;box-shadow: 0pt 0pt 2pt 1pt rgba(0%,43.9216%,81.1765%,1);&#10;}&#10;self:normal .inner_border&#10;{&#10;&#09;padding-right: 5pt;&#10;&#09;padding-left: 5pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<RenderFormat renderType="0"></RenderFormat></Object>
+<Object type="PopoverButton" key="569" LabelKey="0" flags="8" rotation="0">
+<Bounds top="153.0000000" left="1019.0000000" bottom="181.0000000" right="1104.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="13" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>ボタン_文字小_白_枠なし</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>タグ入力</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>12</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>タグ入力</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+<PopoverButtonObj buttonFlags="0" key="570" iconSize="12" displayType="4">
+<Image name="a5_menu.svg"/>
+<Object type="Popover" key="570" LabelKey="0" flags="0" rotation="0">
+<Bounds top="-16.0000000" left="1040.0000000" bottom="349.0000000" right="1700.0000000"/>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-top-color: rgba(80.3922%,80.3922%,80.3922%,1);&#10;&#09;border-right-color: rgba(80.3922%,80.3922%,80.3922%,1);&#10;&#09;border-bottom-color: rgba(80.3922%,80.3922%,80.3922%,1);&#10;&#09;border-left-color: rgba(80.3922%,80.3922%,80.3922%,1);&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>複数タグ</Name></CustomStyles>
+</Styles>
+<TitleCalc>
+</TitleCalc>
+<PopoverObj flags="0" position="0" key="569">
+<Object type="Portal" key="571" LabelKey="0" flags="0" rotation="0">
+<Bounds top="68.0000000" left="1075.0000000" bottom="156.0000000" right="1672.0000000"/>
+<PortalObj portalFlags="17" numOfRows="3" initialRow="1">
+<TableAliasKey>加盟店セット_tagging中間テーブル_終了日なし</TableAliasKey>
+<FieldList><Field table="加盟店セット_tagging中間テーブル_終了日なし" id="10" name="タグ_表示用"></Field><Field table="加盟店セット_tagging中間テーブル_終了日なし" id="7" name="タグID"></Field><Field table="加盟店セット_tagging中間テーブル_終了日なし" id="9" name="カテゴリ_表示用"></Field><Field table="加盟店セット_tagging中間テーブル_終了日なし" id="18" name="適用期間_開始日"></Field><Field table="加盟店セット_tagging中間テーブル_終了日なし" id="19" name="適用期間_終了日"></Field></FieldList>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-top-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-right-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-bottom-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-left-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-top-style: solid;&#10;}&#10;self:normal .row_alt&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;&#09;border-image-source: none;&#10;}&#10;</LocalCSS>
+</Styles>
+<Object type="Field" key="572" LabelKey="578" flags="8" rotation="0">
+<Bounds top="68.0000000" left="1275.0000000" bottom="98.0000000" right="1475.0000000"/>
+<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日なし::タグ_表示用</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>リスト_入力不可</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="タグ_表示用" id="10" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日なし"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="573" LabelKey="577" flags="8" rotation="0">
+<ScriptTriggers>
+<Trigger event="OnObjectModify" id="3" triggerFlags="1">
+<Script id="44" name="加盟店_同一タグチェック">
+</Script>
+<TriggerText>&quot;加盟店_同一タグチェック&quot;</TriggerText>
+</Trigger>
+<Trigger event="OnObjectSave" id="4" triggerFlags="1">
+<Script id="29" name="レコード確定">
+</Script>
+<TriggerText>&quot;レコード確定&quot;</TriggerText>
+</Trigger>
+</ScriptTriggers>
+<Bounds top="68.0000000" left="1075.0000000" bottom="98.0000000" right="1175.0000000"/>
+<FieldObj numOfReps="1" flags="1573920" inputMode="0" keyboardType="1" displayType="2" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日なし::タグID</Name>
+<ValueList>global_カテゴリ_タグ</ValueList>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-image-source: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="タグID" id="7" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日なし"/>
+<ValueList name="global_カテゴリ_タグ" id="11"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="574" LabelKey="579" flags="8" rotation="0">
+<Bounds top="68.0000000" left="1175.0000000" bottom="98.0000000" right="1275.0000000"/>
+<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日なし::カテゴリ_表示用</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>リスト_入力不可</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="カテゴリ_表示用" id="9" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日なし"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="575" LabelKey="591" flags="8" rotation="0">
+<Bounds top="68.0000000" left="1475.0000000" bottom="98.0000000" right="1565.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="6" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日なし::適用期間_開始日</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>リスト_入力不可</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="適用期間_開始日" id="18" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日なし"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="576" LabelKey="594" flags="8" rotation="0">
+<ScriptTriggers>
+<Trigger event="OnObjectSave" id="4" triggerFlags="1">
+<Script id="29" name="レコード確定">
+</Script>
+<TriggerText>&quot;レコード確定&quot;</TriggerText>
+</Trigger>
+</ScriptTriggers>
+<Bounds top="68.0000000" left="1565.0000000" bottom="98.0000000" right="1655.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="6" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日なし::適用期間_終了日</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>リスト_入力不可</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="適用期間_終了日" id="19" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日なし"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+</PortalObj>
+</Object>
+<Object type="Text" key="577" LabelKey="0" flags="0" rotation="0">
+<Bounds top="39.0000000" left="1075.0000000" bottom="69.0000000" right="1175.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-left-style: solid;&#10;&#09;border-top-left-radius: 3pt 3pt;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>タグ</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>タグ</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="578" LabelKey="0" flags="0" rotation="0">
+<Bounds top="39.0000000" left="1275.0000000" bottom="69.0000000" right="1475.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>タグ</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>タグ</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="579" LabelKey="0" flags="0" rotation="0">
+<Bounds top="39.0000000" left="1175.0000000" bottom="69.0000000" right="1275.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>カテゴリ</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>カテゴリ</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="580" LabelKey="0" flags="0" rotation="0">
+<Bounds top="39.0000000" left="1655.0000000" bottom="69.0000000" right="1672.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-top-right-radius: 3pt 3pt;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data></Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data></Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Portal" key="581" LabelKey="0" flags="0" rotation="0">
+<Bounds top="233.0000000" left="1075.0000000" bottom="321.0000000" right="1672.0000000"/>
+<PortalObj portalFlags="17" numOfRows="3" initialRow="1">
+<TableAliasKey>加盟店セット_tagging中間テーブル_終了日あり</TableAliasKey>
+<FieldList><Field table="加盟店セット_tagging中間テーブル_終了日あり" id="10" name="タグ_表示用"></Field><Field table="加盟店セット_tagging中間テーブル_終了日あり" id="9" name="カテゴリ_表示用"></Field><Field table="加盟店セット_tagging中間テーブル_終了日あり" id="7" name="タグID"></Field><Field table="加盟店セット_tagging中間テーブル_終了日あり" id="18" name="適用期間_開始日"></Field><Field table="加盟店セット_tagging中間テーブル_終了日あり" id="19" name="適用期間_終了日"></Field></FieldList>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-top-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-right-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-bottom-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-left-color: rgba(70.1961%,70.1961%,70.1961%,1);&#10;&#09;border-top-style: solid;&#10;}&#10;self:normal .row_alt&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(90.1961%,90.1961%,90.1961%,1);&#10;&#09;border-image-source: none;&#10;}&#10;</LocalCSS>
+</Styles>
+<Object type="Field" key="582" LabelKey="588" flags="8" rotation="0">
+<Bounds top="233.0000000" left="1275.0000000" bottom="263.0000000" right="1475.0000000"/>
+<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日あり::タグ_表示用</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>リスト_入力不可</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="タグ_表示用" id="10" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日あり"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="583" LabelKey="589" flags="8" rotation="0">
+<Bounds top="233.0000000" left="1175.0000000" bottom="263.0000000" right="1275.0000000"/>
+<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日あり::カテゴリ_表示用</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>リスト_入力不可</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="カテゴリ_表示用" id="9" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日あり"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="584" LabelKey="587" flags="8" rotation="0">
+<Bounds top="233.0000000" left="1075.0000000" bottom="263.0000000" right="1175.0000000"/>
+<FieldObj numOfReps="1" flags="1572900" inputMode="0" keyboardType="1" displayType="2" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日あり::タグID</Name>
+<ValueList>global_カテゴリ_タグ</ValueList>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-top-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;font-size: 11pt;&#10;&#09;color: rgba(20.3922%,20.3922%,20.3922%,1);&#10;&#09;text-align: center;&#10;&#09;-fm-text-vertical-align: center;&#10;}&#10;self:pressed .self&#10;{&#10;&#09;background-color: rgba(92.1569%,92.1569%,92.1569%,1);&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-top-color: rgba(0%,0%,0%,1);&#10;&#09;border-right-color: rgba(0%,0%,0%,1);&#10;&#09;border-bottom-color: rgba(0%,0%,0%,1);&#10;&#09;border-left-color: rgba(0%,0%,0%,1);&#10;&#09;box-shadow: 0pt 0pt 2pt 1pt rgba(0%,43.9216%,81.1765%,1);&#10;}&#10;self:normal .text&#10;{&#10;&#09;margin-top: 0pt;&#10;&#09;margin-right: 5pt;&#10;&#09;margin-bottom: 0pt;&#10;&#09;margin-left: 5pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="タグID" id="7" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日あり"/>
+<ValueList name="global_カテゴリ_タグ" id="11"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="585" LabelKey="592" flags="8" rotation="0">
+<Bounds top="233.0000000" left="1475.0000000" bottom="263.0000000" right="1565.0000000"/>
+<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日あり::適用期間_開始日</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-bottom-style: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>リスト_入力不可</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="適用期間_開始日" id="18" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日あり"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+<Object type="Field" key="586" LabelKey="593" flags="8" rotation="0">
+<ScriptTriggers>
+<Trigger event="OnObjectSave" id="4" triggerFlags="1">
+<Script id="44" name="加盟店_同一タグチェック">
+</Script>
+<TriggerText>&quot;加盟店_同一タグチェック&quot;</TriggerText>
+</Trigger>
+</ScriptTriggers>
+<Bounds top="233.0000000" left="1565.0000000" bottom="263.0000000" right="1655.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="6" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット_tagging中間テーブル_終了日あり::適用期間_終了日</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>リスト_入力不可</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="適用期間_終了日" id="19" repetition="1" maxRepetition="1" table="加盟店セット_tagging中間テーブル_終了日あり"/>
+</DDRInfo>
+</FieldObj>
+</Object>
+</PortalObj>
+</Object>
+<Object type="Text" key="587" LabelKey="0" flags="0" rotation="0">
+<Bounds top="204.0000000" left="1075.0000000" bottom="234.0000000" right="1175.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-left-style: solid;&#10;&#09;border-top-left-radius: 3pt 3pt;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>タグ</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>タグ</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="588" LabelKey="0" flags="0" rotation="0">
+<Bounds top="204.0000000" left="1275.0000000" bottom="234.0000000" right="1475.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>タグ</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>タグ</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="589" LabelKey="0" flags="0" rotation="0">
+<Bounds top="204.0000000" left="1175.0000000" bottom="234.0000000" right="1275.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>カテゴリ</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>カテゴリ</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="590" LabelKey="0" flags="0" rotation="0">
+<Bounds top="204.0000000" left="1655.0000000" bottom="234.0000000" right="1672.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-top-right-radius: 3pt 3pt;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data></Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data></Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="591" LabelKey="0" flags="0" rotation="0">
+<Bounds top="39.0000000" left="1475.0000000" bottom="69.0000000" right="1565.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>適用開始日</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>適用開始日</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="592" LabelKey="0" flags="0" rotation="0">
+<Bounds top="204.0000000" left="1475.0000000" bottom="234.0000000" right="1565.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>適用開始日</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>適用開始日</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="593" LabelKey="0" flags="0" rotation="0">
+<Bounds top="204.0000000" left="1565.0000000" bottom="234.0000000" right="1655.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>適用終了日</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>適用終了日</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="594" LabelKey="0" flags="0" rotation="0">
+<Bounds top="39.0000000" left="1565.0000000" bottom="69.0000000" right="1655.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>適用終了日</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>適用終了日</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="595" LabelKey="0" flags="0" rotation="0">
+<Bounds top="14.0000000" left="1075.0000000" bottom="39.0000000" right="1175.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="13" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;font-size: 14pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>＜現在のタグ＞</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>14</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>＜現在のタグ＞</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Text" key="596" LabelKey="0" flags="0" rotation="0">
+<Bounds top="179.0000000" left="1075.0000000" bottom="204.0000000" right="1175.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="13" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;font-size: 14pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>＜過去のタグ＞</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>14</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>＜過去のタグ＞</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+</PopoverObj>
+</Object>
+</PopoverButtonObj>
+</Object>
+<Object type="Field" key="597" LabelKey="0" flags="0" rotation="0">
+<Bounds top="152.0000000" left="727.0000000" bottom="182.0000000" right="1018.0000000"/>
+<FieldObj numOfReps="1" flags="1048800" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット::タグ_表示用</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>リスト　_フィールド_左</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="タグ_表示用" id="13" repetition="1" maxRepetition="1" table="加盟店セット"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 <Object type="Field" key="1992" LabelKey="0" flags="8320" rotation="0">
 <Bounds top="24.0000000" left="0.0000000" bottom="45.0000000" right="120.0000000"/>
-<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="0" pictFormat="5">
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>加盟店::作成情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
@@ -39749,7 +40047,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </Object>
 <Object type="Field" key="1993" LabelKey="0" flags="8320" rotation="0">
 <Bounds top="24.0000000" left="120.0000000" bottom="45.0000000" right="240.0000000"/>
-<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="0" pictFormat="5">
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
 <Name>加盟店::修正情報タイムスタンプ</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
@@ -40230,7 +40528,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="422" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -43084,7 +43385,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="485" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -45497,7 +45801,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="400" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -72266,74 +72573,6 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </ParagraphStyleVector>
 </TextObj>
 </Object>
-<Object type="Field" key="49" LabelKey="50" flags="0" rotation="0">
-<Bounds top="297.0000000" left="144.0000000" bottom="320.0000000" right="397.0000000"/>
-<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店::taggable_ID</Name>
-<ExtendedAttributes fontHeight="13" graphicFormat="5">
-<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
-<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
-<DateElement>8</DateElement>
-<DateElement>4</DateElement>
-<DateElement>1</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1">年</DateElementSep>
-<DateElementSep index="2">月</DateElementSep>
-<DateElementSep index="3">日</DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-</Styles>
-<DDRInfo>
-<Field name="taggable_ID" id="10" repetition="1" maxRepetition="1" table="加盟店"/>
-</DDRInfo>
-</FieldObj>
-</Object>
-<Object type="Text" key="50" LabelKey="0" flags="0" rotation="0">
-<Bounds top="300.0000000" left="74.0000000" bottom="318.0000000" right="133.0000000"/>
-<TextObj flags="0">
-<ExtendedAttributes fontHeight="0" graphicFormat="0">
-<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
-<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElement>0</DateElement>
-<DateElementSep index="0"></DateElementSep>
-<DateElementSep index="1"></DateElementSep>
-<DateElementSep index="2"></DateElementSep>
-<DateElementSep index="3"></DateElementSep>
-<DateElementSep index="4"></DateElementSep>
-</DateFormat>
-<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
-</ExtendedAttributes>
-<Styles>
-<LocalCSS>
-self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-align: center;&#10;}&#10;</LocalCSS>
-</Styles>
-<CharacterStyleVector>
-<Style>
-<Data>taggable_ID</Data>
-<CharacterStyle mask="32695">
-<Font-family codeSet="ShiftJIS" fontId="0" postScript="MS-UIGothic">MS UI Gothic</Font-family>
-<Font-size>12</Font-size>
-<Face>0</Face>
-<Color>#000000</Color>
-</CharacterStyle>
-</Style>
-</CharacterStyleVector>
-<ParagraphStyleVector>
-<Style>
-<Data>taggable_ID</Data>
-<ParagraphStyle mask="0">
-</ParagraphStyle>
-</Style>
-</ParagraphStyleVector>
-</TextObj>
-</Object>
 </Layout>
 <Layout width="1024" quickFind="True" includeInMenu="False" id="38" name="MT.SV担当者">
 <Table id="1065111" name="ユーザーマスタ"/>
@@ -77654,7 +77893,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="425" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="17.0000000" left="149.0000000" bottom="47.0000000" right="269.0000000"/>
@@ -77902,7 +78144,7 @@ self:normal .self&#10;{&#10;&#09;text-align: left;&#10;}&#10;self:normal .inner_
 <Object type="Field" key="515" LabelKey="516" flags="8" rotation="0">
 <Bounds top="95.0000000" left="45.0000000" bottom="125.0000000" right="149.0000000"/>
 <FieldObj numOfReps="1" flags="1048804" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>加盟店_加盟店セット::加盟店法人CD</Name>
+<Name>加盟店::加盟店セットCD</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -77923,7 +78165,7 @@ self:normal .self&#10;{&#10;&#09;text-align: left;&#10;}&#10;self:normal .inner_
 <Name>リスト　_フィールド_中</Name></CustomStyles>
 </Styles>
 <DDRInfo>
-<Field name="加盟店法人CD" id="6" repetition="1" maxRepetition="1" table="加盟店_加盟店セット"/>
+<Field name="加盟店セットCD" id="26" repetition="1" maxRepetition="1" table="加盟店"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -77951,7 +78193,7 @@ self:normal .self&#10;{&#10;&#09;text-align: left;&#10;}&#10;self:normal .inner_
 </Styles>
 <CharacterStyleVector>
 <Style>
-<Data>加盟店法人CD</Data>
+<Data>加盟店セットCD</Data>
 <CharacterStyle mask="32695">
 <Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
 <Font-size>11</Font-size>
@@ -77962,7 +78204,7 @@ self:normal .self&#10;{&#10;&#09;text-align: left;&#10;}&#10;self:normal .inner_
 </CharacterStyleVector>
 <ParagraphStyleVector>
 <Style>
-<Data>加盟店法人CD</Data>
+<Data>加盟店セットCD</Data>
 <ParagraphStyle mask="0">
 </ParagraphStyle>
 </Style>
@@ -83575,7 +83817,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="442" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -86544,7 +86789,10 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If(
+ Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
+ 1
+)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="417" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>

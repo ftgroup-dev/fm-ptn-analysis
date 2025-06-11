@@ -1,13 +1,39 @@
 
 <CustomFunctionCatalog>
 	<CustomFunction id="1" functionArity="3" visible="True" parameters="DateStart;DateEnd;HolidayList" name="WorkingDays">
-		<Calculation><![CDATA[/*WorkingDays ( DateStart ; DateEnd ; HolidayList )returns the number of working days between the two dates.No weekend days nor any day of the HolidayList*/Case(DateStart > DateEnd ; "" ;Let ( $counter = $counter + ( Mod ( DateStart - 1  ; 7 ) < 5 and IsEmpty ( FilterValues ( DateStart ; HolidayList ) ) ) ;Case(DateStart = DateEnd ; $counter & Let( $counter = "" ; "" ) ;WorkingDays ( DateStart + 1 ; DateEnd ; HolidayList ))))]]></Calculation>
+		<Calculation><![CDATA[/*
+WorkingDays ( DateStart ; DateEnd ; HolidayList )
+
+returns the number of working days between the two dates.
+No weekend days nor any day of the HolidayList
+*/
+
+Case(
+DateStart > DateEnd ; "" ;
+Let ( 
+$counter = $counter + ( Mod ( DateStart - 1  ; 7 ) < 5 and IsEmpty ( FilterValues ( DateStart ; HolidayList ) ) ) ;
+Case(
+DateStart = DateEnd ; $counter & Let( $counter = "" ; "" ) ;
+WorkingDays ( DateStart + 1 ; DateEnd ; HolidayList )
+)
+)
+)]]></Calculation>
 		<DisplayCalculation>
-			<Chunk type="NoRef">/*WorkingDays ( DateStart ; DateEnd ; HolidayList )returns the number of working days between the two dates.No weekend days nor any day of the HolidayList*/</Chunk>
+			<Chunk type="NoRef">/*
+WorkingDays ( DateStart ; DateEnd ; HolidayList )
+
+returns the number of working days between the two dates.
+No weekend days nor any day of the HolidayList
+*/
+
+</Chunk>
 			<Chunk type="FunctionRef">Case</Chunk>
-			<Chunk type="NoRef">(DateStart &gt; DateEnd ; &quot;&quot; ;</Chunk>
+			<Chunk type="NoRef">(
+DateStart &gt; DateEnd ; &quot;&quot; ;
+</Chunk>
 			<Chunk type="FunctionRef">Let</Chunk>
-			<Chunk type="NoRef"> ( $counter = $counter + ( </Chunk>
+			<Chunk type="NoRef"> ( 
+$counter = $counter + ( </Chunk>
 			<Chunk type="FunctionRef">Mod</Chunk>
 			<Chunk type="NoRef"> ( DateStart - 1  ; 7 ) &lt; 5 </Chunk>
 			<Chunk type="FunctionRef">and</Chunk>
@@ -15,71 +41,223 @@
 			<Chunk type="FunctionRef">IsEmpty</Chunk>
 			<Chunk type="NoRef"> ( </Chunk>
 			<Chunk type="FunctionRef">FilterValues</Chunk>
-			<Chunk type="NoRef"> ( DateStart ; HolidayList ) ) ) ;</Chunk>
+			<Chunk type="NoRef"> ( DateStart ; HolidayList ) ) ) ;
+</Chunk>
 			<Chunk type="FunctionRef">Case</Chunk>
-			<Chunk type="NoRef">(DateStart = DateEnd ; $counter &amp; </Chunk>
+			<Chunk type="NoRef">(
+DateStart = DateEnd ; $counter &amp; </Chunk>
 			<Chunk type="FunctionRef">Let</Chunk>
-			<Chunk type="NoRef">( $counter = &quot;&quot; ; &quot;&quot; ) ;</Chunk>
+			<Chunk type="NoRef">( $counter = &quot;&quot; ; &quot;&quot; ) ;
+</Chunk>
 			<Chunk type="CustomFunctionRef">WorkingDays</Chunk>
-			<Chunk type="NoRef"> ( DateStart + 1 ; DateEnd ; HolidayList ))))</Chunk>
+			<Chunk type="NoRef"> ( DateStart + 1 ; DateEnd ; HolidayList )
+)
+)
+)</Chunk>
 		</DisplayCalculation>
 	</CustomFunction>
 	<CustomFunction id="2" functionArity="3" visible="True" parameters="日時;形式;型" name="cfTimestamp">
-		<Calculation><![CDATA[/* *********************************************************************************** *//*									*//* [ タイムスタンプ] [形式] [型] を受取り、タイムスタンプを指定の形式と型に変換して返す	*//*									*//* ----------------------------------------------------------------------------------- *//*									*//* 第１引数：	日時							*//* 		タイムスタンプで受け取る					*//*									*//* 第２引数：	形式　※未指定の場合は①					*//*		例）"yyyy/mm/dd hh:MM:ss"　※①			*//*		        "yyyy/mm/dd hh:MM"				*//*		        "yyyy/m/d h:MM"					*//*		        "yyyy-mm-dd hh:MM:ss"				*//*		        "yyyymmddhhMMss"					*//*									*//*									*//*									*//* 第３数：	形式　※未指定の場合は[形式]に合う方			*//*		・テキスト							*//*		・タイムスタンプ						*//*									*//* *********************************************************************************** */Let([ v$y = Year( 日時 ); v$m = Month( 日時 ); v$d = Day( 日時 ); v$h = Hour( 日時 ); v$mi = Minute( 日時 ); v$s = Seconds( 日時 ); v$format = If( not IsEmpty( 形式 ); 形式; "yyyy/mm/dd hh:MM:ss" ); v$result = Substitute( 	v$format;	[ "yyyy"; v$y ];	[ "yy"; Right( v$y; 2 ) ];	[ "mm"; Right( "0" & v$m; 2 ) ];	[ "m"; v$m ];	[ "dd"; Right( "0" &  v$d; 2 ) ];	[ "d"; v$d ];	[ "hh"; Right( "0" & v$h; 2 ) ];	[ "h"; v$h ];	[ "MM"; Right( "0" & v$mi; 2 ) ];	[ "M"; v$mi ];	[ "ss"; Right( "0" & v$s; 2 ) ];	[ "s"; v$s ] ); v$type =  Case( 		not IsEmpty( 型 ); 型;		GetAsTimestamp( v$result ) ≠ "?"; "タイムスタンプ";		"テキスト" 	   ); v$return = Case(		IsEmpty( 日時 ); "";		v$type = "テキスト"; GetAsText( v$result );		v$type = "タイムスタンプ"; GetAsTimestamp ( v$result );		v$result	//テキスト型になる	    )];v$return)]]></Calculation>
+		<Calculation><![CDATA[/* *********************************************************************************** */
+/*									*/
+/* [ タイムスタンプ] [形式] [型] を受取り、タイムスタンプを指定の形式と型に変換して返す	*/
+/*									*/
+/* ----------------------------------------------------------------------------------- */
+/*									*/
+/* 第１引数：	日時							*/
+/* 		タイムスタンプで受け取る					*/
+/*									*/
+/* 第２引数：	形式　※未指定の場合は①					*/
+/*		例）"yyyy/mm/dd hh:MM:ss"　※①			*/
+/*		        "yyyy/mm/dd hh:MM"				*/
+/*		        "yyyy/m/d h:MM"					*/
+/*		        "yyyy-mm-dd hh:MM:ss"				*/
+/*		        "yyyymmddhhMMss"					*/
+/*									*/
+/*									*/
+/*									*/
+/* 第３数：	形式　※未指定の場合は[形式]に合う方			*/
+/*		・テキスト							*/
+/*		・タイムスタンプ						*/
+/*									*/
+/* *********************************************************************************** */
+
+
+
+Let(
+
+[
+
+ v$y = Year( 日時 );
+ v$m = Month( 日時 );
+ v$d = Day( 日時 );
+ v$h = Hour( 日時 );
+ v$mi = Minute( 日時 );
+ v$s = Seconds( 日時 );
+
+ v$format = If( not IsEmpty( 形式 ); 形式; "yyyy/mm/dd hh:MM:ss" );
+
+ v$result =
+ Substitute( 
+	v$format;
+	[ "yyyy"; v$y ];
+	[ "yy"; Right( v$y; 2 ) ];
+	[ "mm"; Right( "0" & v$m; 2 ) ];
+	[ "m"; v$m ];
+	[ "dd"; Right( "0" &  v$d; 2 ) ];
+	[ "d"; v$d ];
+	[ "hh"; Right( "0" & v$h; 2 ) ];
+	[ "h"; v$h ];
+	[ "MM"; Right( "0" & v$mi; 2 ) ];
+	[ "M"; v$mi ];
+	[ "ss"; Right( "0" & v$s; 2 ) ];
+	[ "s"; v$s ]
+ );
+
+ v$type =  Case( 
+		not IsEmpty( 型 ); 型;
+		GetAsTimestamp( v$result ) ≠ "?"; "タイムスタンプ";
+		"テキスト"
+ 	   );
+
+ v$return = Case(
+		IsEmpty( 日時 ); "";
+		v$type = "テキスト"; GetAsText( v$result );
+		v$type = "タイムスタンプ"; GetAsTimestamp ( v$result );
+		v$result	//テキスト型になる
+	    )
+
+];
+
+v$return
+
+)]]></Calculation>
 		<DisplayCalculation>
-			<Chunk type="NoRef">/* *********************************************************************************** *//*									*//* [ タイムスタンプ] [形式] [型] を受取り、タイムスタンプを指定の形式と型に変換して返す	*//*									*//* ----------------------------------------------------------------------------------- *//*									*//* 第１引数：	日時							*//* 		タイムスタンプで受け取る					*//*									*//* 第２引数：	形式　※未指定の場合は①					*//*		例）&quot;yyyy/mm/dd hh:MM:ss&quot;　※①			*//*		        &quot;yyyy/mm/dd hh:MM&quot;				*//*		        &quot;yyyy/m/d h:MM&quot;					*//*		        &quot;yyyy-mm-dd hh:MM:ss&quot;				*//*		        &quot;yyyymmddhhMMss&quot;					*//*									*//*									*//*									*//* 第３数：	形式　※未指定の場合は[形式]に合う方			*//*		・テキスト							*//*		・タイムスタンプ						*//*									*//* *********************************************************************************** */</Chunk>
+			<Chunk type="NoRef">/* *********************************************************************************** */
+/*									*/
+/* [ タイムスタンプ] [形式] [型] を受取り、タイムスタンプを指定の形式と型に変換して返す	*/
+/*									*/
+/* ----------------------------------------------------------------------------------- */
+/*									*/
+/* 第１引数：	日時							*/
+/* 		タイムスタンプで受け取る					*/
+/*									*/
+/* 第２引数：	形式　※未指定の場合は①					*/
+/*		例）&quot;yyyy/mm/dd hh:MM:ss&quot;　※①			*/
+/*		        &quot;yyyy/mm/dd hh:MM&quot;				*/
+/*		        &quot;yyyy/m/d h:MM&quot;					*/
+/*		        &quot;yyyy-mm-dd hh:MM:ss&quot;				*/
+/*		        &quot;yyyymmddhhMMss&quot;					*/
+/*									*/
+/*									*/
+/*									*/
+/* 第３数：	形式　※未指定の場合は[形式]に合う方			*/
+/*		・テキスト							*/
+/*		・タイムスタンプ						*/
+/*									*/
+/* *********************************************************************************** */
+
+
+
+</Chunk>
 			<Chunk type="FunctionRef">Let</Chunk>
-			<Chunk type="NoRef">([ v$y = </Chunk>
+			<Chunk type="NoRef">(
+
+[
+
+ v$y = </Chunk>
 			<Chunk type="FunctionRef">Year</Chunk>
-			<Chunk type="NoRef">( 日時 ); v$m = </Chunk>
+			<Chunk type="NoRef">( 日時 );
+ v$m = </Chunk>
 			<Chunk type="FunctionRef">Month</Chunk>
-			<Chunk type="NoRef">( 日時 ); v$d = </Chunk>
+			<Chunk type="NoRef">( 日時 );
+ v$d = </Chunk>
 			<Chunk type="FunctionRef">Day</Chunk>
-			<Chunk type="NoRef">( 日時 ); v$h = </Chunk>
+			<Chunk type="NoRef">( 日時 );
+ v$h = </Chunk>
 			<Chunk type="FunctionRef">Hour</Chunk>
-			<Chunk type="NoRef">( 日時 ); v$mi = </Chunk>
+			<Chunk type="NoRef">( 日時 );
+ v$mi = </Chunk>
 			<Chunk type="FunctionRef">Minute</Chunk>
-			<Chunk type="NoRef">( 日時 ); v$s = </Chunk>
+			<Chunk type="NoRef">( 日時 );
+ v$s = </Chunk>
 			<Chunk type="FunctionRef">Seconds</Chunk>
-			<Chunk type="NoRef">( 日時 ); v$format = </Chunk>
+			<Chunk type="NoRef">( 日時 );
+
+ v$format = </Chunk>
 			<Chunk type="FunctionRef">If</Chunk>
 			<Chunk type="NoRef">( </Chunk>
 			<Chunk type="FunctionRef">not</Chunk>
 			<Chunk type="NoRef"> </Chunk>
 			<Chunk type="FunctionRef">IsEmpty</Chunk>
-			<Chunk type="NoRef">( 形式 ); 形式; &quot;yyyy/mm/dd hh:MM:ss&quot; ); v$result = </Chunk>
+			<Chunk type="NoRef">( 形式 ); 形式; &quot;yyyy/mm/dd hh:MM:ss&quot; );
+
+ v$result =
+ </Chunk>
 			<Chunk type="FunctionRef">Substitute</Chunk>
-			<Chunk type="NoRef">( 	v$format;	[ &quot;yyyy&quot;; v$y ];	[ &quot;yy&quot;; </Chunk>
+			<Chunk type="NoRef">( 
+	v$format;
+	[ &quot;yyyy&quot;; v$y ];
+	[ &quot;yy&quot;; </Chunk>
 			<Chunk type="FunctionRef">Right</Chunk>
-			<Chunk type="NoRef">( v$y; 2 ) ];	[ &quot;mm&quot;; </Chunk>
+			<Chunk type="NoRef">( v$y; 2 ) ];
+	[ &quot;mm&quot;; </Chunk>
 			<Chunk type="FunctionRef">Right</Chunk>
-			<Chunk type="NoRef">( &quot;0&quot; &amp; v$m; 2 ) ];	[ &quot;m&quot;; v$m ];	[ &quot;dd&quot;; </Chunk>
+			<Chunk type="NoRef">( &quot;0&quot; &amp; v$m; 2 ) ];
+	[ &quot;m&quot;; v$m ];
+	[ &quot;dd&quot;; </Chunk>
 			<Chunk type="FunctionRef">Right</Chunk>
-			<Chunk type="NoRef">( &quot;0&quot; &amp;  v$d; 2 ) ];	[ &quot;d&quot;; v$d ];	[ &quot;hh&quot;; </Chunk>
+			<Chunk type="NoRef">( &quot;0&quot; &amp;  v$d; 2 ) ];
+	[ &quot;d&quot;; v$d ];
+	[ &quot;hh&quot;; </Chunk>
 			<Chunk type="FunctionRef">Right</Chunk>
-			<Chunk type="NoRef">( &quot;0&quot; &amp; v$h; 2 ) ];	[ &quot;h&quot;; v$h ];	[ &quot;MM&quot;; </Chunk>
+			<Chunk type="NoRef">( &quot;0&quot; &amp; v$h; 2 ) ];
+	[ &quot;h&quot;; v$h ];
+	[ &quot;MM&quot;; </Chunk>
 			<Chunk type="FunctionRef">Right</Chunk>
-			<Chunk type="NoRef">( &quot;0&quot; &amp; v$mi; 2 ) ];	[ &quot;M&quot;; v$mi ];	[ &quot;ss&quot;; </Chunk>
+			<Chunk type="NoRef">( &quot;0&quot; &amp; v$mi; 2 ) ];
+	[ &quot;M&quot;; v$mi ];
+	[ &quot;ss&quot;; </Chunk>
 			<Chunk type="FunctionRef">Right</Chunk>
-			<Chunk type="NoRef">( &quot;0&quot; &amp; v$s; 2 ) ];	[ &quot;s&quot;; v$s ] ); v$type =  </Chunk>
+			<Chunk type="NoRef">( &quot;0&quot; &amp; v$s; 2 ) ];
+	[ &quot;s&quot;; v$s ]
+ );
+
+ v$type =  </Chunk>
 			<Chunk type="FunctionRef">Case</Chunk>
-			<Chunk type="NoRef">( 		</Chunk>
+			<Chunk type="NoRef">( 
+		</Chunk>
 			<Chunk type="FunctionRef">not</Chunk>
 			<Chunk type="NoRef"> </Chunk>
 			<Chunk type="FunctionRef">IsEmpty</Chunk>
-			<Chunk type="NoRef">( 型 ); 型;		</Chunk>
+			<Chunk type="NoRef">( 型 ); 型;
+		</Chunk>
 			<Chunk type="FunctionRef">GetAsTimestamp</Chunk>
-			<Chunk type="NoRef">( v$result ) ≠ &quot;?&quot;; &quot;タイムスタンプ&quot;;		&quot;テキスト&quot; 	   ); v$return = </Chunk>
+			<Chunk type="NoRef">( v$result ) ≠ &quot;?&quot;; &quot;タイムスタンプ&quot;;
+		&quot;テキスト&quot;
+ 	   );
+
+ v$return = </Chunk>
 			<Chunk type="FunctionRef">Case</Chunk>
-			<Chunk type="NoRef">(		</Chunk>
+			<Chunk type="NoRef">(
+		</Chunk>
 			<Chunk type="FunctionRef">IsEmpty</Chunk>
-			<Chunk type="NoRef">( 日時 ); &quot;&quot;;		v$type = &quot;テキスト&quot;; </Chunk>
+			<Chunk type="NoRef">( 日時 ); &quot;&quot;;
+		v$type = &quot;テキスト&quot;; </Chunk>
 			<Chunk type="FunctionRef">GetAsText</Chunk>
-			<Chunk type="NoRef">( v$result );		v$type = &quot;タイムスタンプ&quot;; </Chunk>
+			<Chunk type="NoRef">( v$result );
+		v$type = &quot;タイムスタンプ&quot;; </Chunk>
 			<Chunk type="FunctionRef">GetAsTimestamp</Chunk>
-			<Chunk type="NoRef"> ( v$result );		v$result	</Chunk>
-			<Chunk type="FunctionRef">//テキスト型になる</Chunk>
-			<Chunk type="NoRef">	    )];v$return)</Chunk>
+			<Chunk type="NoRef"> ( v$result );
+		v$result	</Chunk>
+			<Chunk type="FunctionRef">//テキスト型になる
+</Chunk>
+			<Chunk type="NoRef">	    )
+
+];
+
+v$return
+
+)</Chunk>
 		</DisplayCalculation>
 	</CustomFunction>
 </CustomFunctionCatalog>
