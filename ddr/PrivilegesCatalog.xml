@@ -634,6 +634,21 @@
 				<Script runFullAccess="False" id="135" name="レイアウト切替_加盟店セット">
 					<Access value="NoAccess"/>
 				</Script>
+				<Script runFullAccess="False" id="140" name="加盟店検索">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="141" name="前月検索">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="142" name="年月検索">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="143" name="担当者検索">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="144" name="当月検索">
+					<Access value="NoAccess"/>
+				</Script>
 				<Script name="[新規スクリプト]">
 					<Access value="NoAccess"/>
 				</Script>

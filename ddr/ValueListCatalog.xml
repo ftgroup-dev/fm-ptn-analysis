@@ -3,13 +3,25 @@
 	<ValueList id="1" name="年">
 		<Source value="Custom"/>
 		<CustomValues>
-			<Text>20242025</Text>
+			<Text>2024
+2025</Text>
 		</CustomValues>
 	</ValueList>
 	<ValueList id="2" name="月">
 		<Source value="Custom"/>
 		<CustomValues>
-			<Text>123456789101112</Text>
+			<Text>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</Text>
 		</CustomValues>
 	</ValueList>
 	<ValueList id="3" name="SV担当者CD">
@@ -25,7 +37,9 @@
 	<ValueList id="4" name="使わない）カテゴリ名">
 		<Source value="Custom"/>
 		<CustomValues>
-			<Text>加盟先SV担当者品種分類</Text>
+			<Text>加盟先
+SV担当者
+品種分類</Text>
 		</CustomValues>
 	</ValueList>
 	<ValueList id="5" name="加盟店法人CD">
@@ -138,5 +152,32 @@
 		<ShowRelated value="True">
 			<Table id="1065090" name="global"/>
 		</ShowRelated>
+	</ValueList>
+	<ValueList id="18" name="年月_検索用">
+		<Source value="Field"/>
+		<PrimaryField show="True" sort="True">
+			<Field table="global_SV担当者入力データ月次" id="18" name="年月"/>
+		</PrimaryField>
+		<ShowRelated value="False"/>
+	</ValueList>
+	<ValueList id="19" name="SV担当者_検索用">
+		<Source value="Field"/>
+		<PrimaryField show="False" sort="False">
+			<Field table="ユーザーマスタ" id="7" name="SV担当者CD"/>
+		</PrimaryField>
+		<SecondaryField show="True" sort="True">
+			<Field table="ユーザーマスタ" id="8" name="SV担当者名"/>
+		</SecondaryField>
+		<ShowRelated value="False"/>
+	</ValueList>
+	<ValueList id="20" name="加盟店CD_検索用">
+		<Source value="Field"/>
+		<PrimaryField show="False" sort="False">
+			<Field table="加盟店" id="8" name="加盟店CD"/>
+		</PrimaryField>
+		<SecondaryField show="True" sort="True">
+			<Field table="加盟店" id="9" name="加盟店名"/>
+		</SecondaryField>
+		<ShowRelated value="False"/>
 	</ValueList>
 </ValueListCatalog>
