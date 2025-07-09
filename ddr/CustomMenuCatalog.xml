@@ -383,7 +383,7 @@
 				<Shortcut key="67" modifier="4"/>
 			</MenuItem>
 			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
-				<Command name="貼り付け(&amp;P) 	Ctrl+V" id="57637"/>
+				<Command name="貼り付け(&amp;P)	Ctrl+V" id="57637"/>
 				<Conditions>
 					<Install>
 						<Calculation><![CDATA[1]]></Calculation>

@@ -191,12 +191,12 @@
 					<Text>作成者	：Yuta Kawabata</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#改修日　　　 ：2025/05/08</StepText>
-					<Text>改修日　　　 ：2025/05/08</Text>
+					<StepText>#改修日　　　 ：2025/06/30</StepText>
+					<Text>改修日　　　 ：2025/06/30</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#コメント　　　 ：合算集計対応</StepText>
-					<Text>コメント　　　 ：合算集計対応</Text>
+					<StepText>#コメント　　　 ：SV担当入力データ変更</StepText>
+					<Text>コメント　　　 ：SV担当入力データ変更</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -675,11 +675,11 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
+					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店セット::加盟店セット名 ) and
+not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
+					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店セット::加盟店セット名 ) and
+not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -687,7 +687,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="9" name="加盟店名"/>
+							<Field table="SV担当者入力データ月次_加盟店セット" id="8" name="加盟店セット名"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -698,7 +698,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
+							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
 						</Chunk>
 						<Chunk type="NoRef">) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -714,141 +714,204 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="NoRef">)</Chunk>
 					</DisplayCalculation>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店CD; SV担当者入力データ月次::加盟店CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::加盟店CD]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
-
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; SV担当者入力データ月次_加盟店::販売区分 &amp; &quot;)&quot;;
-
-Case(
-IsEmpty ( #a ) ; &quot;その他&quot; ;
-#a
-)
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $List; 値:Let([
+  result = ExecuteSQL(
+    &quot;SELECT \&quot;加盟店セットCD\&quot;, \&quot;加盟店CD\&quot;, \&quot;加盟店名\&quot;, \&quot;販売区分\&quot;
+     FROM \&quot;加盟店\&quot;
+     WHERE \&quot;加盟店セットCD\&quot; = ?
+     ORDER BY \&quot;販売区分\&quot;&quot;;
+    &quot;&quot;; &quot;&quot;;
+    SV担当者入力データ月次::加盟店セットCD
+  )
+];
+  result
 ) ]</StepText>
-					<Calculation><![CDATA[Let(
-
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称 & "(" & SV担当者入力データ月次_加盟店::販売区分 & ")";
-
-Case(
-IsEmpty ( #a ) ; "その他" ;
-#a
-)
+					<Value>
+						<Calculation><![CDATA[Let([
+  result = ExecuteSQL(
+    "SELECT \"加盟店セットCD\", \"加盟店CD\", \"加盟店名\", \"販売区分\"
+     FROM \"加盟店\"
+     WHERE \"加盟店セットCD\" = ?
+     ORDER BY \"販売区分\"";
+    ""; "";
+    SV担当者入力データ月次::加盟店セットCD
+  )
+];
+  result
 )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Let</Chunk>
-						<Chunk type="NoRef">(
-
-#a = </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
-						</Chunk>
-						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="25" name="販売区分"/>
-						</Chunk>
-						<Chunk type="NoRef"> &amp; &quot;)&quot;;
-
-</Chunk>
-						<Chunk type="FunctionRef">Case</Chunk>
-						<Chunk type="NoRef">(
-</Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( #a ) ; &quot;その他&quot; ;
-#a
-)
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef">([
+  result = </Chunk>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef">(
+    &quot;SELECT \&quot;加盟店セットCD\&quot;, \&quot;加盟店CD\&quot;, \&quot;加盟店名\&quot;, \&quot;販売区分\&quot;
+     FROM \&quot;加盟店\&quot;
+     WHERE \&quot;加盟店セットCD\&quot; = ?
+     ORDER BY \&quot;販売区分\&quot;&quot;;
+    &quot;&quot;; &quot;&quot;;
+    </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+							</Chunk>
+							<Chunk type="NoRef">
+  )
+];
+  result
 )</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$List</Name>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $cnt_shop; 値:ValueCount ( $List ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[ValueCount ( $List )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">ValueCount</Chunk>
+							<Chunk type="NoRef"> ( $List )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$cnt_shop</Name>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
-
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; &quot;その他&quot; ;
-#a
-)
-) ]</StepText>
-					<Calculation><![CDATA[Let(
-
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; "その他" ;
-#a
-)
-)]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Let</Chunk>
-						<Chunk type="NoRef">(
-
-#a = </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
-						</Chunk>
-						<Chunk type="NoRef">;
-
-</Chunk>
-						<Chunk type="FunctionRef">Case</Chunk>
-						<Chunk type="NoRef">(
-</Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( #a ) ; &quot;その他&quot; ;
-#a
-)
-)</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $i; 値:1 ]</StepText>
+					<Value>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$i</Name>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="7" name="OK目標"/>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="26" name="売上目標"/>
+				<Step enable="True" id="71" name="Loop">
+					<StepText>Loop [ フラッシュ: 常に ]</StepText>
+					<FlushType value="Always"/>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::年月; SV担当者入力データ月次::年月 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::年月]]></Calculation>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ $i ≤ $cnt_shop ]</StepText>
+					<Calculation><![CDATA[$i ≤ $cnt_shop]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="18" name="年月"/>
-						</Chunk>
+						<Chunk type="NoRef">$i ≤ $cnt_shop</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="8" name="年月"/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $行; 値:GetValue ( $List ; $i ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( $List ; $i )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( $List ; $i )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$行</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $セットCD; 値:GetValue ( Substitute ( $行 ; &quot;,&quot; ; ¶ ) ; 1 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $行 ; "," ; ¶ ) ; 1 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $行 ; &quot;,&quot; ; ¶ ) ; 1 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$セットCD</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $加盟店CD; 値:GetValue ( Substitute ( $行 ; &quot;,&quot; ; ¶ ) ; 2 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $行 ; "," ; ¶ ) ; 2 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $行 ; &quot;,&quot; ; ¶ ) ; 2 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$加盟店CD</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $加盟店名; 値:GetValue ( Substitute ( $行 ; &quot;,&quot; ; ¶ ) ; 3 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $行 ; "," ; ¶ ) ; 3 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $行 ; &quot;,&quot; ; ¶ ) ; 3 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$加盟店名</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $区分; 値:GetValue ( Substitute ( $行 ; &quot;,&quot; ; ¶ ) ; 4 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $行 ; "," ; ¶ ) ; 4 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $行 ; &quot;,&quot; ; ¶ ) ; 4 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$区分</Name>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -923,12 +986,32 @@ IsEmpty ( #a ) ; "その他" ;
 					</Repetition>
 					<Name>$end</Name>
 				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $tagJson; 値:JSONSetElement ( &quot;{}&quot; ; &quot;&quot; ; &quot;&quot; ; JSONString ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[JSONSetElement ( "{}" ; "" ; "" ; JSONString )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">JSONSetElement</Chunk>
+							<Chunk type="NoRef"> ( &quot;{}&quot; ; &quot;&quot; ; &quot;&quot; ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$tagJson</Name>
+				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
 					<FlushType value="Defer"/>
 				</Step>
-				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $tagJson; 値:JSONSetElement ( $tagJson ; &quot;tag&quot; &amp; $cnt ; 
+Let ([
 #start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
 #end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
 
@@ -942,7 +1025,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
+SV担当者入力データ月次_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -952,9 +1035,12 @@ Case(
 IsEmpty ( #a ); &quot;その他&quot;;
 #a
 )
-) ]</StepText>
-					<Result>
-						<Calculation><![CDATA[Let ([
+)
+
+ ; JSONString ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[JSONSetElement ( $tagJson ; "tag" & $cnt ; 
+Let ([
 #start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
 #end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
 
@@ -968,7 +1054,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
+SV担当者入力データ月次_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -978,8 +1064,13 @@ Case(
 IsEmpty ( #a ); "その他";
 #a
 )
-)]]></Calculation>
+)
+
+ ; JSONString )]]></Calculation>
 						<DisplayCalculation>
+							<Chunk type="FunctionRef">JSONSetElement</Chunk>
+							<Chunk type="NoRef"> ( $tagJson ; &quot;tag&quot; &amp; $cnt ; 
+</Chunk>
 							<Chunk type="FunctionRef">Let</Chunk>
 							<Chunk type="NoRef"> ([
 #start = </Chunk>
@@ -1019,7 +1110,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+								<Field table="SV担当者入力データ月次_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -1035,17 +1126,20 @@ $カテゴリID[$cnt];
 							<Chunk type="NoRef"> ( #a ); &quot;その他&quot;;
 #a
 )
-)</Chunk>
+)
+
+ ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> )</Chunk>
 						</DisplayCalculation>
-					</Result>
-					<TargetName>
-						<Calculation><![CDATA["SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
 						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
+							<Chunk type="NoRef">1</Chunk>
 						</DisplayCalculation>
-					</TargetName>
+					</Repetition>
+					<Name>$tagJson</Name>
 				</Step>
 				<Step enable="True" id="72" name="Exit Loop If">
 					<StepText>Exit Loop If [ $max ≤ $cnt ]</StepText>
@@ -1075,6 +1169,314 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $Json; 値:JSONSetElement ( 
+  &quot;{}&quot; ; 
+  [ &quot;加盟店CD&quot; ; $加盟店CD ; JSONString ] ;
+  [ &quot;加盟店名&quot; ; If ( not IsEmpty ( $加盟店名 ) ; $加盟店名 ; &quot;その他&quot; ) ; JSONString ] ; 
+  [ &quot;加盟店法人CD&quot; ; SV担当者入力データ月次_加盟店セット::加盟店法人CD ; JSONString ] ;
+  [ &quot;加盟店法人名&quot; ; If ( not IsEmpty ( SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称 ) ;SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称 ; &quot;その他&quot; ) ; JSONString ] ;
+  [ &quot;OK目標_委託&quot; ; SV担当者入力データ月次::当月目標金額_月初_委託 ; JSONNumber ] ;
+  [ &quot;OK目標_卸売&quot; ; SV担当者入力データ月次::当月目標金額_月初_卸売 ; JSONNumber ] ;
+  [ &quot;年月&quot; ; SV担当者入力データ月次::年月 ; JSONString ] ;
+  [ &quot;締フラグ&quot; ; SV担当者入力データ月次::締フラグ ; JSONString ] 
+) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[JSONSetElement ( 
+  "{}" ; 
+  [ "加盟店CD" ; $加盟店CD ; JSONString ] ;
+  [ "加盟店名" ; If ( not IsEmpty ( $加盟店名 ) ; $加盟店名 ; "その他" ) ; JSONString ] ; 
+  [ "加盟店法人CD" ; SV担当者入力データ月次_加盟店セット::加盟店法人CD ; JSONString ] ;
+  [ "加盟店法人名" ; If ( not IsEmpty ( SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称 ) ;SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称 ; "その他" ) ; JSONString ] ;
+  [ "OK目標_委託" ; SV担当者入力データ月次::当月目標金額_月初_委託 ; JSONNumber ] ;
+  [ "OK目標_卸売" ; SV担当者入力データ月次::当月目標金額_月初_卸売 ; JSONNumber ] ;
+  [ "年月" ; SV担当者入力データ月次::年月 ; JSONString ] ;
+  [ "締フラグ" ; SV担当者入力データ月次::締フラグ ; JSONString ] 
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">JSONSetElement</Chunk>
+							<Chunk type="NoRef"> ( 
+  &quot;{}&quot; ; 
+  [ &quot;加盟店CD&quot; ; $加盟店CD ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;加盟店名&quot; ; </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">not</Chunk>
+							<Chunk type="NoRef"> </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( $加盟店名 ) ; $加盟店名 ; &quot;その他&quot; ) ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ; 
+  [ &quot;加盟店法人CD&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次_加盟店セット" id="6" name="加盟店法人CD"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;加盟店法人名&quot; ; </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">not</Chunk>
+							<Chunk type="NoRef"> </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							</Chunk>
+							<Chunk type="NoRef"> ) ;</Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; &quot;その他&quot; ) ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;OK目標_委託&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONNumber</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;OK目標_卸売&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="24" name="当月目標金額_月初_卸売"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONNumber</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;年月&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="18" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;締フラグ&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="22" name="締フラグ"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] 
+)</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$Json</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="122" name="新規ウインドウ">
+					<StepText>新規ウインドウ [ スタイル: ドキュメント; 名前: &quot;処理中&quot;; 使用するレイアウト: 「目標集計テーブル｜作成用」 (SV担当者入力データ月次_目標集計テーブル｜作成許可); 閉じる: はい; 最小化: いいえ; 最大化: いいえ; サイズ変更: いいえ; メニューバー: いいえ; 親ウインドウを淡色表示: いいえ; ツールバー: いいえ ]</StepText>
+					<LayoutDestination value="SelectedLayout"/>
+					<Name>
+						<Calculation><![CDATA["処理中"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;処理中&quot;</Chunk>
+						</DisplayCalculation>
+					</Name>
+					<NewWndStyles DimParentWindow="いいえ" Toolbars="いいえ" MenuBar="いいえ" Style="Document" Close="はい" Minimize="いいえ" Maximize="いいえ" Resize="いいえ" Styles="3221291010"/>
+					<Layout id="122" name="目標集計テーブル｜作成用"/>
+				</Step>
+				<Step enable="True" id="7" name="新規レコード/検索条件">
+					<StepText>新規レコード/検索条件</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店CD; JSONGetElement ( $Json ; &quot;加盟店CD&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "加盟店CD" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;加盟店CD&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; JSONGetElement ( $Json ; &quot;加盟店名&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "加盟店名" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;加盟店名&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; JSONGetElement ( $Json ; &quot;加盟店法人CD&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "加盟店法人CD" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;加盟店法人CD&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; JSONGetElement ( $Json ; &quot;加盟店法人名&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "加盟店法人名" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;加盟店法人名&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::年月; JSONGetElement ( $Json ; &quot;年月&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "年月" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;年月&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="8" name="年月"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ $区分 = &quot;委託&quot; ]</StepText>
+					<Calculation><![CDATA[$区分 = "委託"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$区分 = &quot;委託&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; JSONGetElement ( $Json ; &quot;OK目標_委託&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "OK目標_委託" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;OK目標_委託&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="7" name="OK目標"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; JSONGetElement ( $Json ; &quot;OK目標_委託&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "OK目標_委託" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;OK目標_委託&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="26" name="売上目標"/>
+				</Step>
+				<Step enable="True" id="125" name="Else If">
+					<StepText>Else If [ $区分 = &quot;卸売&quot; ]</StepText>
+					<Calculation><![CDATA[$区分 = "卸売"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$区分 = &quot;卸売&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; JSONGetElement ( $Json ; &quot;OK目標_卸売&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "OK目標_卸売" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;OK目標_卸売&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="7" name="OK目標"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; JSONGetElement ( $Json ; &quot;OK目標_卸売&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "OK目標_卸売" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;OK目標_卸売&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="26" name="売上目標"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ01; JSONGetElement ( $tagJson ; &quot;tag1&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $tagJson ; "tag1" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $tagJson ; &quot;tag1&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="10" name="タグ01"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ02; JSONGetElement ( $tagJson ; &quot;tag2&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $tagJson ; "tag2" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $tagJson ; &quot;tag2&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="11" name="タグ02"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ03; JSONGetElement ( $tagJson ; &quot;tag3&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $tagJson ; "tag3" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $tagJson ; &quot;tag3&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="12" name="タグ03"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="75" name="レコード/検索条件確定">
+					<StepText>レコード/検索条件確定
+[ ダイアログなし ]</StepText>
+					<NoInteract state="True"/>
+					<Option state="False"/>
+					<ESSForceCommit state="False"/>
+				</Step>
+				<Step enable="True" id="121" name="ウインドウを閉じる">
+					<StepText>ウインドウを閉じる [ 名前: &quot;処理中&quot;; 現在のファイル ]</StepText>
+					<LimitToWindowsOfCurrentFile state="True"/>
+					<Window value="ByName"/>
+					<Name>
+						<Calculation><![CDATA["処理中"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;処理中&quot;</Chunk>
+						</DisplayCalculation>
+					</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $i; 値:$i + 1 ]</StepText>
+					<Value>
+						<Calculation><![CDATA[$i + 1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">$i + 1</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$i</Name>
+				</Step>
+				<Step enable="True" id="72" name="Exit Loop If">
+					<StepText>Exit Loop If [ $i &gt; $cnt_shop ]</StepText>
+					<Calculation><![CDATA[$i > $cnt_shop]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$i &gt; $cnt_shop</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="73" name="End Loop">
+					<StepText>End Loop</StepText>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -3710,12 +4112,12 @@ $カテゴリID[$cnt];
 					<Text>作成者	：Yuta Kawabata</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#改修日　　　 ：2025/05/08</StepText>
-					<Text>改修日　　　 ：2025/05/08</Text>
+					<StepText>#改修日　　　 ：2025/06/30</StepText>
+					<Text>改修日　　　 ：2025/06/30</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#コメント　　　 ：合算集計対応</StepText>
-					<Text>コメント　　　 ：合算集計対応</Text>
+					<StepText>#コメント　　　 ：SV担当入力データ変更</StepText>
+					<Text>コメント　　　 ：SV担当入力データ変更</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -4054,11 +4456,11 @@ Case(
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
+					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店セット::加盟店セット名 ) and
+not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
+					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店セット::加盟店セット名 ) and
+not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -4066,7 +4468,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="9" name="加盟店名"/>
+							<Field table="SV担当者入力データ月次_加盟店セット" id="8" name="加盟店セット名"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -4077,7 +4479,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
+							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
 						</Chunk>
 						<Chunk type="NoRef">) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -4093,151 +4495,204 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="NoRef">)</Chunk>
 					</DisplayCalculation>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店CD; SV担当者入力データ月次::加盟店CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::加盟店CD]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
-
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称 &amp; &quot;(&quot; &amp; SV担当者入力データ月次_加盟店::販売区分 &amp; &quot;)&quot;;
-
-Case(
-IsEmpty ( #a ) ; &quot;その他&quot; ;
-#a
-)
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $List; 値:Let([
+  result = ExecuteSQL(
+    &quot;SELECT \&quot;加盟店セットCD\&quot;, \&quot;加盟店CD\&quot;, \&quot;加盟店名\&quot;, \&quot;販売区分\&quot;
+     FROM \&quot;加盟店\&quot;
+     WHERE \&quot;加盟店セットCD\&quot; = ?
+     ORDER BY \&quot;販売区分\&quot;&quot;;
+    &quot;&quot;; &quot;&quot;;
+    SV担当者入力データ月次::加盟店セットCD
+  )
+];
+  result
 ) ]</StepText>
-					<Calculation><![CDATA[Let(
-
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称 & "(" & SV担当者入力データ月次_加盟店::販売区分 & ")";
-
-Case(
-IsEmpty ( #a ) ; "その他" ;
-#a
-)
+					<Value>
+						<Calculation><![CDATA[Let([
+  result = ExecuteSQL(
+    "SELECT \"加盟店セットCD\", \"加盟店CD\", \"加盟店名\", \"販売区分\"
+     FROM \"加盟店\"
+     WHERE \"加盟店セットCD\" = ?
+     ORDER BY \"販売区分\"";
+    ""; "";
+    SV担当者入力データ月次::加盟店セットCD
+  )
+];
+  result
 )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Let</Chunk>
-						<Chunk type="NoRef">(
-
-#a = </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
-						</Chunk>
-						<Chunk type="NoRef"> &amp; &quot;(&quot; &amp; </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="25" name="販売区分"/>
-						</Chunk>
-						<Chunk type="NoRef"> &amp; &quot;)&quot;;
-
-</Chunk>
-						<Chunk type="FunctionRef">Case</Chunk>
-						<Chunk type="NoRef">(
-</Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( #a ) ; &quot;その他&quot; ;
-#a
-)
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef">([
+  result = </Chunk>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef">(
+    &quot;SELECT \&quot;加盟店セットCD\&quot;, \&quot;加盟店CD\&quot;, \&quot;加盟店名\&quot;, \&quot;販売区分\&quot;
+     FROM \&quot;加盟店\&quot;
+     WHERE \&quot;加盟店セットCD\&quot; = ?
+     ORDER BY \&quot;販売区分\&quot;&quot;;
+    &quot;&quot;; &quot;&quot;;
+    </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+							</Chunk>
+							<Chunk type="NoRef">
+  )
+];
+  result
 )</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$List</Name>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $cnt_shop; 値:ValueCount ( $List ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[ValueCount ( $List )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">ValueCount</Chunk>
+							<Chunk type="NoRef"> ( $List )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$cnt_shop</Name>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
-
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; &quot;その他&quot; ;
-#a
-)
-) ]</StepText>
-					<Calculation><![CDATA[Let(
-
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; "その他" ;
-#a
-)
-)]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Let</Chunk>
-						<Chunk type="NoRef">(
-
-#a = </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
-						</Chunk>
-						<Chunk type="NoRef">;
-
-</Chunk>
-						<Chunk type="FunctionRef">Case</Chunk>
-						<Chunk type="NoRef">(
-</Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( #a ) ; &quot;その他&quot; ;
-#a
-)
-)</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $i; 値:1 ]</StepText>
+					<Value>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$i</Name>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="7" name="OK目標"/>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="26" name="売上目標"/>
+				<Step enable="True" id="71" name="Loop">
+					<StepText>Loop [ フラッシュ: 常に ]</StepText>
+					<FlushType value="Always"/>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::年月; SV担当者入力データ月次::年月 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::年月]]></Calculation>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ $i ≤ $cnt_shop ]</StepText>
+					<Calculation><![CDATA[$i ≤ $cnt_shop]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="18" name="年月"/>
-						</Chunk>
+						<Chunk type="NoRef">$i ≤ $cnt_shop</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="8" name="年月"/>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::締フラグ; SV担当者入力データ月次::締フラグ ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::締フラグ]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="22" name="締フラグ"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="27" name="締フラグ"/>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $行; 値:GetValue ( $List ; $i ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( $List ; $i )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( $List ; $i )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$行</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $セットCD; 値:GetValue ( Substitute ( $行 ; &quot;,&quot; ; ¶ ) ; 1 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $行 ; "," ; ¶ ) ; 1 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $行 ; &quot;,&quot; ; ¶ ) ; 1 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$セットCD</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $加盟店CD; 値:GetValue ( Substitute ( $行 ; &quot;,&quot; ; ¶ ) ; 2 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $行 ; "," ; ¶ ) ; 2 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $行 ; &quot;,&quot; ; ¶ ) ; 2 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$加盟店CD</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $加盟店名; 値:GetValue ( Substitute ( $行 ; &quot;,&quot; ; ¶ ) ; 3 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $行 ; "," ; ¶ ) ; 3 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $行 ; &quot;,&quot; ; ¶ ) ; 3 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$加盟店名</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $区分; 値:GetValue ( Substitute ( $行 ; &quot;,&quot; ; ¶ ) ; 4 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $行 ; "," ; ¶ ) ; 4 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $行 ; &quot;,&quot; ; ¶ ) ; 4 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$区分</Name>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -4312,12 +4767,32 @@ IsEmpty ( #a ) ; "その他" ;
 					</Repetition>
 					<Name>$end</Name>
 				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $tagJson; 値:JSONSetElement ( &quot;{}&quot; ; &quot;&quot; ; &quot;&quot; ; JSONString ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[JSONSetElement ( "{}" ; "" ; "" ; JSONString )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">JSONSetElement</Chunk>
+							<Chunk type="NoRef"> ( &quot;{}&quot; ; &quot;&quot; ; &quot;&quot; ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$tagJson</Name>
+				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
 					<FlushType value="Defer"/>
 				</Step>
-				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $tagJson; 値:JSONSetElement ( $tagJson ; &quot;tag&quot; &amp; $cnt ; 
+Let ([
 #start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
 #end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
 
@@ -4331,7 +4806,7 @@ AND \&quot;カテゴリID\&quot; = ?
 AND \&quot;適用期間_開始日\&quot; &lt;= ? 
 AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
+SV担当者入力データ月次_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -4341,9 +4816,12 @@ Case(
 IsEmpty ( #a ); &quot;その他&quot;;
 #a
 )
-) ]</StepText>
-					<Result>
-						<Calculation><![CDATA[Let ([
+)
+
+ ; JSONString ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[JSONSetElement ( $tagJson ; "tag" & $cnt ; 
+Let ([
 #start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
 #end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
 
@@ -4357,7 +4835,7 @@ AND \"カテゴリID\" = ?
 AND \"適用期間_開始日\" <= ? 
 AND \"適用期間_連携用終了日\" >= ?";
 "" ; "" ;
-SV担当者入力データ月次_加盟店_加盟店セット::加盟店セットCD;
+SV担当者入力データ月次_加盟店セット::加盟店セットCD;
 $カテゴリID[$cnt];
 #start;
 #end
@@ -4367,8 +4845,13 @@ Case(
 IsEmpty ( #a ); "その他";
 #a
 )
-)]]></Calculation>
+)
+
+ ; JSONString )]]></Calculation>
 						<DisplayCalculation>
+							<Chunk type="FunctionRef">JSONSetElement</Chunk>
+							<Chunk type="NoRef"> ( $tagJson ; &quot;tag&quot; &amp; $cnt ; 
+</Chunk>
 							<Chunk type="FunctionRef">Let</Chunk>
 							<Chunk type="NoRef"> ([
 #start = </Chunk>
@@ -4408,7 +4891,7 @@ AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
 &quot;&quot; ; &quot;&quot; ;
 </Chunk>
 							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="7" name="加盟店セットCD"/>
+								<Field table="SV担当者入力データ月次_加盟店セット" id="7" name="加盟店セットCD"/>
 							</Chunk>
 							<Chunk type="NoRef">;
 $カテゴリID[$cnt];
@@ -4424,17 +4907,20 @@ $カテゴリID[$cnt];
 							<Chunk type="NoRef"> ( #a ); &quot;その他&quot;;
 #a
 )
-)</Chunk>
+)
+
+ ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> )</Chunk>
 						</DisplayCalculation>
-					</Result>
-					<TargetName>
-						<Calculation><![CDATA["SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
 						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
+							<Chunk type="NoRef">1</Chunk>
 						</DisplayCalculation>
-					</TargetName>
+					</Repetition>
+					<Name>$tagJson</Name>
 				</Step>
 				<Step enable="True" id="72" name="Exit Loop If">
 					<StepText>Exit Loop If [ $max ≤ $cnt ]</StepText>
@@ -4464,6 +4950,323 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $Json; 値:JSONSetElement ( 
+  &quot;{}&quot; ; 
+  [ &quot;加盟店CD&quot; ; $加盟店CD ; JSONString ] ;
+  [ &quot;加盟店名&quot; ; If ( not IsEmpty ( $加盟店名 ) ; $加盟店名 ; &quot;その他&quot; ) ; JSONString ] ; 
+  [ &quot;加盟店法人CD&quot; ; SV担当者入力データ月次_加盟店セット::加盟店法人CD ; JSONString ] ;
+  [ &quot;加盟店法人名&quot; ; If ( not IsEmpty ( SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称 ) ;SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称 ; &quot;その他&quot; ) ; JSONString ] ;
+  [ &quot;OK目標_委託&quot; ; SV担当者入力データ月次::当月目標金額_月初_委託 ; JSONNumber ] ;
+  [ &quot;OK目標_卸売&quot; ; SV担当者入力データ月次::当月目標金額_月初_卸売 ; JSONNumber ] ;
+  [ &quot;年月&quot; ; SV担当者入力データ月次::年月 ; JSONString ] ;
+  [ &quot;締フラグ&quot; ; SV担当者入力データ月次::締フラグ ; JSONString ] 
+) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[JSONSetElement ( 
+  "{}" ; 
+  [ "加盟店CD" ; $加盟店CD ; JSONString ] ;
+  [ "加盟店名" ; If ( not IsEmpty ( $加盟店名 ) ; $加盟店名 ; "その他" ) ; JSONString ] ; 
+  [ "加盟店法人CD" ; SV担当者入力データ月次_加盟店セット::加盟店法人CD ; JSONString ] ;
+  [ "加盟店法人名" ; If ( not IsEmpty ( SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称 ) ;SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称 ; "その他" ) ; JSONString ] ;
+  [ "OK目標_委託" ; SV担当者入力データ月次::当月目標金額_月初_委託 ; JSONNumber ] ;
+  [ "OK目標_卸売" ; SV担当者入力データ月次::当月目標金額_月初_卸売 ; JSONNumber ] ;
+  [ "年月" ; SV担当者入力データ月次::年月 ; JSONString ] ;
+  [ "締フラグ" ; SV担当者入力データ月次::締フラグ ; JSONString ] 
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">JSONSetElement</Chunk>
+							<Chunk type="NoRef"> ( 
+  &quot;{}&quot; ; 
+  [ &quot;加盟店CD&quot; ; $加盟店CD ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;加盟店名&quot; ; </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">not</Chunk>
+							<Chunk type="NoRef"> </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( $加盟店名 ) ; $加盟店名 ; &quot;その他&quot; ) ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ; 
+  [ &quot;加盟店法人CD&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次_加盟店セット" id="6" name="加盟店法人CD"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;加盟店法人名&quot; ; </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">not</Chunk>
+							<Chunk type="NoRef"> </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							</Chunk>
+							<Chunk type="NoRef"> ) ;</Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; &quot;その他&quot; ) ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;OK目標_委託&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONNumber</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;OK目標_卸売&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="24" name="当月目標金額_月初_卸売"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONNumber</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;年月&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="18" name="年月"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] ;
+  [ &quot;締フラグ&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="22" name="締フラグ"/>
+							</Chunk>
+							<Chunk type="NoRef"> ; </Chunk>
+							<Chunk type="FunctionRef">JSONString</Chunk>
+							<Chunk type="NoRef"> ] 
+)</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$Json</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="122" name="新規ウインドウ">
+					<StepText>新規ウインドウ [ スタイル: ドキュメント; 名前: &quot;処理中&quot;; 使用するレイアウト: 「目標集計テーブル｜作成用」 (SV担当者入力データ月次_目標集計テーブル｜作成許可); 閉じる: はい; 最小化: いいえ; 最大化: いいえ; サイズ変更: いいえ; メニューバー: いいえ; 親ウインドウを淡色表示: いいえ; ツールバー: いいえ ]</StepText>
+					<LayoutDestination value="SelectedLayout"/>
+					<Name>
+						<Calculation><![CDATA["処理中"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;処理中&quot;</Chunk>
+						</DisplayCalculation>
+					</Name>
+					<NewWndStyles DimParentWindow="いいえ" Toolbars="いいえ" MenuBar="いいえ" Style="Document" Close="はい" Minimize="いいえ" Maximize="いいえ" Resize="いいえ" Styles="3221291010"/>
+					<Layout id="122" name="目標集計テーブル｜作成用"/>
+				</Step>
+				<Step enable="True" id="7" name="新規レコード/検索条件">
+					<StepText>新規レコード/検索条件</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店CD; JSONGetElement ( $Json ; &quot;加盟店CD&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "加盟店CD" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;加盟店CD&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; JSONGetElement ( $Json ; &quot;加盟店名&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "加盟店名" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;加盟店名&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; JSONGetElement ( $Json ; &quot;加盟店法人CD&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "加盟店法人CD" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;加盟店法人CD&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; JSONGetElement ( $Json ; &quot;加盟店法人名&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "加盟店法人名" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;加盟店法人名&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::年月; JSONGetElement ( $Json ; &quot;年月&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "年月" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;年月&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="8" name="年月"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::締フラグ; JSONGetElement ( $Json ; &quot;締フラグ&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "締フラグ" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;締フラグ&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="27" name="締フラグ"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ $区分 = &quot;委託&quot; ]</StepText>
+					<Calculation><![CDATA[$区分 = "委託"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$区分 = &quot;委託&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; JSONGetElement ( $Json ; &quot;OK目標_委託&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "OK目標_委託" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;OK目標_委託&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="7" name="OK目標"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; JSONGetElement ( $Json ; &quot;OK目標_委託&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "OK目標_委託" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;OK目標_委託&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="26" name="売上目標"/>
+				</Step>
+				<Step enable="True" id="125" name="Else If">
+					<StepText>Else If [ $区分 = &quot;卸売&quot; ]</StepText>
+					<Calculation><![CDATA[$区分 = "卸売"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$区分 = &quot;卸売&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; JSONGetElement ( $Json ; &quot;OK目標_卸売&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "OK目標_卸売" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;OK目標_卸売&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="7" name="OK目標"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; JSONGetElement ( $Json ; &quot;OK目標_卸売&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $Json ; "OK目標_卸売" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $Json ; &quot;OK目標_卸売&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="26" name="売上目標"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ01; JSONGetElement ( $tagJson ; &quot;tag1&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $tagJson ; "tag1" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $tagJson ; &quot;tag1&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="10" name="タグ01"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ02; JSONGetElement ( $tagJson ; &quot;tag2&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $tagJson ; "tag2" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $tagJson ; &quot;tag2&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="11" name="タグ02"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ03; JSONGetElement ( $tagJson ; &quot;tag3&quot; ) ]</StepText>
+					<Calculation><![CDATA[JSONGetElement ( $tagJson ; "tag3" )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">JSONGetElement</Chunk>
+						<Chunk type="NoRef"> ( $tagJson ; &quot;tag3&quot; )</Chunk>
+					</DisplayCalculation>
+					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="12" name="タグ03"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="75" name="レコード/検索条件確定">
+					<StepText>レコード/検索条件確定
+[ ダイアログなし ]</StepText>
+					<NoInteract state="True"/>
+					<Option state="False"/>
+					<ESSForceCommit state="False"/>
+				</Step>
+				<Step enable="True" id="121" name="ウインドウを閉じる">
+					<StepText>ウインドウを閉じる [ 名前: &quot;処理中&quot;; 現在のファイル ]</StepText>
+					<LimitToWindowsOfCurrentFile state="True"/>
+					<Window value="ByName"/>
+					<Name>
+						<Calculation><![CDATA["処理中"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;処理中&quot;</Chunk>
+						</DisplayCalculation>
+					</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $i; 値:$i + 1 ]</StepText>
+					<Value>
+						<Calculation><![CDATA[$i + 1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">$i + 1</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$i</Name>
+				</Step>
+				<Step enable="True" id="72" name="Exit Loop If">
+					<StepText>Exit Loop If [ $i &gt; $cnt_shop ]</StepText>
+					<Calculation><![CDATA[$i > $cnt_shop]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$i &gt; $cnt_shop</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="73" name="End Loop">
+					<StepText>End Loop</StepText>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -4650,7 +5453,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -4659,7 +5462,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -4672,7 +5475,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -7814,14 +8617,14 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<StepText/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::加盟店CD; global::カテゴリID_加盟_g ]</StepText>
+					<StepText>フィールド設定 [ SV担当者入力データ月次::加盟店セットCD; global::カテゴリID_加盟_g ]</StepText>
 					<Calculation><![CDATA[global::カテゴリID_加盟_g]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
 							<Field table="global" id="22" name="カテゴリID_加盟_g"/>
 						</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
+					<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -8202,12 +9005,12 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::加盟店CD; $$searchStore ]</StepText>
+					<StepText>フィールド設定 [ SV担当者入力データ月次::加盟店セットCD; $$searchStore ]</StepText>
 					<Calculation><![CDATA[$$searchStore]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$$searchStore</Chunk>
 					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
+					<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -8881,18 +9684,18 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<Field table="加盟店セット" id="14" name="その他タグID_管轄_g"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 加盟店セット::その他タグID_加盟_g; &quot;tag_0012&quot; ]</StepText>
-					<Calculation><![CDATA["tag_0012"]]></Calculation>
+					<StepText>フィールド設定 [ 加盟店セット::その他タグID_加盟_g; &quot;tag_0017&quot; ]</StepText>
+					<Calculation><![CDATA["tag_0017"]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">&quot;tag_0012&quot;</Chunk>
+						<Chunk type="NoRef">&quot;tag_0017&quot;</Chunk>
 					</DisplayCalculation>
 					<Field table="加盟店セット" id="15" name="その他タグID_加盟_g"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 加盟店セット::その他タグID_SV担当者_g; &quot;tag_0017&quot; ]</StepText>
-					<Calculation><![CDATA["tag_0017"]]></Calculation>
+					<StepText>フィールド設定 [ 加盟店セット::その他タグID_SV担当者_g; &quot;tag_0023&quot; ]</StepText>
+					<Calculation><![CDATA["tag_0023"]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">&quot;tag_0017&quot;</Chunk>
+						<Chunk type="NoRef">&quot;tag_0023&quot;</Chunk>
 					</DisplayCalculation>
 					<Field table="加盟店セット" id="16" name="その他タグID_SV担当者_g"/>
 				</Step>
@@ -8904,10 +9707,10 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<Text>商品テーブルの未設定タグID</Text>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 商品::未設定タグID_商品_g; &quot;tag_0020&quot; ]</StepText>
-					<Calculation><![CDATA["tag_0020"]]></Calculation>
+					<StepText>フィールド設定 [ 商品::未設定タグID_商品_g; &quot;tag_0026&quot; ]</StepText>
+					<Calculation><![CDATA["tag_0026"]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">&quot;tag_0020&quot;</Chunk>
+						<Chunk type="NoRef">&quot;tag_0026&quot;</Chunk>
 					</DisplayCalculation>
 					<Field table="商品" id="16" name="未設定タグID_商品_g"/>
 				</Step>
@@ -17830,11 +18633,11 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( SV担当者入力データ月次::_sv担当者CD ) or
-IsEmpty ( SV担当者入力データ月次::加盟店CD ) or
+IsEmpty ( SV担当者入力データ月次::加盟店セットCD ) or
 IsEmpty ( SV担当者入力データ月次::年 ) or
 IsEmpty ( SV担当者入力データ月次::月 ) ]</StepText>
 					<Calculation><![CDATA[IsEmpty ( SV担当者入力データ月次::_sv担当者CD ) or
-IsEmpty ( SV担当者入力データ月次::加盟店CD ) or
+IsEmpty ( SV担当者入力データ月次::加盟店セットCD ) or
 IsEmpty ( SV担当者入力データ月次::年 ) or
 IsEmpty ( SV担当者入力データ月次::月 )]]></Calculation>
 					<DisplayCalculation>
@@ -17850,7 +18653,7 @@ IsEmpty ( SV担当者入力データ月次::月 )]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
+							<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">or</Chunk>
@@ -19246,11 +20049,11 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
+					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
+not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
+					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
+not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -19258,7 +20061,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="9" name="加盟店名"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店" id="9" name="加盟店名"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -19269,7 +20072,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
+							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
 						</Chunk>
 						<Chunk type="NoRef">) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -19296,51 +20099,51 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; SV担当者入力データ月次_加盟店::加盟店名_略称 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店::加盟店名_略称]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; SV担当者入力データ月次_加盟店セット_加盟店::加盟店名_略称 ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店セット_加盟店::加盟店名_略称]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称 ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初_委託 ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初_委託]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
+							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="7" name="OK目標"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; SV担当者入力データ月次::当月目標金額_月初_委託 ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初_委託]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
+							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="26" name="売上目標"/>
@@ -19709,7 +20512,7 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
 
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19718,7 +20521,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19731,7 +20534,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -19770,7 +20573,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -19779,7 +20582,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -19792,7 +20595,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -21279,11 +22082,11 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
+					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
+not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初) and
+					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
+not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -21291,7 +22094,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="9" name="加盟店名"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店" id="9" name="加盟店名"/>
 						</Chunk>
 						<Chunk type="NoRef"> ) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -21302,7 +22105,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
 						<Chunk type="NoRef"> (</Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
+							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
 						</Chunk>
 						<Chunk type="NoRef">) </Chunk>
 						<Chunk type="FunctionRef">and</Chunk>
@@ -21331,7 +22134,7 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
 
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -21340,7 +22143,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店::加盟店名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店::加盟店名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -21353,7 +22156,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店" id="17" name="加盟店名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店" id="17" name="加盟店名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -21370,11 +22173,11 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店_加盟店セット::加盟店法人CD]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店セット::加盟店法人CD ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次_加盟店セット::加盟店法人CD]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット" id="6" name="加盟店法人CD"/>
+							<Field table="SV担当者入力データ月次_加盟店セット" id="6" name="加盟店法人CD"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
@@ -21382,7 +22185,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -21391,7 +22194,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -21404,7 +22207,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
@@ -21421,21 +22224,21 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初_委託 ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初_委託]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
+							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="7" name="OK目標"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; SV担当者入力データ月次::当月目標金額_月初 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初]]></Calculation>
+					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; SV担当者入力データ月次::当月目標金額_月初_委託 ]</StepText>
+					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初_委託]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初"/>
+							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
 						</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="26" name="売上目標"/>
@@ -21876,7 +22679,7 @@ IsEmpty ( #a ) ; "その他" ;
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; &quot;その他&quot; ;
@@ -21885,7 +22688,7 @@ IsEmpty ( #a ) ; &quot;その他&quot; ;
 ) ]</StepText>
 					<Calculation><![CDATA[Let(
 
-#a = SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
+#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
 
 Case(
 IsEmpty ( #a ) ; "その他" ;
@@ -21898,7 +22701,7 @@ IsEmpty ( #a ) ; "その他" ;
 
 #a = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
+							<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
 						</Chunk>
 						<Chunk type="NoRef">;
 
