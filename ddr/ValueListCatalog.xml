@@ -129,10 +129,10 @@ SV担当者
 	<ValueList id="13" name="SV担当者入力データ月次_加盟店｜値一覧">
 		<Source value="Field"/>
 		<PrimaryField show="True" sort="True">
-			<Field table="SV担当者入力データ月次_ユーザーマスタ_tagging中間テーブル_加盟店" id="8" name="加盟店CD"/>
+			<Field table="" id="8" name=""/>
 		</PrimaryField>
 		<SecondaryField show="False" sort="False">
-			<Field table="SV担当者入力データ月次_ユーザーマスタ_tagging中間テーブル_加盟店" id="9" name="加盟店名"/>
+			<Field table="" id="9" name=""/>
 		</SecondaryField>
 		<ShowRelated value="True">
 			<Table id="1065107" name="SV担当者入力データ月次"/>
@@ -177,6 +177,16 @@ SV担当者
 		</PrimaryField>
 		<SecondaryField show="True" sort="True">
 			<Field table="加盟店" id="9" name="加盟店名"/>
+		</SecondaryField>
+		<ShowRelated value="False"/>
+	</ValueList>
+	<ValueList id="21" name="加盟店セットCD_検索用">
+		<Source value="Field"/>
+		<PrimaryField show="False" sort="False">
+			<Field table="加盟店セット" id="7" name="加盟店セットCD"/>
+		</PrimaryField>
+		<SecondaryField show="True" sort="True">
+			<Field table="加盟店セット" id="8" name="加盟店セット名"/>
 		</SecondaryField>
 		<ShowRelated value="False"/>
 	</ValueList>
