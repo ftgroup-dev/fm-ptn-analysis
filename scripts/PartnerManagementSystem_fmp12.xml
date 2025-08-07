@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<FMPReport link="概要.xml" creationTime="16:07:34" creationDate="2025/08/07" type="Report" version="21.1.1">
-<File name="PartnerManagementSystem.fmp12" path="C:\Users\327311\Desktop\">
+<FMPReport link="概要.xml" creationTime="11:14:27" creationDate="2025/07/24" type="Report" version="21.1.1">
+<File name="PartnerManagementSystem.fmp12" path="ftg.irca-fm.com">
 <BaseTableCatalog>
-	<BaseTable id="129" records="2" name="top">
+	<BaseTable id="129" records="3" name="top">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -509,7 +509,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="136" records="8682" name="物件別管理データ">
+	<BaseTable id="136" records="8859" name="物件別管理データ">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -1874,7 +1874,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="138" records="11531" name="売上集計表">
+	<BaseTable id="138" records="11708" name="売上集計表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2277,7 +2277,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="140" records="11135" name="受注残明細表">
+	<BaseTable id="140" records="11516" name="受注残明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2899,7 +2899,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="142" records="44120" name="売上明細表">
+	<BaseTable id="142" records="45627" name="売上明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -4159,19 +4159,6 @@
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="23" dataType="Text" fieldType="Normal" name="加盟店セットCD">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
 			<Field id="19" dataType="Text" fieldType="Normal" name="加盟店法人CD">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="True" calculation="False">
@@ -4192,7 +4179,33 @@
 				</Validation>
 				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
+			<Field id="23" dataType="Text" fieldType="Normal" name="加盟店セットCD">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
 			<Field id="7" dataType="Text" fieldType="Normal" name="加盟店CD">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="14" dataType="Text" fieldType="Normal" name="_sv担当者CD">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
@@ -4476,19 +4489,6 @@ If ( IsEmpty ( result ) ; 0 ; result )
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="14" dataType="Text" fieldType="Normal" name="_sv担当者CD">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
 			<Field id="15" dataType="Number" fieldType="Normal" name="年">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
@@ -4514,19 +4514,6 @@ If ( IsEmpty ( result ) ; 0 ; result )
 					<StrictValidation value="False"/>
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="17" dataType="Text" fieldType="Normal" name="備考">
-				<Comment>テーブル定義にはないけど追加した</Comment>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="18" dataType="Text" fieldType="Normal" name="年月">
 				<Comment/>
@@ -4586,8 +4573,8 @@ If ( IsEmpty ( result ) ; 0 ; result )
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="21" dataType="Text" fieldType="Normal" name="一括作成UUID">
-				<Comment/>
+			<Field id="17" dataType="Text" fieldType="Normal" name="備考">
+				<Comment>テーブル定義にはないけど追加した</Comment>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
 				</AutoEnter>
@@ -4611,6 +4598,19 @@ If ( IsEmpty ( result ) ; 0 ; result )
 					<StrictValidation value="False"/>
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="21" dataType="Text" fieldType="Normal" name="一括作成UUID">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="27" dataType="Text" fieldType="Normal" name="g_加盟店CD_委託">
 				<Comment/>
@@ -4998,19 +4998,6 @@ If ( IsEmpty ( result ) ; 0 ; result )
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="13" dataType="Text" fieldType="Normal" name="BaseTableID_g">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage indexLanguage="Japanese" global="True" maxRepetition="1"/>
-			</Field>
 			<Field id="14" dataType="Text" fieldType="Normal" name="備考">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
@@ -5023,6 +5010,19 @@ If ( IsEmpty ( result ) ; 0 ; result )
 					<StrictValidation value="False"/>
 				</Validation>
 				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="13" dataType="Text" fieldType="Normal" name="BaseTableID_g">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage indexLanguage="Japanese" global="True" maxRepetition="1"/>
 			</Field>
 			<Field id="15" dataType="Number" fieldType="Normal" name="BaseTableID｜category_g">
 				<Comment/>
@@ -5129,6 +5129,19 @@ If ( IsEmpty ( result ) ; 0 ; result )
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
+			<Field id="26" dataType="Text" fieldType="Normal" name="加盟店セットCD">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
 			<Field id="8" dataType="Text" fieldType="Normal" name="加盟店CD">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
@@ -5149,19 +5162,6 @@ If ( IsEmpty ( result ) ; 0 ; result )
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="26" dataType="Text" fieldType="Normal" name="加盟店セットCD">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
 			<Field id="9" dataType="Text" fieldType="Normal" name="加盟店名">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
@@ -5176,6 +5176,19 @@ If ( IsEmpty ( result ) ; 0 ; result )
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="17" dataType="Text" fieldType="Normal" name="加盟店名_略称">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="25" dataType="Text" fieldType="Normal" name="販売区分">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
@@ -5226,19 +5239,6 @@ If ( IsEmpty ( result ) ; 0 ; result )
 					<StrictValidation value="False"/>
 				</Validation>
 				<Storage indexLanguage="Japanese" global="True" maxRepetition="1"/>
-			</Field>
-			<Field id="25" dataType="Text" fieldType="Normal" name="販売区分">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="27" dataType="Text" fieldType="Normal" name="taggable_ID">
 				<Comment/>
@@ -6238,7 +6238,7 @@ v$return
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="154" records="4477" name="tagging中間テーブル">
+	<BaseTable id="154" records="4525" name="tagging中間テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6317,7 +6317,7 @@ v$return
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="4478" generate="OnCreation"/>
+					<Serial increment="1" nextValue="4526" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -6560,7 +6560,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="155" records="3333" name="商品">
+	<BaseTable id="155" records="3381" name="商品">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6639,7 +6639,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="4281" generate="OnCreation"/>
+					<Serial increment="1" nextValue="4329" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -7210,7 +7210,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="159" records="368" name="営業担当者">
+	<BaseTable id="159" records="369" name="営業担当者">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -7289,7 +7289,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="475" generate="OnCreation"/>
+					<Serial increment="1" nextValue="476" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -7671,7 +7671,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="165" records="746" name="loginLog">
+	<BaseTable id="165" records="770" name="loginLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -7849,6 +7849,32 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Unicode_Raw" global="False" maxRepetition="1"/>
 			</Field>
+			<Field id="17" dataType="Text" fieldType="Normal" name="SV担当者入力データ月次_主キー">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="3" dataType="Text" fieldType="Normal" name="作成者">
+				<Comment>各レコードを作成したユーザのアカウント名</Comment>
+				<AutoEnter allowEditing="False" value="CreationAccountName" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="True"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="True"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
 			<Field id="2" dataType="TimeStamp" fieldType="Normal" name="作成情報タイムスタンプ">
 				<Comment>各レコードが作成された日付と時刻</Comment>
 				<AutoEnter allowEditing="False" value="CreationTimeStamp" constant="False" furigana="False" lookup="False" calculation="False">
@@ -7875,9 +7901,9 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 				<AutoEnter alwaysEvaluate="False"/>
 				<Storage storeCalculationResults="True" autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="3" dataType="Text" fieldType="Normal" name="作成者">
-				<Comment>各レコードを作成したユーザのアカウント名</Comment>
-				<AutoEnter allowEditing="False" value="CreationAccountName" constant="False" furigana="False" lookup="False" calculation="False">
+			<Field id="5" dataType="Text" fieldType="Normal" name="修正者">
+				<Comment>各レコードを最後に修正したユーザのアカウント名</Comment>
+				<AutoEnter allowEditing="False" value="ModificationAccountName" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -7914,18 +7940,31 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 				<AutoEnter alwaysEvaluate="False"/>
 				<Storage storeCalculationResults="True" autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="5" dataType="Text" fieldType="Normal" name="修正者">
-				<Comment>各レコードを最後に修正したユーザのアカウント名</Comment>
-				<AutoEnter allowEditing="False" value="ModificationAccountName" constant="False" furigana="False" lookup="False" calculation="False">
+			<Field id="19" dataType="Text" fieldType="Normal" name="加盟店法人CD">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="True"/>
+					<NotEmpty value="False"/>
 					<Unique value="False"/>
 					<Existing value="False"/>
-					<StrictValidation value="True"/>
+					<StrictValidation value="False"/>
 				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="20" dataType="Text" fieldType="Normal" name="加盟店法人名">
+				<Comment>表示対象項目</Comment>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="6" dataType="Text" fieldType="Normal" name="加盟店CD">
 				<Comment/>
@@ -7953,32 +7992,6 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="19" dataType="Text" fieldType="Normal" name="加盟店法人CD">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="20" dataType="Text" fieldType="Normal" name="加盟店法人名">
-				<Comment>表示対象項目</Comment>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
 			<Field id="7" dataType="Number" fieldType="Normal" name="OK目標">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
@@ -7991,6 +8004,17 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 					<StrictValidation value="False"/>
 				</Validation>
 				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="29" dataType="Number" fieldType="Summary" name="集計_OK目標">
+				<SummaryInfo restartForEachSortedGroup="False" summarizeRepetition="Together" operation="Total">
+					<SummaryField>
+						<Field id="7" name="OK目標"/>
+					</SummaryField>
+				</SummaryInfo>
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
 			</Field>
 			<Field id="26" dataType="Number" fieldType="Normal" name="売上目標">
 				<Comment/>
@@ -8005,18 +8029,16 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 				</Validation>
 				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="8" dataType="Text" fieldType="Normal" name="年月">
+			<Field id="30" dataType="Number" fieldType="Summary" name="集計_売上目標">
+				<SummaryInfo restartForEachSortedGroup="False" summarizeRepetition="Together" operation="Total">
+					<SummaryField>
+						<Field id="26" name="売上目標"/>
+					</SummaryField>
+				</SummaryInfo>
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
 				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="10" dataType="Text" fieldType="Normal" name="タグ01">
 				<Comment/>
@@ -8148,7 +8170,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 				</Validation>
 				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="17" dataType="Text" fieldType="Normal" name="SV担当者入力データ月次_主キー">
+			<Field id="8" dataType="Text" fieldType="Normal" name="年月">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
@@ -8159,7 +8181,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 					<Existing value="False"/>
 					<StrictValidation value="False"/>
 				</Validation>
-				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="27" dataType="Number" fieldType="Normal" name="締フラグ">
 				<Comment/>
@@ -8174,31 +8196,9 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="29" dataType="Number" fieldType="Summary" name="集計_OK目標">
-				<SummaryInfo restartForEachSortedGroup="False" summarizeRepetition="Together" operation="Total">
-					<SummaryField>
-						<Field id="7" name="OK目標"/>
-					</SummaryField>
-				</SummaryInfo>
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-			</Field>
-			<Field id="30" dataType="Number" fieldType="Summary" name="集計_売上目標">
-				<SummaryInfo restartForEachSortedGroup="False" summarizeRepetition="Together" operation="Total">
-					<SummaryField>
-						<Field id="26" name="売上目標"/>
-					</SummaryField>
-				</SummaryInfo>
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="163" records="14290" name="実績集計テーブル">
+	<BaseTable id="163" records="14601" name="実績集計テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -8219,6 +8219,19 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 					<StrictValidation value="True"/>
 				</Validation>
 				<Storage index="All" indexLanguage="Unicode_Raw" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="15" dataType="Text" fieldType="Normal" name="物件別管理データ_主キー">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="2" dataType="TimeStamp" fieldType="Normal" name="作成情報タイムスタンプ">
 				<Comment>各レコードが作成された日付と時刻</Comment>
@@ -8299,6 +8312,58 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 				</Validation>
 				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
+			<Field id="20" dataType="Text" fieldType="Normal" name="加盟店法人CD">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="21" dataType="Text" fieldType="Normal" name="加盟店法人名">
+				<Comment>表示対象項目</Comment>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="39" dataType="Text" fieldType="Normal" name="加盟店セットCD">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="40" dataType="Text" fieldType="Normal" name="加盟店セット名">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
 			<Field id="6" dataType="Text" fieldType="Normal" name="加盟店CD">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
@@ -8311,6 +8376,19 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 					<StrictValidation value="False"/>
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="19" dataType="Text" fieldType="Normal" name="加盟店名">
+				<Comment>表示対象項目</Comment>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="7" dataType="Number" fieldType="Normal" name="OK実績">
 				<Comment/>
@@ -8325,83 +8403,16 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="9" dataType="Text" fieldType="Normal" name="タグ01">
+			<Field id="36" dataType="Number" fieldType="Summary" name="集計_OK実績">
+				<SummaryInfo restartForEachSortedGroup="False" summarizeRepetition="Together" operation="Total">
+					<SummaryField>
+						<Field id="7" name="OK実績"/>
+					</SummaryField>
+				</SummaryInfo>
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
 				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="10" dataType="Text" fieldType="Normal" name="タグ02">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="11" dataType="Text" fieldType="Normal" name="タグ03">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="12" dataType="Text" fieldType="Normal" name="タグ04">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="13" dataType="Text" fieldType="Normal" name="タグ05">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="15" dataType="Text" fieldType="Normal" name="物件別管理データ_主キー">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="17" dataType="Text" fieldType="Normal" name="OK年月">
 				<Comment/>
@@ -8453,6 +8464,59 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
+			<Field id="32" dataType="Date" fieldType="Normal" name="OK日">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="43" dataType="TimeStamp" fieldType="Calculated" name="t_OK日">
+				<Calculation table="実績集計テーブル"><![CDATA[Timestamp ( OK日 ; Time ( 9 ; 0 ; 0 ) )]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="FunctionRef">Timestamp</Chunk>
+					<Chunk type="NoRef"> ( </Chunk>
+					<Chunk type="FieldRef">
+						<Field table="実績集計テーブル" id="32" name="OK日"/>
+					</Chunk>
+					<Chunk type="NoRef"> ; </Chunk>
+					<Chunk type="FunctionRef">Time</Chunk>
+					<Chunk type="NoRef"> ( 9 ; 0 ; 0 ) )</Chunk>
+				</DisplayCalculation>
+				<Comment/>
+				<AutoEnter alwaysEvaluate="False"/>
+				<Storage storeCalculationResults="True" autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="27" dataType="Number" fieldType="Normal" name="売上実績">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="37" dataType="Number" fieldType="Summary" name="集計_売上実績">
+				<SummaryInfo restartForEachSortedGroup="False" summarizeRepetition="Together" operation="Total">
+					<SummaryField>
+						<Field id="27" name="売上実績"/>
+					</SummaryField>
+				</SummaryInfo>
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+			</Field>
 			<Field id="18" dataType="Text" fieldType="Normal" name="売上年月">
 				<Comment/>
 				<AutoEnter allowEditing="True" overwriteExistingValue="True" alwaysEvaluate="False" constant="False" furigana="False" lookup="False" calculation="True">
@@ -8502,236 +8566,6 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 					<StrictValidation value="False"/>
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="19" dataType="Text" fieldType="Normal" name="加盟店名">
-				<Comment>表示対象項目</Comment>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="20" dataType="Text" fieldType="Normal" name="加盟店法人CD">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="21" dataType="Text" fieldType="Normal" name="加盟店法人名">
-				<Comment>表示対象項目</Comment>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="22" dataType="Text" fieldType="Normal" name="タグ06">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="23" dataType="Text" fieldType="Normal" name="タグ07">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="24" dataType="Text" fieldType="Normal" name="タグ08">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="25" dataType="Text" fieldType="Normal" name="タグ09">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="26" dataType="Text" fieldType="Normal" name="タグ10">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="27" dataType="Number" fieldType="Normal" name="売上実績">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="28" dataType="Text" fieldType="Normal" name="年月">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="29" dataType="Number" fieldType="Normal" name="締フラグ">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="30" dataType="Date" fieldType="Normal" name="キャンセル日">
-				<Comment>表示対象項目</Comment>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="45" dataType="TimeStamp" fieldType="Calculated" name="t_キャンセル日">
-				<Calculation table="実績集計テーブル"><![CDATA[Timestamp ( キャンセル日 ; Time ( 9 ; 0 ; 0 ) )]]></Calculation>
-				<DisplayCalculation>
-					<Chunk type="FunctionRef">Timestamp</Chunk>
-					<Chunk type="NoRef"> ( </Chunk>
-					<Chunk type="FieldRef">
-						<Field table="実績集計テーブル" id="30" name="キャンセル日"/>
-					</Chunk>
-					<Chunk type="NoRef"> ; </Chunk>
-					<Chunk type="FunctionRef">Time</Chunk>
-					<Chunk type="NoRef"> ( 9 ; 0 ; 0 ) )</Chunk>
-				</DisplayCalculation>
-				<Comment>表示対象項目</Comment>
-				<AutoEnter alwaysEvaluate="False"/>
-				<Storage storeCalculationResults="True" autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="31" dataType="Date" fieldType="Normal" name="撤去日">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="46" dataType="TimeStamp" fieldType="Calculated" name="t_撤去日">
-				<Calculation table="実績集計テーブル"><![CDATA[Timestamp ( 撤去日 ; Time ( 9 ; 0 ; 0 ) )]]></Calculation>
-				<DisplayCalculation>
-					<Chunk type="FunctionRef">Timestamp</Chunk>
-					<Chunk type="NoRef"> ( </Chunk>
-					<Chunk type="FieldRef">
-						<Field table="実績集計テーブル" id="31" name="撤去日"/>
-					</Chunk>
-					<Chunk type="NoRef"> ; </Chunk>
-					<Chunk type="FunctionRef">Time</Chunk>
-					<Chunk type="NoRef"> ( 9 ; 0 ; 0 ) )</Chunk>
-				</DisplayCalculation>
-				<Comment/>
-				<AutoEnter alwaysEvaluate="False"/>
-				<Storage storeCalculationResults="True" autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="32" dataType="Date" fieldType="Normal" name="OK日">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="43" dataType="TimeStamp" fieldType="Calculated" name="t_OK日">
-				<Calculation table="実績集計テーブル"><![CDATA[Timestamp ( OK日 ; Time ( 9 ; 0 ; 0 ) )]]></Calculation>
-				<DisplayCalculation>
-					<Chunk type="FunctionRef">Timestamp</Chunk>
-					<Chunk type="NoRef"> ( </Chunk>
-					<Chunk type="FieldRef">
-						<Field table="実績集計テーブル" id="32" name="OK日"/>
-					</Chunk>
-					<Chunk type="NoRef"> ; </Chunk>
-					<Chunk type="FunctionRef">Time</Chunk>
-					<Chunk type="NoRef"> ( 9 ; 0 ; 0 ) )</Chunk>
-				</DisplayCalculation>
-				<Comment/>
-				<AutoEnter alwaysEvaluate="False"/>
-				<Storage storeCalculationResults="True" autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="33" dataType="Date" fieldType="Normal" name="売上日">
 				<Comment/>
@@ -8812,6 +8646,35 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
+			<Field id="30" dataType="Date" fieldType="Normal" name="キャンセル日">
+				<Comment>表示対象項目</Comment>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="45" dataType="TimeStamp" fieldType="Calculated" name="t_キャンセル日">
+				<Calculation table="実績集計テーブル"><![CDATA[Timestamp ( キャンセル日 ; Time ( 9 ; 0 ; 0 ) )]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="FunctionRef">Timestamp</Chunk>
+					<Chunk type="NoRef"> ( </Chunk>
+					<Chunk type="FieldRef">
+						<Field table="実績集計テーブル" id="30" name="キャンセル日"/>
+					</Chunk>
+					<Chunk type="NoRef"> ; </Chunk>
+					<Chunk type="FunctionRef">Time</Chunk>
+					<Chunk type="NoRef"> ( 9 ; 0 ; 0 ) )</Chunk>
+				</DisplayCalculation>
+				<Comment>表示対象項目</Comment>
+				<AutoEnter alwaysEvaluate="False"/>
+				<Storage storeCalculationResults="True" autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
 			<Field id="35" dataType="Text" fieldType="Normal" name="撤去年月">
 				<Comment/>
 				<AutoEnter allowEditing="True" overwriteExistingValue="True" alwaysEvaluate="False" constant="False" furigana="False" lookup="False" calculation="True">
@@ -8862,27 +8725,177 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 				</Validation>
 				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="36" dataType="Number" fieldType="Summary" name="集計_OK実績">
-				<SummaryInfo restartForEachSortedGroup="False" summarizeRepetition="Together" operation="Total">
-					<SummaryField>
-						<Field id="7" name="OK実績"/>
-					</SummaryField>
-				</SummaryInfo>
+			<Field id="31" dataType="Date" fieldType="Normal" name="撤去日">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
 				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="37" dataType="Number" fieldType="Summary" name="集計_売上実績">
-				<SummaryInfo restartForEachSortedGroup="False" summarizeRepetition="Together" operation="Total">
-					<SummaryField>
-						<Field id="27" name="売上実績"/>
-					</SummaryField>
-				</SummaryInfo>
+			<Field id="46" dataType="TimeStamp" fieldType="Calculated" name="t_撤去日">
+				<Calculation table="実績集計テーブル"><![CDATA[Timestamp ( 撤去日 ; Time ( 9 ; 0 ; 0 ) )]]></Calculation>
+				<DisplayCalculation>
+					<Chunk type="FunctionRef">Timestamp</Chunk>
+					<Chunk type="NoRef"> ( </Chunk>
+					<Chunk type="FieldRef">
+						<Field table="実績集計テーブル" id="31" name="撤去日"/>
+					</Chunk>
+					<Chunk type="NoRef"> ; </Chunk>
+					<Chunk type="FunctionRef">Time</Chunk>
+					<Chunk type="NoRef"> ( 9 ; 0 ; 0 ) )</Chunk>
+				</DisplayCalculation>
+				<Comment/>
+				<AutoEnter alwaysEvaluate="False"/>
+				<Storage storeCalculationResults="True" autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="9" dataType="Text" fieldType="Normal" name="タグ01">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
 				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="10" dataType="Text" fieldType="Normal" name="タグ02">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="11" dataType="Text" fieldType="Normal" name="タグ03">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="12" dataType="Text" fieldType="Normal" name="タグ04">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="13" dataType="Text" fieldType="Normal" name="タグ05">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="22" dataType="Text" fieldType="Normal" name="タグ06">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="23" dataType="Text" fieldType="Normal" name="タグ07">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="24" dataType="Text" fieldType="Normal" name="タグ08">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="25" dataType="Text" fieldType="Normal" name="タグ09">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="26" dataType="Text" fieldType="Normal" name="タグ10">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+			</Field>
+			<Field id="28" dataType="Text" fieldType="Normal" name="年月">
+				<Comment/>
+				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
+					<ConstantData/>
+				</AutoEnter>
+				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
+					<NotEmpty value="False"/>
+					<Unique value="False"/>
+					<Existing value="False"/>
+					<StrictValidation value="False"/>
+				</Validation>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="38" dataType="Text" fieldType="Normal" name="販売区分">
 				<Comment/>
@@ -8897,7 +8910,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 				</Validation>
 				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
-			<Field id="39" dataType="Text" fieldType="Normal" name="加盟店セットCD">
+			<Field id="29" dataType="Number" fieldType="Normal" name="締フラグ">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
 					<ConstantData/>
@@ -8908,20 +8921,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 					<Existing value="False"/>
 					<StrictValidation value="False"/>
 				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
-			</Field>
-			<Field id="40" dataType="Text" fieldType="Normal" name="加盟店セット名">
-				<Comment/>
-				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<ConstantData/>
-				</AutoEnter>
-				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
-					<NotEmpty value="False"/>
-					<Unique value="False"/>
-					<Existing value="False"/>
-					<StrictValidation value="False"/>
-				</Validation>
-				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+				<Storage index="All" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="47" dataType="Text" fieldType="Normal" name="フィールド 47">
 				<Comment/>
@@ -8934,7 +8934,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 					<Existing value="False"/>
 					<StrictValidation value="False"/>
 				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="48" dataType="Text" fieldType="Normal" name="フィールド 48">
 				<Comment/>
@@ -8947,7 +8947,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 					<Existing value="False"/>
 					<StrictValidation value="False"/>
 				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 			<Field id="49" dataType="Text" fieldType="Normal" name="フィールド 49">
 				<Comment/>
@@ -8960,7 +8960,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 					<Existing value="False"/>
 					<StrictValidation value="False"/>
 				</Validation>
-				<Storage autoIndex="True" index="None" indexLanguage="Japanese" global="False" maxRepetition="1"/>
+				<Storage autoIndex="True" index="Minimal" indexLanguage="Japanese" global="False" maxRepetition="1"/>
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
@@ -9329,13 +9329,13 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="169" records="161" name="csvImportLog">
+	<BaseTable id="169" records="171" name="xlsxImportLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
 				<AutoEnter allowEditing="False" overwriteExistingValue="True" alwaysEvaluate="False" constant="False" furigana="False" lookup="False" calculation="True">
 					<ConstantData/>
-					<Calculation table="csvImportLog"><![CDATA[Get( UUID )]]></Calculation>
+					<Calculation table="xlsxImportLog"><![CDATA[Get( UUID )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
 						<Chunk type="NoRef">( </Chunk>
@@ -9925,6 +9925,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 </BaseDirectoryCatalog>
 <RelationshipGraph>
 	<TableList>
+		<Table id="1065198" color="#787878" baseTableId="169" baseTable="xlsxImportLog" name="top_xlsxImportLog"/>
 		<Table id="1065217" color="#777777" baseTableId="172" baseTable="加盟店セット" name="SV担当者入力データ月次_ユーザーマスタ_tagging中間テーブル_加盟店セット"/>
 		<Table id="1065159" color="#787878" baseTableId="154" baseTable="tagging中間テーブル" name="SV担当者入力データ月次_ユーザーマスタ_tagging中間テーブル"/>
 		<Table id="1065127" color="#787878" baseTableId="151" baseTable="ユーザーマスタ" name="SV担当者入力データ月次_ユーザーマスタ"/>
@@ -9994,8 +9995,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 		<Table id="1065158" color="#777777" baseTableId="153" baseTable="タグ" name="global_タグ｜SV担当者"/>
 		<Table id="1065164" color="#787878" baseTableId="152" baseTable="カテゴリ" name="global_カテゴリ_有効カテゴリ"/>
 		<Table id="1065089" color="#787878" baseTableId="129" baseTable="top" name="top"/>
-		<Table id="1065198" color="#787878" baseTableId="169" baseTable="csvImportLog" name="top_csvImportLog"/>
-		<Table id="1065189" color="#787878" baseTableId="169" baseTable="csvImportLog" name="csvImportLog"/>
+		<Table id="1065189" color="#787878" baseTableId="169" baseTable="xlsxImportLog" name="xlsxImportLog"/>
 		<Table id="1065091" color="#787878" baseTableId="131" baseTable="sytem" name="sytem"/>
 		<Table id="1065188" color="#787878" baseTableId="136" baseTable="物件別管理データ" name="global_物件別管理データ｜有無確認"/>
 		<Table id="1065187" color="#787878" baseTableId="136" baseTable="物件別管理データ" name="global_物件別管理データ"/>
@@ -10620,11 +10620,11 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 			</JoinPredicateList>
 		</Relationship>
 		<Relationship id="71">
-			<LeftTable cascadeCreate="False" cascadeDelete="False" name="top_csvImportLog">
+			<LeftTable cascadeCreate="False" cascadeDelete="False" name="top_xlsxImportLog">
 				<SortList Maintain="True" value="True">
 					<Sort type="Descending">
 						<PrimaryField>
-							<Field table="top_csvImportLog" id="6" name="実行日時"/>
+							<Field table="top_xlsxImportLog" id="6" name="実行日時"/>
 						</PrimaryField>
 					</Sort>
 				</SortList>
@@ -10635,7 +10635,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 			<JoinPredicateList>
 				<JoinPredicate type="Equal">
 					<LeftField>
-						<Field table="top_csvImportLog" id="8" name="結果"/>
+						<Field table="top_xlsxImportLog" id="8" name="結果"/>
 					</LeftField>
 					<RightField>
 						<Field table="top" id="7" name="relation_OK"/>
@@ -13735,7 +13735,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Styles>
 <CharacterStyleVector>
 <Style>
-<Data>最終更新日時：&lt;&lt;top_csvImportLog::実行日時&gt;&gt;</Data>
+<Data>最終更新日時：&lt;&lt;top_xlsxImportLog::実行日時&gt;&gt;</Data>
 <CharacterStyle mask="32695">
 <Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
 <Font-size>10</Font-size>
@@ -13746,12 +13746,12 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </CharacterStyleVector>
 <ParagraphStyleVector>
 <Style>
-<Data>最終更新日時：&lt;&lt;top_csvImportLog::実行日時&gt;&gt;</Data>
+<Data>最終更新日時：&lt;&lt;top_xlsxImportLog::実行日時&gt;&gt;</Data>
 <ParagraphStyle mask="0">
 </ParagraphStyle>
 </Style>
 </ParagraphStyleVector>
-<FieldList quickFind="True"><Field table="top_csvImportLog" id="6" name="実行日時"></Field></FieldList></TextObj>
+<FieldList quickFind="True"><Field table="top_xlsxImportLog" id="6" name="実行日時"></Field></FieldList></TextObj>
 <HideCondition findMode="True">
 <Calculation><![CDATA[$$access ≠ "[Full Access]"]]></Calculation><DisplayCalculation><Chunk type="NoRef">$$access ≠ &quot;[Full Access]&quot;</Chunk></DisplayCalculation></HideCondition>
 </Object>
@@ -16432,7 +16432,7 @@ self:normal .self&#10;{&#10;&#09;color: rgba(0%,33.7255%,61.5686%,1);&#10;}&#10;
 </ParagraphStyleVector>
 </TextObj>
 <ButtonObj buttonFlags="0" iconSize="15" displayType="4">
-<Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「OBIC7_csv取込」 ]</StepText><CurrentScript value="Pause"></CurrentScript><Script id="10" name="OBIC7_csv取込"></Script></Step>
+<Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「OBIC7_xlsx取込」 ]</StepText><CurrentScript value="Pause"></CurrentScript><Script id="10" name="OBIC7_xlsx取込"></Script></Step>
 <Image name="Vector (18).svg"/>
 </ButtonObj>
 <HideCondition findMode="True">
@@ -96097,8 +96097,8 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 </Layout>
-<Layout width="1450" quickFind="True" includeInMenu="False" id="105" name="csvImportLog">
-<Table id="1065189" name="csvImportLog"/>
+<Layout width="1450" quickFind="True" includeInMenu="False" id="105" name="xlsxImportLog">
+<Table id="1065189" name="xlsxImportLog"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
 	<CustomStyles/>
@@ -96108,7 +96108,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 <Object type="Field" key="43" LabelKey="44" flags="0" rotation="0">
 <Bounds top="150.0000000" left="0.0000000" bottom="175.0000000" right="140.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::作成者</Name>
+<Name>xlsxImportLog::作成者</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -96129,7 +96129,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-right-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="作成者" id="3" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="作成者" id="3" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -96178,7 +96178,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="49" LabelKey="50" flags="0" rotation="0">
 <Bounds top="100.0000000" left="0.0000000" bottom="125.0000000" right="140.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::実行日時</Name>
+<Name>xlsxImportLog::実行日時</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="7" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -96199,7 +96199,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-right-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="実行日時" id="6" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="実行日時" id="6" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -96248,7 +96248,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="51" LabelKey="52" flags="0" rotation="0">
 <Bounds top="100.0000000" left="190.0000000" bottom="355.0000000" right="460.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::取込ファイル名</Name>
+<Name>xlsxImportLog::取込ファイル名</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -96269,7 +96269,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="取込ファイル名" id="7" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="取込ファイル名" id="7" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -96318,7 +96318,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="53" LabelKey="54" flags="0" rotation="0">
 <Bounds top="100.0000000" left="140.0000000" bottom="355.0000000" right="190.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::結果</Name>
+<Name>xlsxImportLog::結果</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -96339,7 +96339,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="結果" id="8" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="結果" id="8" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -96388,9 +96388,9 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="55" LabelKey="56" flags="16384" rotation="0">
 <Bounds top="125.0000000" left="780.0000000" bottom="151.0000000" right="920.0000000"/>
 <ToolTip>
-<Calculation><![CDATA[csvImportLog::エラー内容]]></Calculation><DisplayCalculation><Chunk type="FieldRef"><Field table="csvImportLog" id="9" name="エラー内容"></Field></Chunk></DisplayCalculation></ToolTip>
+<Calculation><![CDATA[xlsxImportLog::エラー内容]]></Calculation><DisplayCalculation><Chunk type="FieldRef"><Field table="xlsxImportLog" id="9" name="エラー内容"></Field></Chunk></DisplayCalculation></ToolTip>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::エラー内容</Name>
+<Name>xlsxImportLog::エラー内容</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -96411,7 +96411,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="エラー内容" id="9" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="エラー内容" id="9" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -96460,9 +96460,9 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="57" LabelKey="58" flags="16384" rotation="0">
 <Bounds top="100.0000000" left="460.0000000" bottom="355.0000000" right="780.0000000"/>
 <ToolTip>
-<Calculation><![CDATA[csvImportLog::log]]></Calculation><DisplayCalculation><Chunk type="FieldRef"><Field table="csvImportLog" id="10" name="log"></Field></Chunk></DisplayCalculation></ToolTip>
+<Calculation><![CDATA[xlsxImportLog::log]]></Calculation><DisplayCalculation><Chunk type="FieldRef"><Field table="xlsxImportLog" id="10" name="log"></Field></Chunk></DisplayCalculation></ToolTip>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::log</Name>
+<Name>xlsxImportLog::log</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -96483,7 +96483,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;self:normal .text&#10;{&#10;&#09;margin-top: 3pt;&#10;&#09;margin-right: 6pt;&#10;&#09;margin-bottom: 0pt;&#10;&#09;margin-left: 6pt;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="log" id="10" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="log" id="10" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -96532,7 +96532,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="59" LabelKey="60" flags="0" rotation="0">
 <Bounds top="150.0000000" left="780.0000000" bottom="355.0000000" right="920.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::備考</Name>
+<Name>xlsxImportLog::備考</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -96553,7 +96553,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="備考" id="11" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="備考" id="11" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -96602,7 +96602,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="61" LabelKey="62" flags="0" rotation="0">
 <Bounds top="125.0000000" left="0.0000000" bottom="150.0000000" right="140.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::終了日時</Name>
+<Name>xlsxImportLog::終了日時</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="7" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -96623,7 +96623,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-right-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="終了日時" id="12" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="終了日時" id="12" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -96672,7 +96672,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="63" LabelKey="64" flags="0" rotation="0">
 <Bounds top="100.0000000" left="780.0000000" bottom="125.0000000" right="920.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::中止日時</Name>
+<Name>xlsxImportLog::中止日時</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="7" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -96693,7 +96693,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="中止日時" id="13" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="中止日時" id="13" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -103497,10 +103497,10 @@ SV担当者
 		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="31" name="tesuto">
 			<StepList>
 				<Step enable="True" id="164" name="サーバー上のスクリプト実行">
-					<StepText>サーバー上のスクリプト実行 [ 「OBIC7_csv取込」 ]
+					<StepText>サーバー上のスクリプト実行 [ 「OBIC7_xlsx取込」 ]
 [ 終了するまで待つ ]</StepText>
 					<WaitForCompletion state="True"/>
-					<Script id="10" name="OBIC7_csv取込"/>
+					<Script id="10" name="OBIC7_xlsx取込"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -130261,7 +130261,7 @@ $カテゴリID[$cnt];
 		</Script>
 	</Group>
 	<Group groupCollapsed="False" includeInMenu="False" id="109" name="OBIC7取込">
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="100" name="OBIC7_csv取込_Schedule">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="100" name="OBIC7_xlsx取込_Schedule">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -130272,8 +130272,8 @@ $カテゴリID[$cnt];
 					<Text>◆作成情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#機能概要	：OBIC7のcsv取込のスケジュール設定用</StepText>
-					<Text>機能概要	：OBIC7のcsv取込のスケジュール設定用</Text>
+					<StepText>#機能概要	：OBIC7のxlsx取込のスケジュール設定用</StepText>
+					<Text>機能概要	：OBIC7のxlsx取込のスケジュール設定用</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#引数		：なし</StepText>
@@ -130304,8 +130304,8 @@ $カテゴリID[$cnt];
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/07/24　真板　拡張子更新</StepText>
+					<Text>2025/07/24　真板　拡張子更新</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -130428,8 +130428,8 @@ $カテゴリID[$cnt];
 					<Text>--------------------------------------------------</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText># OBIC7 csv取込処理</StepText>
-					<Text> OBIC7 csv取込処理</Text>
+					<StepText># OBIC7 xlsx取込処理</StepText>
+					<Text> OBIC7 xlsx取込処理</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#--------------------------------------------------</StepText>
@@ -130439,8 +130439,8 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込」 ]</StepText>
-					<Script id="10" name="OBIC7_csv取込"/>
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込」 ]</StepText>
+					<Script id="10" name="OBIC7_xlsx取込"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $result; 値:Get( スクリプトの結果 ) ]</StepText>
@@ -130590,7 +130590,7 @@ $カテゴリID[$cnt];
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="10" name="OBIC7_csv取込">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="10" name="OBIC7_xlsx取込">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#前月と当月は別々に処理する　使うスクリプトはこれ　呼び出し元で分岐させる</StepText>
@@ -130614,8 +130614,8 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ドキュメントパス取得」 ]</StepText>
-					<Script id="30" name="OBIC7_csv取込_ドキュメントパス取得"/>
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ドキュメントパス取得」 ]</StepText>
+					<Script id="30" name="OBIC7_xlsx取込_ドキュメントパス取得"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $scriptResult; 値:Get( スクリプトの結果 ) ]</StepText>
@@ -130822,8 +130822,8 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#csvファイル退避先</StepText>
-					<Text>csvファイル退避先</Text>
+					<StepText>#xlsxファイル退避先</StepText>
+					<Text>xlsxファイル退避先</Text>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $bkBasicPath; 値:&quot;c:\OBIC7\backup\\&quot; ]</StepText>
@@ -130980,20 +130980,20 @@ $カテゴリID[$cnt];
 					<StepText>変数を設定 [ $tmp; 値:Substitute ( 
  $fname;
  [ &quot;_&quot;; ¶ ];
- [ &quot;.csv&quot;; ¶ &amp; &quot;.csv&quot; ]
+ [ &quot;.xlsx&quot;; ¶ &amp; &quot;.xlsx&quot; ]
 ) ]</StepText>
 					<Value>
 						<Calculation><![CDATA[Substitute ( 
  $fname;
  [ "_"; ¶ ];
- [ ".csv"; ¶ & ".csv" ]
+ [ ".xlsx"; ¶ & ".xlsx" ]
 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Substitute</Chunk>
 							<Chunk type="NoRef"> ( 
  $fname;
  [ &quot;_&quot;; ¶ ];
- [ &quot;.csv&quot;; ¶ &amp; &quot;.csv&quot; ]
+ [ &quot;.xlsx&quot;; ¶ &amp; &quot;.xlsx&quot; ]
 )</Chunk>
 						</DisplayCalculation>
 					</Value>
@@ -131077,14 +131077,14 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#拡張子は.csv</StepText>
-					<Text>拡張子は.csv</Text>
+					<StepText>#拡張子は.xlsx</StepText>
+					<Text>拡張子は.xlsx</Text>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ $ext = &quot;.csv&quot; ]</StepText>
-					<Calculation><![CDATA[$ext = ".csv"]]></Calculation>
+					<StepText>If [ $ext = &quot;.xlsx&quot; ]</StepText>
+					<Calculation><![CDATA[$ext = ".xlsx"]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">$ext = &quot;.csv&quot;</Chunk>
+						<Chunk type="NoRef">$ext = &quot;.xlsx&quot;</Chunk>
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -131434,7 +131434,7 @@ $json;
 					<Text>開始ログ</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;new&quot;; JSONString ];
 [ &quot;startTS&quot;; Get( ホストのタイムスタンプ ); JSONString ]
@@ -131460,7 +131460,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -131689,7 +131689,7 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;物件別管理データ 設定エラー&quot;; JSONString ];
@@ -131725,7 +131725,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -131776,7 +131776,7 @@ $json;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="35" name="レコードのインポート">
-					<StepText>レコードのインポート [ ソース: 「$fullPath」; フィールド名の行:0; 定義済み:いいえ; ターゲット: 「物件別管理データ」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 物件別管理データ::受注番号; 
+					<StepText>レコードのインポート [ &quot;$fullPath&quot;; ワークシート: &quot;&quot;; フィールド名の行:0; ターゲット: 「物件別管理データ」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 物件別管理データ::受注番号; 
 ソースフィールド 2 のインポート 物件別管理データ::売上番号; 
 ソースフィールド 3 のインポート 物件別管理データ::店所CD; 
 ソースフィールド 4 のインポート 物件別管理データ::店所名; 
@@ -131877,12 +131877,12 @@ $json;
 物件別管理データ::修正情報タイムスタンプ(入力値の自動化を実行); 
 物件別管理データ::修正者(入力値の自動化を実行); 
 物件別管理データ::主キー(入力値の自動化を実行);  ]
-[ ダイアログなし ]</StepText>
+[ ダイアログなし; データに列名が含まれる ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<VerifySSLCertificates state="False"/>
 					<DataSourceType value="File"/>
-					<Profile FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="COMS"/>
+					<Profile FileName="$fullPath" WorksheetName="" SelectedSheet="0" FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="XLSX"/>
 					<UniversalPathList>$fullPath</UniversalPathList>
 					<ImportOptions CharacterSet="ShiftJIS" PreserveContainer="False" MatchFieldNames="False" AutoEnter="True" SplitRepetitions="False" method="Add"/>
 					<Table id="1065096" name="物件別管理データ"/>
@@ -132034,17 +132034,17 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(取込)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(取込)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "物件別管理データ(取込)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(取込)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -132057,8 +132057,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(取込)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -132069,7 +132067,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -132099,15 +132097,15 @@ $json;
 					<Field table="物件別管理データ" id="104" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(年月設定)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(年月設定)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "物件別管理データ(年月設定)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(年月設定)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -132117,8 +132115,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(年月設定)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -132129,7 +132125,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -132207,7 +132203,7 @@ $json;
 					<NoInteract state="True"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;物件別管理データ マスタ更新エラー(&quot; &amp; $errorSub &amp; &quot;)&quot;; JSONString ];
@@ -132243,7 +132239,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -132266,15 +132262,15 @@ $json;
 					<StepText>End Loop</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(マスタ更新)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(マスタ更新)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "物件別管理データ(マスタ更新)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(マスタ更新)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -132284,8 +132280,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(マスタ更新)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -132296,7 +132290,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -132306,17 +132300,17 @@ $json;
 					<Text>0件なら何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(データなし)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(データなし)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "物件別管理データ(データなし)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(データなし)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -132329,8 +132323,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(データなし)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -132341,7 +132333,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -132361,17 +132353,17 @@ $json;
 					<Text>ヘッダも無い　何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(空ファイル)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(空ファイル)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "物件別管理データ(空ファイル)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(空ファイル)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -132384,8 +132376,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(空ファイル)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -132396,7 +132386,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -132406,7 +132396,7 @@ $json;
 					<Text>エラー</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
@@ -132447,7 +132437,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -132482,7 +132472,7 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;売上集計表 設定エラー&quot;; JSONString ];
@@ -132518,7 +132508,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -132566,7 +132556,7 @@ $json;
 					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="35" name="レコードのインポート">
-					<StepText>レコードのインポート [ ソース: 「$fullPath」; フィールド名の行:0; 定義済み:いいえ; ターゲット: 「売上集計表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 売上集計表::店所コード; 
+					<StepText>レコードのインポート [ &quot;$fullPath&quot;; ワークシート: &quot;&quot;; フィールド名の行:0; ターゲット: 「売上集計表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 売上集計表::店所コード; 
 ソースフィールド 2 のインポート 売上集計表::店所名; 
 ソースフィールド 3 のインポート 売上集計表::売上日; 
 ソースフィールド 4 のインポート 売上集計表::回収予定日; 
@@ -132593,12 +132583,12 @@ $json;
 売上集計表::修正者(入力値の自動化を実行); 
 売上集計表::主キー(入力値の自動化を実行); 
 売上集計表::作成情報タイムスタンプ(入力値の自動化を実行);  ]
-[ ダイアログなし ]</StepText>
+[ ダイアログなし; データに列名が含まれる ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<VerifySSLCertificates state="False"/>
 					<DataSourceType value="File"/>
-					<Profile FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="COMS"/>
+					<Profile FileName="$fullPath" WorksheetName="" SelectedSheet="0" FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="XLSX"/>
 					<UniversalPathList>$fullPath</UniversalPathList>
 					<ImportOptions CharacterSet="ShiftJIS" PreserveContainer="False" MatchFieldNames="False" AutoEnter="True" SplitRepetitions="False" method="Add"/>
 					<Table id="1065098" name="売上集計表"/>
@@ -132672,17 +132662,17 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上集計表(取込)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上集計表(取込)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上集計表(取込)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上集計表(取込)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -132695,10 +132685,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上集計表(取込)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -132709,7 +132695,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#インポートデータがある場合　※データ0件でもヘッダが出力されていれば最終エラー = 0 になる</StepText>
@@ -132740,15 +132726,15 @@ $json;
 					<Field table="売上集計表" id="29" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;売上集計表(年月設定)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上集計表(年月設定)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "売上集計表(年月設定)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上集計表(年月設定)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -132758,8 +132744,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上集計表(年月設定)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -132770,7 +132754,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -132780,17 +132764,17 @@ $json;
 					<Text>0件なら何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上集計表(データなし)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上集計表(データなし)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上集計表(データなし)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上集計表(データなし)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -132803,10 +132787,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上集計表(データなし)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -132817,7 +132797,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -132837,17 +132817,17 @@ $json;
 					<Text>ヘッダも無い　何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上集計表(空ファイル)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上集計表(空ファイル)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上集計表(空ファイル)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上集計表(空ファイル)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -132860,10 +132840,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上集計表(空ファイル)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -132874,7 +132850,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -132884,7 +132860,7 @@ $json;
 					<Text>エラー</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
@@ -132925,7 +132901,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -132960,7 +132936,7 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;受注残明細表 設定エラー&quot;; JSONString ];
@@ -132996,7 +132972,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -133044,7 +133020,7 @@ $json;
 					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="35" name="レコードのインポート">
-					<StepText>レコードのインポート [ ソース: 「$fullPath」; フィールド名の行:0; 定義済み:いいえ; ターゲット: 「受注残明細表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 受注残明細表::店所コード; 
+					<StepText>レコードのインポート [ &quot;$fullPath&quot;; ワークシート: &quot;&quot;; フィールド名の行:0; ターゲット: 「受注残明細表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 受注残明細表::店所コード; 
 ソースフィールド 2 のインポート 受注残明細表::店所名; 
 ソースフィールド 3 のインポート 受注残明細表::部課コード; 
 ソースフィールド 4 のインポート 受注残明細表::部課名; 
@@ -133087,12 +133063,12 @@ $json;
 受注残明細表::主キー(入力値の自動化を実行); 
 受注残明細表::作成情報タイムスタンプ(入力値の自動化を実行); 
 受注残明細表::作成者(入力値の自動化を実行);  ]
-[ ダイアログなし ]</StepText>
+[ ダイアログなし; データに列名が含まれる ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<VerifySSLCertificates state="False"/>
 					<DataSourceType value="File"/>
-					<Profile FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="COMS"/>
+					<Profile FileName="$fullPath" WorksheetName="" SelectedSheet="0" FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="XLSX"/>
 					<UniversalPathList>$fullPath</UniversalPathList>
 					<ImportOptions CharacterSet="ShiftJIS" PreserveContainer="False" MatchFieldNames="False" AutoEnter="True" SplitRepetitions="False" method="Add"/>
 					<Table id="1065100" name="受注残明細表"/>
@@ -133183,17 +133159,17 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;受注残明細表(取込)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;受注残明細表(取込)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "受注残明細表(取込)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "受注残明細表(取込)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -133206,10 +133182,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;受注残明細表(取込)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -133220,7 +133192,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#インポートデータがある場合　※データ0件でもヘッダが出力されていれば最終エラー = 0 になる</StepText>
@@ -133251,15 +133223,15 @@ $json;
 					<Field table="受注残明細表" id="45" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;受注残明細表(年月設定)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;受注残明細表(年月設定)&quot;&amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "受注残明細表(年月設定)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "受注残明細表(年月設定)"& cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -133268,9 +133240,7 @@ $json;
 [ &quot;type&quot;; &quot;update&quot;; </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
-[ &quot;log&quot;; &quot;受注残明細表(年月設定)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
+[ &quot;log&quot;; &quot;受注残明細表(年月設定)&quot;&amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -133281,7 +133251,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -133291,17 +133261,17 @@ $json;
 					<Text>0件なら何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;受注残明細表(データなし)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;受注残明細表(データなし)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "受注残明細表(データなし)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "受注残明細表(データなし)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -133314,8 +133284,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;受注残明細表(データなし)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -133326,7 +133294,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -133346,17 +133314,17 @@ $json;
 					<Text>ヘッダも無い　何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;受注残明細表(空ファイル)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;受注残明細表(空ファイル)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "受注残明細表(空ファイル)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "受注残明細表(空ファイル)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -133369,8 +133337,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;受注残明細表(空ファイル)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -133381,7 +133347,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -133391,7 +133357,7 @@ $json;
 					<Text>エラー</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
@@ -133432,7 +133398,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -133467,7 +133433,7 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;売上明細表 設定エラー&quot;; JSONString ];
@@ -133503,7 +133469,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -133551,7 +133517,7 @@ $json;
 					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="35" name="レコードのインポート">
-					<StepText>レコードのインポート [ ソース: 「$fullPath」; フィールド名の行:0; 定義済み:いいえ; ターゲット: 「売上明細表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 売上明細表::店所コード; 
+					<StepText>レコードのインポート [ &quot;$fullPath&quot;; ワークシート: &quot;&quot;; フィールド名の行:0; ターゲット: 「売上明細表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 売上明細表::店所コード; 
 ソースフィールド 2 のインポート 売上明細表::店所名; 
 ソースフィールド 3 のインポート 売上明細表::部課コード; 
 ソースフィールド 4 のインポート 売上明細表::部課名; 
@@ -133637,12 +133603,12 @@ $json;
 売上明細表::修正情報タイムスタンプ(入力値の自動化を実行); 
 売上明細表::修正者(入力値の自動化を実行); 
 売上明細表::主キー(入力値の自動化を実行);  ]
-[ ダイアログなし ]</StepText>
+[ ダイアログなし; データに列名が含まれる ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<VerifySSLCertificates state="False"/>
 					<DataSourceType value="File"/>
-					<Profile FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="COMS"/>
+					<Profile FileName="$fullPath" WorksheetName="" SelectedSheet="0" FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="XLSX"/>
 					<UniversalPathList>$fullPath</UniversalPathList>
 					<ImportOptions CharacterSet="ShiftJIS" PreserveContainer="False" MatchFieldNames="False" AutoEnter="True" SplitRepetitions="False" method="Add"/>
 					<Table id="1065102" name="売上明細表"/>
@@ -133775,17 +133741,17 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(取込)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(取込)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上明細表(取込)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(取込)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -133798,10 +133764,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(取込)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -133812,7 +133774,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#インポートデータがある場合　※データ0件でもヘッダが出力されていれば最終エラー = 0 になる</StepText>
@@ -133843,15 +133805,15 @@ $json;
 					<Field table="売上明細表" id="88" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(年月設定)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(年月設定)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "売上明細表(年月設定)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(年月設定)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -133861,8 +133823,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(年月設定)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -133873,7 +133833,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -133980,7 +133940,7 @@ $json;
 					<NoInteract state="True"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;売上明細表 マスタ更新エラー(&quot; &amp; $errorSub &amp; &quot;)&quot;; JSONString ];
@@ -134016,7 +133976,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -134039,15 +133999,15 @@ $json;
 					<StepText>End Loop</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(マスタ更新)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(マスタ更新)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "売上明細表(マスタ更新)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(マスタ更新)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -134057,8 +134017,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(マスタ更新)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -134069,7 +134027,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -134079,17 +134037,17 @@ $json;
 					<Text>0件なら何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(データなし)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(データなし)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上明細表(データなし)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(データなし)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -134102,8 +134060,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(データなし)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -134114,7 +134070,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -134134,17 +134090,17 @@ $json;
 					<Text>ヘッダも無い　何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(空ファイル)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(空ファイル)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上明細表(空ファイル)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(空ファイル)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -134157,8 +134113,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(空ファイル)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -134169,7 +134123,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -134179,7 +134133,7 @@ $json;
 					<Text>エラー</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
@@ -134220,7 +134174,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -134649,15 +134603,15 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;batファイル出力&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;batファイル出力&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "batファイル出力" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "batファイル出力" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -134667,10 +134621,6 @@ v$return
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;batファイル出力&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -134681,13 +134631,13 @@ v$return
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;batファイル出力エラー(&quot; &amp; $error &amp; &quot;)&quot;; JSONString ];
@@ -134723,7 +134673,7 @@ v$return
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -134739,7 +134689,7 @@ v$return
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;batファイル出力テーブル設定エラー&quot;; JSONString ];
@@ -134775,7 +134725,7 @@ v$return
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -134794,7 +134744,7 @@ v$return
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;endTS&quot;; Get( ホストのタイムスタンプ ); JSONString ];
@@ -134830,7 +134780,7 @@ v$return
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -134872,8 +134822,8 @@ v$return
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/07/24　真板　拡張子更新</StepText>
+					<Text>2025/07/24　真板　拡張子更新</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -134881,7 +134831,7 @@ v$return
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="30" name="OBIC7_csv取込_ドキュメントパス取得">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="30" name="OBIC7_xlsx取込_ドキュメントパス取得">
 			<StepList>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $pathList; 値:Get( ドキュメントパス一覧 ) ]</StepText>
@@ -134957,8 +134907,8 @@ v$return
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/07/24　真板　拡張子更新</StepText>
+					<Text>2025/07/24　真板　拡張子更新</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -134966,7 +134916,7 @@ v$return
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="88" name="OBIC7_csv取込_ログ">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="88" name="OBIC7_xlsx取込_ログ">
 			<StepList>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $arg; 値:Get( スクリプト引数 ) ]</StepText>
@@ -135271,9 +135221,9 @@ v$return
 					<StepText/>
 				</Step>
 				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「csvImportLog」 (csvImportLog) ]</StepText>
+					<StepText>レイアウト切り替え [ 「xlsxImportLog」 (xlsxImportLog) ]</StepText>
 					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="105" name="csvImportLog"/>
+					<Layout id="105" name="xlsxImportLog"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -135317,20 +135267,20 @@ v$return
 					<StepText/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::実行日時; $startTS ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::実行日時; $startTS ]</StepText>
 					<Calculation><![CDATA[$startTS]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$startTS</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="6" name="実行日時"/>
+					<Field table="xlsxImportLog" id="6" name="実行日時"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::log; &quot;-開始-&quot; ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::log; &quot;-開始-&quot; ]</StepText>
 					<Calculation><![CDATA["-開始-"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;-開始-&quot;</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="10" name="log"/>
+					<Field table="xlsxImportLog" id="10" name="log"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -135343,17 +135293,17 @@ v$return
 					<Text>Newで生成したレコードが見えている状態</Text>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::log; List( csvImportLog::log; $log ) ]</StepText>
-					<Calculation><![CDATA[List( csvImportLog::log; $log )]]></Calculation>
+					<StepText>フィールド設定 [ xlsxImportLog::log; List( xlsxImportLog::log; $log ) ]</StepText>
+					<Calculation><![CDATA[List( xlsxImportLog::log; $log )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">List</Chunk>
 						<Chunk type="NoRef">( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="csvImportLog" id="10" name="log"/>
+							<Field table="xlsxImportLog" id="10" name="log"/>
 						</Chunk>
 						<Chunk type="NoRef">; $log )</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="10" name="log"/>
+					<Field table="xlsxImportLog" id="10" name="log"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -135369,17 +135319,17 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::取込ファイル名; List( csvImportLog::取込ファイル名; $fileName ) ]</StepText>
-					<Calculation><![CDATA[List( csvImportLog::取込ファイル名; $fileName )]]></Calculation>
+					<StepText>フィールド設定 [ xlsxImportLog::取込ファイル名; List( xlsxImportLog::取込ファイル名; $fileName ) ]</StepText>
+					<Calculation><![CDATA[List( xlsxImportLog::取込ファイル名; $fileName )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">List</Chunk>
 						<Chunk type="NoRef">( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="csvImportLog" id="7" name="取込ファイル名"/>
+							<Field table="xlsxImportLog" id="7" name="取込ファイル名"/>
 						</Chunk>
 						<Chunk type="NoRef">; $fileName )</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="7" name="取込ファイル名"/>
+					<Field table="xlsxImportLog" id="7" name="取込ファイル名"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -135395,12 +135345,12 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::結果; $result ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::結果; $result ]</StepText>
 					<Calculation><![CDATA[$result]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$result</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="8" name="結果"/>
+					<Field table="xlsxImportLog" id="8" name="結果"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -135416,12 +135366,12 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::エラー内容; $errorDetails ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::エラー内容; $errorDetails ]</StepText>
 					<Calculation><![CDATA[$errorDetails]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$errorDetails</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="9" name="エラー内容"/>
+					<Field table="xlsxImportLog" id="9" name="エラー内容"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -135437,12 +135387,12 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::終了日時; $endTS ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::終了日時; $endTS ]</StepText>
 					<Calculation><![CDATA[$endTS]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$endTS</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="12" name="終了日時"/>
+					<Field table="xlsxImportLog" id="12" name="終了日時"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -135458,12 +135408,12 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::中止日時; $cancelTS ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::中止日時; $cancelTS ]</StepText>
 					<Calculation><![CDATA[$cancelTS]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$cancelTS</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="13" name="中止日時"/>
+					<Field table="xlsxImportLog" id="13" name="中止日時"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -135509,8 +135459,8 @@ v$return
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/07/24　真板　拡張子更新</StepText>
+					<Text>2025/07/24　真板　拡張子更新</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -136230,8 +136180,8 @@ $json;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ドキュメントパス取得」 ]</StepText>
-					<Script id="30" name="OBIC7_csv取込_ドキュメントパス取得"/>
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ドキュメントパス取得」 ]</StepText>
+					<Script id="30" name="OBIC7_xlsx取込_ドキュメントパス取得"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $scriptResult; 値:Get( スクリプトの結果 ) ]</StepText>
@@ -141067,7 +141017,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="105" name="csvImportLog">
+				<Layout id="105" name="xlsxImportLog">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
@@ -141148,7 +141098,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 				<Script runFullAccess="True" id="8" name="SV担当者週次レコード一括作成">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="10" name="OBIC7_csv取込">
+				<Script runFullAccess="False" id="10" name="OBIC7_xlsx取込">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="True" id="11" name="全テーブル情報_データ更新">
@@ -141208,7 +141158,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 				<Script runFullAccess="False" id="29" name="レコード確定">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="30" name="OBIC7_csv取込_ドキュメントパス取得">
+				<Script runFullAccess="False" id="30" name="OBIC7_xlsx取込_ドキュメントパス取得">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="31" name="tesuto">
@@ -141340,7 +141290,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 				<Script runFullAccess="False" id="87" name="締処理実行_使用しない（削除可）">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="88" name="OBIC7_csv取込_ログ">
+				<Script runFullAccess="False" id="88" name="OBIC7_xlsx取込_ログ">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="90" name="SV担当者月次入力_一括作成_sub">
@@ -141367,7 +141317,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 				<Script runFullAccess="False" id="99" name="SSS_締処理実行">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="100" name="OBIC7_csv取込_Schedule">
+				<Script runFullAccess="False" id="100" name="OBIC7_xlsx取込_Schedule">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="101" name="ユーザーマスタ_タグ消去">
@@ -141640,7 +141590,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="169" name="csvImportLog">
+				<BaseTable id="169" name="xlsxImportLog">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
