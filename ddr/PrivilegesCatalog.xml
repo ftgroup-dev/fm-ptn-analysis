@@ -298,7 +298,7 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="105" name="csvImportLog">
+				<Layout id="105" name="xlsxImportLog">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
@@ -379,7 +379,7 @@
 				<Script runFullAccess="True" id="8" name="SV担当者週次レコード一括作成">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="10" name="OBIC7_csv取込">
+				<Script runFullAccess="False" id="10" name="OBIC7_xlsx取込">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="True" id="11" name="全テーブル情報_データ更新">
@@ -439,7 +439,7 @@
 				<Script runFullAccess="False" id="29" name="レコード確定">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="30" name="OBIC7_csv取込_ドキュメントパス取得">
+				<Script runFullAccess="False" id="30" name="OBIC7_xlsx取込_ドキュメントパス取得">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="31" name="tesuto">
@@ -571,7 +571,7 @@
 				<Script runFullAccess="False" id="87" name="締処理実行_使用しない（削除可）">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="88" name="OBIC7_csv取込_ログ">
+				<Script runFullAccess="False" id="88" name="OBIC7_xlsx取込_ログ">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="90" name="SV担当者月次入力_一括作成_sub">
@@ -598,7 +598,7 @@
 				<Script runFullAccess="False" id="99" name="SSS_締処理実行">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="100" name="OBIC7_csv取込_Schedule">
+				<Script runFullAccess="False" id="100" name="OBIC7_xlsx取込_Schedule">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="101" name="ユーザーマスタ_タグ消去">
@@ -871,7 +871,7 @@
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="169" name="csvImportLog">
+				<BaseTable id="169" name="xlsxImportLog">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>

@@ -2505,7 +2505,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Styles>
 <CharacterStyleVector>
 <Style>
-<Data>最終更新日時：&lt;&lt;top_csvImportLog::実行日時&gt;&gt;</Data>
+<Data>最終更新日時：&lt;&lt;top_xlsxImportLog::実行日時&gt;&gt;</Data>
 <CharacterStyle mask="32695">
 <Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
 <Font-size>10</Font-size>
@@ -2516,12 +2516,12 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </CharacterStyleVector>
 <ParagraphStyleVector>
 <Style>
-<Data>最終更新日時：&lt;&lt;top_csvImportLog::実行日時&gt;&gt;</Data>
+<Data>最終更新日時：&lt;&lt;top_xlsxImportLog::実行日時&gt;&gt;</Data>
 <ParagraphStyle mask="0">
 </ParagraphStyle>
 </Style>
 </ParagraphStyleVector>
-<FieldList quickFind="True"><Field table="top_csvImportLog" id="6" name="実行日時"></Field></FieldList></TextObj>
+<FieldList quickFind="True"><Field table="top_xlsxImportLog" id="6" name="実行日時"></Field></FieldList></TextObj>
 <HideCondition findMode="True">
 <Calculation><![CDATA[$$access ≠ "[Full Access]"]]></Calculation><DisplayCalculation><Chunk type="NoRef">$$access ≠ &quot;[Full Access]&quot;</Chunk></DisplayCalculation></HideCondition>
 </Object>
@@ -5202,7 +5202,7 @@ self:normal .self&#10;{&#10;&#09;color: rgba(0%,33.7255%,61.5686%,1);&#10;}&#10;
 </ParagraphStyleVector>
 </TextObj>
 <ButtonObj buttonFlags="0" iconSize="15" displayType="4">
-<Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「OBIC7_csv取込」 ]</StepText><CurrentScript value="Pause"></CurrentScript><Script id="10" name="OBIC7_csv取込"></Script></Step>
+<Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「OBIC7_xlsx取込」 ]</StepText><CurrentScript value="Pause"></CurrentScript><Script id="10" name="OBIC7_xlsx取込"></Script></Step>
 <Image name="Vector (18).svg"/>
 </ButtonObj>
 <HideCondition findMode="True">
@@ -84867,8 +84867,8 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 </Layout>
-<Layout width="1450" quickFind="True" includeInMenu="False" id="105" name="csvImportLog">
-<Table id="1065189" name="csvImportLog"/>
+<Layout width="1450" quickFind="True" includeInMenu="False" id="105" name="xlsxImportLog">
+<Table id="1065189" name="xlsxImportLog"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
 	<CustomStyles/>
@@ -84878,7 +84878,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 <Object type="Field" key="43" LabelKey="44" flags="0" rotation="0">
 <Bounds top="150.0000000" left="0.0000000" bottom="175.0000000" right="140.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::作成者</Name>
+<Name>xlsxImportLog::作成者</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -84899,7 +84899,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;}&#10;</LocalCSS>
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-right-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="作成者" id="3" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="作成者" id="3" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -84948,7 +84948,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="49" LabelKey="50" flags="0" rotation="0">
 <Bounds top="100.0000000" left="0.0000000" bottom="125.0000000" right="140.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::実行日時</Name>
+<Name>xlsxImportLog::実行日時</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="7" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -84969,7 +84969,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-right-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="実行日時" id="6" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="実行日時" id="6" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -85018,7 +85018,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="51" LabelKey="52" flags="0" rotation="0">
 <Bounds top="100.0000000" left="190.0000000" bottom="355.0000000" right="460.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::取込ファイル名</Name>
+<Name>xlsxImportLog::取込ファイル名</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -85039,7 +85039,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="取込ファイル名" id="7" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="取込ファイル名" id="7" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -85088,7 +85088,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="53" LabelKey="54" flags="0" rotation="0">
 <Bounds top="100.0000000" left="140.0000000" bottom="355.0000000" right="190.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::結果</Name>
+<Name>xlsxImportLog::結果</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -85109,7 +85109,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="結果" id="8" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="結果" id="8" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -85158,9 +85158,9 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="55" LabelKey="56" flags="16384" rotation="0">
 <Bounds top="125.0000000" left="780.0000000" bottom="151.0000000" right="920.0000000"/>
 <ToolTip>
-<Calculation><![CDATA[csvImportLog::エラー内容]]></Calculation><DisplayCalculation><Chunk type="FieldRef"><Field table="csvImportLog" id="9" name="エラー内容"></Field></Chunk></DisplayCalculation></ToolTip>
+<Calculation><![CDATA[xlsxImportLog::エラー内容]]></Calculation><DisplayCalculation><Chunk type="FieldRef"><Field table="xlsxImportLog" id="9" name="エラー内容"></Field></Chunk></DisplayCalculation></ToolTip>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::エラー内容</Name>
+<Name>xlsxImportLog::エラー内容</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -85181,7 +85181,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="エラー内容" id="9" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="エラー内容" id="9" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -85230,9 +85230,9 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="57" LabelKey="58" flags="16384" rotation="0">
 <Bounds top="100.0000000" left="460.0000000" bottom="355.0000000" right="780.0000000"/>
 <ToolTip>
-<Calculation><![CDATA[csvImportLog::log]]></Calculation><DisplayCalculation><Chunk type="FieldRef"><Field table="csvImportLog" id="10" name="log"></Field></Chunk></DisplayCalculation></ToolTip>
+<Calculation><![CDATA[xlsxImportLog::log]]></Calculation><DisplayCalculation><Chunk type="FieldRef"><Field table="xlsxImportLog" id="10" name="log"></Field></Chunk></DisplayCalculation></ToolTip>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::log</Name>
+<Name>xlsxImportLog::log</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -85253,7 +85253,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;self:normal .text&#10;{&#10;&#09;margin-top: 3pt;&#10;&#09;margin-right: 6pt;&#10;&#09;margin-bottom: 0pt;&#10;&#09;margin-left: 6pt;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="log" id="10" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="log" id="10" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -85302,7 +85302,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="59" LabelKey="60" flags="0" rotation="0">
 <Bounds top="150.0000000" left="780.0000000" bottom="355.0000000" right="920.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::備考</Name>
+<Name>xlsxImportLog::備考</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -85323,7 +85323,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="備考" id="11" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="備考" id="11" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -85372,7 +85372,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="61" LabelKey="62" flags="0" rotation="0">
 <Bounds top="125.0000000" left="0.0000000" bottom="150.0000000" right="140.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::終了日時</Name>
+<Name>xlsxImportLog::終了日時</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="7" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -85393,7 +85393,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-right-style: none;&#10;&#09;border-bottom-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="終了日時" id="12" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="終了日時" id="12" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>
@@ -85442,7 +85442,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 <Object type="Field" key="63" LabelKey="64" flags="0" rotation="0">
 <Bounds top="100.0000000" left="780.0000000" bottom="125.0000000" right="920.0000000"/>
 <FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
-<Name>csvImportLog::中止日時</Name>
+<Name>xlsxImportLog::中止日時</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
 <DateFormat format="7" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
@@ -85463,7 +85463,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-bottom-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI);&#10;&#09;text-align: center;&#10;}&#10;</LocalCSS>
 </Styles>
 <DDRInfo>
-<Field name="中止日時" id="13" repetition="1" maxRepetition="1" table="csvImportLog"/>
+<Field name="中止日時" id="13" repetition="1" maxRepetition="1" table="xlsxImportLog"/>
 </DDRInfo>
 </FieldObj>
 </Object>

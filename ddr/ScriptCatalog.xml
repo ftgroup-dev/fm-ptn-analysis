@@ -94,10 +94,10 @@
 		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="31" name="tesuto">
 			<StepList>
 				<Step enable="True" id="164" name="サーバー上のスクリプト実行">
-					<StepText>サーバー上のスクリプト実行 [ 「OBIC7_csv取込」 ]
+					<StepText>サーバー上のスクリプト実行 [ 「OBIC7_xlsx取込」 ]
 [ 終了するまで待つ ]</StepText>
 					<WaitForCompletion state="True"/>
-					<Script id="10" name="OBIC7_csv取込"/>
+					<Script id="10" name="OBIC7_xlsx取込"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -26858,7 +26858,7 @@ $カテゴリID[$cnt];
 		</Script>
 	</Group>
 	<Group groupCollapsed="False" includeInMenu="False" id="109" name="OBIC7取込">
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="100" name="OBIC7_csv取込_Schedule">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="100" name="OBIC7_xlsx取込_Schedule">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -26869,8 +26869,8 @@ $カテゴリID[$cnt];
 					<Text>◆作成情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#機能概要	：OBIC7のcsv取込のスケジュール設定用</StepText>
-					<Text>機能概要	：OBIC7のcsv取込のスケジュール設定用</Text>
+					<StepText>#機能概要	：OBIC7のxlsx取込のスケジュール設定用</StepText>
+					<Text>機能概要	：OBIC7のxlsx取込のスケジュール設定用</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#引数		：なし</StepText>
@@ -26901,8 +26901,8 @@ $カテゴリID[$cnt];
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/07/24　真板　拡張子更新</StepText>
+					<Text>2025/07/24　真板　拡張子更新</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -27025,8 +27025,8 @@ $カテゴリID[$cnt];
 					<Text>--------------------------------------------------</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText># OBIC7 csv取込処理</StepText>
-					<Text> OBIC7 csv取込処理</Text>
+					<StepText># OBIC7 xlsx取込処理</StepText>
+					<Text> OBIC7 xlsx取込処理</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#--------------------------------------------------</StepText>
@@ -27036,8 +27036,8 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込」 ]</StepText>
-					<Script id="10" name="OBIC7_csv取込"/>
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込」 ]</StepText>
+					<Script id="10" name="OBIC7_xlsx取込"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $result; 値:Get( スクリプトの結果 ) ]</StepText>
@@ -27187,7 +27187,7 @@ $カテゴリID[$cnt];
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="10" name="OBIC7_csv取込">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="10" name="OBIC7_xlsx取込">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#前月と当月は別々に処理する　使うスクリプトはこれ　呼び出し元で分岐させる</StepText>
@@ -27211,8 +27211,8 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ドキュメントパス取得」 ]</StepText>
-					<Script id="30" name="OBIC7_csv取込_ドキュメントパス取得"/>
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ドキュメントパス取得」 ]</StepText>
+					<Script id="30" name="OBIC7_xlsx取込_ドキュメントパス取得"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $scriptResult; 値:Get( スクリプトの結果 ) ]</StepText>
@@ -27419,8 +27419,8 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#csvファイル退避先</StepText>
-					<Text>csvファイル退避先</Text>
+					<StepText>#xlsxファイル退避先</StepText>
+					<Text>xlsxファイル退避先</Text>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $bkBasicPath; 値:&quot;c:\OBIC7\backup\\&quot; ]</StepText>
@@ -27577,20 +27577,20 @@ $カテゴリID[$cnt];
 					<StepText>変数を設定 [ $tmp; 値:Substitute ( 
  $fname;
  [ &quot;_&quot;; ¶ ];
- [ &quot;.csv&quot;; ¶ &amp; &quot;.csv&quot; ]
+ [ &quot;.xlsx&quot;; ¶ &amp; &quot;.xlsx&quot; ]
 ) ]</StepText>
 					<Value>
 						<Calculation><![CDATA[Substitute ( 
  $fname;
  [ "_"; ¶ ];
- [ ".csv"; ¶ & ".csv" ]
+ [ ".xlsx"; ¶ & ".xlsx" ]
 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Substitute</Chunk>
 							<Chunk type="NoRef"> ( 
  $fname;
  [ &quot;_&quot;; ¶ ];
- [ &quot;.csv&quot;; ¶ &amp; &quot;.csv&quot; ]
+ [ &quot;.xlsx&quot;; ¶ &amp; &quot;.xlsx&quot; ]
 )</Chunk>
 						</DisplayCalculation>
 					</Value>
@@ -27674,14 +27674,14 @@ $カテゴリID[$cnt];
 					<StepText/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#拡張子は.csv</StepText>
-					<Text>拡張子は.csv</Text>
+					<StepText>#拡張子は.xlsx</StepText>
+					<Text>拡張子は.xlsx</Text>
 				</Step>
 				<Step enable="True" id="68" name="If">
-					<StepText>If [ $ext = &quot;.csv&quot; ]</StepText>
-					<Calculation><![CDATA[$ext = ".csv"]]></Calculation>
+					<StepText>If [ $ext = &quot;.xlsx&quot; ]</StepText>
+					<Calculation><![CDATA[$ext = ".xlsx"]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">$ext = &quot;.csv&quot;</Chunk>
+						<Chunk type="NoRef">$ext = &quot;.xlsx&quot;</Chunk>
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -28031,7 +28031,7 @@ $json;
 					<Text>開始ログ</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;new&quot;; JSONString ];
 [ &quot;startTS&quot;; Get( ホストのタイムスタンプ ); JSONString ]
@@ -28057,7 +28057,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -28286,7 +28286,7 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;物件別管理データ 設定エラー&quot;; JSONString ];
@@ -28322,7 +28322,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -28373,7 +28373,7 @@ $json;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="35" name="レコードのインポート">
-					<StepText>レコードのインポート [ ソース: 「$fullPath」; フィールド名の行:0; 定義済み:いいえ; ターゲット: 「物件別管理データ」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 物件別管理データ::受注番号; 
+					<StepText>レコードのインポート [ &quot;$fullPath&quot;; ワークシート: &quot;&quot;; フィールド名の行:0; ターゲット: 「物件別管理データ」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 物件別管理データ::受注番号; 
 ソースフィールド 2 のインポート 物件別管理データ::売上番号; 
 ソースフィールド 3 のインポート 物件別管理データ::店所CD; 
 ソースフィールド 4 のインポート 物件別管理データ::店所名; 
@@ -28474,12 +28474,12 @@ $json;
 物件別管理データ::修正情報タイムスタンプ(入力値の自動化を実行); 
 物件別管理データ::修正者(入力値の自動化を実行); 
 物件別管理データ::主キー(入力値の自動化を実行);  ]
-[ ダイアログなし ]</StepText>
+[ ダイアログなし; データに列名が含まれる ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<VerifySSLCertificates state="False"/>
 					<DataSourceType value="File"/>
-					<Profile FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="COMS"/>
+					<Profile FileName="$fullPath" WorksheetName="" SelectedSheet="0" FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="XLSX"/>
 					<UniversalPathList>$fullPath</UniversalPathList>
 					<ImportOptions CharacterSet="ShiftJIS" PreserveContainer="False" MatchFieldNames="False" AutoEnter="True" SplitRepetitions="False" method="Add"/>
 					<Table id="1065096" name="物件別管理データ"/>
@@ -28631,17 +28631,17 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(取込)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(取込)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "物件別管理データ(取込)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(取込)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -28654,8 +28654,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(取込)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -28666,7 +28664,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -28696,15 +28694,15 @@ $json;
 					<Field table="物件別管理データ" id="104" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(年月設定)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(年月設定)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "物件別管理データ(年月設定)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(年月設定)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -28714,8 +28712,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(年月設定)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -28726,7 +28722,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -28804,7 +28800,7 @@ $json;
 					<NoInteract state="True"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;物件別管理データ マスタ更新エラー(&quot; &amp; $errorSub &amp; &quot;)&quot;; JSONString ];
@@ -28840,7 +28836,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -28863,15 +28859,15 @@ $json;
 					<StepText>End Loop</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(マスタ更新)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(マスタ更新)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "物件別管理データ(マスタ更新)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(マスタ更新)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -28881,8 +28877,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(マスタ更新)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -28893,7 +28887,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -28903,17 +28897,17 @@ $json;
 					<Text>0件なら何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(データなし)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(データなし)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "物件別管理データ(データなし)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(データなし)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -28926,8 +28920,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(データなし)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -28938,7 +28930,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -28958,17 +28950,17 @@ $json;
 					<Text>ヘッダも無い　何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;物件別管理データ(空ファイル)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;物件別管理データ(空ファイル)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "物件別管理データ(空ファイル)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "物件別管理データ(空ファイル)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -28981,8 +28973,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;物件別管理データ(空ファイル)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -28993,7 +28983,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -29003,7 +28993,7 @@ $json;
 					<Text>エラー</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
@@ -29044,7 +29034,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -29079,7 +29069,7 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;売上集計表 設定エラー&quot;; JSONString ];
@@ -29115,7 +29105,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -29163,7 +29153,7 @@ $json;
 					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="35" name="レコードのインポート">
-					<StepText>レコードのインポート [ ソース: 「$fullPath」; フィールド名の行:0; 定義済み:いいえ; ターゲット: 「売上集計表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 売上集計表::店所コード; 
+					<StepText>レコードのインポート [ &quot;$fullPath&quot;; ワークシート: &quot;&quot;; フィールド名の行:0; ターゲット: 「売上集計表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 売上集計表::店所コード; 
 ソースフィールド 2 のインポート 売上集計表::店所名; 
 ソースフィールド 3 のインポート 売上集計表::売上日; 
 ソースフィールド 4 のインポート 売上集計表::回収予定日; 
@@ -29190,12 +29180,12 @@ $json;
 売上集計表::修正者(入力値の自動化を実行); 
 売上集計表::主キー(入力値の自動化を実行); 
 売上集計表::作成情報タイムスタンプ(入力値の自動化を実行);  ]
-[ ダイアログなし ]</StepText>
+[ ダイアログなし; データに列名が含まれる ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<VerifySSLCertificates state="False"/>
 					<DataSourceType value="File"/>
-					<Profile FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="COMS"/>
+					<Profile FileName="$fullPath" WorksheetName="" SelectedSheet="0" FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="XLSX"/>
 					<UniversalPathList>$fullPath</UniversalPathList>
 					<ImportOptions CharacterSet="ShiftJIS" PreserveContainer="False" MatchFieldNames="False" AutoEnter="True" SplitRepetitions="False" method="Add"/>
 					<Table id="1065098" name="売上集計表"/>
@@ -29269,17 +29259,17 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上集計表(取込)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上集計表(取込)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上集計表(取込)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上集計表(取込)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -29292,10 +29282,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上集計表(取込)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29306,7 +29292,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#インポートデータがある場合　※データ0件でもヘッダが出力されていれば最終エラー = 0 になる</StepText>
@@ -29337,15 +29323,15 @@ $json;
 					<Field table="売上集計表" id="29" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;売上集計表(年月設定)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上集計表(年月設定)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "売上集計表(年月設定)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上集計表(年月設定)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -29355,8 +29341,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上集計表(年月設定)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29367,7 +29351,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -29377,17 +29361,17 @@ $json;
 					<Text>0件なら何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上集計表(データなし)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上集計表(データなし)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上集計表(データなし)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上集計表(データなし)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -29400,10 +29384,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上集計表(データなし)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29414,7 +29394,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -29434,17 +29414,17 @@ $json;
 					<Text>ヘッダも無い　何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上集計表(空ファイル)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上集計表(空ファイル)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上集計表(空ファイル)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上集計表(空ファイル)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -29457,10 +29437,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上集計表(空ファイル)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29471,7 +29447,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -29481,7 +29457,7 @@ $json;
 					<Text>エラー</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
@@ -29522,7 +29498,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -29557,7 +29533,7 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;受注残明細表 設定エラー&quot;; JSONString ];
@@ -29593,7 +29569,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -29641,7 +29617,7 @@ $json;
 					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="35" name="レコードのインポート">
-					<StepText>レコードのインポート [ ソース: 「$fullPath」; フィールド名の行:0; 定義済み:いいえ; ターゲット: 「受注残明細表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 受注残明細表::店所コード; 
+					<StepText>レコードのインポート [ &quot;$fullPath&quot;; ワークシート: &quot;&quot;; フィールド名の行:0; ターゲット: 「受注残明細表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 受注残明細表::店所コード; 
 ソースフィールド 2 のインポート 受注残明細表::店所名; 
 ソースフィールド 3 のインポート 受注残明細表::部課コード; 
 ソースフィールド 4 のインポート 受注残明細表::部課名; 
@@ -29684,12 +29660,12 @@ $json;
 受注残明細表::主キー(入力値の自動化を実行); 
 受注残明細表::作成情報タイムスタンプ(入力値の自動化を実行); 
 受注残明細表::作成者(入力値の自動化を実行);  ]
-[ ダイアログなし ]</StepText>
+[ ダイアログなし; データに列名が含まれる ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<VerifySSLCertificates state="False"/>
 					<DataSourceType value="File"/>
-					<Profile FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="COMS"/>
+					<Profile FileName="$fullPath" WorksheetName="" SelectedSheet="0" FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="XLSX"/>
 					<UniversalPathList>$fullPath</UniversalPathList>
 					<ImportOptions CharacterSet="ShiftJIS" PreserveContainer="False" MatchFieldNames="False" AutoEnter="True" SplitRepetitions="False" method="Add"/>
 					<Table id="1065100" name="受注残明細表"/>
@@ -29780,17 +29756,17 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;受注残明細表(取込)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;受注残明細表(取込)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "受注残明細表(取込)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "受注残明細表(取込)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -29803,10 +29779,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;受注残明細表(取込)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29817,7 +29789,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#インポートデータがある場合　※データ0件でもヘッダが出力されていれば最終エラー = 0 になる</StepText>
@@ -29848,15 +29820,15 @@ $json;
 					<Field table="受注残明細表" id="45" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;受注残明細表(年月設定)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;受注残明細表(年月設定)&quot;&amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "受注残明細表(年月設定)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "受注残明細表(年月設定)"& cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -29865,9 +29837,7 @@ $json;
 [ &quot;type&quot;; &quot;update&quot;; </Chunk>
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
-[ &quot;log&quot;; &quot;受注残明細表(年月設定)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
+[ &quot;log&quot;; &quot;受注残明細表(年月設定)&quot;&amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29878,7 +29848,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -29888,17 +29858,17 @@ $json;
 					<Text>0件なら何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;受注残明細表(データなし)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;受注残明細表(データなし)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "受注残明細表(データなし)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "受注残明細表(データなし)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -29911,8 +29881,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;受注残明細表(データなし)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29923,7 +29891,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -29943,17 +29911,17 @@ $json;
 					<Text>ヘッダも無い　何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;受注残明細表(空ファイル)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;受注残明細表(空ファイル)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "受注残明細表(空ファイル)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "受注残明細表(空ファイル)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -29966,8 +29934,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;受注残明細表(空ファイル)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29978,7 +29944,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -29988,7 +29954,7 @@ $json;
 					<Text>エラー</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
@@ -30029,7 +29995,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -30064,7 +30030,7 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;売上明細表 設定エラー&quot;; JSONString ];
@@ -30100,7 +30066,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -30148,7 +30114,7 @@ $json;
 					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="35" name="レコードのインポート">
-					<StepText>レコードのインポート [ ソース: 「$fullPath」; フィールド名の行:0; 定義済み:いいえ; ターゲット: 「売上明細表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 売上明細表::店所コード; 
+					<StepText>レコードのインポート [ &quot;$fullPath&quot;; ワークシート: &quot;&quot;; フィールド名の行:0; ターゲット: 「売上明細表」; 方法: 追加; 文字セット: 「シフト JIS」; フィールドデータのインポート順: ソースフィールド 1 のインポート 売上明細表::店所コード; 
 ソースフィールド 2 のインポート 売上明細表::店所名; 
 ソースフィールド 3 のインポート 売上明細表::部課コード; 
 ソースフィールド 4 のインポート 売上明細表::部課名; 
@@ -30234,12 +30200,12 @@ $json;
 売上明細表::修正情報タイムスタンプ(入力値の自動化を実行); 
 売上明細表::修正者(入力値の自動化を実行); 
 売上明細表::主キー(入力値の自動化を実行);  ]
-[ ダイアログなし ]</StepText>
+[ ダイアログなし; データに列名が含まれる ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<VerifySSLCertificates state="False"/>
 					<DataSourceType value="File"/>
-					<Profile FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="COMS"/>
+					<Profile FileName="$fullPath" WorksheetName="" SelectedSheet="0" FieldDelimiter="	" IsPredefined="-1" FieldNameRow="0" DataType="XLSX"/>
 					<UniversalPathList>$fullPath</UniversalPathList>
 					<ImportOptions CharacterSet="ShiftJIS" PreserveContainer="False" MatchFieldNames="False" AutoEnter="True" SplitRepetitions="False" method="Add"/>
 					<Table id="1065102" name="売上明細表"/>
@@ -30372,17 +30338,17 @@ $json;
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(取込)&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(取込)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上明細表(取込)" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(取込)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -30395,10 +30361,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(取込)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -30409,7 +30371,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#インポートデータがある場合　※データ0件でもヘッダが出力されていれば最終エラー = 0 になる</StepText>
@@ -30440,15 +30402,15 @@ $json;
 					<Field table="売上明細表" id="88" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(年月設定)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(年月設定)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "売上明細表(年月設定)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(年月設定)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -30458,8 +30420,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(年月設定)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -30470,7 +30430,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -30577,7 +30537,7 @@ $json;
 					<NoInteract state="True"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;売上明細表 マスタ更新エラー(&quot; &amp; $errorSub &amp; &quot;)&quot;; JSONString ];
@@ -30613,7 +30573,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -30636,15 +30596,15 @@ $json;
 					<StepText>End Loop</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(マスタ更新)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(マスタ更新)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "売上明細表(マスタ更新)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(マスタ更新)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -30654,8 +30614,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(マスタ更新)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -30666,7 +30624,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -30676,17 +30634,17 @@ $json;
 					<Text>0件なら何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(データなし)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(データなし)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上明細表(データなし)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(データなし)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -30699,8 +30657,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(データなし)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -30711,7 +30667,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -30731,17 +30687,17 @@ $json;
 					<Text>ヘッダも無い　何もしない</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
-[ &quot;log&quot;; &quot;売上明細表(空ファイル)&quot; &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;売上明細表(空ファイル)&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
 [ "fileName"; $filename; JSONString ];
-[ "log"; "売上明細表(空ファイル)" & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "売上明細表(空ファイル)" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -30754,8 +30710,6 @@ $json;
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;売上明細表(空ファイル)&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -30766,7 +30720,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
@@ -30776,7 +30730,7 @@ $json;
 					<Text>エラー</Text>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;fileName&quot;; $filename; JSONString ];
@@ -30817,7 +30771,7 @@ $json;
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -31246,15 +31200,15 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
-[ &quot;log&quot;; &quot;batファイル出力&quot; &amp; Char(9) &amp; Char(9) &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
+[ &quot;log&quot;; &quot;batファイル出力&quot; &amp; cfTimestamp ( Get( ホストのタイムスタンプ ); &quot;&quot;; &quot;&quot; ); JSONString ]
  ) ]</StepText>
 					<Calculation><![CDATA[JSONSetElement ( 
 "";
 [ "type"; "update"; JSONString ];
-[ "log"; "batファイル出力" & Char(9) & Char(9) & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
+[ "log"; "batファイル出力" & cfTimestamp ( Get( ホストのタイムスタンプ ); ""; "" ); JSONString ]
  )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">JSONSetElement</Chunk>
@@ -31264,10 +31218,6 @@ v$return
 						<Chunk type="FunctionRef">JSONString</Chunk>
 						<Chunk type="NoRef"> ];
 [ &quot;log&quot;; &quot;batファイル出力&quot; &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
-						<Chunk type="FunctionRef">Char</Chunk>
-						<Chunk type="NoRef">(9) &amp; </Chunk>
 						<Chunk type="CustomFunctionRef">cfTimestamp</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -31278,13 +31228,13 @@ v$return
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;batファイル出力エラー(&quot; &amp; $error &amp; &quot;)&quot;; JSONString ];
@@ -31320,7 +31270,7 @@ v$return
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -31336,7 +31286,7 @@ v$return
 					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;errorDetails&quot;; &quot;batファイル出力テーブル設定エラー&quot;; JSONString ];
@@ -31372,7 +31322,7 @@ v$return
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: False ]</StepText>
@@ -31391,7 +31341,7 @@ v$return
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ログ」; 引数: JSONSetElement ( 
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
 &quot;&quot;;
 [ &quot;type&quot;; &quot;update&quot;; JSONString ];
 [ &quot;endTS&quot;; Get( ホストのタイムスタンプ ); JSONString ];
@@ -31427,7 +31377,7 @@ v$return
 						<Chunk type="NoRef"> ]
  )</Chunk>
 					</DisplayCalculation>
-					<Script id="88" name="OBIC7_csv取込_ログ"/>
+					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -31469,8 +31419,8 @@ v$return
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/07/24　真板　拡張子更新</StepText>
+					<Text>2025/07/24　真板　拡張子更新</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -31478,7 +31428,7 @@ v$return
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="30" name="OBIC7_csv取込_ドキュメントパス取得">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="30" name="OBIC7_xlsx取込_ドキュメントパス取得">
 			<StepList>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $pathList; 値:Get( ドキュメントパス一覧 ) ]</StepText>
@@ -31554,8 +31504,8 @@ v$return
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/07/24　真板　拡張子更新</StepText>
+					<Text>2025/07/24　真板　拡張子更新</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -31563,7 +31513,7 @@ v$return
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="88" name="OBIC7_csv取込_ログ">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="88" name="OBIC7_xlsx取込_ログ">
 			<StepList>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $arg; 値:Get( スクリプト引数 ) ]</StepText>
@@ -31868,9 +31818,9 @@ v$return
 					<StepText/>
 				</Step>
 				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「csvImportLog」 (csvImportLog) ]</StepText>
+					<StepText>レイアウト切り替え [ 「xlsxImportLog」 (xlsxImportLog) ]</StepText>
 					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="105" name="csvImportLog"/>
+					<Layout id="105" name="xlsxImportLog"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -31914,20 +31864,20 @@ v$return
 					<StepText/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::実行日時; $startTS ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::実行日時; $startTS ]</StepText>
 					<Calculation><![CDATA[$startTS]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$startTS</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="6" name="実行日時"/>
+					<Field table="xlsxImportLog" id="6" name="実行日時"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::log; &quot;-開始-&quot; ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::log; &quot;-開始-&quot; ]</StepText>
 					<Calculation><![CDATA["-開始-"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;-開始-&quot;</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="10" name="log"/>
+					<Field table="xlsxImportLog" id="10" name="log"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -31940,17 +31890,17 @@ v$return
 					<Text>Newで生成したレコードが見えている状態</Text>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::log; List( csvImportLog::log; $log ) ]</StepText>
-					<Calculation><![CDATA[List( csvImportLog::log; $log )]]></Calculation>
+					<StepText>フィールド設定 [ xlsxImportLog::log; List( xlsxImportLog::log; $log ) ]</StepText>
+					<Calculation><![CDATA[List( xlsxImportLog::log; $log )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">List</Chunk>
 						<Chunk type="NoRef">( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="csvImportLog" id="10" name="log"/>
+							<Field table="xlsxImportLog" id="10" name="log"/>
 						</Chunk>
 						<Chunk type="NoRef">; $log )</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="10" name="log"/>
+					<Field table="xlsxImportLog" id="10" name="log"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -31966,17 +31916,17 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::取込ファイル名; List( csvImportLog::取込ファイル名; $fileName ) ]</StepText>
-					<Calculation><![CDATA[List( csvImportLog::取込ファイル名; $fileName )]]></Calculation>
+					<StepText>フィールド設定 [ xlsxImportLog::取込ファイル名; List( xlsxImportLog::取込ファイル名; $fileName ) ]</StepText>
+					<Calculation><![CDATA[List( xlsxImportLog::取込ファイル名; $fileName )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">List</Chunk>
 						<Chunk type="NoRef">( </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="csvImportLog" id="7" name="取込ファイル名"/>
+							<Field table="xlsxImportLog" id="7" name="取込ファイル名"/>
 						</Chunk>
 						<Chunk type="NoRef">; $fileName )</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="7" name="取込ファイル名"/>
+					<Field table="xlsxImportLog" id="7" name="取込ファイル名"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -31992,12 +31942,12 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::結果; $result ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::結果; $result ]</StepText>
 					<Calculation><![CDATA[$result]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$result</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="8" name="結果"/>
+					<Field table="xlsxImportLog" id="8" name="結果"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -32013,12 +31963,12 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::エラー内容; $errorDetails ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::エラー内容; $errorDetails ]</StepText>
 					<Calculation><![CDATA[$errorDetails]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$errorDetails</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="9" name="エラー内容"/>
+					<Field table="xlsxImportLog" id="9" name="エラー内容"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -32034,12 +31984,12 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::終了日時; $endTS ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::終了日時; $endTS ]</StepText>
 					<Calculation><![CDATA[$endTS]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$endTS</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="12" name="終了日時"/>
+					<Field table="xlsxImportLog" id="12" name="終了日時"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -32055,12 +32005,12 @@ v$return
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ csvImportLog::中止日時; $cancelTS ]</StepText>
+					<StepText>フィールド設定 [ xlsxImportLog::中止日時; $cancelTS ]</StepText>
 					<Calculation><![CDATA[$cancelTS]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$cancelTS</Chunk>
 					</DisplayCalculation>
-					<Field table="csvImportLog" id="13" name="中止日時"/>
+					<Field table="xlsxImportLog" id="13" name="中止日時"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
 					<StepText>End If</StepText>
@@ -32106,8 +32056,8 @@ v$return
 					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
+					<StepText>#2025/07/24　真板　拡張子更新</StepText>
+					<Text>2025/07/24　真板　拡張子更新</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -32827,8 +32777,8 @@ $json;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「OBIC7_csv取込_ドキュメントパス取得」 ]</StepText>
-					<Script id="30" name="OBIC7_csv取込_ドキュメントパス取得"/>
+					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ドキュメントパス取得」 ]</StepText>
+					<Script id="30" name="OBIC7_xlsx取込_ドキュメントパス取得"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $scriptResult; 値:Get( スクリプトの結果 ) ]</StepText>
