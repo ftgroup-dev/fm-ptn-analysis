@@ -342,10 +342,6 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="121" name="SV担当者入力データ月次_新">
-					<LayoutAccess value="NoAccess"/>
-					<DataAccess value="NoAccess"/>
-				</Layout>
 				<Layout id="122" name="目標集計テーブル｜作成用">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
@@ -663,6 +659,18 @@
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="144" name="当月検索">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="156" name="レイアウト切替_SV担当者入力データ月次詳細">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="157" name="SV担当入力データ月次詳細 | レイアウト移動">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="158" name="差額チェック">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="159" name="検索_bk">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script name="[新規スクリプト]">

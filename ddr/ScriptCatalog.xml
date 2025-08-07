@@ -11772,6 +11772,211 @@ WorkingDays (#b ; #c ; $休日リスト )
 		</Script>
 	</Group>
 	<Group groupCollapsed="False" includeInMenu="False" id="19" name="共通">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="158" name="差額チェック">
+			<StepList>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託目標差額; 値:&quot;&quot; ]</StepText>
+					<Value>
+						<Calculation><![CDATA[""]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;&quot;</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託目標差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸目標差額; 値:&quot;&quot; ]</StepText>
+					<Value>
+						<Calculation><![CDATA[""]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;&quot;</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸目標差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託着地差額; 値:&quot;&quot; ]</StepText>
+					<Value>
+						<Calculation><![CDATA[""]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;&quot;</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託着地差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸着地差額; 値:&quot;&quot; ]</StepText>
+					<Value>
+						<Calculation><![CDATA[""]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;&quot;</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸着地差額</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#前月データと比較して差額を計算し変数に格納</StepText>
+					<Text>前月データと比較して差額を計算し変数に格納</Text>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託目標差額; 値:Case ( IsEmpty ( Filter ( $$委託目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標1月前 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$委託目標1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標1月前 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Filter</Chunk>
+							<Chunk type="NoRef"> ( $$委託目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
+							</Chunk>
+							<Chunk type="NoRef"> - $$委託目標1月前 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託目標差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸目標差額; 値:Case ( IsEmpty ( Filter ( $$卸目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::当月目標金額_月初_卸売 - $$卸目標1月前 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$卸目標1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::当月目標金額_月初_卸売 - $$卸目標1月前 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Filter</Chunk>
+							<Chunk type="NoRef"> ( $$卸目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="24" name="当月目標金額_月初_卸売"/>
+							</Chunk>
+							<Chunk type="NoRef"> - $$卸目標1月前 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸目標差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託着地差額; 値:Case ( IsEmpty ( Filter ( $$委託着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::月次着地額_月次_委託 - $$委託着地額1月前 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$委託着地額1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::月次着地額_月次_委託 - $$委託着地額1月前 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Filter</Chunk>
+							<Chunk type="NoRef"> ( $$委託着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="12" name="月次着地額_月次_委託"/>
+							</Chunk>
+							<Chunk type="NoRef"> - $$委託着地額1月前 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託着地差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸着地差額; 値:Case ( IsEmpty ( Filter ( $$卸着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::月次着地額_月次_卸売 - $$卸着地額1月前 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$卸着地額1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::月次着地額_月次_卸売 - $$卸着地額1月前 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Filter</Chunk>
+							<Chunk type="NoRef"> ( $$卸着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="25" name="月次着地額_月次_卸売"/>
+							</Chunk>
+							<Chunk type="NoRef"> - $$卸着地額1月前 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸着地差額</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="80" name="ウインドウ内容の再表示">
+					<StepText>ウインドウ内容の再表示</StepText>
+					<Option state="False"/>
+					<FlushSQLData state="False"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#◆更新情報◆</StepText>
+					<Text>◆更新情報◆</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#2025/07/09　maita SV担当入力データ月次詳細画面変更</StepText>
+					<Text>2025/07/09　maita SV担当入力データ月次詳細画面変更</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+			</StepList>
+		</Script>
 		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="62" name="メニューバー設定">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -11947,6 +12152,1027 @@ WorkingDays (#b ; #c ; $休日リスト )
 			</StepList>
 		</Script>
 		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="6" name="検索">
+			<StepList>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#◆作成情報◆</StepText>
+					<Text>◆作成情報◆</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#機能概要	：ログイン時に実行するグローバルセット一式</StepText>
+					<Text>機能概要	：ログイン時に実行するグローバルセット一式</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#引数		：なし</StepText>
+					<Text>引数		：なし</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#トリガ	：[スクリプト]FileOpen_トリガ</StepText>
+					<Text>トリガ	：[スクリプト]FileOpen_トリガ</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#作成日	：2024/11/15</StepText>
+					<Text>作成日	：2024/11/15</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#作成者	：Mika Shimomura</StepText>
+					<Text>作成者	：Mika Shimomura</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#コメント	：</StepText>
+					<Text>コメント	：</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $arg; 値:Get( スクリプト引数 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Get( スクリプト引数 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Get</Chunk>
+							<Chunk type="NoRef">( </Chunk>
+							<Chunk type="FunctionRef">スクリプト引数</Chunk>
+							<Chunk type="NoRef"> )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$arg</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ $arg = &quot;検索モード&quot; ]</StepText>
+					<Calculation><![CDATA[$arg = "検索モード"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$arg = &quot;検索モード&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="22" name="検索モードに切り替え">
+					<StepText>検索モードに切り替え [  ]</StepText>
+					<Pause state="False"/>
+					<Restore state="False"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="125" name="Else If">
+					<StepText>Else If [ $arg = &quot;検索実行&quot; ]</StepText>
+					<Calculation><![CDATA[$arg = "検索実行"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$arg = &quot;検索実行&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="28" name="検索実行">
+					<StepText>検索実行 [  ]</StepText>
+					<Restore state="False"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#標準のダイアログ出しとく</StepText>
+					<Text>標準のダイアログ出しとく</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#SQL処理 1-3か月毎の目標値と着地額を取得(値が存在しなかった場合&quot;設定金額なし&quot;を設定)</StepText>
+					<Text>SQL処理 1-3か月毎の目標値と着地額を取得(値が存在しなかった場合&quot;設定金額なし&quot;を設定)</Text>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $resultList; 値:Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 );
+
+
+  m1Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y1; m1
+    ) ; 
+  
+  m2Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y2; m2
+    ) ; 
+
+  m3Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y3; m3
+    ) ;
+  
+  m1Row = If ( not IsEmpty ( m1Row ) ; m1Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m2Row = If ( not IsEmpty ( m2Row ) ; m2Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m3Row = If ( not IsEmpty ( m3Row ) ; m3Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  result = m3Row &amp; ¶ &amp; m2Row &amp; ¶ &amp; m1Row
+  ];
+  
+  result 
+) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 );
+
+
+  m1Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y1; m1
+    ) ; 
+  
+  m2Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y2; m2
+    ) ; 
+
+  m3Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y3; m3
+    ) ;
+  
+  m1Row = If ( not IsEmpty ( m1Row ) ; m1Row ; "設定金額なし,設定金額なし,設定金額なし,設定金額なし" ) ; 
+  m2Row = If ( not IsEmpty ( m2Row ) ; m2Row ; "設定金額なし,設定金額なし,設定金額なし,設定金額なし" ) ; 
+  m3Row = If ( not IsEmpty ( m3Row ) ; m3Row ; "設定金額なし,設定金額なし,設定金額なし,設定金額なし" ) ; 
+  result = m3Row & ¶ & m2Row & ¶ & m1Row
+  ];
+  
+  result 
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef"> (
+[
+  today = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="16" name="月"/>
+							</Chunk>
+							<Chunk type="NoRef"> - 1 ; 1 ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="15" name="年"/>
+							</Chunk>
+							<Chunk type="NoRef"> ) ;
+
+  </Chunk>
+							<Chunk type="FunctionRef">// 取得対象の3か月の年月をそれぞれ算出
+</Chunk>
+							<Chunk type="NoRef">  y1 = </Chunk>
+							<Chunk type="FunctionRef">Year</Chunk>
+							<Chunk type="NoRef"> ( today );
+  m1 = </Chunk>
+							<Chunk type="FunctionRef">Month</Chunk>
+							<Chunk type="NoRef"> ( today );
+
+  date2 = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( m1 - 1 ; 1 ; y1 );
+  y2 = </Chunk>
+							<Chunk type="FunctionRef">Year</Chunk>
+							<Chunk type="NoRef"> ( date2 );
+  m2 = </Chunk>
+							<Chunk type="FunctionRef">Month</Chunk>
+							<Chunk type="NoRef"> ( date2 );
+
+  date3 = </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( m2 - 1 ; 1 ; y2 );
+  y3 = </Chunk>
+							<Chunk type="FunctionRef">Year</Chunk>
+							<Chunk type="NoRef"> ( date3 );
+  m3 = </Chunk>
+							<Chunk type="FunctionRef">Month</Chunk>
+							<Chunk type="NoRef"> ( date3 );
+
+
+  m1Row = </Chunk>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+							</Chunk>
+							<Chunk type="NoRef">;
+    y1; m1
+    ) ; 
+  
+  m2Row = </Chunk>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+							</Chunk>
+							<Chunk type="NoRef">;
+    y2; m2
+    ) ; 
+
+  m3Row = </Chunk>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+							</Chunk>
+							<Chunk type="NoRef">;
+    y3; m3
+    ) ;
+  
+  m1Row = </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">not</Chunk>
+							<Chunk type="NoRef"> </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( m1Row ) ; m1Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m2Row = </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">not</Chunk>
+							<Chunk type="NoRef"> </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( m2Row ) ; m2Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m3Row = </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">not</Chunk>
+							<Chunk type="NoRef"> </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( m3Row ) ; m3Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  result = m3Row &amp; ¶ &amp; m2Row &amp; ¶ &amp; m1Row
+  ];
+  
+  result 
+)</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$resultList</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#3か月前データの取得</StepText>
+					<Text>3か月前データの取得</Text>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $row1; 値:GetValue ( $resultList ; 1 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( $resultList ; 1 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( $resultList ; 1 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$row1</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託目標3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 1 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託目標3月前</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸目標3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 2 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸目標3月前</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託着地額3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 3 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託着地額3月前</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸着地額3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 4 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸着地額3月前</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#前々月データの取得</StepText>
+					<Text>前々月データの取得</Text>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $row2; 値:GetValue ( $resultList ; 2 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( $resultList ; 2 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( $resultList ; 2 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$row2</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託目標2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 1 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託目標2月前</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸目標2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 2 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸目標2月前</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託着地額2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 3 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託着地額2月前</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸着地額2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 4 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸着地額2月前</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#前月のデータの取得</StepText>
+					<Text>前月のデータの取得</Text>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $row3; 値:GetValue ( $resultList ; 3 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( $resultList ; 3 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( $resultList ; 3 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$row3</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託目標1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 1 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託目標1月前</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸目標1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 2 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸目標1月前</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託着地額1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 3 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託着地額1月前</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸着地額1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 4 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Substitute</Chunk>
+							<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸着地額1月前</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#リセット</StepText>
+					<Text>リセット</Text>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託目標差額; 値:&quot;&quot; ]</StepText>
+					<Value>
+						<Calculation><![CDATA[""]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;&quot;</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託目標差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸目標差額; 値:&quot;&quot; ]</StepText>
+					<Value>
+						<Calculation><![CDATA[""]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;&quot;</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸目標差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託着地差額; 値:&quot;&quot; ]</StepText>
+					<Value>
+						<Calculation><![CDATA[""]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;&quot;</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託着地差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸着地差額; 値:&quot;&quot; ]</StepText>
+					<Value>
+						<Calculation><![CDATA[""]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;&quot;</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸着地差額</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#前月データと比較して差額を計算し変数に格納</StepText>
+					<Text>前月データと比較して差額を計算し変数に格納</Text>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託目標差額; 値:Case ( IsEmpty ( Filter ( $$委託目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標1月前 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$委託目標1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標1月前 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Filter</Chunk>
+							<Chunk type="NoRef"> ( $$委託目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
+							</Chunk>
+							<Chunk type="NoRef"> - $$委託目標1月前 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託目標差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸目標差額; 値:Case ( IsEmpty ( Filter ( $$卸目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::当月目標金額_月初_卸売 - $$卸目標1月前 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$卸目標1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::当月目標金額_月初_卸売 - $$卸目標1月前 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Filter</Chunk>
+							<Chunk type="NoRef"> ( $$卸目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="24" name="当月目標金額_月初_卸売"/>
+							</Chunk>
+							<Chunk type="NoRef"> - $$卸目標1月前 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸目標差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$委託着地差額; 値:Case ( IsEmpty ( Filter ( $$委託着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::月次着地額_月次_委託 - $$委託着地額1月前 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$委託着地額1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::月次着地額_月次_委託 - $$委託着地額1月前 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Filter</Chunk>
+							<Chunk type="NoRef"> ( $$委託着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="12" name="月次着地額_月次_委託"/>
+							</Chunk>
+							<Chunk type="NoRef"> - $$委託着地額1月前 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$委託着地差額</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$卸着地差額; 値:Case ( IsEmpty ( Filter ( $$卸着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::月次着地額_月次_卸売 - $$卸着地額1月前 ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$卸着地額1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::月次着地額_月次_卸売 - $$卸着地額1月前 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Case</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">IsEmpty</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Filter</Chunk>
+							<Chunk type="NoRef"> ( $$卸着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+							<Chunk type="FieldRef">
+								<Field table="SV担当者入力データ月次" id="25" name="月次着地額_月次_卸売"/>
+							</Chunk>
+							<Chunk type="NoRef"> - $$卸着地額1月前 )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$卸着地差額</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
+					<StepText>レコード/検索条件/ページへ移動
+[ 最初の ]</StepText>
+					<NoInteract state="False"/>
+					<RowPageLocation value="First"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="125" name="Else If">
+					<StepText>Else If [ $arg = &quot;全件表示&quot; ]</StepText>
+					<Calculation><![CDATA[$arg = "全件表示"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$arg = &quot;全件表示&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="23" name="全レコードを表示">
+					<StepText>全レコードを表示</StepText>
+				</Step>
+				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
+					<StepText>レコード/検索条件/ページへ移動
+[ 最初の ]</StepText>
+					<NoInteract state="False"/>
+					<RowPageLocation value="First"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$searchY ]</StepText>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$searchY</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$searchM ]</StepText>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$searchM</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$searchSV ]</StepText>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$searchSV</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$searchLastY ]</StepText>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$searchLastY</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$searchLastM ]</StepText>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$searchLastM</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$searchYList ]</StepText>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$searchYList</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$searchMList ]</StepText>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$searchMList</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $$searchStore ]</StepText>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$$searchStore</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="125" name="Else If">
+					<StepText>Else If [ $arg = &quot;キャンセル&quot; ]</StepText>
+					<Calculation><![CDATA[$arg = "キャンセル"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$arg = &quot;キャンセル&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="55" name="ブラウズモードに切り替え">
+					<StepText>ブラウズモードに切り替え</StepText>
+					<Pause state="False"/>
+				</Step>
+				<Step enable="True" id="90" name="全スクリプト終了">
+					<StepText>全スクリプト終了</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else</StepText>
+				</Step>
+				<Step enable="True" id="103" name="現在のスクリプト終了">
+					<StepText>現在のスクリプト終了 [  ]</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#◆更新情報◆</StepText>
+					<Text>◆更新情報◆</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#2025/07/09　maita SV担当入力データ月次詳細画面変更</StepText>
+					<Text>2025/07/09　maita SV担当入力データ月次詳細画面変更</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+			</StepList>
+		</Script>
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="159" name="検索_bk">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -14854,6 +16080,2180 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
 						<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+					</Step>
+				</StepList>
+			</Script>
+			<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="156" name="レイアウト切替_SV担当者入力データ月次詳細">
+				<StepList>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="False" id="141" name="変数を設定">
+						<StepText>//  変数を設定 [ $resultList; 値:Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 )
+];
+
+ExecuteSQL (
+  &quot;
+  SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+  FROM \&quot;SV担当者入力データ月次\&quot;
+  WHERE \&quot;加盟店セットCD\&quot; = ?
+  AND (
+    (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) OR
+    (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) OR
+    (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?)
+  )
+  &quot;;
+  &quot;,&quot;; &quot;¶&quot;;
+  SV担当者入力データ月次::加盟店セットCD;
+  y1; m1;
+  y2; m2;
+  y3; m3
+)) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 )
+];
+
+ExecuteSQL (
+  "
+  SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+  FROM \"SV担当者入力データ月次\"
+  WHERE \"加盟店セットCD\" = ?
+  AND (
+    (\"年\" = ? AND \"月\" = ?) OR
+    (\"年\" = ? AND \"月\" = ?) OR
+    (\"年\" = ? AND \"月\" = ?)
+  )
+  ";
+  ","; "¶";
+  SV担当者入力データ月次::加盟店セットCD;
+  y1; m1;
+  y2; m2;
+  y3; m3
+))]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Let</Chunk>
+								<Chunk type="NoRef"> (
+[
+  today = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="16" name="月"/>
+								</Chunk>
+								<Chunk type="NoRef"> - 1 ; 1 ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="15" name="年"/>
+								</Chunk>
+								<Chunk type="NoRef"> ) ;
+
+  </Chunk>
+								<Chunk type="FunctionRef">// 取得対象の3か月の年月をそれぞれ算出
+</Chunk>
+								<Chunk type="NoRef">  y1 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( today );
+  m1 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( today );
+
+  date2 = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( m1 - 1 ; 1 ; y1 );
+  y2 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( date2 );
+  m2 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( date2 );
+
+  date3 = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( m2 - 1 ; 1 ; y2 );
+  y3 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( date3 );
+  m3 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( date3 )
+];
+
+</Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+  &quot;
+  SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+  FROM \&quot;SV担当者入力データ月次\&quot;
+  WHERE \&quot;加盟店セットCD\&quot; = ?
+  AND (
+    (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) OR
+    (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) OR
+    (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?)
+  )
+  &quot;;
+  &quot;,&quot;; &quot;¶&quot;;
+  </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+  y1; m1;
+  y2; m2;
+  y3; m3
+))</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$resultList</Name>
+					</Step>
+					<Step enable="False" id="141" name="変数を設定">
+						<StepText>//  変数を設定 [ $resultList; 値:Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 );
+
+
+  m1Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y1; m1
+    ) ; 
+  
+  m2Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y2; m2
+    ) ; 
+
+  m3Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y3; m3
+    ) ;
+  
+  m1Row = If ( not IsEmpty ( m1Row ) ; m1Row ; &quot;値なし,値なし,値なし,値なし&quot; ) ; 
+  m2Row = If ( not IsEmpty ( m2Row ) ; m2Row ; &quot;値なし,値なし,値なし,値なし&quot; ) ; 
+  m3Row = If ( not IsEmpty ( m3Row ) ; m3Row ; &quot;値なし,値なし,値なし,値なし&quot; ) ; 
+  result = m3Row &amp; ¶ &amp; m2Row &amp; ¶ &amp; m1Row
+  ];
+  
+  result 
+) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 );
+
+
+  m1Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y1; m1
+    ) ; 
+  
+  m2Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y2; m2
+    ) ; 
+
+  m3Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y3; m3
+    ) ;
+  
+  m1Row = If ( not IsEmpty ( m1Row ) ; m1Row ; "値なし,値なし,値なし,値なし" ) ; 
+  m2Row = If ( not IsEmpty ( m2Row ) ; m2Row ; "値なし,値なし,値なし,値なし" ) ; 
+  m3Row = If ( not IsEmpty ( m3Row ) ; m3Row ; "値なし,値なし,値なし,値なし" ) ; 
+  result = m3Row & ¶ & m2Row & ¶ & m1Row
+  ];
+  
+  result 
+)]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Let</Chunk>
+								<Chunk type="NoRef"> (
+[
+  today = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="16" name="月"/>
+								</Chunk>
+								<Chunk type="NoRef"> - 1 ; 1 ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="15" name="年"/>
+								</Chunk>
+								<Chunk type="NoRef"> ) ;
+
+  </Chunk>
+								<Chunk type="FunctionRef">// 取得対象の3か月の年月をそれぞれ算出
+</Chunk>
+								<Chunk type="NoRef">  y1 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( today );
+  m1 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( today );
+
+  date2 = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( m1 - 1 ; 1 ; y1 );
+  y2 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( date2 );
+  m2 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( date2 );
+
+  date3 = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( m2 - 1 ; 1 ; y2 );
+  y3 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( date3 );
+  m3 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( date3 );
+
+
+  m1Row = </Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+    y1; m1
+    ) ; 
+  
+  m2Row = </Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+    y2; m2
+    ) ; 
+
+  m3Row = </Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+    y3; m3
+    ) ;
+  
+  m1Row = </Chunk>
+								<Chunk type="FunctionRef">If</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">not</Chunk>
+								<Chunk type="NoRef"> </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( m1Row ) ; m1Row ; &quot;値なし,値なし,値なし,値なし&quot; ) ; 
+  m2Row = </Chunk>
+								<Chunk type="FunctionRef">If</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">not</Chunk>
+								<Chunk type="NoRef"> </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( m2Row ) ; m2Row ; &quot;値なし,値なし,値なし,値なし&quot; ) ; 
+  m3Row = </Chunk>
+								<Chunk type="FunctionRef">If</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">not</Chunk>
+								<Chunk type="NoRef"> </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( m3Row ) ; m3Row ; &quot;値なし,値なし,値なし,値なし&quot; ) ; 
+  result = m3Row &amp; ¶ &amp; m2Row &amp; ¶ &amp; m1Row
+  ];
+  
+  result 
+)</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$resultList</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#SQL処理 1-3か月毎の目標値と着地額を取得(値が存在しなかった場合&quot;設定金額なし&quot;を設定)</StepText>
+						<Text>SQL処理 1-3か月毎の目標値と着地額を取得(値が存在しなかった場合&quot;設定金額なし&quot;を設定)</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $resultList; 値:Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 );
+
+
+  m1Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y1; m1
+    ) ; 
+  
+  m2Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y2; m2
+    ) ; 
+
+  m3Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y3; m3
+    ) ;
+  
+  m1Row = If ( not IsEmpty ( m1Row ) ; m1Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m2Row = If ( not IsEmpty ( m2Row ) ; m2Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m3Row = If ( not IsEmpty ( m3Row ) ; m3Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  result = m3Row &amp; ¶ &amp; m2Row &amp; ¶ &amp; m1Row
+  ];
+  
+  result 
+) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 );
+
+
+  m1Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y1; m1
+    ) ; 
+  
+  m2Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y2; m2
+    ) ; 
+
+  m3Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y3; m3
+    ) ;
+  
+  m1Row = If ( not IsEmpty ( m1Row ) ; m1Row ; "設定金額なし,設定金額なし,設定金額なし,設定金額なし" ) ; 
+  m2Row = If ( not IsEmpty ( m2Row ) ; m2Row ; "設定金額なし,設定金額なし,設定金額なし,設定金額なし" ) ; 
+  m3Row = If ( not IsEmpty ( m3Row ) ; m3Row ; "設定金額なし,設定金額なし,設定金額なし,設定金額なし" ) ; 
+  result = m3Row & ¶ & m2Row & ¶ & m1Row
+  ];
+  
+  result 
+)]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Let</Chunk>
+								<Chunk type="NoRef"> (
+[
+  today = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="16" name="月"/>
+								</Chunk>
+								<Chunk type="NoRef"> - 1 ; 1 ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="15" name="年"/>
+								</Chunk>
+								<Chunk type="NoRef"> ) ;
+
+  </Chunk>
+								<Chunk type="FunctionRef">// 取得対象の3か月の年月をそれぞれ算出
+</Chunk>
+								<Chunk type="NoRef">  y1 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( today );
+  m1 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( today );
+
+  date2 = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( m1 - 1 ; 1 ; y1 );
+  y2 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( date2 );
+  m2 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( date2 );
+
+  date3 = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( m2 - 1 ; 1 ; y2 );
+  y3 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( date3 );
+  m3 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( date3 );
+
+
+  m1Row = </Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+    y1; m1
+    ) ; 
+  
+  m2Row = </Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+    y2; m2
+    ) ; 
+
+  m3Row = </Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+    y3; m3
+    ) ;
+  
+  m1Row = </Chunk>
+								<Chunk type="FunctionRef">If</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">not</Chunk>
+								<Chunk type="NoRef"> </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( m1Row ) ; m1Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m2Row = </Chunk>
+								<Chunk type="FunctionRef">If</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">not</Chunk>
+								<Chunk type="NoRef"> </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( m2Row ) ; m2Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m3Row = </Chunk>
+								<Chunk type="FunctionRef">If</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">not</Chunk>
+								<Chunk type="NoRef"> </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( m3Row ) ; m3Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  result = m3Row &amp; ¶ &amp; m2Row &amp; ¶ &amp; m1Row
+  ];
+  
+  result 
+)</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$resultList</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#3か月前データの取得</StepText>
+						<Text>3か月前データの取得</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $row1; 値:GetValue ( $resultList ; 1 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( $resultList ; 1 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( $resultList ; 1 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$row1</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 1 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標3月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 2 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標3月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地額3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 3 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地額3月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地額3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 4 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地額3月前</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#前々月データの取得</StepText>
+						<Text>前々月データの取得</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $row2; 値:GetValue ( $resultList ; 2 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( $resultList ; 2 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( $resultList ; 2 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$row2</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 1 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標2月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 2 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標2月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地額2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 3 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地額2月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地額2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 4 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地額2月前</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#前月のデータの取得</StepText>
+						<Text>前月のデータの取得</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $row3; 値:GetValue ( $resultList ; 3 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( $resultList ; 3 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( $resultList ; 3 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$row3</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 1 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標1月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 2 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標1月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地額1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 3 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地額1月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地額1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 4 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地額1月前</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#リセット</StepText>
+						<Text>リセット</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標差額; 値:&quot;&quot; ]</StepText>
+						<Value>
+							<Calculation><![CDATA[""]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;&quot;</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標差額; 値:&quot;&quot; ]</StepText>
+						<Value>
+							<Calculation><![CDATA[""]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;&quot;</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地差額; 値:&quot;&quot; ]</StepText>
+						<Value>
+							<Calculation><![CDATA[""]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;&quot;</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地差額; 値:&quot;&quot; ]</StepText>
+						<Value>
+							<Calculation><![CDATA[""]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;&quot;</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地差額</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#前月データと比較して差額を計算し変数に格納</StepText>
+						<Text>前月データと比較して差額を計算し変数に格納</Text>
+					</Step>
+					<Step enable="False" id="141" name="変数を設定">
+						<StepText>//  変数を設定 [ $$金額計算; 値:SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標_1m ]</StepText>
+						<Value>
+							<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標_1m]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
+								</Chunk>
+								<Chunk type="NoRef"> - $$委託目標_1m</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$金額計算</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標差額; 値:Case ( IsEmpty ( Filter ( $$委託目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標1月前 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$委託目標1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標1月前 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Case</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Filter</Chunk>
+								<Chunk type="NoRef"> ( $$委託目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
+								</Chunk>
+								<Chunk type="NoRef"> - $$委託目標1月前 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標差額; 値:Case ( IsEmpty ( Filter ( $$卸目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::当月目標金額_月初_卸売 - $$卸目標1月前 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$卸目標1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::当月目標金額_月初_卸売 - $$卸目標1月前 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Case</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Filter</Chunk>
+								<Chunk type="NoRef"> ( $$卸目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="24" name="当月目標金額_月初_卸売"/>
+								</Chunk>
+								<Chunk type="NoRef"> - $$卸目標1月前 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地差額; 値:Case ( IsEmpty ( Filter ( $$委託着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::月次着地額_月次_委託 - $$委託着地額1月前 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$委託着地額1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::月次着地額_月次_委託 - $$委託着地額1月前 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Case</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Filter</Chunk>
+								<Chunk type="NoRef"> ( $$委託着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="12" name="月次着地額_月次_委託"/>
+								</Chunk>
+								<Chunk type="NoRef"> - $$委託着地額1月前 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地差額; 値:Case ( IsEmpty ( Filter ( $$卸着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::月次着地額_月次_卸売 - $$卸着地額1月前 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$卸着地額1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::月次着地額_月次_卸売 - $$卸着地額1月前 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Case</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Filter</Chunk>
+								<Chunk type="NoRef"> ( $$卸着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="25" name="月次着地額_月次_卸売"/>
+								</Chunk>
+								<Chunk type="NoRef"> - $$卸着地額1月前 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地差額</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="6" name="レイアウト切り替え">
+						<StepText>レイアウト切り替え [ 「SV担当者入力データ月次｜詳細」 (SV担当者入力データ月次) ]</StepText>
+						<LayoutDestination value="SelectedLayout"/>
+						<Layout id="32" name="SV担当者入力データ月次｜詳細"/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+						<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#◆更新情報◆</StepText>
+						<Text>◆更新情報◆</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#2025/07/09　maita SV担当入力データ月次詳細画面変更</StepText>
+						<Text>2025/07/09　maita SV担当入力データ月次詳細画面変更</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+						<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+					</Step>
+				</StepList>
+			</Script>
+			<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="157" name="SV担当入力データ月次詳細 | レイアウト移動">
+				<StepList>
+					<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
+						<StepText>レコード/検索条件/ページへ移動 [ Get ( スクリプト引数 ) ]
+[ ダイアログなし ]</StepText>
+						<NoInteract state="True"/>
+						<RowPageLocation value="ByCalculation"/>
+						<Calculation><![CDATA[Get ( スクリプト引数 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Get</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">スクリプト引数</Chunk>
+							<Chunk type="NoRef"> )</Chunk>
+						</DisplayCalculation>
+					</Step>
+					<Step enable="False" id="16" name="レコード/検索条件/ページへ移動">
+						<StepText>//  レコード/検索条件/ページへ移動
+[ ダイアログなし; 前の; 最後まできたら終了 ]</StepText>
+						<NoInteract state="True"/>
+						<Exit state="True"/>
+						<RowPageLocation value="Previous"/>
+						<Calculation><![CDATA[$pageAct]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">$pageAct</Chunk>
+						</DisplayCalculation>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="False" id="89" name="# (コメント)">
+						<StepText>//  #最初/前/次/最終 レコードに移動するための変数設定</StepText>
+						<Text>最初/前/次/最終 レコードに移動するための変数設定</Text>
+					</Step>
+					<Step enable="False" id="141" name="変数を設定">
+						<StepText>//  変数を設定 [ $pageAct; 値:Case (
+     Get ( スクリプト引数 ) = &quot;next&quot;; Get ( レコード番号 ) + 1;
+     Get ( スクリプト引数 ) = &quot;prev&quot;; Get ( レコード番号 ) - 1;
+     Get ( スクリプト引数 ) = &quot;first&quot;; 1;
+     Get ( スクリプト引数 ) = &quot;last&quot;; Get ( 対象レコード数 )
+     ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Case (
+     Get ( スクリプト引数 ) = "next"; Get ( レコード番号 ) + 1;
+     Get ( スクリプト引数 ) = "prev"; Get ( レコード番号 ) - 1;
+     Get ( スクリプト引数 ) = "first"; 1;
+     Get ( スクリプト引数 ) = "last"; Get ( 対象レコード数 )
+     )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Case</Chunk>
+								<Chunk type="NoRef"> (
+     </Chunk>
+								<Chunk type="FunctionRef">Get</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">スクリプト引数</Chunk>
+								<Chunk type="NoRef"> ) = &quot;next&quot;; </Chunk>
+								<Chunk type="FunctionRef">Get</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">レコード番号</Chunk>
+								<Chunk type="NoRef"> ) + 1;
+     </Chunk>
+								<Chunk type="FunctionRef">Get</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">スクリプト引数</Chunk>
+								<Chunk type="NoRef"> ) = &quot;prev&quot;; </Chunk>
+								<Chunk type="FunctionRef">Get</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">レコード番号</Chunk>
+								<Chunk type="NoRef"> ) - 1;
+     </Chunk>
+								<Chunk type="FunctionRef">Get</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">スクリプト引数</Chunk>
+								<Chunk type="NoRef"> ) = &quot;first&quot;; 1;
+     </Chunk>
+								<Chunk type="FunctionRef">Get</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">スクリプト引数</Chunk>
+								<Chunk type="NoRef"> ) = &quot;last&quot;; </Chunk>
+								<Chunk type="FunctionRef">Get</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">対象レコード数</Chunk>
+								<Chunk type="NoRef"> )
+     )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$pageAct</Name>
+					</Step>
+					<Step enable="False" id="89" name="# (コメント)">
+						<StepText>//  </StepText>
+					</Step>
+					<Step enable="False" id="89" name="# (コメント)">
+						<StepText>//  #範囲チェック(先頭より前は処理しない&amp;最終より後は処理しない(存在するレコード番号の範囲内だけに移動))</StepText>
+						<Text>範囲チェック(先頭より前は処理しない&amp;最終より後は処理しない(存在するレコード番号の範囲内だけに移動))</Text>
+					</Step>
+					<Step enable="False" id="68" name="If">
+						<StepText>//  If [ $pageAct ≥ 1 and $pageAct ≤ Get ( 対象レコード数 ) ]</StepText>
+						<Calculation><![CDATA[$pageAct ≥ 1 and $pageAct ≤ Get ( 対象レコード数 )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">$pageAct ≥ 1 </Chunk>
+							<Chunk type="FunctionRef">and</Chunk>
+							<Chunk type="NoRef"> $pageAct ≤ </Chunk>
+							<Chunk type="FunctionRef">Get</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">対象レコード数</Chunk>
+							<Chunk type="NoRef"> )</Chunk>
+						</DisplayCalculation>
+					</Step>
+					<Step enable="False" id="16" name="レコード/検索条件/ページへ移動">
+						<StepText>//  レコード/検索条件/ページへ移動 [ $pageAct ]
+[ ダイアログなし ]</StepText>
+						<NoInteract state="True"/>
+						<RowPageLocation value="ByCalculation"/>
+						<Calculation><![CDATA[$pageAct]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">$pageAct</Chunk>
+						</DisplayCalculation>
+					</Step>
+					<Step enable="False" id="70" name="End If">
+						<StepText>//  End If</StepText>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#SQL処理 1-3か月毎の目標値と着地額を取得(値が存在しなかった場合&quot;設定金額なし&quot;を設定)</StepText>
+						<Text>SQL処理 1-3か月毎の目標値と着地額を取得(値が存在しなかった場合&quot;設定金額なし&quot;を設定)</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $resultList; 値:Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 );
+
+
+  m1Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y1; m1
+    ) ; 
+  
+  m2Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y2; m2
+    ) ; 
+
+  m3Row = ExecuteSQL (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    SV担当者入力データ月次::加盟店セットCD;
+    y3; m3
+    ) ;
+  
+  m1Row = If ( not IsEmpty ( m1Row ) ; m1Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m2Row = If ( not IsEmpty ( m2Row ) ; m2Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m3Row = If ( not IsEmpty ( m3Row ) ; m3Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  result = m3Row &amp; ¶ &amp; m2Row &amp; ¶ &amp; m1Row
+  ];
+  
+  result 
+) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Let (
+[
+  today = Date ( SV担当者入力データ月次::月 - 1 ; 1 ; SV担当者入力データ月次::年 ) ;
+
+  // 取得対象の3か月の年月をそれぞれ算出
+  y1 = Year ( today );
+  m1 = Month ( today );
+
+  date2 = Date ( m1 - 1 ; 1 ; y1 );
+  y2 = Year ( date2 );
+  m2 = Month ( date2 );
+
+  date3 = Date ( m2 - 1 ; 1 ; y2 );
+  y3 = Year ( date3 );
+  m3 = Month ( date3 );
+
+
+  m1Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y1; m1
+    ) ; 
+  
+  m2Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y2; m2
+    ) ; 
+
+  m3Row = ExecuteSQL (
+    "
+    SELECT \"当月目標金額_月初_委託\",\"当月目標金額_月初_卸売\",\"月次着地額_月次_委託\",\"月次着地額_月次_卸売\"
+    FROM \"SV担当者入力データ月次\"
+    WHERE \"加盟店セットCD\" = ?
+    AND (
+      (\"年\" = ? AND \"月\" = ?) 
+    )
+    ";
+    ","; "¶";
+    SV担当者入力データ月次::加盟店セットCD;
+    y3; m3
+    ) ;
+  
+  m1Row = If ( not IsEmpty ( m1Row ) ; m1Row ; "設定金額なし,設定金額なし,設定金額なし,設定金額なし" ) ; 
+  m2Row = If ( not IsEmpty ( m2Row ) ; m2Row ; "設定金額なし,設定金額なし,設定金額なし,設定金額なし" ) ; 
+  m3Row = If ( not IsEmpty ( m3Row ) ; m3Row ; "設定金額なし,設定金額なし,設定金額なし,設定金額なし" ) ; 
+  result = m3Row & ¶ & m2Row & ¶ & m1Row
+  ];
+  
+  result 
+)]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Let</Chunk>
+								<Chunk type="NoRef"> (
+[
+  today = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="16" name="月"/>
+								</Chunk>
+								<Chunk type="NoRef"> - 1 ; 1 ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="15" name="年"/>
+								</Chunk>
+								<Chunk type="NoRef"> ) ;
+
+  </Chunk>
+								<Chunk type="FunctionRef">// 取得対象の3か月の年月をそれぞれ算出
+</Chunk>
+								<Chunk type="NoRef">  y1 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( today );
+  m1 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( today );
+
+  date2 = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( m1 - 1 ; 1 ; y1 );
+  y2 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( date2 );
+  m2 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( date2 );
+
+  date3 = </Chunk>
+								<Chunk type="FunctionRef">Date</Chunk>
+								<Chunk type="NoRef"> ( m2 - 1 ; 1 ; y2 );
+  y3 = </Chunk>
+								<Chunk type="FunctionRef">Year</Chunk>
+								<Chunk type="NoRef"> ( date3 );
+  m3 = </Chunk>
+								<Chunk type="FunctionRef">Month</Chunk>
+								<Chunk type="NoRef"> ( date3 );
+
+
+  m1Row = </Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+    y1; m1
+    ) ; 
+  
+  m2Row = </Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+    y2; m2
+    ) ; 
+
+  m3Row = </Chunk>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (
+    &quot;
+    SELECT \&quot;当月目標金額_月初_委託\&quot;,\&quot;当月目標金額_月初_卸売\&quot;,\&quot;月次着地額_月次_委託\&quot;,\&quot;月次着地額_月次_卸売\&quot;
+    FROM \&quot;SV担当者入力データ月次\&quot;
+    WHERE \&quot;加盟店セットCD\&quot; = ?
+    AND (
+      (\&quot;年\&quot; = ? AND \&quot;月\&quot; = ?) 
+    )
+    &quot;;
+    &quot;,&quot;; &quot;¶&quot;;
+    </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="23" name="加盟店セットCD"/>
+								</Chunk>
+								<Chunk type="NoRef">;
+    y3; m3
+    ) ;
+  
+  m1Row = </Chunk>
+								<Chunk type="FunctionRef">If</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">not</Chunk>
+								<Chunk type="NoRef"> </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( m1Row ) ; m1Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m2Row = </Chunk>
+								<Chunk type="FunctionRef">If</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">not</Chunk>
+								<Chunk type="NoRef"> </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( m2Row ) ; m2Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  m3Row = </Chunk>
+								<Chunk type="FunctionRef">If</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">not</Chunk>
+								<Chunk type="NoRef"> </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( m3Row ) ; m3Row ; &quot;設定金額なし,設定金額なし,設定金額なし,設定金額なし&quot; ) ; 
+  result = m3Row &amp; ¶ &amp; m2Row &amp; ¶ &amp; m1Row
+  ];
+  
+  result 
+)</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$resultList</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#3か月前データの取得</StepText>
+						<Text>3か月前データの取得</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $row1; 値:GetValue ( $resultList ; 1 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( $resultList ; 1 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( $resultList ; 1 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$row1</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 1 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標3月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 2 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標3月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地額3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 3 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地額3月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地額3月前; 値:GetValue ( Substitute ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row1 ; "," ; "¶" ) ; 4 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row1 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地額3月前</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#前々月データの取得</StepText>
+						<Text>前々月データの取得</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $row2; 値:GetValue ( $resultList ; 2 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( $resultList ; 2 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( $resultList ; 2 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$row2</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 1 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標2月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 2 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標2月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地額2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 3 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地額2月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地額2月前; 値:GetValue ( Substitute ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row2 ; "," ; "¶" ) ; 4 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row2 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地額2月前</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#前月のデータの取得</StepText>
+						<Text>前月のデータの取得</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $row3; 値:GetValue ( $resultList ; 3 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( $resultList ; 3 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( $resultList ; 3 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$row3</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 1 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 1 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標1月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 2 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 2 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標1月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地額1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 3 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 3 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地額1月前</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地額1月前; 値:GetValue ( Substitute ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[GetValue ( Substitute ( $row3 ; "," ; "¶" ) ; 4 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">GetValue</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Substitute</Chunk>
+								<Chunk type="NoRef"> ( $row3 ; &quot;,&quot; ; &quot;¶&quot; ) ; 4 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地額1月前</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#リセット</StepText>
+						<Text>リセット</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標差額; 値:&quot;&quot; ]</StepText>
+						<Value>
+							<Calculation><![CDATA[""]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;&quot;</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標差額; 値:&quot;&quot; ]</StepText>
+						<Value>
+							<Calculation><![CDATA[""]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;&quot;</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地差額; 値:&quot;&quot; ]</StepText>
+						<Value>
+							<Calculation><![CDATA[""]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;&quot;</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地差額; 値:&quot;&quot; ]</StepText>
+						<Value>
+							<Calculation><![CDATA[""]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;&quot;</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地差額</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#前月データと比較して差額を計算し変数に格納</StepText>
+						<Text>前月データと比較して差額を計算し変数に格納</Text>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託目標差額; 値:Case ( IsEmpty ( Filter ( $$委託目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標1月前 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$委託目標1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::当月目標金額_月初_委託 - $$委託目標1月前 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Case</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Filter</Chunk>
+								<Chunk type="NoRef"> ( $$委託目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
+								</Chunk>
+								<Chunk type="NoRef"> - $$委託目標1月前 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託目標差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸目標差額; 値:Case ( IsEmpty ( Filter ( $$卸目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::当月目標金額_月初_卸売 - $$卸目標1月前 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$卸目標1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::当月目標金額_月初_卸売 - $$卸目標1月前 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Case</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Filter</Chunk>
+								<Chunk type="NoRef"> ( $$卸目標1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="24" name="当月目標金額_月初_卸売"/>
+								</Chunk>
+								<Chunk type="NoRef"> - $$卸目標1月前 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸目標差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$委託着地差額; 値:Case ( IsEmpty ( Filter ( $$委託着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::月次着地額_月次_委託 - $$委託着地額1月前 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$委託着地額1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::月次着地額_月次_委託 - $$委託着地額1月前 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Case</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Filter</Chunk>
+								<Chunk type="NoRef"> ( $$委託着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="12" name="月次着地額_月次_委託"/>
+								</Chunk>
+								<Chunk type="NoRef"> - $$委託着地額1月前 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$委託着地差額</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$卸着地差額; 値:Case ( IsEmpty ( Filter ( $$卸着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; SV担当者入力データ月次::月次着地額_月次_卸売 - $$卸着地額1月前 ) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[Case ( IsEmpty ( Filter ( $$卸着地額1月前 ; "1234567890" ) ) ; "前月値なし" ; SV担当者入力データ月次::月次着地額_月次_卸売 - $$卸着地額1月前 )]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">Case</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">IsEmpty</Chunk>
+								<Chunk type="NoRef"> ( </Chunk>
+								<Chunk type="FunctionRef">Filter</Chunk>
+								<Chunk type="NoRef"> ( $$卸着地額1月前 ; &quot;1234567890&quot; ) ) ; &quot;前月値なし&quot; ; </Chunk>
+								<Chunk type="FieldRef">
+									<Field table="SV担当者入力データ月次" id="25" name="月次着地額_月次_卸売"/>
+								</Chunk>
+								<Chunk type="NoRef"> - $$卸着地額1月前 )</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$卸着地差額</Name>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="80" name="ウインドウ内容の再表示">
+						<StepText>ウインドウ内容の再表示</StepText>
+						<Option state="False"/>
+						<FlushSQLData state="False"/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+						<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#◆更新情報◆</StepText>
+						<Text>◆更新情報◆</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#2025/07/09　maita SV担当入力データ月次詳細画面変更</StepText>
+						<Text>2025/07/09　maita SV担当入力データ月次詳細画面変更</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+						<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
+					</Step>
+					<Step enable="True" id="89" name="# (コメント)">
+						<StepText/>
 					</Step>
 				</StepList>
 			</Script>
