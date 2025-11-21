@@ -3,25 +3,13 @@
 	<ValueList id="1" name="年">
 		<Source value="Custom"/>
 		<CustomValues>
-			<Text>2024
-2025</Text>
+			<Text>20242025</Text>
 		</CustomValues>
 	</ValueList>
 	<ValueList id="2" name="月">
 		<Source value="Custom"/>
 		<CustomValues>
-			<Text>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12</Text>
+			<Text>123456789101112</Text>
 		</CustomValues>
 	</ValueList>
 	<ValueList id="3" name="SV担当者CD">
@@ -37,9 +25,7 @@
 	<ValueList id="4" name="使わない）カテゴリ名">
 		<Source value="Custom"/>
 		<CustomValues>
-			<Text>加盟先
-SV担当者
-品種分類</Text>
+			<Text>加盟先SV担当者品種分類</Text>
 		</CustomValues>
 	</ValueList>
 	<ValueList id="5" name="加盟店法人CD">
