@@ -36,7 +36,7 @@
 	<Account id="42" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="000119">
 		<Description/>
 	</Account>
-	<Account id="44" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="002283">
+	<Account id="44" privilegeSet="[Data Editor]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="002283">
 		<Description/>
 	</Account>
 	<Account id="45" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="999999">

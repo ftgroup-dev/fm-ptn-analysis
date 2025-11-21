@@ -253,4 +253,11 @@ GRP</Text>
 			<Text>1</Text>
 		</CustomValues>
 	</ValueList>
+	<ValueList id="26" name="販売区分">
+		<Source value="Custom"/>
+		<CustomValues>
+			<Text>委託
+卸売</Text>
+		</CustomValues>
+	</ValueList>
 </ValueListCatalog>
