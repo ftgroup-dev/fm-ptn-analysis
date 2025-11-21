@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<FMPReport link="概要.xml" creationTime="11:14:27" creationDate="2025/07/24" type="Report" version="21.1.1">
+<FMPReport link="概要.xml" creationTime="10:31:13" creationDate="2025/08/27" type="Report" version="21.1.1">
 <File name="PartnerManagementSystem.fmp12" path="ftg.irca-fm.com">
 <BaseTableCatalog>
 	<BaseTable id="129" records="3" name="top">
@@ -509,7 +509,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="136" records="8859" name="物件別管理データ">
+	<BaseTable id="136" records="9541" name="物件別管理データ">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -1874,7 +1874,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="138" records="11708" name="売上集計表">
+	<BaseTable id="138" records="12591" name="売上集計表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2277,7 +2277,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="140" records="11516" name="受注残明細表">
+	<BaseTable id="140" records="12922" name="受注残明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2899,7 +2899,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="142" records="45627" name="売上明細表">
+	<BaseTable id="142" records="48340" name="売上明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -4069,7 +4069,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="147" records="4411" name="SV担当者入力データ月次">
+	<BaseTable id="147" records="5171" name="SV担当者入力データ月次">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -4148,7 +4148,7 @@
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="12913" generate="OnCreation"/>
+					<Serial increment="1" nextValue="13673" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -4640,7 +4640,7 @@ If ( IsEmpty ( result ) ; 0 ; result )
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="148" records="0" name="SV担当者入力データ週次">
+	<BaseTable id="148" records="1" name="SV担当者入力データ週次">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -4719,7 +4719,7 @@ If ( IsEmpty ( result ) ; 0 ; result )
 			<Field id="16" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="1198" generate="OnCreation"/>
+					<Serial increment="1" nextValue="1199" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -6238,7 +6238,7 @@ v$return
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="154" records="4525" name="tagging中間テーブル">
+	<BaseTable id="154" records="4652" name="tagging中間テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6317,7 +6317,7 @@ v$return
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="4526" generate="OnCreation"/>
+					<Serial increment="1" nextValue="4653" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -6560,7 +6560,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="155" records="3381" name="商品">
+	<BaseTable id="155" records="3508" name="商品">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6639,7 +6639,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="4329" generate="OnCreation"/>
+					<Serial increment="1" nextValue="4456" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -7210,7 +7210,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="159" records="369" name="営業担当者">
+	<BaseTable id="159" records="376" name="営業担当者">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -7289,7 +7289,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="476" generate="OnCreation"/>
+					<Serial increment="1" nextValue="483" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -7671,7 +7671,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="165" records="770" name="loginLog">
+	<BaseTable id="165" records="798" name="loginLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -7827,7 +7827,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="162" records="8304" name="目標集計テーブル">
+	<BaseTable id="162" records="9736" name="目標集計テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -8198,7 +8198,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="163" records="14601" name="実績集計テーブル">
+	<BaseTable id="163" records="15743" name="実績集計テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -9329,7 +9329,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="169" records="171" name="xlsxImportLog">
+	<BaseTable id="169" records="195" name="xlsxImportLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -9602,7 +9602,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="171" records="23" name="SV担当者入力データ一括作成Log">
+	<BaseTable id="171" records="25" name="SV担当者入力データ一括作成Log">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -63440,7 +63440,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </TextObj>
 </Object>
 </Layout>
-<Layout width="1024" quickFind="True" includeInMenu="True" id="61" name="MT.SV担当者入力データ月次">
+<Layout width="1024" quickFind="True" includeInMenu="False" id="61" name="MT.SV担当者入力データ月次">
 <Table id="1065107" name="SV担当者入力データ月次"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
@@ -97865,7 +97865,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 </Layout>
-</Group><Layout width="1281" quickFind="True" includeInMenu="True" id="112" name="SV担当者入力データ月次｜一覧_確認後削除">
+</Group><Layout width="1281" quickFind="True" includeInMenu="False" id="112" name="SV担当者入力データ月次｜一覧_確認後削除">
 <Table id="1065107" name="SV担当者入力データ月次"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
@@ -103200,7 +103200,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo-Bold
 </TextObj>
 </Object>
 </Layout>
-<Layout width="1024" quickFind="True" includeInMenu="True" id="119" name="メンテナンス">
+<Layout width="1024" quickFind="True" includeInMenu="False" id="119" name="メンテナンス">
 <Table id="1065216" name="メンテナンス"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
@@ -112098,46 +112098,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次" id="16" name="月"/>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; global::ログインSV担当者CD_g ]</StepText>
-					<Calculation><![CDATA[global::ログインSV担当者CD_g]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="global" id="18" name="ログインSV担当者CD_g"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty ( $$searchSV ) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty ( $$searchSV )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">not</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( $$searchSV )</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="49" name="消去">
-					<StepText>消去 [ SV担当者入力データ月次::_sv担当者CD ]
-[ 選択 ]</StepText>
-					<SelectAll state="True"/>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; $$searchSV ]</StepText>
-					<Calculation><![CDATA[$$searchSV]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$searchSV</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
-				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
@@ -112217,150 +112177,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="False" id="68" name="If">
-					<StepText>//  If [ IsEmpty ( $$button ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( $$button )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( $$button )</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="False" id="141" name="変数を設定">
-					<StepText>//  変数を設定 [ $$button; 値:0 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[0]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">0</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$$button</Name>
-				</Step>
-				<Step enable="False" id="70" name="End If">
-					<StepText>//  End If</StepText>
-				</Step>
-				<Step enable="False" id="89" name="# (コメント)">
-					<StepText>//  </StepText>
-				</Step>
-				<Step enable="False" id="68" name="If">
-					<StepText>//  If [ $$button = 1 ]</StepText>
-					<Calculation><![CDATA[$$button = 1]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$button = 1</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="False" id="23" name="全レコードを表示">
-					<StepText>//  全レコードを表示</StepText>
-				</Step>
-				<Step enable="False" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>//  レコード/検索条件/ページへ移動
-[ ダイアログなし; 最初の ]</StepText>
-					<NoInteract state="True"/>
-					<RowPageLocation value="First"/>
-				</Step>
-				<Step enable="False" id="89" name="# (コメント)">
-					<StepText>//  </StepText>
-				</Step>
-				<Step enable="False" id="141" name="変数を設定">
-					<StepText>//  変数を設定 [ $$button; 値:0 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[0]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">0</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$$button</Name>
-				</Step>
-				<Step enable="False" id="69" name="Else">
-					<StepText>//  Else</StepText>
-				</Step>
-				<Step enable="False" id="22" name="検索モードに切り替え">
-					<StepText>//  検索モードに切り替え [  ]</StepText>
-					<Pause state="False"/>
-					<Restore state="False"/>
-				</Step>
-				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ SV担当者入力データ月次::年; Year ( Get ( 日付 ) ) ]</StepText>
-					<Calculation><![CDATA[Year ( Get ( 日付 ) )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Year</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">日付</Chunk>
-						<Chunk type="NoRef"> ) )</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="15" name="年"/>
-				</Step>
-				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ SV担当者入力データ月次::月; Month ( Get ( 日付 ) ) -1 ]</StepText>
-					<Calculation><![CDATA[Month ( Get ( 日付 ) ) -1]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Month</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">日付</Chunk>
-						<Chunk type="NoRef"> ) ) -1</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="16" name="月"/>
-				</Step>
-				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; global::ログインSV担当者CD_g ]</StepText>
-					<Calculation><![CDATA[global::ログインSV担当者CD_g]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="global" id="18" name="ログインSV担当者CD_g"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="False" id="28" name="検索実行">
-					<StepText>//  検索実行 [  ]</StepText>
-					<Restore state="False"/>
-				</Step>
-				<Step enable="False" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>//  レコード/検索条件/ページへ移動
-[ ダイアログなし; 最初の ]</StepText>
-					<NoInteract state="True"/>
-					<RowPageLocation value="First"/>
-				</Step>
-				<Step enable="False" id="89" name="# (コメント)">
-					<StepText>//  </StepText>
-				</Step>
-				<Step enable="False" id="141" name="変数を設定">
-					<StepText>//  変数を設定 [ $$button; 値:1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$$button</Name>
-				</Step>
-				<Step enable="False" id="70" name="End If">
-					<StepText>//  End If</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
 			</StepList>
 		</Script>
 		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="142" name="年月検索">
@@ -112369,30 +112185,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<StepText>検索モードに切り替え [  ]</StepText>
 					<Pause state="False"/>
 					<Restore state="False"/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty ( $$searchSV ) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty ( $$searchSV )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">not</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( $$searchSV )</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; $$searchSV ]</StepText>
-					<Calculation><![CDATA[$$searchSV]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$searchSV</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -112688,46 +112480,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 						<Chunk type="NoRef"> ) )</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次" id="16" name="月"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; global::ログインSV担当者CD_g ]</StepText>
-					<Calculation><![CDATA[global::ログインSV担当者CD_g]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="global" id="18" name="ログインSV担当者CD_g"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty ( $$searchSV ) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty ( $$searchSV )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">not</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( $$searchSV )</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="49" name="消去">
-					<StepText>消去 [ SV担当者入力データ月次::_sv担当者CD ]
-[ 選択 ]</StepText>
-					<SelectAll state="True"/>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; $$searchSV ]</StepText>
-					<Calculation><![CDATA[$$searchSV]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$searchSV</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -142360,7 +142112,7 @@ v$return
 				<Shortcut key="67" modifier="4"/>
 			</MenuItem>
 			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
-				<Command name="貼り付け(&amp;P)	Ctrl+V" id="57637"/>
+				<Command name="貼り付け(&amp;P) 	Ctrl+V" id="57637"/>
 				<Conditions>
 					<Install>
 						<Calculation><![CDATA[1]]></Calculation>

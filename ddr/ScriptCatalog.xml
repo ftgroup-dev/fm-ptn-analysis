@@ -8695,46 +8695,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次" id="16" name="月"/>
 				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; global::ログインSV担当者CD_g ]</StepText>
-					<Calculation><![CDATA[global::ログインSV担当者CD_g]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="global" id="18" name="ログインSV担当者CD_g"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty ( $$searchSV ) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty ( $$searchSV )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">not</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( $$searchSV )</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="49" name="消去">
-					<StepText>消去 [ SV担当者入力データ月次::_sv担当者CD ]
-[ 選択 ]</StepText>
-					<SelectAll state="True"/>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; $$searchSV ]</StepText>
-					<Calculation><![CDATA[$$searchSV]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$searchSV</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
-				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
@@ -8814,150 +8774,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="False" id="68" name="If">
-					<StepText>//  If [ IsEmpty ( $$button ) ]</StepText>
-					<Calculation><![CDATA[IsEmpty ( $$button )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( $$button )</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="False" id="141" name="変数を設定">
-					<StepText>//  変数を設定 [ $$button; 値:0 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[0]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">0</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$$button</Name>
-				</Step>
-				<Step enable="False" id="70" name="End If">
-					<StepText>//  End If</StepText>
-				</Step>
-				<Step enable="False" id="89" name="# (コメント)">
-					<StepText>//  </StepText>
-				</Step>
-				<Step enable="False" id="68" name="If">
-					<StepText>//  If [ $$button = 1 ]</StepText>
-					<Calculation><![CDATA[$$button = 1]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$button = 1</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="False" id="23" name="全レコードを表示">
-					<StepText>//  全レコードを表示</StepText>
-				</Step>
-				<Step enable="False" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>//  レコード/検索条件/ページへ移動
-[ ダイアログなし; 最初の ]</StepText>
-					<NoInteract state="True"/>
-					<RowPageLocation value="First"/>
-				</Step>
-				<Step enable="False" id="89" name="# (コメント)">
-					<StepText>//  </StepText>
-				</Step>
-				<Step enable="False" id="141" name="変数を設定">
-					<StepText>//  変数を設定 [ $$button; 値:0 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[0]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">0</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$$button</Name>
-				</Step>
-				<Step enable="False" id="69" name="Else">
-					<StepText>//  Else</StepText>
-				</Step>
-				<Step enable="False" id="22" name="検索モードに切り替え">
-					<StepText>//  検索モードに切り替え [  ]</StepText>
-					<Pause state="False"/>
-					<Restore state="False"/>
-				</Step>
-				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ SV担当者入力データ月次::年; Year ( Get ( 日付 ) ) ]</StepText>
-					<Calculation><![CDATA[Year ( Get ( 日付 ) )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Year</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">日付</Chunk>
-						<Chunk type="NoRef"> ) )</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="15" name="年"/>
-				</Step>
-				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ SV担当者入力データ月次::月; Month ( Get ( 日付 ) ) -1 ]</StepText>
-					<Calculation><![CDATA[Month ( Get ( 日付 ) ) -1]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Month</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">日付</Chunk>
-						<Chunk type="NoRef"> ) ) -1</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="16" name="月"/>
-				</Step>
-				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; global::ログインSV担当者CD_g ]</StepText>
-					<Calculation><![CDATA[global::ログインSV担当者CD_g]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="global" id="18" name="ログインSV担当者CD_g"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="False" id="28" name="検索実行">
-					<StepText>//  検索実行 [  ]</StepText>
-					<Restore state="False"/>
-				</Step>
-				<Step enable="False" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>//  レコード/検索条件/ページへ移動
-[ ダイアログなし; 最初の ]</StepText>
-					<NoInteract state="True"/>
-					<RowPageLocation value="First"/>
-				</Step>
-				<Step enable="False" id="89" name="# (コメント)">
-					<StepText>//  </StepText>
-				</Step>
-				<Step enable="False" id="141" name="変数を設定">
-					<StepText>//  変数を設定 [ $$button; 値:1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$$button</Name>
-				</Step>
-				<Step enable="False" id="70" name="End If">
-					<StepText>//  End If</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
 			</StepList>
 		</Script>
 		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="142" name="年月検索">
@@ -8966,30 +8782,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<StepText>検索モードに切り替え [  ]</StepText>
 					<Pause state="False"/>
 					<Restore state="False"/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty ( $$searchSV ) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty ( $$searchSV )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">not</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( $$searchSV )</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; $$searchSV ]</StepText>
-					<Calculation><![CDATA[$$searchSV]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$searchSV</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -9285,46 +9077,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 						<Chunk type="NoRef"> ) )</Chunk>
 					</DisplayCalculation>
 					<Field table="SV担当者入力データ月次" id="16" name="月"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; global::ログインSV担当者CD_g ]</StepText>
-					<Calculation><![CDATA[global::ログインSV担当者CD_g]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="global" id="18" name="ログインSV担当者CD_g"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty ( $$searchSV ) ]</StepText>
-					<Calculation><![CDATA[not IsEmpty ( $$searchSV )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">not</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( $$searchSV )</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="49" name="消去">
-					<StepText>消去 [ SV担当者入力データ月次::_sv担当者CD ]
-[ 選択 ]</StepText>
-					<SelectAll state="True"/>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次::_sv担当者CD; $$searchSV ]</StepText>
-					<Calculation><![CDATA[$$searchSV]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$searchSV</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次" id="14" name="_sv担当者CD"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
