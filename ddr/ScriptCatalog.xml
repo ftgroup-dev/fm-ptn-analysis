@@ -253,7 +253,6 @@
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $serverFlag = 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$serverFlag = 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$serverFlag = 1</Chunk>
@@ -265,8 +264,7 @@
 					<Layout id="99" name="global_処理用"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="122" name="新規ウインドウ">
 					<StepText>新規ウインドウ [ スタイル: カード; 使用するレイアウト: 「global_処理用」 (global); 閉じる: いいえ; 最小化: いいえ; 最大化: いいえ; サイズ変更: いいえ; メニューバー: いいえ; 親ウインドウを淡色表示: はい; ツールバー: いいえ ]</StepText>
@@ -357,7 +355,6 @@ Case(
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -509,7 +506,6 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -547,7 +543,6 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -632,7 +627,6 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -678,14 +672,12 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店セット::加盟店セット名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店セット::加盟店セット名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
@@ -819,12 +811,10 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $i ≤ $cnt_shop ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$i ≤ $cnt_shop]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$i ≤ $cnt_shop</Chunk>
@@ -1017,7 +1007,6 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -1355,7 +1344,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $区分 = &quot;委託&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$区分 = "委託"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$区分 = &quot;委託&quot;</Chunk>
@@ -1381,7 +1369,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $区分 = &quot;卸売&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$区分 = "卸売"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$区分 = &quot;卸売&quot;</Chunk>
@@ -1543,7 +1530,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -1589,7 +1575,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -1773,7 +1758,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -1809,8 +1793,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セットCD; 物件別管理データ_加盟店_加盟店セット::加盟店セットCD ]</StepText>
@@ -1850,7 +1833,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -1870,8 +1852,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::販売区分; 物件別管理データ_加盟店::販売区分 ]</StepText>
@@ -1891,7 +1872,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -1911,8 +1891,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::販売区分; 物件別管理データ_加盟店::販売区分 ]</StepText>
@@ -2010,7 +1989,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -2195,7 +2173,6 @@ $end
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -2355,7 +2332,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 売上集計表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -2391,8 +2367,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セットCD; 売上集計表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
@@ -2432,7 +2407,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 売上集計表_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -2452,8 +2426,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::販売区分; 売上集計表_加盟店::販売区分 ]</StepText>
@@ -2473,7 +2446,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 売上集計表_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -2493,8 +2465,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::販売区分; 売上集計表_加盟店::販売区分 ]</StepText>
@@ -2530,7 +2501,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -2859,7 +2829,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -2889,7 +2858,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $orderNo ≠ $currentOrderNo ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$orderNo ≠ $currentOrderNo]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$orderNo ≠ $currentOrderNo</Chunk>
@@ -3082,7 +3050,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -3118,8 +3085,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; 受注残明細表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
@@ -3162,7 +3128,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -3182,8 +3147,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
@@ -3203,7 +3167,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -3223,8 +3186,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
@@ -3260,7 +3222,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -3478,7 +3439,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ 受注残明細表::年月 = $currentPrevYm ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[受注残明細表::年月 = $currentPrevYm]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
@@ -3527,7 +3487,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -3553,7 +3512,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $orderNo ≠ $currentOrderNo ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$orderNo ≠ $currentOrderNo]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$orderNo ≠ $currentOrderNo</Chunk>
@@ -3742,7 +3700,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -3778,8 +3735,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; 受注残明細表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
@@ -3819,7 +3775,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -3839,8 +3794,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
@@ -3876,7 +3830,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -4080,7 +4033,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $serverFlag ≠ 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$serverFlag ≠ 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$serverFlag ≠ 1</Chunk>
@@ -4248,7 +4200,6 @@ Case(
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -4359,7 +4310,6 @@ Case(
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -4397,7 +4347,6 @@ Case(
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -4472,7 +4421,6 @@ Case(
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -4505,14 +4453,12 @@ Case(
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店セット::加盟店セット名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店セット::加盟店セット名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
@@ -4646,12 +4592,10 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $i ≤ $cnt_shop ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$i ≤ $cnt_shop]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$i ≤ $cnt_shop</Chunk>
@@ -4844,7 +4788,6 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -5191,7 +5134,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $区分 = &quot;委託&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$区分 = "委託"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$区分 = &quot;委託&quot;</Chunk>
@@ -5217,7 +5159,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $区分 = &quot;卸売&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$区分 = "卸売"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$区分 = &quot;卸売&quot;</Chunk>
@@ -5369,7 +5310,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -5402,7 +5342,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -5637,7 +5576,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -5673,8 +5611,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店セットCD; 物件別管理データ_加盟店_加盟店セット::加盟店セットCD ]</StepText>
@@ -5714,7 +5651,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 物件別管理データ_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 物件別管理データ_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -5734,8 +5670,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::販売区分; 物件別管理データ_加盟店::販売区分 ]</StepText>
@@ -5833,7 +5768,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -6015,7 +5949,6 @@ $end
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -6185,7 +6118,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 売上集計表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -6221,8 +6153,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::加盟店セットCD; 売上集計表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
@@ -6262,7 +6193,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 売上集計表_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 売上集計表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -6282,8 +6212,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="売上集計表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 売上集計表_実績集計テーブル｜作成許可::販売区分; 売上集計表_加盟店::販売区分 ]</StepText>
@@ -6319,7 +6248,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -6648,7 +6576,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -6678,7 +6605,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $orderNo ≠ $currentOrderNo ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$orderNo ≠ $currentOrderNo]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$orderNo ≠ $currentOrderNo</Chunk>
@@ -6881,7 +6807,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -6917,8 +6842,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; 受注残明細表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
@@ -6958,7 +6882,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -6978,8 +6901,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
@@ -7015,7 +6937,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -7233,7 +7154,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ 受注残明細表::年月 = $currentPrevYm ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[受注残明細表::年月 = $currentPrevYm]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
@@ -7282,7 +7202,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -7308,7 +7227,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $orderNo ≠ $currentOrderNo ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$orderNo ≠ $currentOrderNo]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$orderNo ≠ $currentOrderNo</Chunk>
@@ -7507,7 +7425,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店_加盟店セット::加盟店セットCD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -7543,8 +7460,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::加盟店セットCD; 受注残明細表_加盟店_加盟店セット::加盟店セットCD ]</StepText>
@@ -7584,7 +7500,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( 受注残明細表_加盟店::加盟店CD ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( 受注残明細表_加盟店::加盟店CD )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -7604,8 +7519,7 @@ IsEmpty ( #a ) ; "その他" ;
 					<Field table="受注残明細表_実績集計テーブル｜作成許可" id="38" name="販売区分"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 受注残明細表_実績集計テーブル｜作成許可::販売区分; 受注残明細表_加盟店::販売区分 ]</StepText>
@@ -7641,7 +7555,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -8012,7 +7925,6 @@ WorkingDays ( #b ; #a ; $休日リスト )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $稼働日 ≠ $締営業日 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$稼働日 ≠ $締営業日]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$稼働日 ≠ $締営業日</Chunk>
@@ -8137,7 +8049,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -8148,7 +8059,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -8225,7 +8135,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -8236,7 +8145,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -8308,7 +8216,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -8319,7 +8226,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -8378,7 +8284,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -8389,7 +8294,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -8456,7 +8360,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -8467,7 +8370,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -8522,7 +8424,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -8533,7 +8434,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -8598,7 +8498,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty ( $$searchY ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty ( $$searchY )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -8631,7 +8530,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty ( $$searchLastY ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty ( $$searchLastY )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -8664,7 +8562,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty ( $$searchYList ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty ( $$searchYList )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -8697,7 +8594,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty ( $$searchSV ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty ( $$searchSV )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -8892,7 +8788,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty ( $$searchStore ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty ( $$searchStore )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -9010,7 +8905,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty ( $$searchY ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty ( $$searchY )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -9043,7 +8937,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty ( $$searchLastY ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty ( $$searchLastY )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -9076,7 +8969,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty ( $$searchYList ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty ( $$searchYList )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -9331,7 +9223,6 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Left( Get( アプリケーションバージョン ); 6 ) = &quot;Server&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Left( Get( アプリケーションバージョン ); 6 ) = "Server"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Left</Chunk>
@@ -9375,8 +9266,7 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
 					<StepText>スクリプト実行 [ 「メニューバー設定」 ]</StepText>
@@ -9990,7 +9880,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 対象レコード数 ) = 1 and 稼働日情報テーブル::本日 = $$本日 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 対象レコード数 ) = 1 and 稼働日情報テーブル::本日 = $$本日]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -10013,8 +9902,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#稼働日テーブル更新</StepText>
@@ -10025,7 +9913,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -10164,7 +10051,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 					</Step>
 					<Step enable="True" id="68" name="If">
 						<StepText>If [ Count ( global_ユーザーマスタ｜ログイン用::ID ) = 1 ]</StepText>
-						<Restore state="False"/>
 						<Calculation><![CDATA[Count ( global_ユーザーマスタ｜ログイン用::ID ) = 1]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Count</Chunk>
@@ -10183,12 +10069,10 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<StepText/>
 					</Step>
 					<Step enable="True" id="69" name="Else">
-						<StepText>Else [  ]</StepText>
-						<Restore state="False"/>
+						<StepText>Else</StepText>
 					</Step>
 					<Step enable="True" id="68" name="If">
 						<StepText>If [ Count ( global_ユーザーマスタ｜ログイン用::ID) = 0 ]</StepText>
-						<Restore state="False"/>
 						<Calculation><![CDATA[Count ( global_ユーザーマスタ｜ログイン用::ID) = 0]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Count</Chunk>
@@ -10216,8 +10100,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<Name>$dialogue</Name>
 					</Step>
 					<Step enable="True" id="69" name="Else">
-						<StepText>Else [  ]</StepText>
-						<Restore state="False"/>
+						<StepText>Else</StepText>
 					</Step>
 					<Step enable="True" id="89" name="# (コメント)">
 						<StepText>#Countなのでここは &gt;1 が該当する</StepText>
@@ -10367,7 +10250,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 					</Step>
 					<Step enable="True" id="68" name="If">
 						<StepText>If [ Exact ( global::パスワード_g;global_ユーザーマスタ｜ログイン用::パスワード ) = 0 ]</StepText>
-						<Restore state="False"/>
 						<Calculation><![CDATA[Exact ( global::パスワード_g;global_ユーザーマスタ｜ログイン用::パスワード ) = 0]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Exact</Chunk>
@@ -10523,7 +10405,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 					</Step>
 					<Step enable="True" id="68" name="If">
 						<StepText>If [ global_ユーザーマスタ｜ログイン用::ステータス = &quot;無効&quot; ]</StepText>
-						<Restore state="False"/>
 						<Calculation><![CDATA[global_ユーザーマスタ｜ログイン用::ステータス = "無効"]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FieldRef">
@@ -10691,7 +10572,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 					</Step>
 					<Step enable="True" id="68" name="If">
 						<StepText>If [ Get ( 最終エラー ) ≠ 0 ]</StepText>
-						<Restore state="False"/>
 						<Calculation><![CDATA[Get ( 最終エラー ) ≠ 0]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Get</Chunk>
@@ -10969,6 +10849,41 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<Name>$$access</Name>
 					</Step>
 					<Step enable="True" id="141" name="変数を設定">
+						<StepText>変数を設定 [ $$ACL; 値:ExecuteSQL (&quot;
+	SELECT \&quot;Key\&quot; FROM \&quot;ACL\&quot;
+	WHERE \&quot;HideRoles\&quot; LIKE ?
+	&quot; ;
+	&quot;&quot; ; &quot;&quot; ;
+	&quot;%&quot; &amp; $$access &amp; &quot;%&quot;
+) ]</StepText>
+						<Value>
+							<Calculation><![CDATA[ExecuteSQL ("
+	SELECT \"Key\" FROM \"ACL\"
+	WHERE \"HideRoles\" LIKE ?
+	" ;
+	"" ; "" ;
+	"%" & $$access & "%"
+)]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+								<Chunk type="NoRef"> (&quot;
+	SELECT \&quot;Key\&quot; FROM \&quot;ACL\&quot;
+	WHERE \&quot;HideRoles\&quot; LIKE ?
+	&quot; ;
+	&quot;&quot; ; &quot;&quot; ;
+	&quot;%&quot; &amp; $$access &amp; &quot;%&quot;
+)</Chunk>
+							</DisplayCalculation>
+						</Value>
+						<Repetition>
+							<Calculation><![CDATA[1]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">1</Chunk>
+							</DisplayCalculation>
+						</Repetition>
+						<Name>$$ACL</Name>
+					</Step>
+					<Step enable="True" id="141" name="変数を設定">
 						<StepText>変数を設定 [ $$file; 値:Get( ファイル名 ) ]</StepText>
 						<Value>
 							<Calculation><![CDATA[Get( ファイル名 )]]></Calculation>
@@ -11127,7 +11042,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 					</Step>
 					<Step enable="True" id="68" name="If">
 						<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-						<Restore state="False"/>
 						<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="FunctionRef">Get</Chunk>
@@ -11166,7 +11080,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 					</Step>
 					<Step enable="False" id="68" name="If">
 						<StepText>//  If [ $$access = &quot;[Full Access]&quot; ]</StepText>
-						<Restore state="False"/>
 						<Calculation><![CDATA[$$access = "[Full Access]"]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="NoRef">$$access = &quot;[Full Access]&quot;</Chunk>
@@ -11178,8 +11091,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 						<Layout id="26" name="Top"/>
 					</Step>
 					<Step enable="False" id="69" name="Else">
-						<StepText>//  Else [  ]</StepText>
-						<Restore state="False"/>
+						<StepText>//  Else</StepText>
 					</Step>
 					<Step enable="False" id="6" name="レイアウト切り替え">
 						<StepText>//  レイアウト切り替え [ 「SV担当者入力データ月次｜一覧」 (SV担当者入力データ月次) ]</StepText>
@@ -11303,7 +11215,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( ファイル共有状態 ) ≠ 0 and Left( Get ( ホストアプリケーションバージョン ); 6 ) = &quot;Server&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( ファイル共有状態 ) ≠ 0 and Left( Get ( ホストアプリケーションバージョン ); 6 ) = "Server"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -11334,8 +11245,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 					<Script id="71" name="LogInLog_sub"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#ローカルファイル・共有ファイルの場合</StepText>
@@ -11932,7 +11842,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $$access = &quot;[Full Access]&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$$access = "[Full Access]"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$$access = &quot;[Full Access]&quot;</Chunk>
@@ -11940,7 +11849,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( デバイス )　= 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( デバイス )　= 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -11972,12 +11880,10 @@ WorkingDays (#b ; #c ; $休日リスト )
 					<CustomMenuSet id="1" name="[FileMaker の標準メニュー]"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( デバイス )　= 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( デバイス )　= 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -12097,7 +12003,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $arg = &quot;検索モード&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "検索モード"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;検索モード&quot;</Chunk>
@@ -12113,7 +12018,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;検索実行&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "検索実行"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;検索実行&quot;</Chunk>
@@ -12905,7 +12809,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;全件表示&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "全件表示"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;全件表示&quot;</Chunk>
@@ -13008,7 +12911,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;キャンセル&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "キャンセル"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;キャンセル&quot;</Chunk>
@@ -13025,8 +12927,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [  ]</StepText>
@@ -13123,7 +13024,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $arg = &quot;検索モード&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "検索モード"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;検索モード&quot;</Chunk>
@@ -13139,7 +13039,6 @@ WorkingDays (#b ; #c ; $休日リスト )
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;検索実行&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "検索実行"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;検索実行&quot;</Chunk>
@@ -13328,7 +13227,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;全件表示&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "全件表示"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;全件表示&quot;</Chunk>
@@ -13601,7 +13499,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;キャンセル&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "キャンセル"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;キャンセル&quot;</Chunk>
@@ -13618,8 +13515,7 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [  ]</StepText>
@@ -13677,7 +13573,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $arg = &quot;拡大&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "拡大"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;拡大&quot;</Chunk>
@@ -13693,7 +13588,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;縮小&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "縮小"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;縮小&quot;</Chunk>
@@ -13709,7 +13603,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;25&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "25"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;25&quot;</Chunk>
@@ -13725,7 +13618,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;50&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "50"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;50&quot;</Chunk>
@@ -13741,7 +13633,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;75&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "75"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;75&quot;</Chunk>
@@ -13757,7 +13648,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;100&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "100"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;100&quot;</Chunk>
@@ -13773,7 +13663,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;150&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "150"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;150&quot;</Chunk>
@@ -13789,7 +13678,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;200&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "200"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;200&quot;</Chunk>
@@ -13805,7 +13693,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;300&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "300"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;300&quot;</Chunk>
@@ -13821,7 +13708,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;400&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "400"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;400&quot;</Chunk>
@@ -13960,7 +13846,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終メッセージ選択 ) ≠ 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終メッセージ選択 ) ≠ 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -14069,7 +13954,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終メッセージ選択 ) = 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終メッセージ選択 ) = 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -14209,7 +14093,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $table = &quot;加盟店&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$table = "加盟店"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$table = &quot;加盟店&quot;</Chunk>
@@ -14217,7 +14100,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( 加盟店セット_tagging中間テーブル::ID ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( 加盟店セット_tagging中間テーブル::ID )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -14254,7 +14136,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $table = &quot;商品&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$table = "商品"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$table = &quot;商品&quot;</Chunk>
@@ -14262,7 +14143,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( 商品_tagging中間テーブル::ID ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( 商品_tagging中間テーブル::ID )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -14301,8 +14181,7 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#未設定　※ここに該当する場合はSetting Error</StepText>
@@ -14319,7 +14198,6 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $error = 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 1</Chunk>
@@ -14352,8 +14230,7 @@ If ( not IsEmpty ( SV担当者入力データ月次::月 ) ; Right ( &quot;0&quo
 					</DisplayCalculation>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: True ]</StepText>
@@ -17341,7 +17218,6 @@ ExecuteSQL (
 					</Step>
 					<Step enable="False" id="68" name="If">
 						<StepText>//  If [ $pageAct ≥ 1 and $pageAct ≤ Get ( 対象レコード数 ) ]</StepText>
-						<Restore state="False"/>
 						<Calculation><![CDATA[$pageAct ≥ 1 and $pageAct ≤ Get ( 対象レコード数 )]]></Calculation>
 						<DisplayCalculation>
 							<Chunk type="NoRef">$pageAct ≥ 1 </Chunk>
@@ -18311,7 +18187,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( スクリプト引数 ) = &quot;今月&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( スクリプト引数 ) = "今月"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -18398,7 +18273,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ Get ( スクリプト引数 ) = &quot;前月&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( スクリプト引数 ) = "前月"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -18443,7 +18317,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ Get ( スクリプト引数 ) = &quot;翌月&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( スクリプト引数 ) = "翌月"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -18488,7 +18361,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ Get ( スクリプト引数 ) = &quot;前年&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( スクリプト引数 ) = "前年"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -18515,7 +18387,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ Get ( スクリプト引数 ) = &quot;翌年&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( スクリプト引数 ) = "翌年"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -18614,7 +18485,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ global::SV入力担当レコード_g = 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[global::SV入力担当レコード_g = 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
@@ -18637,8 +18507,7 @@ ExecuteSQL (
 					</Query>
 				</Step>
 				<Step enable="False" id="69" name="Else">
-					<StepText>//  Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>//  Else</StepText>
 				</Step>
 				<Step enable="True" id="126" name="対象レコードの絞り込み">
 					<StepText>対象レコードの絞り込み [ 指定された検索条件: レコードの検索; 条件: SV担当者入力データ月次::_sv担当者CD: 「==$SV担当者CD」 ]
@@ -18724,7 +18593,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ global::SV入力担当レコード_g = 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[global::SV入力担当レコード_g = 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
@@ -18755,8 +18623,7 @@ ExecuteSQL (
 					</Query>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ global::SV入力担当レコード_g; 1 ]</StepText>
@@ -18864,7 +18731,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $arg = &quot;schedule&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "schedule"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;schedule&quot;</Chunk>
@@ -18898,7 +18764,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Day( $today ) ≠ 25 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Day( $today ) ≠ 25]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Day</Chunk>
@@ -19008,7 +18873,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;manual&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "manual"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;manual&quot;</Chunk>
@@ -19083,7 +18947,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終メッセージ選択 ) ≠ 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終メッセージ選択 ) ≠ 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -19104,7 +18967,6 @@ ExecuteSQL (
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ IsEmpty( $yearMonth ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty( $yearMonth )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -19144,8 +19006,7 @@ ExecuteSQL (
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#OK　年月入力あり</StepText>
@@ -19210,7 +19071,6 @@ ExecuteSQL (
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Length( $yearMonthFilter ) ≠ 6 or
 not Exact ( $yearMonth; $yearMonthFilter ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Length( $yearMonthFilter ) ≠ 6 or
 not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 					<DisplayCalculation>
@@ -19256,7 +19116,6 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $month &lt; 1 or $month &gt; 12 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$month < 1 or $month > 12]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$month &lt; 1 </Chunk>
@@ -19294,8 +19153,7 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#OKとする　何もしない</StepText>
@@ -19342,7 +19200,6 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終メッセージ選択 ) ≠ 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終メッセージ選択 ) ≠ 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -19448,8 +19305,7 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [  ]</StepText>
@@ -19472,7 +19328,6 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $arg = &quot;schedule&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "schedule"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;schedule&quot;</Chunk>
@@ -19555,7 +19410,6 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;manual&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "manual"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;manual&quot;</Chunk>
@@ -19662,7 +19516,6 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $recordNum = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$recordNum = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$recordNum = 0</Chunk>
@@ -19747,8 +19600,7 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 					</Buttons>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="22" name="検索モードに切り替え">
 					<StepText>検索モードに切り替え [  ]</StepText>
@@ -19795,7 +19647,6 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $error = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 0</Chunk>
@@ -19880,7 +19731,6 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $error = 401 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 401]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 401</Chunk>
@@ -19968,8 +19818,7 @@ not Exact ( $yearMonth; $yearMonthFilter )]]></Calculation>
 					</Buttons>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#想定外エラー</StepText>
@@ -20361,7 +20210,6 @@ global::カテゴリID_SV担当者_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $cd_sqlResult ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $cd_sqlResult )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -20411,7 +20259,6 @@ global::カテゴリID_SV担当者_g
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -20586,7 +20433,6 @@ global::カテゴリID_SV担当者_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $date &lt; $today ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$date < $today]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$date &lt; $today</Chunk>
@@ -20601,7 +20447,6 @@ global::カテゴリID_SV担当者_g
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ not IsEmpty( $lastDate ) and $date &lt; GetAsDate( $lastDate ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $lastDate ) and $date < GetAsDate( $lastDate )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -20622,8 +20467,7 @@ global::カテゴリID_SV担当者_g
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $cd_json; 値:JSONSetElement ( 
@@ -20770,7 +20614,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 対象レコード数 ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 対象レコード数 ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -20842,8 +20685,7 @@ $cd_json;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $recordNum; 値:0 ]</StepText>
@@ -20891,7 +20733,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -20900,7 +20741,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty( 加盟店セット_SV担当者入力データ月次｜一括作成用::主キー ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty( 加盟店セット_SV担当者入力データ月次｜一括作成用::主キー )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -21509,7 +21349,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $type = &quot;new&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$type = "new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$type = &quot;new&quot;</Chunk>
@@ -21627,8 +21466,7 @@ $cd_json;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#途中でサーバーに処理を渡す場合があるのでここでは常に検索する</StepText>
@@ -21639,7 +21477,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $uuid ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $uuid )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -21689,7 +21526,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $error = 0 and Get( 対象レコード数 ) = 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 0 and Get( 対象レコード数 ) = 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 0 </Chunk>
@@ -21706,8 +21542,7 @@ $cd_json;
 					<Text>OK</Text>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#ここでは [Error:0 かつレコード1件] 以外は全て想定外　ログだけなので作成しておく　※主キーは返さない</StepText>
@@ -21738,8 +21573,7 @@ $cd_json;
 					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#ここではuuidなしは想定外　ログだけなので作成しておく　※主キーは返さない</StepText>
@@ -21787,7 +21621,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $result ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $result )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -21809,7 +21642,6 @@ $cd_json;
 				</Step>
 				<Step enable="False" id="68" name="If">
 					<StepText>//  If [ not IsEmpty( $errorDetails ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $errorDetails )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -21836,7 +21668,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $endTS ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $endTS )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -21858,7 +21689,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $cancelTS ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $cancelTS )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -21880,7 +21710,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $recordNum ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $recordNum )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -21902,7 +21731,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $recordUUID ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $recordUUID )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -21924,7 +21752,6 @@ $cd_json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $svTagList ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $svTagList )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -21996,7 +21823,6 @@ $cd_json;
 IsEmpty ( SV担当者入力データ月次::加盟店セットCD ) or
 IsEmpty ( SV担当者入力データ月次::年 ) or
 IsEmpty ( SV担当者入力データ月次::月 ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( SV担当者入力データ月次::_sv担当者CD ) or
 IsEmpty ( SV担当者入力データ月次::加盟店セットCD ) or
 IsEmpty ( SV担当者入力データ月次::年 ) or
@@ -22245,7 +22071,6 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Count ( SV担当者入力データ週次::主キー ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Count ( SV担当者入力データ週次::主キー ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Count</Chunk>
@@ -22288,8 +22113,7 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="79" name="ウインドウの固定">
 					<StepText>ウインドウの固定</StepText>
@@ -22304,7 +22128,6 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="72" name="Exit Loop If">
@@ -22319,7 +22142,6 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ DayOfWeek ( $日付 ) = 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[DayOfWeek ( $日付 ) = 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">DayOfWeek</Chunk>
@@ -22596,7 +22418,6 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -22704,7 +22525,6 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $arg = &quot;set&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "set"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;set&quot;</Chunk>
@@ -22751,7 +22571,6 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $arg = &quot;reset&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$arg = "reset"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$arg = &quot;reset&quot;</Chunk>
@@ -22875,7 +22694,6 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 最終メッセージ選択 ) = 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 最終メッセージ選択 ) = 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -23007,7 +22825,6 @@ If(IsEmpty ( #b )  ; "加盟店CD" ; "" ) &
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 最終メッセージ選択 ) = 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 最終メッセージ選択 ) = 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -23112,7 +22929,6 @@ Case(
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -23264,7 +23080,6 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -23302,7 +23117,6 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -23387,7 +23201,6 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -23420,14 +23233,12 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
@@ -23552,7 +23363,6 @@ not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="False" id="147" name="フィールドを名前で設定">
@@ -23832,7 +23642,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -23865,7 +23674,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -24278,7 +24086,6 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="False" id="147" name="フィールドを名前で設定">
@@ -24668,7 +24475,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -24820,7 +24626,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 最終メッセージ選択 ) = 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 最終メッセージ選択 ) = 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -24909,7 +24714,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -25061,7 +24865,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 最終メッセージ選択 ) = 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 最終メッセージ選択 ) = 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -25166,7 +24969,6 @@ Case(
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
@@ -25321,7 +25123,6 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -25359,7 +25160,6 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="147" name="フィールドを名前で設定">
@@ -25434,7 +25234,6 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -25467,14 +25266,12 @@ Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
 not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
 not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
@@ -25661,7 +25458,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="False" id="147" name="フィールドを名前で設定">
@@ -25931,7 +25727,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -25964,7 +25759,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -26198,7 +25992,6 @@ IsEmpty ( #a ) ; "その他" ;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Defer"/>
 				</Step>
 				<Step enable="False" id="147" name="フィールドを名前で設定">
@@ -26469,7 +26262,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -26614,7 +26406,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( $対象年月 ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( $対象年月 )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -26744,7 +26535,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( global_物件別管理データ｜有無確認::主キー ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( global_物件別管理データ｜有無確認::主キー )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -27064,7 +26854,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $result ≠ &quot;completed&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$result ≠ "completed"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$result ≠ &quot;completed&quot;</Chunk>
@@ -27142,7 +26931,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="False" id="68" name="If">
 					<StepText>//  If [ $$稼働日 = 4 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$$稼働日 = 4]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$$稼働日 = 4</Chunk>
@@ -27288,7 +27076,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $total &lt; 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$total < 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$total &lt; 1</Chunk>
@@ -27534,7 +27321,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -27680,7 +27466,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ext = &quot;.xlsx&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ext = ".xlsx"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ext = &quot;.xlsx&quot;</Chunk>
@@ -27692,7 +27477,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $name = &quot;物件別管理データ&quot; or $name = &quot;売上集計表&quot; or $name = &quot;受注残明細表&quot; or $name = &quot;売上明細表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "物件別管理データ" or $name = "売上集計表" or $name = "受注残明細表" or $name = "売上明細表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;物件別管理データ&quot; </Chunk>
@@ -27710,7 +27494,6 @@ $カテゴリID[$cnt];
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ym = $tYM or $ym = $lYM ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ym = $tYM or $ym = $lYM]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ym = $tYM </Chunk>
@@ -27766,7 +27549,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ym = $tYM ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ym = $tYM]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ym = $tYM</Chunk>
@@ -27790,7 +27572,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $ym = $lYM ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ym = $lYM]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ym = $lYM</Chunk>
@@ -27858,7 +27639,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $json ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $json )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -27876,7 +27656,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $tcount = 4 and ValueCount( JSONListKeys ( $json; $tYM ) ) = 4 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$tcount = 4 and ValueCount( JSONListKeys ( $json; $tYM ) ) = 4]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$tcount = 4 </Chunk>
@@ -27893,8 +27672,7 @@ $json;
 					<Text>OK</Text>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $json; 値:JSONDeleteElement ( $json; $tYM ) ]</StepText>
@@ -27921,7 +27699,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $lcount = 4 and ValueCount( JSONListKeys ( $json; $lYM ) ) = 4 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$lcount = 4 and ValueCount( JSONListKeys ( $json; $lYM ) ) = 4]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$lcount = 4 </Chunk>
@@ -27938,8 +27715,7 @@ $json;
 					<Text>OK</Text>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $json; 値:JSONDeleteElement ( $json; $lYM ) ]</StepText>
@@ -28000,7 +27776,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ymTotal &lt; 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ymTotal < 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ymTotal &lt; 1</Chunk>
@@ -28020,8 +27795,7 @@ $json;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: True ]</StepText>
@@ -28093,7 +27867,6 @@ $json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -28188,7 +27961,6 @@ $json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -28283,7 +28055,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $name = &quot;物件別管理データ&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "物件別管理データ"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;物件別管理データ&quot;</Chunk>
@@ -28296,7 +28067,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $name ≠ &quot;物件別管理データ&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name ≠ "物件別管理データ"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name ≠ &quot;物件別管理データ&quot;</Chunk>
@@ -28370,7 +28140,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -28629,7 +28398,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $error = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 0</Chunk>
@@ -28641,7 +28409,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -28693,26 +28460,24 @@ $json;
 					<StepText>フィールド内容の全置換 [ 物件別管理データ::ファイル名; 計算で置き換える: $fileName ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$fileName]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$fileName</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="物件別管理データ" id="103" name="ファイル名"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
 					<StepText>フィールド内容の全置換 [ 物件別管理データ::年月; 計算で置き換える: $yearMonth ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$yearMonth]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$yearMonth</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="物件別管理データ" id="104" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
@@ -28761,7 +28526,6 @@ $json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -28812,7 +28576,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $errorSub ≠ 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$errorSub ≠ 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$errorSub ≠ 0</Chunk>
@@ -28914,8 +28677,7 @@ $json;
 					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#0件なら何もしない</StepText>
@@ -28965,7 +28727,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $error = 409 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 409]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 409</Chunk>
@@ -29012,8 +28773,7 @@ $json;
 					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#エラー</StepText>
@@ -29078,7 +28838,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $name = &quot;売上集計表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "売上集計表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;売上集計表&quot;</Chunk>
@@ -29091,7 +28850,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $name ≠ &quot;売上集計表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name ≠ "売上集計表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name ≠ &quot;売上集計表&quot;</Chunk>
@@ -29165,7 +28923,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29273,7 +29030,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $error = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 0</Chunk>
@@ -29281,7 +29037,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29334,26 +29089,24 @@ $json;
 					<StepText>フィールド内容の全置換 [ 売上集計表::ファイル名; 計算で置き換える: $fileName ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$fileName]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$fileName</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="売上集計表" id="28" name="ファイル名"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
 					<StepText>フィールド内容の全置換 [ 売上集計表::年月; 計算で置き換える: $yearMonth ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$yearMonth]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$yearMonth</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="売上集計表" id="29" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
@@ -29388,8 +29141,7 @@ $json;
 					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#0件なら何もしない</StepText>
@@ -29439,7 +29191,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $error = 409 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 409]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 409</Chunk>
@@ -29486,8 +29237,7 @@ $json;
 					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#エラー</StepText>
@@ -29552,7 +29302,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $name = &quot;受注残明細表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "受注残明細表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;受注残明細表&quot;</Chunk>
@@ -29565,7 +29314,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $name ≠ &quot;受注残明細表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name ≠ "受注残明細表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name ≠ &quot;受注残明細表&quot;</Chunk>
@@ -29639,7 +29387,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29780,7 +29527,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $error = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 0</Chunk>
@@ -29788,7 +29534,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -29841,26 +29586,24 @@ $json;
 					<StepText>フィールド内容の全置換 [ 受注残明細表::ファイル名; 計算で置き換える: $fileName ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$fileName]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$fileName</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="受注残明細表" id="44" name="ファイル名"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
 					<StepText>フィールド内容の全置換 [ 受注残明細表::年月; 計算で置き換える: $yearMonth ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$yearMonth]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$yearMonth</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="受注残明細表" id="45" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
@@ -29895,8 +29638,7 @@ $json;
 					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#0件なら何もしない</StepText>
@@ -29946,7 +29688,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $error = 409 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 409]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 409</Chunk>
@@ -29993,8 +29734,7 @@ $json;
 					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#エラー</StepText>
@@ -30059,7 +29799,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $name = &quot;売上明細表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "売上明細表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;売上明細表&quot;</Chunk>
@@ -30072,7 +29811,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $name ≠ &quot;売上明細表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name ≠ "売上明細表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name ≠ &quot;売上明細表&quot;</Chunk>
@@ -30146,7 +29884,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -30372,7 +30109,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $error = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 0</Chunk>
@@ -30380,7 +30116,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 対象レコード数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -30433,26 +30168,24 @@ $json;
 					<StepText>フィールド内容の全置換 [ 売上明細表::ファイル名; 計算で置き換える: $fileName ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$fileName]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$fileName</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="売上明細表" id="87" name="ファイル名"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
 					<StepText>フィールド内容の全置換 [ 売上明細表::年月; 計算で置き換える: $yearMonth ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$yearMonth]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$yearMonth</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="売上明細表" id="88" name="年月"/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
@@ -30501,7 +30234,6 @@ $json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
@@ -30530,7 +30262,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty( 売上明細表_商品_tagging中間テーブル::タグID ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty( 売上明細表_商品_tagging中間テーブル::タグID )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -30582,7 +30313,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $errorSub ≠ 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$errorSub ≠ 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$errorSub ≠ 0</Chunk>
@@ -30684,8 +30414,7 @@ $json;
 					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#0件なら何もしない</StepText>
@@ -30735,7 +30464,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $error = 409 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 409]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 409</Chunk>
@@ -30782,8 +30510,7 @@ $json;
 					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#エラー</StepText>
@@ -31081,7 +30808,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( レイアウトテーブル名 ) = &quot;batExport&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( レイアウトテーブル名 ) = "batExport"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -31095,7 +30821,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 対象レコード数 ) ≠ 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 対象レコード数 ) ≠ 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -31165,7 +30890,6 @@ v$return
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="72" name="Exit Loop If">
@@ -31257,7 +30981,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $error = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$error = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$error = 0</Chunk>
@@ -31295,8 +31018,7 @@ v$return
 					<Script id="88" name="OBIC7_xlsx取込_ログ"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
 					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
@@ -31348,8 +31070,7 @@ v$return
 					<StepText>End If</StepText>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
 					<StepText>スクリプト実行 [ 「OBIC7_xlsx取込_ログ」; 引数: JSONSetElement ( 
@@ -31893,7 +31614,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $type = &quot;new&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$type = "new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$type = &quot;new&quot;</Chunk>
@@ -31950,8 +31670,7 @@ v$return
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#Newで生成したレコードが見えている状態</StepText>
@@ -31975,7 +31694,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $fileName ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $fileName )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -32002,7 +31720,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $result ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $result )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -32024,7 +31741,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $errorDetails ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $errorDetails )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -32046,7 +31762,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $endTS ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $endTS )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -32068,7 +31783,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( $cancelTS ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( $cancelTS )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -32239,7 +31953,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $total &lt; 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$total < 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$total &lt; 1</Chunk>
@@ -32405,7 +32118,6 @@ v$return
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -32551,7 +32263,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ext = &quot;.csv&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ext = ".csv"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ext = &quot;.csv&quot;</Chunk>
@@ -32563,7 +32274,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $name = &quot;物件別管理データ&quot; or $name = &quot;売上集計表&quot; or $name = &quot;受注残明細表&quot; or $name = &quot;売上明細表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "物件別管理データ" or $name = "売上集計表" or $name = "受注残明細表" or $name = "売上明細表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;物件別管理データ&quot; </Chunk>
@@ -32581,7 +32291,6 @@ v$return
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ym = $tYM or $ym = $lYM ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ym = $tYM or $ym = $lYM]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ym = $tYM </Chunk>
@@ -32637,7 +32346,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ym = $tYM ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ym = $tYM]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ym = $tYM</Chunk>
@@ -32661,7 +32369,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $ym = $lYM ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ym = $lYM]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ym = $lYM</Chunk>
@@ -32733,7 +32440,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $tcount = 4 and ValueCount( JSONListKeys ( $json; $tYM ) ) = 4 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$tcount = 4 and ValueCount( JSONListKeys ( $json; $tYM ) ) = 4]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$tcount = 4 </Chunk>
@@ -32750,8 +32456,7 @@ $json;
 					<Text>OK</Text>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $json; 値:JSONDeleteElement ( $json; $tYM ) ]</StepText>
@@ -32778,7 +32483,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $lcount = 4 and ValueCount( JSONListKeys ( $json; $lYM ) ) = 4 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$lcount = 4 and ValueCount( JSONListKeys ( $json; $lYM ) ) = 4]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$lcount = 4 </Chunk>
@@ -32795,8 +32499,7 @@ $json;
 					<Text>OK</Text>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $json; 値:JSONDeleteElement ( $json; $lYM ) ]</StepText>
@@ -32939,7 +32642,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $total &lt; 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$total < 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$total &lt; 1</Chunk>
@@ -33102,7 +32804,6 @@ $json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -33248,7 +32949,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ext = &quot;.csv&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ext = ".csv"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ext = &quot;.csv&quot;</Chunk>
@@ -33260,7 +32960,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $name = &quot;物件別管理データ&quot; or $name = &quot;売上集計表&quot; or $name = &quot;受注残明細表&quot; or $name = &quot;売上明細表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "物件別管理データ" or $name = "売上集計表" or $name = "受注残明細表" or $name = "売上明細表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;物件別管理データ&quot; </Chunk>
@@ -33278,7 +32977,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ym = $tYM or $ym = $lYM ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ym = $tYM or $ym = $lYM]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ym = $tYM </Chunk>
@@ -33334,7 +33032,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ym = $tYM ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ym = $tYM]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ym = $tYM</Chunk>
@@ -33358,7 +33055,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $ym = $lYM ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ym = $lYM]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ym = $lYM</Chunk>
@@ -33430,7 +33126,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $tcount = 4 and ValueCount( JSONListKeys ( $json; $tYM ) ) = 4 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$tcount = 4 and ValueCount( JSONListKeys ( $json; $tYM ) ) = 4]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$tcount = 4 </Chunk>
@@ -33447,8 +33142,7 @@ $json;
 					<Text>OK</Text>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $json; 値:JSONDeleteElement ( $json; $tYM ) ]</StepText>
@@ -33475,7 +33169,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $lcount = 4 and ValueCount( JSONListKeys ( $json; $lYM ) ) = 4 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$lcount = 4 and ValueCount( JSONListKeys ( $json; $lYM ) ) = 4]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$lcount = 4 </Chunk>
@@ -33492,8 +33185,7 @@ $json;
 					<Text>OK</Text>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $json; 値:JSONDeleteElement ( $json; $lYM ) ]</StepText>
@@ -33554,7 +33246,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $ymTotal &lt; 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$ymTotal < 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$ymTotal &lt; 1</Chunk>
@@ -33591,7 +33282,6 @@ $json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -33670,7 +33360,6 @@ $json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -33746,7 +33435,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $name = &quot;物件別管理データ&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "物件別管理データ"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;物件別管理データ&quot;</Chunk>
@@ -33976,7 +33664,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -33989,26 +33676,24 @@ $json;
 					<StepText>フィールド内容の全置換 [ 物件別管理データ::ファイル名; 計算で置き換える: $fileName ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$fileName]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$fileName</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="物件別管理データ" id="103" name="ファイル名"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
 					<StepText>フィールド内容の全置換 [ 物件別管理データ::年月; 計算で置き換える: $yearMonth ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$yearMonth]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$yearMonth</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="物件別管理データ" id="104" name="年月"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
@@ -34019,7 +33704,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $name = &quot;売上集計表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "売上集計表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;売上集計表&quot;</Chunk>
@@ -34101,7 +33785,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -34114,26 +33797,24 @@ $json;
 					<StepText>フィールド内容の全置換 [ 売上集計表::ファイル名; 計算で置き換える: $fileName ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$fileName]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$fileName</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="売上集計表" id="28" name="ファイル名"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
 					<StepText>フィールド内容の全置換 [ 売上集計表::年月; 計算で置き換える: $yearMonth ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$yearMonth]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$yearMonth</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="売上集計表" id="29" name="年月"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
@@ -34144,7 +33825,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $name = &quot;受注残明細表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "受注残明細表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;受注残明細表&quot;</Chunk>
@@ -34259,7 +33939,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -34272,26 +33951,24 @@ $json;
 					<StepText>フィールド内容の全置換 [ 受注残明細表::ファイル名; 計算で置き換える: $fileName ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$fileName]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$fileName</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="受注残明細表" id="44" name="ファイル名"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
 					<StepText>フィールド内容の全置換 [ 受注残明細表::年月; 計算で置き換える: $yearMonth ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$yearMonth]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$yearMonth</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="受注残明細表" id="45" name="年月"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
@@ -34302,7 +33979,6 @@ $json;
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ $name = &quot;売上明細表&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$name = "売上明細表"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$name = &quot;売上明細表&quot;</Chunk>
@@ -34502,7 +34178,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -34515,26 +34190,24 @@ $json;
 					<StepText>フィールド内容の全置換 [ 売上明細表::ファイル名; 計算で置き換える: $fileName ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$fileName]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$fileName</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="売上明細表" id="87" name="ファイル名"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
 					<StepText>フィールド内容の全置換 [ 売上明細表::年月; 計算で置き換える: $yearMonth ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[$yearMonth]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$yearMonth</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="売上明細表" id="88" name="年月"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
@@ -34670,7 +34343,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) ≠ 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) ≠ 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -34709,7 +34381,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( レコード総数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( レコード総数 ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -34824,7 +34495,6 @@ $json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="72" name="Exit Loop If">
@@ -34956,7 +34626,6 @@ $json;
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -34964,7 +34633,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ not IsEmpty( 全テーブル情報｜tmp_全テーブル情報::BaseTableName ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[not IsEmpty( 全テーブル情報｜tmp_全テーブル情報::BaseTableName )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">not</Chunk>
@@ -34979,7 +34647,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ 全テーブル情報｜tmp::BaseTableName = 全テーブル情報｜tmp_全テーブル情報::BaseTableName ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[全テーブル情報｜tmp::BaseTableName = 全テーブル情報｜tmp_全テーブル情報::BaseTableName]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
@@ -34996,8 +34663,7 @@ $json;
 					<Text>何もしない</Text>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 全テーブル情報｜tmp_全テーブル情報::BaseTableName; 全テーブル情報｜tmp::BaseTableName ]</StepText>
@@ -35042,8 +34708,7 @@ $json;
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
 					<StepText>フィールド設定 [ 全テーブル情報｜tmp_全テーブル情報::BaseTableName; 全テーブル情報｜tmp::BaseTableName ]</StepText>
@@ -35141,7 +34806,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終エラー ) = 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終エラー ) = 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -35154,13 +34818,12 @@ $json;
 					<StepText>フィールド内容の全置換 [ 全テーブル情報::削除flag; 計算で置き換える: 1 ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">1</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="全テーブル情報" id="9" name="削除flag"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
@@ -35170,7 +34833,6 @@ $json;
 ) ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
-					<Restore state="False"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[List(
  全テーブル情報::更新情報;
@@ -35191,7 +34853,7 @@ $json;
 						<Chunk type="NoRef"> )
 )</Chunk>
 					</DisplayCalculation>
-					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
+					<SerialNumbers UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="全テーブル情報" id="10" name="更新情報"/>
 				</Step>
 				<Step enable="True" id="70" name="End If">
@@ -35341,7 +35003,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty( $arg ) or IsEmpty( $layoutTable ) or IsEmpty( $targetField ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty( $arg ) or IsEmpty( $layoutTable ) or IsEmpty( $targetField )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -35441,7 +35102,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty( $type ) or $type = &quot;global&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty( $type ) or $type = "global"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -35463,7 +35123,6 @@ $json;
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty( $type ) or $type = &quot;target&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty( $type ) or $type = "target"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -35846,7 +35505,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ $SV担当者タグ数 &gt; 1 or $SV管轄タグ数 &gt; 1 or $SV加盟タグ数 &gt; 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[$SV担当者タグ数 > 1 or $SV管轄タグ数 > 1 or $SV加盟タグ数 > 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">$SV担当者タグ数 &gt; 1 </Chunk>
@@ -35884,8 +35542,7 @@ global::カテゴリID_加盟_g
 					<StepText/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="103" name="現在のスクリプト終了">
 					<StepText>現在のスクリプト終了 [ 結果: True ]</StepText>
@@ -35965,7 +35622,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Count( 加盟店セット_tagging中間テーブル::タグID ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Count( 加盟店セット_tagging中間テーブル::タグID ) > 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Count</Chunk>
@@ -36032,7 +35688,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get( 最終メッセージ選択 ) = 1 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終メッセージ選択 ) = 1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -36104,7 +35759,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ Get( 最終メッセージ選択 ) = 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終メッセージ選択 ) = 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -36129,7 +35783,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ Get( 最終メッセージ選択 ) = 3 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get( 最終メッセージ選択 ) = 3]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -36232,7 +35885,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ ユーザーマスタ::ステータス　= &quot;有効&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[ユーザーマスタ::ステータス　= "有効"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
@@ -36281,7 +35933,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ IsEmpty ( ユーザーマスタ::アカウント名 ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( ユーザーマスタ::アカウント名 )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -36322,7 +35973,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="125" name="Else If">
 					<StepText>Else If [ IsEmpty ( ユーザーマスタ::パスワード ) ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[IsEmpty ( ユーザーマスタ::パスワード )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">IsEmpty</Chunk>
@@ -36399,7 +36049,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 最終メッセージ選択 ) = 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 最終メッセージ選択 ) = 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -36422,7 +36071,7 @@ global::カテゴリID_加盟_g
 					<Text>権限</Text>
 				</Step>
 				<Step enable="True" id="134" name="アカウントを追加">
-					<StepText>アカウントを追加 [ 認証方法: FileMaker; アカウント名: ユーザーマスタ::アカウント名; パスワード: ユーザーマスタ::パスワード; アクセス権セット: [データ入力のみ] ]</StepText>
+					<StepText>アカウントを追加 [ アカウント名: ユーザーマスタ::アカウント名; パスワード: ユーザーマスタ::パスワード; アクセス権セット: [データ入力のみ] ]</StepText>
 					<ChgPwdOnNextLogin value="False"/>
 					<AccountName>
 						<Calculation><![CDATA[ユーザーマスタ::アカウント名]]></Calculation>
@@ -36441,16 +36090,12 @@ global::カテゴリID_加盟_g
 						</DisplayCalculation>
 					</Password>
 					<PrivilegeSet id="2" name="[データ入力のみ]"/>
-					<AddAccount>
-						<AccountType>FileMaker</AccountType>
-					</AddAccount>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 最終エラー )　= 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 最終エラー )　= 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -36499,8 +36144,7 @@ global::カテゴリID_加盟_g
 					<FlushSQLData state="True"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="87" name="カスタムダイアログを表示">
 					<StepText>カスタムダイアログを表示 [ タイトル: &quot;エラー&quot;; メッセージ: &quot;正常に登録できませんでした。&quot;; デフォルトボタン: 「OK」, 確定: 「はい」 ]</StepText>
@@ -36601,7 +36245,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ ユーザーマスタ::ステータス = &quot;無効&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[ユーザーマスタ::ステータス = "無効"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
@@ -36676,7 +36319,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 最終メッセージ選択 ) = 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 最終メッセージ選択 ) = 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -36707,7 +36349,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 最終エラー )　= 0 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 最終エラー )　= 0]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -36756,8 +36397,7 @@ global::カテゴリID_加盟_g
 					<FlushSQLData state="True"/>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="87" name="カスタムダイアログを表示">
 					<StepText>カスタムダイアログを表示 [ タイトル: &quot;エラー&quot;; メッセージ: &quot;正常に停止できませんでした。&quot;; デフォルトボタン: 「OK」, 確定: 「はい」 ]</StepText>
@@ -36881,7 +36521,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ Get ( 最終メッセージ選択 ) = 2 ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[Get ( 最終メッセージ選択 ) = 2]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Get</Chunk>
@@ -36894,12 +36533,10 @@ global::カテゴリID_加盟_g
 					<StepText>現在のスクリプト終了 [  ]</StepText>
 				</Step>
 				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>Else</StepText>
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ ユーザーマスタ::ステータス = &quot;有効&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[ユーザーマスタ::ステータス = "有効"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
@@ -37119,7 +36756,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="68" name="If">
 					<StepText>If [ ユーザーマスタ::ステータス = &quot;有効&quot; ]</StepText>
-					<Restore state="False"/>
 					<Calculation><![CDATA[ユーザーマスタ::ステータス = "有効"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FieldRef">
@@ -37299,7 +36935,6 @@ global::カテゴリID_加盟_g
 				</Step>
 				<Step enable="True" id="71" name="Loop">
 					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
