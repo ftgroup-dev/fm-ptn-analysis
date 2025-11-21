@@ -682,224 +682,224 @@
 	<PrivilegeSet comment="SV担当者制限" id="7" allowModifyPassword="False" manageAccounts="False" managedExtended="False" menu="Minimal" idleDisconnect="True" overrideValidationWarning="False" exporting="False" printing="False" name="SV担当者制限">
 		<Records value="Custom">
 			<TableList>
-				<BaseTable id="129" name="top">
+				<BaseTable id="129" comment="" name="top">
 					<Create value="False"/>
 					<View value="True"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
-				<BaseTable id="130" name="global">
+				<BaseTable id="130" comment="" name="global">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="131" name="sytem">
+				<BaseTable id="131" comment="" name="sytem">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="136" name="物件別管理データ">
+				<BaseTable id="136" comment="" name="物件別管理データ">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="138" name="売上集計表">
+				<BaseTable id="138" comment="" name="売上集計表">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="140" name="受注残明細表">
+				<BaseTable id="140" comment="" name="受注残明細表">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="142" name="売上明細表">
+				<BaseTable id="142" comment="" name="売上明細表">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="147" name="SV担当者入力データ月次">
+				<BaseTable id="147" comment="" name="SV担当者入力データ月次">
 					<Create value="False"/>
 					<View value="True"/>
 					<Edit value="True"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
-				<BaseTable id="148" name="SV担当者入力データ週次">
+				<BaseTable id="148" comment="" name="SV担当者入力データ週次">
 					<Create value="True"/>
 					<View value="True"/>
 					<Edit value="True"/>
 					<Delete value="True"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
-				<BaseTable id="149" name="加盟店法人">
+				<BaseTable id="149" comment="" name="加盟店法人">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="150" name="加盟店">
+				<BaseTable id="150" comment="" name="加盟店">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="151" name="ユーザーマスタ">
+				<BaseTable id="151" comment="" name="ユーザーマスタ">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="152" name="カテゴリ">
+				<BaseTable id="152" comment="" name="カテゴリ">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="153" name="タグ">
+				<BaseTable id="153" comment="" name="タグ">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="154" name="tagging中間テーブル">
+				<BaseTable id="154" comment="" name="tagging中間テーブル">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="155" name="商品">
+				<BaseTable id="155" comment="" name="商品">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="156" name="タグ用テーブルマスタ">
+				<BaseTable id="156" comment="" name="タグ用テーブルマスタ">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="157" name="全テーブル情報">
+				<BaseTable id="157" comment="" name="全テーブル情報">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="158" name="全テーブル情報｜tmp">
+				<BaseTable id="158" comment="" name="全テーブル情報｜tmp">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="159" name="営業担当者">
+				<BaseTable id="159" comment="" name="営業担当者">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="160" name="休日マスタ">
+				<BaseTable id="160" comment="" name="休日マスタ">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="162" name="目標集計テーブル">
+				<BaseTable id="162" comment="" name="目標集計テーブル">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="163" name="実績集計テーブル">
+				<BaseTable id="163" comment="" name="実績集計テーブル">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="165" name="loginLog">
+				<BaseTable id="165" comment="" name="loginLog">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="166" name="営業日マスタ">
+				<BaseTable id="166" comment="" name="営業日マスタ">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="167" name="集計タグカテゴリテーブル">
+				<BaseTable id="167" comment="" name="集計タグカテゴリテーブル">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="168" name="稼働日情報テーブル">
+				<BaseTable id="168" comment="" name="稼働日情報テーブル">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="169" name="xlsxImportLog">
+				<BaseTable id="169" comment="" name="xlsxImportLog">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="170" name="batExport">
+				<BaseTable id="170" comment="" name="batExport">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="171" name="SV担当者入力データ一括作成Log">
+				<BaseTable id="171" comment="" name="SV担当者入力データ一括作成Log">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="172" name="加盟店セット">
+				<BaseTable id="172" comment="" name="加盟店セット">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="173" name="メンテナンス">
+				<BaseTable id="173" comment="" name="メンテナンス">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
