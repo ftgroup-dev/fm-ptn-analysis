@@ -18,7 +18,7 @@
 	<Account id="19" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="321995">
 		<Description/>
 	</Account>
-	<Account id="20" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="327312">
+	<Account id="20" privilegeSet="[Data Editor]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="327312">
 		<Description/>
 	</Account>
 	<Account id="21" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="327311">
