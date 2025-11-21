@@ -260,4 +260,11 @@ GRP</Text>
 卸売</Text>
 		</CustomValues>
 	</ValueList>
+	<ValueList id="27" name="集計年月一覧">
+		<Source value="Field"/>
+		<PrimaryField show="True" sort="True">
+			<Field table="計画進捗" id="8" name="年月"/>
+		</PrimaryField>
+		<ShowRelated value="False"/>
+	</ValueList>
 </ValueListCatalog>
