@@ -824,12 +824,12 @@ ExecuteSQL ("
 					<StepText/>
 				</Step>
 				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「N業バックアップレコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<StepText>スクリプト実行 [ 「&lt;不明&gt;」; 引数: &quot;all&quot; ]</StepText>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="174" name="N業バックアップレコード作成"/>
+					<Script id="174" name="&lt;不明&gt;"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -7458,7 +7458,7 @@ ExecuteSQL ("
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
 					<StepText>フィールド内容の全置換 [ 稼働日重要指数::計上売上; 計算で置き換える: Case (
- 稼働日重要指数::稼働日 &gt;= 3 ;
+ 稼働日重要指数::稼働日 &gt;= 2 ;
  ExecuteSQL (&quot;
 	SELECT \&quot;計上売上\&quot; FROM \&quot;稼働日重要指数\&quot;
 	WHERE \&quot;稼働日\&quot; = ?
@@ -7471,32 +7471,21 @@ ExecuteSQL ("
 	稼働日重要指数::年月
  ) + 稼働日重要指数::日計 ;
 
- 稼働日重要指数::稼働日 = 2 ;
- Sum ( 拠点別計画進捗_集計::前月繰越 ) +
- ExecuteSQL (&quot;
-	SELECT \&quot;日計\&quot; FROM \&quot;稼働日重要指数\&quot;
-	WHERE \&quot;稼働日\&quot; = ?
-	AND \&quot;重要指数分類\&quot; = ?
-	AND \&quot;年月\&quot; = ?
-	&quot; ;
-	&quot;&quot; ; &quot;&quot; ;
-	1 ;
-	稼働日重要指数::重要指数分類 ;
-	稼働日重要指数::年月
- ) + 稼働日重要指数::日計 ;
+ 稼働日重要指数::稼働日 = 1 ;
+ Sum ( 拠点別計画進捗_集計::前月繰越 ) + 稼働日重要指数::日計 ;
 
  &quot;&quot;
 )
 
-//稼働日が1⇒空欄
-//稼働日が2⇒前月繰越+日計(1)+日計(2)
-//それ以外⇒前日の計上売上+日計; 入力値の自動化オプションを無視 ]
+//稼働日が2以上⇒前日の計上売上+日計
+//稼働日が1⇒前月繰越+日計(1)
+//それ以外⇒空欄; 入力値の自動化オプションを無視 ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<With value="Calculation"/>
 					<Calculation><![CDATA[Case (
- 稼働日重要指数::稼働日 >= 3 ;
+ 稼働日重要指数::稼働日 >= 2 ;
  ExecuteSQL ("
 	SELECT \"計上売上\" FROM \"稼働日重要指数\"
 	WHERE \"稼働日\" = ?
@@ -7509,26 +7498,15 @@ ExecuteSQL ("
 	稼働日重要指数::年月
  ) + 稼働日重要指数::日計 ;
 
- 稼働日重要指数::稼働日 = 2 ;
- Sum ( 拠点別計画進捗_集計::前月繰越 ) +
- ExecuteSQL ("
-	SELECT \"日計\" FROM \"稼働日重要指数\"
-	WHERE \"稼働日\" = ?
-	AND \"重要指数分類\" = ?
-	AND \"年月\" = ?
-	" ;
-	"" ; "" ;
-	1 ;
-	稼働日重要指数::重要指数分類 ;
-	稼働日重要指数::年月
- ) + 稼働日重要指数::日計 ;
+ 稼働日重要指数::稼働日 = 1 ;
+ Sum ( 拠点別計画進捗_集計::前月繰越 ) + 稼働日重要指数::日計 ;
 
  ""
 )
 
-//稼働日が1⇒空欄
-//稼働日が2⇒前月繰越+日計(1)+日計(2)
-//それ以外⇒前日の計上売上+日計]]></Calculation>
+//稼働日が2以上⇒前日の計上売上+日計
+//稼働日が1⇒前月繰越+日計(1)
+//それ以外⇒空欄]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">Case</Chunk>
 						<Chunk type="NoRef"> (
@@ -7536,7 +7514,7 @@ ExecuteSQL ("
 						<Chunk type="FieldRef">
 							<Field table="稼働日重要指数" id="18" name="稼働日"/>
 						</Chunk>
-						<Chunk type="NoRef"> &gt;= 3 ;
+						<Chunk type="NoRef"> &gt;= 2 ;
  </Chunk>
 						<Chunk type="FunctionRef">ExecuteSQL</Chunk>
 						<Chunk type="NoRef"> (&quot;
@@ -7571,35 +7549,14 @@ ExecuteSQL ("
 						<Chunk type="FieldRef">
 							<Field table="稼働日重要指数" id="18" name="稼働日"/>
 						</Chunk>
-						<Chunk type="NoRef"> = 2 ;
+						<Chunk type="NoRef"> = 1 ;
  </Chunk>
 						<Chunk type="FunctionRef">Sum</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
 						<Chunk type="FieldRef">
 							<Field table="拠点別計画進捗_集計" id="23" name="前月繰越"/>
 						</Chunk>
-						<Chunk type="NoRef"> ) +
- </Chunk>
-						<Chunk type="FunctionRef">ExecuteSQL</Chunk>
-						<Chunk type="NoRef"> (&quot;
-	SELECT \&quot;日計\&quot; FROM \&quot;稼働日重要指数\&quot;
-	WHERE \&quot;稼働日\&quot; = ?
-	AND \&quot;重要指数分類\&quot; = ?
-	AND \&quot;年月\&quot; = ?
-	&quot; ;
-	&quot;&quot; ; &quot;&quot; ;
-	1 ;
-	</Chunk>
-						<Chunk type="FieldRef">
-							<Field table="稼働日重要指数" id="17" name="重要指数分類"/>
-						</Chunk>
-						<Chunk type="NoRef"> ;
-	</Chunk>
-						<Chunk type="FieldRef">
-							<Field table="稼働日重要指数" id="19" name="年月"/>
-						</Chunk>
-						<Chunk type="NoRef">
- ) + </Chunk>
+						<Chunk type="NoRef"> ) + </Chunk>
 						<Chunk type="FieldRef">
 							<Field table="稼働日重要指数" id="14" name="日計"/>
 						</Chunk>
@@ -7609,11 +7566,11 @@ ExecuteSQL ("
 )
 
 </Chunk>
-						<Chunk type="FunctionRef">//稼働日が1⇒空欄
+						<Chunk type="FunctionRef">//稼働日が2以上⇒前日の計上売上+日計
 </Chunk>
-						<Chunk type="FunctionRef">//稼働日が2⇒前月繰越+日計(1)+日計(2)
+						<Chunk type="FunctionRef">//稼働日が1⇒前月繰越+日計(1)
 </Chunk>
-						<Chunk type="FunctionRef">//それ以外⇒前日の計上売上+日計</Chunk>
+						<Chunk type="FunctionRef">//それ以外⇒空欄</Chunk>
 					</DisplayCalculation>
 					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="稼働日重要指数" id="7" name="計上売上"/>
@@ -9198,6 +9155,25 @@ ExecuteSQL ("
 					<StepText>エラー処理 [ オフ ]</StepText>
 					<Set state="False"/>
 				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#◆更新情報◆</StepText>
+					<Text>◆更新情報◆</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#20251117　okada　計上売上ロジック変更</StepText>
+					<Text>20251117　okada　計上売上ロジック変更</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
 			</StepList>
 		</Script>
 		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="166" name="N業のみ計算値更新">
@@ -9372,23 +9348,86 @@ ExecuteSQL ("
 					<Field table="拠点別計画進捗" id="57" name="当社受注"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
-					<StepText>フィールド内容の全置換 [ 拠点別計画進捗::達成率; 計算で置き換える: Round ( 拠点別計画進捗::当社受注 * 100 / 拠点別計画進捗::当月目標 ; 1 ); 入力値の自動化オプションを無視 ]
+					<StepText>フィールド内容の全置換 [ 拠点別計画進捗::達成率; 計算で置き換える: Let (
+ [
+ 当社受注 = 拠点別計画進捗::当社受注 ;
+ 当月目標 = 拠点別計画進捗_SV担当者入力データ月次::当月目標金額_月初_卸売 ;
+ rate = 当社受注 * 100 / 当月目標
+　] ;
+
+ Case (
+	当月目標 = 0 or IsEmpty ( 当月目標 ) or 当社受注 = 0 or IsEmpty ( 当社受注 ) ; &quot;&quot; ;
+	rate ≥ 0 and rate &lt; 1 ; &quot;0&quot; &amp; Round ( rate ; 1 ) ;
+	rate &lt; 0 and rate &gt; -1 ; &quot;-0&quot; &amp; Right ( Round ( rate ; 1 ) ; 2 ) ;
+	Round ( rate ; 1 )
+ )
+); 入力値の自動化オプションを無視 ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<With value="Calculation"/>
-					<Calculation><![CDATA[Round ( 拠点別計画進捗::当社受注 * 100 / 拠点別計画進捗::当月目標 ; 1 )]]></Calculation>
+					<Calculation><![CDATA[Let (
+ [
+ 当社受注 = 拠点別計画進捗::当社受注 ;
+ 当月目標 = 拠点別計画進捗_SV担当者入力データ月次::当月目標金額_月初_卸売 ;
+ rate = 当社受注 * 100 / 当月目標
+　] ;
+
+ Case (
+	当月目標 = 0 or IsEmpty ( 当月目標 ) or 当社受注 = 0 or IsEmpty ( 当社受注 ) ; "" ;
+	rate ≥ 0 and rate < 1 ; "0" & Round ( rate ; 1 ) ;
+	rate < 0 and rate > -1 ; "-0" & Right ( Round ( rate ; 1 ) ; 2 ) ;
+	Round ( rate ; 1 )
+ )
+)]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="FunctionRef">Round</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">Let</Chunk>
+						<Chunk type="NoRef"> (
+ [
+ 当社受注 = </Chunk>
 						<Chunk type="FieldRef">
 							<Field table="拠点別計画進捗" id="57" name="当社受注"/>
 						</Chunk>
-						<Chunk type="NoRef"> * 100 / </Chunk>
+						<Chunk type="NoRef"> ;
+ 当月目標 = </Chunk>
 						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗" id="25" name="当月目標"/>
+							<Field table="拠点別計画進捗_SV担当者入力データ月次" id="24" name="当月目標金額_月初_卸売"/>
 						</Chunk>
-						<Chunk type="NoRef"> ; 1 )</Chunk>
+						<Chunk type="NoRef"> ;
+ rate = 当社受注 * 100 / 当月目標
+　] ;
+
+ </Chunk>
+						<Chunk type="FunctionRef">Case</Chunk>
+						<Chunk type="NoRef"> (
+	当月目標 = 0 </Chunk>
+						<Chunk type="FunctionRef">or</Chunk>
+						<Chunk type="NoRef"> </Chunk>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( 当月目標 ) </Chunk>
+						<Chunk type="FunctionRef">or</Chunk>
+						<Chunk type="NoRef"> 当社受注 = 0 </Chunk>
+						<Chunk type="FunctionRef">or</Chunk>
+						<Chunk type="NoRef"> </Chunk>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( 当社受注 ) ; &quot;&quot; ;
+	rate ≥ 0 </Chunk>
+						<Chunk type="FunctionRef">and</Chunk>
+						<Chunk type="NoRef"> rate &lt; 1 ; &quot;0&quot; &amp; </Chunk>
+						<Chunk type="FunctionRef">Round</Chunk>
+						<Chunk type="NoRef"> ( rate ; 1 ) ;
+	rate &lt; 0 </Chunk>
+						<Chunk type="FunctionRef">and</Chunk>
+						<Chunk type="NoRef"> rate &gt; -1 ; &quot;-0&quot; &amp; </Chunk>
+						<Chunk type="FunctionRef">Right</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">Round</Chunk>
+						<Chunk type="NoRef"> ( rate ; 1 ) ; 2 ) ;
+	</Chunk>
+						<Chunk type="FunctionRef">Round</Chunk>
+						<Chunk type="NoRef"> ( rate ; 1 )
+ )
+)</Chunk>
 					</DisplayCalculation>
 					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
 					<Field table="拠点別計画進捗" id="13" name="達成率"/>
@@ -10448,59 +10487,85 @@ ExecuteSQL ("
 					<Field table="稼働日重要指数" id="12" name="対比"/>
 				</Step>
 				<Step enable="True" id="91" name="フィールド内容の全置換">
-					<StepText>フィールド内容の全置換 [ 稼働日重要指数::進捗率; 計算で置き換える: If (
- IsEmpty ( 稼働日重要指数::必要売上 ) or IsEmpty ( 稼働日重要指数::計上売上 ) or 稼働日重要指数::必要売上 = 0 or 稼働日重要指数::計上売上 = 0 ; &quot;&quot; ;
- Round ( 稼働日重要指数::計上売上 * 100 / 稼働日重要指数::必要売上 ; 0 )
+					<StepText>フィールド内容の全置換 [ 稼働日重要指数::進捗率; 計算で置き換える: Let (
+ [
+ 計上売上 = 稼働日重要指数::計上売上 ;
+ 必要売上 = 稼働日重要指数::必要売上 ;
+ rate = 計上売上 * 100 / 必要売上
+　] ;
+
+ Case (
+	必要売上 = 0 or IsEmpty ( 必要売上 ) or 計上売上 = 0 or IsEmpty ( 計上売上 ) ; &quot;&quot; ;
+	rate ≥ 0 and rate &lt; 1 ; &quot;0&quot; &amp; Round ( rate ; 1 ) ;
+	rate &lt; 0 and rate &gt; -1 ; &quot;-0&quot; &amp; Right ( Round ( rate ; 1 ) ; 2 ) ;
+	Round ( rate ; 1 )
+ )
 ); 入力値の自動化オプションを無視 ]
 [ ダイアログなし ]</StepText>
 					<NoInteract state="True"/>
 					<Restore state="True"/>
 					<With value="Calculation"/>
-					<Calculation><![CDATA[If (
- IsEmpty ( 稼働日重要指数::必要売上 ) or IsEmpty ( 稼働日重要指数::計上売上 ) or 稼働日重要指数::必要売上 = 0 or 稼働日重要指数::計上売上 = 0 ; "" ;
- Round ( 稼働日重要指数::計上売上 * 100 / 稼働日重要指数::必要売上 ; 0 )
+					<Calculation><![CDATA[Let (
+ [
+ 計上売上 = 稼働日重要指数::計上売上 ;
+ 必要売上 = 稼働日重要指数::必要売上 ;
+ rate = 計上売上 * 100 / 必要売上
+　] ;
+
+ Case (
+	必要売上 = 0 or IsEmpty ( 必要売上 ) or 計上売上 = 0 or IsEmpty ( 計上売上 ) ; "" ;
+	rate ≥ 0 and rate < 1 ; "0" & Round ( rate ; 1 ) ;
+	rate < 0 and rate > -1 ; "-0" & Right ( Round ( rate ; 1 ) ; 2 ) ;
+	Round ( rate ; 1 )
+ )
 )]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="FunctionRef">If</Chunk>
+						<Chunk type="FunctionRef">Let</Chunk>
 						<Chunk type="NoRef"> (
- </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="稼働日重要指数" id="6" name="必要売上"/>
-						</Chunk>
-						<Chunk type="NoRef"> ) </Chunk>
-						<Chunk type="FunctionRef">or</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
+ [
+ 計上売上 = </Chunk>
 						<Chunk type="FieldRef">
 							<Field table="稼働日重要指数" id="7" name="計上売上"/>
 						</Chunk>
-						<Chunk type="NoRef"> ) </Chunk>
-						<Chunk type="FunctionRef">or</Chunk>
-						<Chunk type="NoRef"> </Chunk>
+						<Chunk type="NoRef"> ;
+ 必要売上 = </Chunk>
 						<Chunk type="FieldRef">
 							<Field table="稼働日重要指数" id="6" name="必要売上"/>
 						</Chunk>
-						<Chunk type="NoRef"> = 0 </Chunk>
+						<Chunk type="NoRef"> ;
+ rate = 計上売上 * 100 / 必要売上
+　] ;
+
+ </Chunk>
+						<Chunk type="FunctionRef">Case</Chunk>
+						<Chunk type="NoRef"> (
+	必要売上 = 0 </Chunk>
 						<Chunk type="FunctionRef">or</Chunk>
 						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="稼働日重要指数" id="7" name="計上売上"/>
-						</Chunk>
-						<Chunk type="NoRef"> = 0 ; &quot;&quot; ;
- </Chunk>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( 必要売上 ) </Chunk>
+						<Chunk type="FunctionRef">or</Chunk>
+						<Chunk type="NoRef"> 計上売上 = 0 </Chunk>
+						<Chunk type="FunctionRef">or</Chunk>
+						<Chunk type="NoRef"> </Chunk>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( 計上売上 ) ; &quot;&quot; ;
+	rate ≥ 0 </Chunk>
+						<Chunk type="FunctionRef">and</Chunk>
+						<Chunk type="NoRef"> rate &lt; 1 ; &quot;0&quot; &amp; </Chunk>
 						<Chunk type="FunctionRef">Round</Chunk>
+						<Chunk type="NoRef"> ( rate ; 1 ) ;
+	rate &lt; 0 </Chunk>
+						<Chunk type="FunctionRef">and</Chunk>
+						<Chunk type="NoRef"> rate &gt; -1 ; &quot;-0&quot; &amp; </Chunk>
+						<Chunk type="FunctionRef">Right</Chunk>
 						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="稼働日重要指数" id="7" name="計上売上"/>
-						</Chunk>
-						<Chunk type="NoRef"> * 100 / </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="稼働日重要指数" id="6" name="必要売上"/>
-						</Chunk>
-						<Chunk type="NoRef"> ; 0 )
+						<Chunk type="FunctionRef">Round</Chunk>
+						<Chunk type="NoRef"> ( rate ; 1 ) ; 2 ) ;
+	</Chunk>
+						<Chunk type="FunctionRef">Round</Chunk>
+						<Chunk type="NoRef"> ( rate ; 1 )
+ )
 )</Chunk>
 					</DisplayCalculation>
 					<SerialNumbers PerformAutoEnter="False" UpdateEntryOptions="False" UseEntryOptions="True"/>
@@ -10524,315 +10589,24 @@ ExecuteSQL ("
 					<StepText>エラー処理 [ オフ ]</StepText>
 					<Set state="False"/>
 				</Step>
-			</StepList>
-		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="167" name="N業バックアップ">
-			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
-					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#◆作成情報◆</StepText>
-					<Text>◆作成情報◆</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#機能概要	：N業のデータはOBICなどにはないので、FileMaker内で保管しておく</StepText>
-					<Text>機能概要	：N業のデータはOBICなどにはないので、FileMaker内で保管しておく</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#引数		：new, all</StepText>
-					<Text>引数		：new, all</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#トリガ		：Severスクリプトにより実行</StepText>
-					<Text>トリガ		：Severスクリプトにより実行</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#作成日	：2025/11/07</StepText>
-					<Text>作成日	：2025/11/07</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#作成者	：Ray Okada</StepText>
-					<Text>作成者	：Ray Okada</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#コメント	：</StepText>
-					<Text>コメント	：</Text>
+					<StepText/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
 					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="86" name="エラー処理">
-					<StepText>エラー処理 [ オン ]</StepText>
-					<Set state="True"/>
+					<StepText>#◆更新情報◆</StepText>
+					<Text>◆更新情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「拠点別計画進捗｜バックアップ用」 (拠点別計画進捗) ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="136" name="拠点別計画進捗｜バックアップ用"/>
-				</Step>
-				<Step enable="True" id="22" name="検索モードに切り替え">
-					<StepText>検索モードに切り替え [  ]</StepText>
-					<Pause state="False"/>
-					<Restore state="False"/>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ Get ( スクリプト引数 ) = &quot;new&quot; ]</StepText>
-					<Restore state="False"/>
-					<Calculation><![CDATA[Get ( スクリプト引数 ) = "new"]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">スクリプト引数</Chunk>
-						<Chunk type="NoRef"> ) = &quot;new&quot;</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 拠点別計画進捗｜バックアップ用::締めフラグ; &quot;==&quot; ]</StepText>
-					<Calculation><![CDATA["=="]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">&quot;==&quot;</Chunk>
-					</DisplayCalculation>
-					<Field table="拠点別計画進捗｜バックアップ用" id="37" name="締めフラグ"/>
-				</Step>
-				<Step enable="True" id="125" name="Else If">
-					<StepText>Else If [ Get ( スクリプト引数 ) = &quot;all&quot; ]</StepText>
-					<Restore state="False"/>
-					<Calculation><![CDATA[Get ( スクリプト引数 ) = "all"]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">スクリプト引数</Chunk>
-						<Chunk type="NoRef"> ) = &quot;all&quot;</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="69" name="Else">
-					<StepText>Else [  ]</StepText>
-					<Restore state="False"/>
-				</Step>
-				<Step enable="True" id="55" name="ブラウズモードに切り替え">
-					<StepText>ブラウズモードに切り替え</StepText>
-					<Pause state="False"/>
-				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 元のレイアウト ]</StepText>
-					<LayoutDestination value="OriginalLayout"/>
-				</Step>
-				<Step enable="True" id="87" name="カスタムダイアログを表示">
-					<StepText>カスタムダイアログを表示 [ タイトル: &quot;スクリプト終了&quot;; メッセージ: &quot;スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。&quot;; デフォルトボタン: 「OK」, 確定: 「はい」 ]</StepText>
-					<Title>
-						<Calculation><![CDATA["スクリプト終了"]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;スクリプト終了&quot;</Chunk>
-						</DisplayCalculation>
-					</Title>
-					<Message>
-						<Calculation><![CDATA["スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。"]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。&quot;</Chunk>
-						</DisplayCalculation>
-					</Message>
-					<Buttons>
-						<Button CommitState="True">
-							<Calculation><![CDATA["OK"]]></Calculation>
-							<DisplayCalculation>
-								<Chunk type="NoRef">&quot;OK&quot;</Chunk>
-							</DisplayCalculation>
-						</Button>
-						<Button CommitState="False"/>
-						<Button CommitState="False"/>
-					</Buttons>
-				</Step>
-				<Step enable="True" id="103" name="現在のスクリプト終了">
-					<StepText>現在のスクリプト終了 [ 結果: &quot;&quot; ]</StepText>
-					<Calculation><![CDATA[""]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">&quot;&quot;</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 拠点別計画進捗｜バックアップ用::分類; &quot;NTT業務委託&quot; ]</StepText>
-					<Calculation><![CDATA["NTT業務委託"]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">&quot;NTT業務委託&quot;</Chunk>
-					</DisplayCalculation>
-					<Field table="拠点別計画進捗｜バックアップ用" id="23" name="分類"/>
-				</Step>
-				<Step enable="True" id="28" name="検索実行">
-					<StepText>検索実行 [  ]</StepText>
-					<Restore state="False"/>
+					<StepText>#2025/11/17　okada　達成率ロジック修正</StepText>
+					<Text>2025/11/17　okada　達成率ロジック修正</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>レコード/検索条件/ページへ移動
-[ ダイアログなし; 最初の ]</StepText>
-					<NoInteract state="True"/>
-					<RowPageLocation value="First"/>
-				</Step>
-				<Step enable="True" id="71" name="Loop">
-					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
-					<FlushType value="Always"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::前月繰越; 拠点別計画進捗｜バックアップ用::前月繰越 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::前月繰越]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="8" name="前月繰越"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="8" name="前月繰越"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::当月目標; 拠点別計画進捗｜バックアップ用::当月目標 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当月目標]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="25" name="当月目標"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="21" name="当月目標"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::当月受注1; 拠点別計画進捗｜バックアップ用::当月受注1 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当月受注1]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="55" name="当月受注1"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="41" name="当月受注1"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::受注計; 拠点別計画進捗｜バックアップ用::受注計 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::受注計]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="56" name="受注計"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="42" name="受注計"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::当社受注; 拠点別計画進捗｜バックアップ用::当社受注 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当社受注]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="57" name="当社受注"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="43" name="当社受注"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::達成率; 拠点別計画進捗｜バックアップ用::達成率 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::達成率]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="13" name="達成率"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="12" name="達成率"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::完工; 拠点別計画進捗｜バックアップ用::完工 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::完工]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="17" name="完工"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="13" name="完工"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::最終予測; 拠点別計画進捗｜バックアップ用::最終予測 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::最終予測]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="18" name="最終予測"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="14" name="最終予測"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::中間予測; 拠点別計画進捗｜バックアップ用::中間予測 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::中間予測]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="19" name="中間予測"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="15" name="中間予測"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::当社完工; 拠点別計画進捗｜バックアップ用::当社完工 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当社完工]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="58" name="当社完工"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="44" name="当社完工"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::当月受注2; 拠点別計画進捗｜バックアップ用::当月受注2 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当月受注2]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="59" name="当月受注2"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="45" name="当月受注2"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::最終差異; 拠点別計画進捗｜バックアップ用::最終差異 ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::最終差異]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="22" name="最終差異"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="18" name="最終差異"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::締めフラグ; 拠点別計画進捗｜バックアップ用::締めフラグ ]</StepText>
-					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::締めフラグ]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="拠点別計画進捗｜バックアップ用" id="37" name="締めフラグ"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="N業バックアップ" id="28" name="締めフラグ"/>
-				</Step>
-				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>レコード/検索条件/ページへ移動
-[ ダイアログなし; 次の; 最後まできたら終了 ]</StepText>
-					<NoInteract state="True"/>
-					<Exit state="True"/>
-					<RowPageLocation value="Next"/>
-				</Step>
-				<Step enable="True" id="73" name="End Loop">
-					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="86" name="エラー処理">
-					<StepText>エラー処理 [ オフ ]</StepText>
-					<Set state="False"/>
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
 				</Step>
 			</StepList>
 		</Script>
@@ -14474,7 +14248,7 @@ next
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="174" name="N業バックアップレコード作成">
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="187" name="N業バックアップ_拠点別計画進捗レコード作成">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -14485,8 +14259,8 @@ next
 					<Text>◆作成情報◆</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#機能概要	：拠点別計画進捗レコード作成</StepText>
-					<Text>機能概要	：拠点別計画進捗レコード作成</Text>
+					<StepText>#機能概要	：N業バックアップ_拠点別計画進捗レコード作成</StepText>
+					<Text>機能概要	：N業バックアップ_拠点別計画進捗レコード作成</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#引数		：なし</StepText>
@@ -14527,9 +14301,9 @@ next
 					<StepText>ウインドウの固定</StepText>
 				</Step>
 				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「MT.N業バックアップ」 (N業バックアップ) ]</StepText>
+					<StepText>レイアウト切り替え [ 「MT.N業バックアップ_拠点別計画進捗」 (N業バックアップ_拠点別計画進捗) ]</StepText>
 					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="130" name="MT.N業バックアップ"/>
+					<Layout id="130" name="MT.N業バックアップ_拠点別計画進捗"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -14972,30 +14746,30 @@ next
 					<StepText>新規レコード/検索条件</StepText>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::加盟店セットCD; GetValue ( $setcode_list ; $setcode_cnt ) ]</StepText>
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::加盟店セットCD; GetValue ( $setcode_list ; $setcode_cnt ) ]</StepText>
 					<Calculation><![CDATA[GetValue ( $setcode_list ; $setcode_cnt )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">GetValue</Chunk>
 						<Chunk type="NoRef"> ( $setcode_list ; $setcode_cnt )</Chunk>
 					</DisplayCalculation>
-					<Field table="N業バックアップ" id="6" name="加盟店セットCD"/>
+					<Field table="N業バックアップ_拠点別計画進捗" id="6" name="加盟店セットCD"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::年月; GetValue ( $yyyymm_list ; $yyyymm_cnt ) ]</StepText>
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::年月; GetValue ( $yyyymm_list ; $yyyymm_cnt ) ]</StepText>
 					<Calculation><![CDATA[GetValue ( $yyyymm_list ; $yyyymm_cnt )]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="FunctionRef">GetValue</Chunk>
 						<Chunk type="NoRef"> ( $yyyymm_list ; $yyyymm_cnt )</Chunk>
 					</DisplayCalculation>
-					<Field table="N業バックアップ" id="20" name="年月"/>
+					<Field table="N業バックアップ_拠点別計画進捗" id="20" name="年月"/>
 				</Step>
 				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ N業バックアップ::分類; &quot;NTT業務委託&quot; ]</StepText>
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::分類; &quot;NTT業務委託&quot; ]</StepText>
 					<Calculation><![CDATA["NTT業務委託"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;NTT業務委託&quot;</Chunk>
 					</DisplayCalculation>
-					<Field table="N業バックアップ" id="19" name="分類"/>
+					<Field table="N業バックアップ_拠点別計画進捗" id="19" name="分類"/>
 				</Step>
 				<Step enable="True" id="141" name="変数を設定">
 					<StepText>変数を設定 [ $setcode_cnt; 値:$setcode_cnt + 1 ]</StepText>
@@ -15012,6 +14786,640 @@ next
 						</DisplayCalculation>
 					</Repetition>
 					<Name>$setcode_cnt</Name>
+				</Step>
+				<Step enable="True" id="73" name="End Loop">
+					<StepText>End Loop</StepText>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $yyyymm_cnt; 値:$yyyymm_cnt + 1 ]</StepText>
+					<Value>
+						<Calculation><![CDATA[$yyyymm_cnt + 1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">$yyyymm_cnt + 1</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$yyyymm_cnt</Name>
+				</Step>
+				<Step enable="True" id="73" name="End Loop">
+					<StepText>End Loop</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="75" name="レコード/検索条件確定">
+					<StepText>レコード/検索条件確定
+[ ダイアログなし ]</StepText>
+					<NoInteract state="True"/>
+					<Option state="False"/>
+					<ESSForceCommit state="False"/>
+				</Step>
+				<Step enable="True" id="6" name="レイアウト切り替え">
+					<StepText>レイアウト切り替え [ 元のレイアウト ]</StepText>
+					<LayoutDestination value="OriginalLayout"/>
+				</Step>
+				<Step enable="True" id="86" name="エラー処理">
+					<StepText>エラー処理 [ オフ ]</StepText>
+					<Set state="False"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#◆更新情報◆</StepText>
+					<Text>◆更新情報◆</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#2025/11/17　okada　機能概要修正</StepText>
+					<Text>2025/11/17　okada　機能概要修正</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+			</StepList>
+		</Script>
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="188" name="N業バックアップ_稼働日重要指数レコード作成">
+			<StepList>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#◆作成情報◆</StepText>
+					<Text>◆作成情報◆</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#機能概要	：N業バックアップ_稼働日重要指数レコード作成</StepText>
+					<Text>機能概要	：N業バックアップ_稼働日重要指数レコード作成</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#引数		：なし</StepText>
+					<Text>引数		：なし</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#トリガ  	：Severスクリプトにより実行</StepText>
+					<Text>トリガ  	：Severスクリプトにより実行</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#作成日	：2025/11/17</StepText>
+					<Text>作成日	：2025/11/17</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#作成者	：Ray Okada</StepText>
+					<Text>作成者	：Ray Okada</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#改修日	：</StepText>
+					<Text>改修日	：</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#コメント　　　 ：バックアップ時にないレコードは作成されるので、allで使ったらもういらないかも</StepText>
+					<Text>コメント　　　 ：バックアップ時にないレコードは作成されるので、allで使ったらもういらないかも</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="86" name="エラー処理">
+					<StepText>エラー処理 [ オン ]</StepText>
+					<Set state="True"/>
+				</Step>
+				<Step enable="True" id="79" name="ウインドウの固定">
+					<StepText>ウインドウの固定</StepText>
+				</Step>
+				<Step enable="True" id="6" name="レイアウト切り替え">
+					<StepText>レイアウト切り替え [ 「MT.N業バックアップ_稼働日重要指数」 (N業バックアップ_稼働日重要指数) ]</StepText>
+					<LayoutDestination value="SelectedLayout"/>
+					<Layout id="147" name="MT.N業バックアップ_稼働日重要指数"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ Get ( スクリプト引数 ) = &quot;new&quot; ]</StepText>
+					<Restore state="False"/>
+					<Calculation><![CDATA[Get ( スクリプト引数 ) = "new"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">Get</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">スクリプト引数</Chunk>
+						<Chunk type="NoRef"> ) = &quot;new&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#現在の日付から翌月を設定</StepText>
+					<Text>現在の日付から翌月を設定</Text>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $yyyymm_list; 値:Let (
+[
+now = Year( Get ( 日付 ) ) &amp; Month( Get ( 日付 ) ) ;
+next = If ( Right ( now ; 2 ) = &quot;12&quot; ; Left ( now ; 4 ) + 1 &amp; &quot;01&quot; ; now + 1 )
+] ;
+next
+) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Let (
+[
+now = Year( Get ( 日付 ) ) & Month( Get ( 日付 ) ) ;
+next = If ( Right ( now ; 2 ) = "12" ; Left ( now ; 4 ) + 1 & "01" ; now + 1 )
+] ;
+next
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef"> (
+[
+now = </Chunk>
+							<Chunk type="FunctionRef">Year</Chunk>
+							<Chunk type="NoRef">( </Chunk>
+							<Chunk type="FunctionRef">Get</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">日付</Chunk>
+							<Chunk type="NoRef"> ) ) &amp; </Chunk>
+							<Chunk type="FunctionRef">Month</Chunk>
+							<Chunk type="NoRef">( </Chunk>
+							<Chunk type="FunctionRef">Get</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">日付</Chunk>
+							<Chunk type="NoRef"> ) ) ;
+next = </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( now ; 2 ) = &quot;12&quot; ; </Chunk>
+							<Chunk type="FunctionRef">Left</Chunk>
+							<Chunk type="NoRef"> ( now ; 4 ) + 1 &amp; &quot;01&quot; ; now + 1 )
+] ;
+next
+)</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$yyyymm_list</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#同テーブルのレコードの最大年月から翌月を設定</StepText>
+					<Text>同テーブルのレコードの最大年月から翌月を設定</Text>
+				</Step>
+				<Step enable="False" id="141" name="変数を設定">
+					<StepText>//  変数を設定 [ $yyyymm_list; 値:Let (
+ [
+ list = ExecuteSQL (&quot;
+		SELECT MAX (\&quot;年月\&quot;) FROM \&quot;拠点別計画進捗\&quot;
+		&quot; ;
+		&quot;&quot; ; &quot;&quot;
+	) ;
+ last = GetValue ( list ; ValueCount ( list ) ) ;
+ next = If ( Right ( last ; 2 ) = &quot;12&quot; ; Left ( last ; 4 ) + 1 &amp; &quot;01&quot; ; last + 1 )
+ ] ;
+ next
+) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Let (
+ [
+ list = ExecuteSQL ("
+		SELECT MAX (\"年月\") FROM \"拠点別計画進捗\"
+		" ;
+		"" ; ""
+	) ;
+ last = GetValue ( list ; ValueCount ( list ) ) ;
+ next = If ( Right ( last ; 2 ) = "12" ; Left ( last ; 4 ) + 1 & "01" ; last + 1 )
+ ] ;
+ next
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef"> (
+ [
+ list = </Chunk>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef"> (&quot;
+		SELECT MAX (\&quot;年月\&quot;) FROM \&quot;拠点別計画進捗\&quot;
+		&quot; ;
+		&quot;&quot; ; &quot;&quot;
+	) ;
+ last = </Chunk>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( list ; </Chunk>
+							<Chunk type="FunctionRef">ValueCount</Chunk>
+							<Chunk type="NoRef"> ( list ) ) ;
+ next = </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( last ; 2 ) = &quot;12&quot; ; </Chunk>
+							<Chunk type="FunctionRef">Left</Chunk>
+							<Chunk type="NoRef"> ( last ; 4 ) + 1 &amp; &quot;01&quot; ; last + 1 )
+ ] ;
+ next
+)</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$yyyymm_list</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#実績集計テーブルに存在するレコードのうち最新の年月から翌月を設定</StepText>
+					<Text>実績集計テーブルに存在するレコードのうち最新の年月から翌月を設定</Text>
+				</Step>
+				<Step enable="False" id="141" name="変数を設定">
+					<StepText>//  変数を設定 [ $yyyymm_list; 値:Let (
+ [
+ list = ValueListItems ( &quot;&quot; ; &quot;集計年月一覧&quot; ) ;
+ last = GetValue ( list ; ValueCount ( list ) ) ;
+ next = If ( Right ( last ; 2 ) = &quot;12&quot; ; Left ( last ; 4 ) + 1 &amp; &quot;01&quot; ; last + 1 )
+ ] ;
+ next
+) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Let (
+ [
+ list = ValueListItems ( "" ; "集計年月一覧" ) ;
+ last = GetValue ( list ; ValueCount ( list ) ) ;
+ next = If ( Right ( last ; 2 ) = "12" ; Left ( last ; 4 ) + 1 & "01" ; last + 1 )
+ ] ;
+ next
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Let</Chunk>
+							<Chunk type="NoRef"> (
+ [
+ list = </Chunk>
+							<Chunk type="FunctionRef">ValueListItems</Chunk>
+							<Chunk type="NoRef"> ( &quot;&quot; ; &quot;集計年月一覧&quot; ) ;
+ last = </Chunk>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( list ; </Chunk>
+							<Chunk type="FunctionRef">ValueCount</Chunk>
+							<Chunk type="NoRef"> ( list ) ) ;
+ next = </Chunk>
+							<Chunk type="FunctionRef">If</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( last ; 2 ) = &quot;12&quot; ; </Chunk>
+							<Chunk type="FunctionRef">Left</Chunk>
+							<Chunk type="NoRef"> ( last ; 4 ) + 1 &amp; &quot;01&quot; ; last + 1 )
+ ] ;
+ next
+)</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$yyyymm_list</Name>
+				</Step>
+				<Step enable="True" id="125" name="Else If">
+					<StepText>Else If [ Get ( スクリプト引数 ) = &quot;all&quot; ]</StepText>
+					<Restore state="False"/>
+					<Calculation><![CDATA[Get ( スクリプト引数 ) = "all"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">Get</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">スクリプト引数</Chunk>
+						<Chunk type="NoRef"> ) = &quot;all&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="23" name="全レコードを表示">
+					<StepText>全レコードを表示</StepText>
+				</Step>
+				<Step enable="True" id="10" name="対象レコード削除">
+					<StepText>対象レコード削除
+[ ダイアログなし ]</StepText>
+					<NoInteract state="True"/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $yyyymm_list; 値:ExecuteSQL (&quot;
+	SELECT DISTINCT \&quot;年月\&quot; FROM \&quot;実績集計テーブル\&quot;
+	ORDER BY \&quot;年月\&quot; ASC
+	&quot; ;
+	&quot;&quot; ; &quot;&quot;
+) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[ExecuteSQL ("
+	SELECT DISTINCT \"年月\" FROM \"実績集計テーブル\"
+	ORDER BY \"年月\" ASC
+	" ;
+	"" ; ""
+)]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+							<Chunk type="NoRef"> (&quot;
+	SELECT DISTINCT \&quot;年月\&quot; FROM \&quot;実績集計テーブル\&quot;
+	ORDER BY \&quot;年月\&quot; ASC
+	&quot; ;
+	&quot;&quot; ; &quot;&quot;
+)</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$yyyymm_list</Name>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else [  ]</StepText>
+					<Restore state="False"/>
+				</Step>
+				<Step enable="True" id="6" name="レイアウト切り替え">
+					<StepText>レイアウト切り替え [ 元のレイアウト ]</StepText>
+					<LayoutDestination value="OriginalLayout"/>
+				</Step>
+				<Step enable="True" id="87" name="カスタムダイアログを表示">
+					<StepText>カスタムダイアログを表示 [ タイトル: &quot;スクリプト終了&quot;; メッセージ: &quot;スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。&quot;; デフォルトボタン: 「OK」, 確定: 「はい」 ]</StepText>
+					<Title>
+						<Calculation><![CDATA["スクリプト終了"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;スクリプト終了&quot;</Chunk>
+						</DisplayCalculation>
+					</Title>
+					<Message>
+						<Calculation><![CDATA["スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。&quot;</Chunk>
+						</DisplayCalculation>
+					</Message>
+					<Buttons>
+						<Button CommitState="True">
+							<Calculation><![CDATA["OK"]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;OK&quot;</Chunk>
+							</DisplayCalculation>
+						</Button>
+						<Button CommitState="False"/>
+						<Button CommitState="False"/>
+					</Buttons>
+				</Step>
+				<Step enable="True" id="103" name="現在のスクリプト終了">
+					<StepText>現在のスクリプト終了 [ 結果: &quot;&quot; ]</StepText>
+					<Calculation><![CDATA[""]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $yyyymm_cnt; 値:1 ]</StepText>
+					<Value>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$yyyymm_cnt</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $yyyymm_cntmax; 値:ValueCount ( $yyyymm_list ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[ValueCount ( $yyyymm_list )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">ValueCount</Chunk>
+							<Chunk type="NoRef"> ( $yyyymm_list )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$yyyymm_cntmax</Name>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="71" name="Loop">
+					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
+					<Restore state="False"/>
+					<FlushType value="Defer"/>
+				</Step>
+				<Step enable="True" id="72" name="Exit Loop If">
+					<StepText>Exit Loop If [ $yyyymm_cnt &gt; $yyyymm_cntmax ]</StepText>
+					<Calculation><![CDATA[$yyyymm_cnt > $yyyymm_cntmax]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$yyyymm_cnt &gt; $yyyymm_cntmax</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $yyyymm; 値:GetValue ( $yyyymm_list ; $yyyymm_cnt ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[GetValue ( $yyyymm_list ; $yyyymm_cnt )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">GetValue</Chunk>
+							<Chunk type="NoRef"> ( $yyyymm_list ; $yyyymm_cnt )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$yyyymm</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $day; 値:1 ]</StepText>
+					<Value>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$day</Name>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $daymax; 値:Day ( Date ( Right ( $yyyymm ; 2 ) + 1 ; -1 ; Left ( $yyyymm ; 4 ) ) ) ]</StepText>
+					<Value>
+						<Calculation><![CDATA[Day ( Date ( Right ( $yyyymm ; 2 ) + 1 ; -1 ; Left ( $yyyymm ; 4 ) ) )]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="FunctionRef">Day</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Date</Chunk>
+							<Chunk type="NoRef"> ( </Chunk>
+							<Chunk type="FunctionRef">Right</Chunk>
+							<Chunk type="NoRef"> ( $yyyymm ; 2 ) + 1 ; -1 ; </Chunk>
+							<Chunk type="FunctionRef">Left</Chunk>
+							<Chunk type="NoRef"> ( $yyyymm ; 4 ) ) )</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$daymax</Name>
+				</Step>
+				<Step enable="True" id="71" name="Loop">
+					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
+					<Restore state="False"/>
+					<FlushType value="Defer"/>
+				</Step>
+				<Step enable="True" id="72" name="Exit Loop If">
+					<StepText>Exit Loop If [ $day &gt; $daymax ]</StepText>
+					<Calculation><![CDATA[$day > $daymax]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$day &gt; $daymax</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ Let (
+ [
+ holidaylist = Substitute (
+	ExecuteSQL ( &quot;SELECT \&quot;日付\&quot; FROM \&quot;休日マスタ\&quot;&quot; ; &quot;&quot; ; &quot;&quot; ) ;
+	&quot;-&quot; ; &quot;/&quot;
+	) ;
+ date = Date ( Right ( $yyyymm ; 2 ) ; $day ; Left ( $yyyymm ; 4 ) )
+ ] ;
+
+ IsEmpty ( FilterValues ( holidaylist ; date ) )
+) ]</StepText>
+					<Restore state="False"/>
+					<Calculation><![CDATA[Let (
+ [
+ holidaylist = Substitute (
+	ExecuteSQL ( "SELECT \"日付\" FROM \"休日マスタ\"" ; "" ; "" ) ;
+	"-" ; "/"
+	) ;
+ date = Date ( Right ( $yyyymm ; 2 ) ; $day ; Left ( $yyyymm ; 4 ) )
+ ] ;
+
+ IsEmpty ( FilterValues ( holidaylist ; date ) )
+)]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">Let</Chunk>
+						<Chunk type="NoRef"> (
+ [
+ holidaylist = </Chunk>
+						<Chunk type="FunctionRef">Substitute</Chunk>
+						<Chunk type="NoRef"> (
+	</Chunk>
+						<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+						<Chunk type="NoRef"> ( &quot;SELECT \&quot;日付\&quot; FROM \&quot;休日マスタ\&quot;&quot; ; &quot;&quot; ; &quot;&quot; ) ;
+	&quot;-&quot; ; &quot;/&quot;
+	) ;
+ date = </Chunk>
+						<Chunk type="FunctionRef">Date</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">Right</Chunk>
+						<Chunk type="NoRef"> ( $yyyymm ; 2 ) ; $day ; </Chunk>
+						<Chunk type="FunctionRef">Left</Chunk>
+						<Chunk type="NoRef"> ( $yyyymm ; 4 ) )
+ ] ;
+
+ </Chunk>
+						<Chunk type="FunctionRef">IsEmpty</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">FilterValues</Chunk>
+						<Chunk type="NoRef"> ( holidaylist ; date ) )
+)</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="7" name="新規レコード/検索条件">
+					<StepText>新規レコード/検索条件</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::年月; $yyyymm ]</StepText>
+					<Calculation><![CDATA[$yyyymm]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$yyyymm</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="6" name="年月"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::日; $day ]</StepText>
+					<Calculation><![CDATA[$day]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">$day</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="7" name="日"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::日付; Date ( Right ( $yyyymm ; 2 ) ; $day ; Left ( $yyyymm ; 4 ) ) ]</StepText>
+					<Calculation><![CDATA[Date ( Right ( $yyyymm ; 2 ) ; $day ; Left ( $yyyymm ; 4 ) )]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">Date</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">Right</Chunk>
+						<Chunk type="NoRef"> ( $yyyymm ; 2 ) ; $day ; </Chunk>
+						<Chunk type="FunctionRef">Left</Chunk>
+						<Chunk type="NoRef"> ( $yyyymm ; 4 ) )</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="8" name="日付"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::重要指数分類; &quot;NTT業務委託&quot; ]</StepText>
+					<Calculation><![CDATA["NTT業務委託"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;NTT業務委託&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="19" name="重要指数分類"/>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="141" name="変数を設定">
+					<StepText>変数を設定 [ $day; 値:$day + 1 ]</StepText>
+					<Value>
+						<Calculation><![CDATA[$day + 1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">$day + 1</Chunk>
+						</DisplayCalculation>
+					</Value>
+					<Repetition>
+						<Calculation><![CDATA[1]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">1</Chunk>
+						</DisplayCalculation>
+					</Repetition>
+					<Name>$day</Name>
 				</Step>
 				<Step enable="True" id="73" name="End Loop">
 					<StepText>End Loop</StepText>
@@ -15106,12 +15514,20 @@ next
 					<Script id="173" name="担当別進捗レコード作成"/>
 				</Step>
 				<Step enable="False" id="1" name="スクリプト実行">
-					<StepText>//  スクリプト実行 [ 「N業バックアップレコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<StepText>//  スクリプト実行 [ 「N業バックアップ_拠点別計画進捗レコード作成」; 引数: &quot;all&quot; ]</StepText>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="174" name="N業バックアップレコード作成"/>
+					<Script id="187" name="N業バックアップ_拠点別計画進捗レコード作成"/>
+				</Step>
+				<Step enable="False" id="1" name="スクリプト実行">
+					<StepText>//  スクリプト実行 [ 「N業バックアップ_稼働日重要指数レコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<Calculation><![CDATA["all"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;all&quot;</Chunk>
+					</DisplayCalculation>
+					<Script id="188" name="N業バックアップ_稼働日重要指数レコード作成"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -15165,12 +15581,20 @@ next
 					<Script id="173" name="担当別進捗レコード作成"/>
 				</Step>
 				<Step enable="False" id="1" name="スクリプト実行">
-					<StepText>//  スクリプト実行 [ 「N業バックアップレコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<StepText>//  スクリプト実行 [ 「N業バックアップ_拠点別計画進捗レコード作成」; 引数: &quot;new&quot; ]</StepText>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="174" name="N業バックアップレコード作成"/>
+					<Script id="187" name="N業バックアップ_拠点別計画進捗レコード作成"/>
+				</Step>
+				<Step enable="False" id="1" name="スクリプト実行">
+					<StepText>//  スクリプト実行 [ 「N業バックアップ_稼働日重要指数レコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<Calculation><![CDATA["new"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;new&quot;</Chunk>
+					</DisplayCalculation>
+					<Script id="188" name="N業バックアップ_稼働日重要指数レコード作成"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -15194,13 +15618,31 @@ next
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
+				<Step enable="False" id="1" name="スクリプト実行">
+					<StepText>//  スクリプト実行 [ 「SSS_N業バックアップ」; 引数: &quot;all&quot; ]</StepText>
+					<Calculation><![CDATA["all"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;all&quot;</Chunk>
+					</DisplayCalculation>
+					<Script id="167" name="SSS_N業バックアップ"/>
+				</Step>
+				<Step enable="False" id="1" name="スクリプト実行">
+					<StepText>//  スクリプト実行 [ 「SSS_N業バックアップ」; 引数: &quot;new&quot; ]</StepText>
+					<Calculation><![CDATA["new"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;new&quot;</Chunk>
+					</DisplayCalculation>
+					<Script id="167" name="SSS_N業バックアップ"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「計画進捗レコード作成」; 引数: &quot;all&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「計画進捗レコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
@@ -15208,9 +15650,8 @@ next
 					<Script id="168" name="計画進捗レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「拠点別計画進捗レコード作成」; 引数: &quot;all&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「拠点別計画進捗レコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
@@ -15218,9 +15659,8 @@ next
 					<Script id="169" name="拠点別計画進捗レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「拠点別計画進捗集計レコード作成」; 引数: &quot;all&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「拠点別計画進捗集計レコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
@@ -15228,9 +15668,8 @@ next
 					<Script id="170" name="拠点別計画進捗集計レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「稼働日重要指数レコード作成」; 引数: &quot;all&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「稼働日重要指数レコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
@@ -15238,9 +15677,8 @@ next
 					<Script id="171" name="稼働日重要指数レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「日計平均推移レコード作成」; 引数: &quot;all&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「日計平均推移レコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
@@ -15248,9 +15686,8 @@ next
 					<Script id="172" name="日計平均推移レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「担当別進捗レコード作成」; 引数: &quot;all&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「担当別進捗レコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
@@ -15258,22 +15695,29 @@ next
 					<Script id="173" name="担当別進捗レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「N業バックアップレコード作成」; 引数: &quot;all&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「N業バックアップ_拠点別計画進捗レコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="174" name="N業バックアップレコード作成"/>
+					<Script id="187" name="N業バックアップ_拠点別計画進捗レコード作成"/>
+				</Step>
+				<Step enable="True" id="164" name="サーバー上のスクリプト実行">
+					<StepText>サーバー上のスクリプト実行 [ 「N業バックアップ_稼働日重要指数レコード作成」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
+					<Calculation><![CDATA["all"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;all&quot;</Chunk>
+					</DisplayCalculation>
+					<Script id="188" name="N業バックアップ_稼働日重要指数レコード作成"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「計画進捗レコード作成」; 引数: &quot;new&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「計画進捗レコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
@@ -15281,9 +15725,8 @@ next
 					<Script id="168" name="計画進捗レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「拠点別計画進捗レコード作成」; 引数: &quot;new&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「拠点別計画進捗レコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
@@ -15291,9 +15734,8 @@ next
 					<Script id="169" name="拠点別計画進捗レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「拠点別計画進捗集計レコード作成」; 引数: &quot;new&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「拠点別計画進捗集計レコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
@@ -15301,9 +15743,8 @@ next
 					<Script id="170" name="拠点別計画進捗集計レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「稼働日重要指数レコード作成」; 引数: &quot;new&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「稼働日重要指数レコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
@@ -15311,9 +15752,8 @@ next
 					<Script id="171" name="稼働日重要指数レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「日計平均推移レコード作成」; 引数: &quot;new&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「日計平均推移レコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
@@ -15321,9 +15761,8 @@ next
 					<Script id="172" name="日計平均推移レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「担当別進捗レコード作成」; 引数: &quot;new&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「担当別進捗レコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
@@ -15331,14 +15770,22 @@ next
 					<Script id="173" name="担当別進捗レコード作成"/>
 				</Step>
 				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
-					<StepText>//  サーバー上のスクリプト実行 [ 「N業バックアップレコード作成」; 引数: &quot;new&quot; ]
-[ 終了するまで待つ ]</StepText>
-					<WaitForCompletion state="True"/>
+					<StepText>//  サーバー上のスクリプト実行 [ 「N業バックアップ_拠点別計画進捗レコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="174" name="N業バックアップレコード作成"/>
+					<Script id="187" name="N業バックアップ_拠点別計画進捗レコード作成"/>
+				</Step>
+				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
+					<StepText>//  サーバー上のスクリプト実行 [ 「N業バックアップ_稼働日重要指数レコード作成」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
+					<Calculation><![CDATA["new"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;new&quot;</Chunk>
+					</DisplayCalculation>
+					<Script id="188" name="N業バックアップ_稼働日重要指数レコード作成"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -15364,150 +15811,44 @@ next
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="False" id="1" name="スクリプト実行">
-					<StepText>//  スクリプト実行 [ 「N業バックアップ」; 引数: &quot;all&quot; ]</StepText>
+				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
+					<StepText>//  サーバー上のスクリプト実行 [ 「SSS_N業バックアップ」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;all&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="167" name="N業バックアップ"/>
+					<Script id="167" name="SSS_N業バックアップ"/>
 				</Step>
-				<Step enable="False" id="1" name="スクリプト実行">
-					<StepText>//  スクリプト実行 [ 「N業バックアップ」; 引数: &quot;new&quot; ]</StepText>
+				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
+					<StepText>//  サーバー上のスクリプト実行 [ 「SSS_N業バックアップ」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="167" name="N業バックアップ"/>
+					<Script id="167" name="SSS_N業バックアップ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#日計平均推移</StepText>
-					<Text>日計平均推移</Text>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $対象年月; 値:Let ([
-#day = Get ( 日付 );
-#year = Year ( #day );
-#month = Month ( #day )
-];
-
-Case(
-#month = 1 ; Right ( &quot;00&quot; &amp; #year - 1 ; 4 ) &amp; &quot;12&quot; ;
-Right ( &quot;0000&quot; &amp; #year ; 4 ) &amp; Right ( &quot;00&quot; &amp; #month - 1 ; 2 ) 
-)
-) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Let ([
-#day = Get ( 日付 );
-#year = Year ( #day );
-#month = Month ( #day )
-];
-
-Case(
-#month = 1 ; Right ( "00" & #year - 1 ; 4 ) & "12" ;
-Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 ) 
-)
-)]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> ([
-#day = </Chunk>
-							<Chunk type="FunctionRef">Get</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">日付</Chunk>
-							<Chunk type="NoRef"> );
-#year = </Chunk>
-							<Chunk type="FunctionRef">Year</Chunk>
-							<Chunk type="NoRef"> ( #day );
-#month = </Chunk>
-							<Chunk type="FunctionRef">Month</Chunk>
-							<Chunk type="NoRef"> ( #day )
-];
-
-</Chunk>
-							<Chunk type="FunctionRef">Case</Chunk>
-							<Chunk type="NoRef">(
-#month = 1 ; </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;00&quot; &amp; #year - 1 ; 4 ) &amp; &quot;12&quot; ;
-</Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;0000&quot; &amp; #year ; 4 ) &amp; </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;00&quot; &amp; #month - 1 ; 2 ) 
-)
-)</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$対象年月</Name>
-				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「MT.日計平均推移」 (日計平均推移) ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="128" name="MT.日計平均推移"/>
-				</Step>
-				<Step enable="True" id="28" name="検索実行">
-					<StepText>検索実行 [ 指定された検索条件: レコードの検索; 条件: 日計平均推移::年月: 「≤$対象年月」 AND 日計平均推移::締めフラグ: 「=」 ]
-[ 記憶する ]</StepText>
-					<Restore state="True"/>
-					<Query>
-						<RequestRow operation="Include">
-							<Criteria>
-								<Field table="日計平均推移" id="8" name="年月"/>
-								<Text>≤$対象年月</Text>
-							</Criteria>
-							<Criteria>
-								<Field table="日計平均推移" id="13" name="締めフラグ"/>
-								<Text>=</Text>
-							</Criteria>
-						</RequestRow>
-					</Query>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
-					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
+				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
+					<StepText>//  サーバー上のスクリプト実行 [ 「N業のみ計算値更新」; 引数: &quot;all&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
+					<Calculation><![CDATA["all"]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">対象レコード数</Chunk>
-						<Chunk type="NoRef"> ) &gt; 0</Chunk>
+						<Chunk type="NoRef">&quot;all&quot;</Chunk>
 					</DisplayCalculation>
+					<Script id="166" name="N業のみ計算値更新"/>
 				</Step>
-				<Step enable="True" id="71" name="Loop">
-					<StepText>Loop [ フラッシュ: 常に ]</StepText>
-					<Restore state="False"/>
-					<FlushType value="Always"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 日計平均推移::締めフラグ; 1 ]</StepText>
-					<Calculation><![CDATA[1]]></Calculation>
+				<Step enable="False" id="164" name="サーバー上のスクリプト実行">
+					<StepText>//  サーバー上のスクリプト実行 [ 「N業のみ計算値更新」; 引数: &quot;new&quot; ]</StepText>
+					<WaitForCompletion state="False"/>
+					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
-						<Chunk type="NoRef">1</Chunk>
+						<Chunk type="NoRef">&quot;new&quot;</Chunk>
 					</DisplayCalculation>
-					<Field table="日計平均推移" id="13" name="締めフラグ"/>
-				</Step>
-				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>レコード/検索条件/ページへ移動
-[ ダイアログなし; 次の; 最後まできたら終了 ]</StepText>
-					<NoInteract state="True"/>
-					<Exit state="True"/>
-					<RowPageLocation value="Next"/>
-				</Step>
-				<Step enable="True" id="73" name="End Loop">
-					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
+					<Script id="166" name="N業のみ計算値更新"/>
 				</Step>
 			</StepList>
 		</Script>
@@ -25254,9 +25595,9 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<Text>計画進捗</Text>
 				</Step>
 				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「計画進捗_ポータル」 (計画進捗) ]</StepText>
+					<StepText>レイアウト切り替え [ 「MT.計画進捗」 (計画進捗) ]</StepText>
 					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="124" name="計画進捗_ポータル"/>
+					<Layout id="137" name="MT.計画進捗"/>
 				</Step>
 				<Step enable="True" id="28" name="検索実行">
 					<StepText>検索実行 [ 指定された検索条件: レコードの検索; 条件: 計画進捗::年月: 「≤$対象年月」 AND 計画進捗::締めフラグ: 「=」 ]
@@ -25660,6 +26001,10 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#2025/10/16　okada　集計画面用テーブル追加(Loopじゃなくて全置換のほうが早いのでは？？)</StepText>
 					<Text>2025/10/16　okada　集計画面用テーブル追加(Loopじゃなくて全置換のほうが早いのでは？？)</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#2025/11/17　okada　計画進捗レイアウト変更</StepText>
+					<Text>2025/11/17　okada　計画進捗レイアウト変更</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -26233,9 +26578,9 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<Text>計画進捗</Text>
 				</Step>
 				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「計画進捗_ポータル」 (計画進捗) ]</StepText>
+					<StepText>レイアウト切り替え [ 「MT.計画進捗」 (計画進捗) ]</StepText>
 					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="124" name="計画進捗_ポータル"/>
+					<Layout id="137" name="MT.計画進捗"/>
 				</Step>
 				<Step enable="True" id="28" name="検索実行">
 					<StepText>検索実行 [ 指定された検索条件: レコードの検索; 条件: 計画進捗::年月: 「≤$対象年月」 AND 計画進捗::締めフラグ: 「=」 ]
@@ -26635,6 +26980,10 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#2025/10/31  fujisawa  実績と目標の締め作業を分割</StepText>
 					<Text>2025/10/31  fujisawa  実績と目標の締め作業を分割</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#2025/11/17　okada　計画進捗レイアウト変更</StepText>
+					<Text>2025/11/17　okada　計画進捗レイアウト変更</Text>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
@@ -27126,9 +27475,9 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<Text>計画進捗</Text>
 				</Step>
 				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「計画進捗_ポータル」 (計画進捗) ]</StepText>
+					<StepText>レイアウト切り替え [ 「MT.計画進捗」 (計画進捗) ]</StepText>
 					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="124" name="計画進捗_ポータル"/>
+					<Layout id="137" name="MT.計画進捗"/>
 				</Step>
 				<Step enable="True" id="28" name="検索実行">
 					<StepText>検索実行 [ 指定された検索条件: レコードの検索; 条件: 計画進捗::年月: 「≤$対象年月」 AND 計画進捗::締めフラグ: 「=」 ]
@@ -27522,22 +27871,22 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<Text>N業バックアップ</Text>
 				</Step>
 				<Step enable="False" id="6" name="レイアウト切り替え">
-					<StepText>//  レイアウト切り替え [ 「MT.N業バックアップ」 (N業バックアップ) ]</StepText>
+					<StepText>//  レイアウト切り替え [ 「MT.N業バックアップ_拠点別計画進捗」 (N業バックアップ_拠点別計画進捗) ]</StepText>
 					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="130" name="MT.N業バックアップ"/>
+					<Layout id="130" name="MT.N業バックアップ_拠点別計画進捗"/>
 				</Step>
 				<Step enable="False" id="28" name="検索実行">
-					<StepText>//  検索実行 [ 指定された検索条件: レコードの検索; 条件: N業バックアップ::年月: 「≤$対象年月」 AND N業バックアップ::締めフラグ: 「=」 ]
+					<StepText>//  検索実行 [ 指定された検索条件: レコードの検索; 条件: N業バックアップ_拠点別計画進捗::年月: 「≤$対象年月」 AND N業バックアップ_拠点別計画進捗::締めフラグ: 「=」 ]
 [ 記憶する ]</StepText>
 					<Restore state="True"/>
 					<Query>
 						<RequestRow operation="Include">
 							<Criteria>
-								<Field table="N業バックアップ" id="20" name="年月"/>
+								<Field table="N業バックアップ_拠点別計画進捗" id="20" name="年月"/>
 								<Text>≤$対象年月</Text>
 							</Criteria>
 							<Criteria>
-								<Field table="N業バックアップ" id="28" name="締めフラグ"/>
+								<Field table="N業バックアップ_拠点別計画進捗" id="28" name="締めフラグ"/>
 								<Text>=</Text>
 							</Criteria>
 						</RequestRow>
@@ -27560,12 +27909,12 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 					<FlushType value="Always"/>
 				</Step>
 				<Step enable="False" id="76" name="フィールド設定">
-					<StepText>//  フィールド設定 [ N業バックアップ::締めフラグ; 1 ]</StepText>
+					<StepText>//  フィールド設定 [ N業バックアップ_拠点別計画進捗::締めフラグ; 1 ]</StepText>
 					<Calculation><![CDATA[1]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">1</Chunk>
 					</DisplayCalculation>
-					<Field table="N業バックアップ" id="28" name="締めフラグ"/>
+					<Field table="N業バックアップ_拠点別計画進捗" id="28" name="締めフラグ"/>
 				</Step>
 				<Step enable="False" id="16" name="レコード/検索条件/ページへ移動">
 					<StepText>//  レコード/検索条件/ページへ移動
@@ -27579,6 +27928,630 @@ Right ( "0000" & #year ; 4 ) & Right ( "00" & #month - 1 ; 2 )
 				</Step>
 				<Step enable="False" id="70" name="End If">
 					<StepText>//  End If</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#◆更新情報◆</StepText>
+					<Text>◆更新情報◆</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#2025/11/17　okada　計画進捗レイアウト変更</StepText>
+					<Text>2025/11/17　okada　計画進捗レイアウト変更</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+			</StepList>
+		</Script>
+		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="167" name="SSS_N業バックアップ">
+			<StepList>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#◆作成情報◆</StepText>
+					<Text>◆作成情報◆</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#機能概要	：N業のデータはOBICなどにはないので、FileMaker内で保管しておく</StepText>
+					<Text>機能概要	：N業のデータはOBICなどにはないので、FileMaker内で保管しておく</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#引数		：new, all</StepText>
+					<Text>引数		：new, all</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#トリガ		：Severスクリプトにより実行</StepText>
+					<Text>トリガ		：Severスクリプトにより実行</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#作成日	：2025/11/07</StepText>
+					<Text>作成日	：2025/11/07</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#作成者	：Ray Okada</StepText>
+					<Text>作成者	：Ray Okada</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#コメント	：</StepText>
+					<Text>コメント	：</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="86" name="エラー処理">
+					<StepText>エラー処理 [ オン ]</StepText>
+					<Set state="True"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#===================================</StepText>
+					<Text>===================================</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#拠点別計画進捗</StepText>
+					<Text>拠点別計画進捗</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#===================================</StepText>
+					<Text>===================================</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="6" name="レイアウト切り替え">
+					<StepText>レイアウト切り替え [ 「拠点別計画進捗｜バックアップ用」 (拠点別計画進捗｜バックアップ用) ]</StepText>
+					<LayoutDestination value="SelectedLayout"/>
+					<Layout id="148" name="拠点別計画進捗｜バックアップ用"/>
+				</Step>
+				<Step enable="True" id="22" name="検索モードに切り替え">
+					<StepText>検索モードに切り替え [  ]</StepText>
+					<Pause state="False"/>
+					<Restore state="False"/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ Get ( スクリプト引数 ) = &quot;new&quot; ]</StepText>
+					<Restore state="False"/>
+					<Calculation><![CDATA[Get ( スクリプト引数 ) = "new"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">Get</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">スクリプト引数</Chunk>
+						<Chunk type="NoRef"> ) = &quot;new&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 拠点別計画進捗｜バックアップ用::締めフラグ; &quot;==&quot; ]</StepText>
+					<Calculation><![CDATA["=="]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;==&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="拠点別計画進捗｜バックアップ用" id="37" name="締めフラグ"/>
+				</Step>
+				<Step enable="True" id="125" name="Else If">
+					<StepText>Else If [ Get ( スクリプト引数 ) = &quot;all&quot; ]</StepText>
+					<Restore state="False"/>
+					<Calculation><![CDATA[Get ( スクリプト引数 ) = "all"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">Get</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">スクリプト引数</Chunk>
+						<Chunk type="NoRef"> ) = &quot;all&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else [  ]</StepText>
+					<Restore state="False"/>
+				</Step>
+				<Step enable="True" id="55" name="ブラウズモードに切り替え">
+					<StepText>ブラウズモードに切り替え</StepText>
+					<Pause state="False"/>
+				</Step>
+				<Step enable="True" id="6" name="レイアウト切り替え">
+					<StepText>レイアウト切り替え [ 元のレイアウト ]</StepText>
+					<LayoutDestination value="OriginalLayout"/>
+				</Step>
+				<Step enable="True" id="87" name="カスタムダイアログを表示">
+					<StepText>カスタムダイアログを表示 [ タイトル: &quot;スクリプト終了&quot;; メッセージ: &quot;スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。&quot;; デフォルトボタン: 「OK」, 確定: 「はい」 ]</StepText>
+					<Title>
+						<Calculation><![CDATA["スクリプト終了"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;スクリプト終了&quot;</Chunk>
+						</DisplayCalculation>
+					</Title>
+					<Message>
+						<Calculation><![CDATA["スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。&quot;</Chunk>
+						</DisplayCalculation>
+					</Message>
+					<Buttons>
+						<Button CommitState="True">
+							<Calculation><![CDATA["OK"]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;OK&quot;</Chunk>
+							</DisplayCalculation>
+						</Button>
+						<Button CommitState="False"/>
+						<Button CommitState="False"/>
+					</Buttons>
+				</Step>
+				<Step enable="True" id="103" name="現在のスクリプト終了">
+					<StepText>現在のスクリプト終了 [ 結果: &quot;&quot; ]</StepText>
+					<Calculation><![CDATA[""]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 拠点別計画進捗｜バックアップ用::分類; &quot;NTT業務委託&quot; ]</StepText>
+					<Calculation><![CDATA["NTT業務委託"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;NTT業務委託&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="拠点別計画進捗｜バックアップ用" id="23" name="分類"/>
+				</Step>
+				<Step enable="True" id="28" name="検索実行">
+					<StepText>検索実行 [  ]</StepText>
+					<Restore state="False"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
+					<StepText>レコード/検索条件/ページへ移動
+[ ダイアログなし; 最初の ]</StepText>
+					<NoInteract state="True"/>
+					<RowPageLocation value="First"/>
+				</Step>
+				<Step enable="True" id="71" name="Loop">
+					<StepText>Loop [ フラッシュ: 常に ]</StepText>
+					<Restore state="False"/>
+					<FlushType value="Always"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::前月繰越; 拠点別計画進捗｜バックアップ用::前月繰越 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::前月繰越]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="8" name="前月繰越"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="8" name="前月繰越"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::当月目標; 拠点別計画進捗｜バックアップ用::当月目標 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当月目標]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="25" name="当月目標"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="21" name="当月目標"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::当月受注1; 拠点別計画進捗｜バックアップ用::当月受注1 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当月受注1]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="55" name="当月受注1"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="41" name="当月受注1"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::受注計; 拠点別計画進捗｜バックアップ用::受注計 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::受注計]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="56" name="受注計"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="42" name="受注計"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::当社受注; 拠点別計画進捗｜バックアップ用::当社受注 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当社受注]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="57" name="当社受注"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="43" name="当社受注"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::達成率; 拠点別計画進捗｜バックアップ用::達成率 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::達成率]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="13" name="達成率"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="12" name="達成率"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::完工; 拠点別計画進捗｜バックアップ用::完工 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::完工]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="17" name="完工"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="13" name="完工"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::最終予測; 拠点別計画進捗｜バックアップ用::最終予測 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::最終予測]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="18" name="最終予測"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="14" name="最終予測"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::中間予測; 拠点別計画進捗｜バックアップ用::中間予測 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::中間予測]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="19" name="中間予測"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="15" name="中間予測"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::当社完工; 拠点別計画進捗｜バックアップ用::当社完工 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当社完工]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="58" name="当社完工"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="44" name="当社完工"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::当月受注2; 拠点別計画進捗｜バックアップ用::当月受注2 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::当月受注2]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="59" name="当月受注2"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="45" name="当月受注2"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::最終差異; 拠点別計画進捗｜バックアップ用::最終差異 ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::最終差異]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="22" name="最終差異"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="18" name="最終差異"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_拠点別計画進捗::締めフラグ; 拠点別計画進捗｜バックアップ用::締めフラグ ]</StepText>
+					<Calculation><![CDATA[拠点別計画進捗｜バックアップ用::締めフラグ]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="拠点別計画進捗｜バックアップ用" id="37" name="締めフラグ"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_拠点別計画進捗" id="28" name="締めフラグ"/>
+				</Step>
+				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
+					<StepText>レコード/検索条件/ページへ移動
+[ ダイアログなし; 次の; 最後まできたら終了 ]</StepText>
+					<NoInteract state="True"/>
+					<Exit state="True"/>
+					<RowPageLocation value="Next"/>
+				</Step>
+				<Step enable="True" id="73" name="End Loop">
+					<StepText>End Loop</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#===================================</StepText>
+					<Text>===================================</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#稼働日重要指数</StepText>
+					<Text>稼働日重要指数</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#===================================</StepText>
+					<Text>===================================</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="6" name="レイアウト切り替え">
+					<StepText>レイアウト切り替え [ 「稼働日重要指数｜バックアップ用」 (稼働日重要指数｜バックアップ用) ]</StepText>
+					<LayoutDestination value="SelectedLayout"/>
+					<Layout id="146" name="稼働日重要指数｜バックアップ用"/>
+				</Step>
+				<Step enable="True" id="22" name="検索モードに切り替え">
+					<StepText>検索モードに切り替え [  ]</StepText>
+					<Pause state="False"/>
+					<Restore state="False"/>
+				</Step>
+				<Step enable="True" id="68" name="If">
+					<StepText>If [ Get ( スクリプト引数 ) = &quot;new&quot; ]</StepText>
+					<Restore state="False"/>
+					<Calculation><![CDATA[Get ( スクリプト引数 ) = "new"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">Get</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">スクリプト引数</Chunk>
+						<Chunk type="NoRef"> ) = &quot;new&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 稼働日重要指数｜バックアップ用::締めフラグ; &quot;==&quot; ]</StepText>
+					<Calculation><![CDATA["=="]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;==&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="稼働日重要指数｜バックアップ用" id="22" name="締めフラグ"/>
+				</Step>
+				<Step enable="True" id="125" name="Else If">
+					<StepText>Else If [ Get ( スクリプト引数 ) = &quot;all&quot; ]</StepText>
+					<Restore state="False"/>
+					<Calculation><![CDATA[Get ( スクリプト引数 ) = "all"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FunctionRef">Get</Chunk>
+						<Chunk type="NoRef"> ( </Chunk>
+						<Chunk type="FunctionRef">スクリプト引数</Chunk>
+						<Chunk type="NoRef"> ) = &quot;all&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="69" name="Else">
+					<StepText>Else [  ]</StepText>
+					<Restore state="False"/>
+				</Step>
+				<Step enable="True" id="55" name="ブラウズモードに切り替え">
+					<StepText>ブラウズモードに切り替え</StepText>
+					<Pause state="False"/>
+				</Step>
+				<Step enable="True" id="6" name="レイアウト切り替え">
+					<StepText>レイアウト切り替え [ 元のレイアウト ]</StepText>
+					<LayoutDestination value="OriginalLayout"/>
+				</Step>
+				<Step enable="True" id="87" name="カスタムダイアログを表示">
+					<StepText>カスタムダイアログを表示 [ タイトル: &quot;スクリプト終了&quot;; メッセージ: &quot;スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。&quot;; デフォルトボタン: 「OK」, 確定: 「はい」 ]</StepText>
+					<Title>
+						<Calculation><![CDATA["スクリプト終了"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;スクリプト終了&quot;</Chunk>
+						</DisplayCalculation>
+					</Title>
+					<Message>
+						<Calculation><![CDATA["スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。"]]></Calculation>
+						<DisplayCalculation>
+							<Chunk type="NoRef">&quot;スクリプト引数が設定されていないか、あるいはスクリプト引数が間違っています。&quot;</Chunk>
+						</DisplayCalculation>
+					</Message>
+					<Buttons>
+						<Button CommitState="True">
+							<Calculation><![CDATA["OK"]]></Calculation>
+							<DisplayCalculation>
+								<Chunk type="NoRef">&quot;OK&quot;</Chunk>
+							</DisplayCalculation>
+						</Button>
+						<Button CommitState="False"/>
+						<Button CommitState="False"/>
+					</Buttons>
+				</Step>
+				<Step enable="True" id="103" name="現在のスクリプト終了">
+					<StepText>現在のスクリプト終了 [ 結果: &quot;&quot; ]</StepText>
+					<Calculation><![CDATA[""]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;&quot;</Chunk>
+					</DisplayCalculation>
+				</Step>
+				<Step enable="True" id="70" name="End If">
+					<StepText>End If</StepText>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ 稼働日重要指数｜バックアップ用::重要指数分類; &quot;NTT業務委託&quot; ]</StepText>
+					<Calculation><![CDATA["NTT業務委託"]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="NoRef">&quot;NTT業務委託&quot;</Chunk>
+					</DisplayCalculation>
+					<Field table="稼働日重要指数｜バックアップ用" id="17" name="重要指数分類"/>
+				</Step>
+				<Step enable="True" id="28" name="検索実行">
+					<StepText>検索実行 [  ]</StepText>
+					<Restore state="False"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
+					<StepText>レコード/検索条件/ページへ移動
+[ ダイアログなし; 最初の ]</StepText>
+					<NoInteract state="True"/>
+					<RowPageLocation value="First"/>
+				</Step>
+				<Step enable="True" id="71" name="Loop">
+					<StepText>Loop [ フラッシュ: 常に ]</StepText>
+					<Restore state="False"/>
+					<FlushType value="Always"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::日付; 稼働日重要指数｜バックアップ用::日付 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::日付]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="20" name="日付"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="8" name="日付"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::稼働日; 稼働日重要指数｜バックアップ用::稼働日 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::稼働日]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="18" name="稼働日"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="9" name="稼働日"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::必要売上; 稼働日重要指数｜バックアップ用::必要売上 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::必要売上]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="6" name="必要売上"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="10" name="必要売上"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::計上売上; 稼働日重要指数｜バックアップ用::計上売上 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::計上売上]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="7" name="計上売上"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="11" name="計上売上"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::差異金額; 稼働日重要指数｜バックアップ用::差異金額 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::差異金額]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="8" name="差異金額"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="12" name="差異金額"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::必要進捗; 稼働日重要指数｜バックアップ用::必要進捗 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::必要進捗]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="9" name="必要進捗"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="13" name="必要進捗"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::実績進捗; 稼働日重要指数｜バックアップ用::実績進捗 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::実績進捗]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="10" name="実績進捗"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="14" name="実績進捗"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::前月; 稼働日重要指数｜バックアップ用::前月 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::前月]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="11" name="前月"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="15" name="前月"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::対比; 稼働日重要指数｜バックアップ用::対比 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::対比]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="12" name="対比"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="16" name="対比"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::日計; 稼働日重要指数｜バックアップ用::日計 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::日計]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="14" name="日計"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="17" name="日計"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::進捗率; 稼働日重要指数｜バックアップ用::進捗率 ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::進捗率]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="15" name="進捗率"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="18" name="進捗率"/>
+				</Step>
+				<Step enable="True" id="76" name="フィールド設定">
+					<StepText>フィールド設定 [ N業バックアップ_稼働日重要指数::締めフラグ; 稼働日重要指数｜バックアップ用::締めフラグ ]</StepText>
+					<Calculation><![CDATA[稼働日重要指数｜バックアップ用::締めフラグ]]></Calculation>
+					<DisplayCalculation>
+						<Chunk type="FieldRef">
+							<Field table="稼働日重要指数｜バックアップ用" id="22" name="締めフラグ"/>
+						</Chunk>
+					</DisplayCalculation>
+					<Field table="N業バックアップ_稼働日重要指数" id="20" name="締めフラグ"/>
+				</Step>
+				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
+					<StepText>レコード/検索条件/ページへ移動
+[ ダイアログなし; 次の; 最後まできたら終了 ]</StepText>
+					<NoInteract state="True"/>
+					<Exit state="True"/>
+					<RowPageLocation value="Next"/>
+				</Step>
+				<Step enable="True" id="73" name="End Loop">
+					<StepText>End Loop</StepText>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="86" name="エラー処理">
+					<StepText>エラー処理 [ オフ ]</StepText>
+					<Set state="False"/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText/>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#◆更新情報◆</StepText>
+					<Text>◆更新情報◆</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#2025/11/17　okada　稼働日重要指数部分追加</StepText>
+					<Text>2025/11/17　okada　稼働日重要指数部分追加</Text>
+				</Step>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
+					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
 				</Step>
 			</StepList>
 		</Script>
@@ -44506,1566 +45479,6 @@ $カテゴリID[$cnt];
 				</Step>
 			</StepList>
 		</Script>
-		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="105" name="集計用データ作成_全レコード作成し直しVer_BK20250204">
-			<StepList>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
-					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#◆作成情報◆</StepText>
-					<Text>◆作成情報◆</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#機能概要	：タブローの連携用テーブルの作成</StepText>
-					<Text>機能概要	：タブローの連携用テーブルの作成</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#引数		：なし</StepText>
-					<Text>引数		：なし</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#トリガ	：[レイアウト]ダッシュボード画面／　　　更新ボタン</StepText>
-					<Text>トリガ	：[レイアウト]ダッシュボード画面／　　　更新ボタン</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#作成日	：2024/12/19</StepText>
-					<Text>作成日	：2024/12/19</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#作成者	：Yuta Kawabata</StepText>
-					<Text>作成者	：Yuta Kawabata</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#コメント	：</StepText>
-					<Text>コメント	：</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
-					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="87" name="カスタムダイアログを表示">
-					<StepText>カスタムダイアログを表示 [ タイトル: &quot;確認&quot;; メッセージ: &quot;集計用テーブルを再作成します。¶レコード数によって前後しますが最大10分程度の時間がかかります。¶※処理中はファイルを閉じないでください。&quot;; デフォルトボタン: 「OK」, 確定: 「はい」; ボタン 2: 「キャンセル」, 確定: 「いいえ」 ]</StepText>
-					<Title>
-						<Calculation><![CDATA["確認"]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;確認&quot;</Chunk>
-						</DisplayCalculation>
-					</Title>
-					<Message>
-						<Calculation><![CDATA["集計用テーブルを再作成します。¶レコード数によって前後しますが最大10分程度の時間がかかります。¶※処理中はファイルを閉じないでください。"]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;集計用テーブルを再作成します。¶レコード数によって前後しますが最大10分程度の時間がかかります。¶※処理中はファイルを閉じないでください。&quot;</Chunk>
-						</DisplayCalculation>
-					</Message>
-					<Buttons>
-						<Button CommitState="True">
-							<Calculation><![CDATA["OK"]]></Calculation>
-							<DisplayCalculation>
-								<Chunk type="NoRef">&quot;OK&quot;</Chunk>
-							</DisplayCalculation>
-						</Button>
-						<Button CommitState="False">
-							<Calculation><![CDATA["キャンセル"]]></Calculation>
-							<DisplayCalculation>
-								<Chunk type="NoRef">&quot;キャンセル&quot;</Chunk>
-							</DisplayCalculation>
-						</Button>
-						<Button CommitState="False"/>
-					</Buttons>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ Get ( 最終メッセージ選択 ) = 2 ]</StepText>
-					<Restore state="False"/>
-					<Calculation><![CDATA[Get ( 最終メッセージ選択 ) = 2]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">最終メッセージ選択</Chunk>
-						<Chunk type="NoRef"> ) = 2</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="103" name="現在のスクリプト終了">
-					<StepText>現在のスクリプト終了 [  ]</StepText>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="86" name="エラー処理">
-					<StepText>エラー処理 [ オン ]</StepText>
-					<Set state="True"/>
-				</Step>
-				<Step enable="True" id="122" name="新規ウインドウ">
-					<StepText>新規ウインドウ [ スタイル: カード; 使用するレイアウト: 「global_処理用」 (global); 閉じる: いいえ; 最小化: いいえ; 最大化: いいえ; サイズ変更: いいえ; メニューバー: いいえ; 親ウインドウを淡色表示: はい; ツールバー: いいえ ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<NewWndStyles DimParentWindow="はい" Toolbars="いいえ" MenuBar="いいえ" Style="Card" Close="いいえ" Minimize="いいえ" Maximize="いいえ" Resize="いいえ" Styles="3222274064"/>
-					<Layout id="99" name="global_処理用"/>
-				</Step>
-				<Step enable="True" id="62" name="スクリプト一時停止/続行">
-					<StepText>スクリプト一時停止/続行 [ 間隔（秒）: 1 ]</StepText>
-					<PauseTime value="ForDuration"/>
-					<Calculation><![CDATA[1]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">1</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="79" name="ウインドウの固定">
-					<StepText>ウインドウの固定</StepText>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $max; 値:Let (
-#a = ValueCount ( List (global_カテゴリ_有効カテゴリ::カテゴリID));
-
-Case(
-#a ≥ 10 ; 10 ;
-#a 
-)
-) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Let (
-#a = ValueCount ( List (global_カテゴリ_有効カテゴリ::カテゴリID));
-
-Case(
-#a ≥ 10 ; 10 ;
-#a 
-)
-)]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> (
-#a = </Chunk>
-							<Chunk type="FunctionRef">ValueCount</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">List</Chunk>
-							<Chunk type="NoRef"> (</Chunk>
-							<Chunk type="FieldRef">
-								<Field table="global_カテゴリ_有効カテゴリ" id="7" name="カテゴリID"/>
-							</Chunk>
-							<Chunk type="NoRef">));
-
-</Chunk>
-							<Chunk type="FunctionRef">Case</Chunk>
-							<Chunk type="NoRef">(
-#a ≥ 10 ; 10 ;
-#a 
-)
-)</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$max</Name>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $cnt; 値:1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$cnt</Name>
-				</Step>
-				<Step enable="True" id="71" name="Loop">
-					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
-					<FlushType value="Defer"/>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $カテゴリID[$cnt]; 値:GetValue ( List ( global_カテゴリ_有効カテゴリ::カテゴリID ) ; $cnt ) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[GetValue ( List ( global_カテゴリ_有効カテゴリ::カテゴリID ) ; $cnt )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">GetValue</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">List</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="global_カテゴリ_有効カテゴリ" id="7" name="カテゴリID"/>
-							</Chunk>
-							<Chunk type="NoRef"> ) ; $cnt )</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[$cnt]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">$cnt</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$カテゴリID</Name>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $カテゴリ数; 値:Count ( $カテゴリID ) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Count ( $カテゴリID )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Count</Chunk>
-							<Chunk type="NoRef"> ( $カテゴリID )</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Name>$カテゴリ数</Name>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $カテゴリ名[$cnt]; 値:GetValue ( List ( global_カテゴリ_有効カテゴリ::カテゴリ名 ) ; $cnt ) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[GetValue ( List ( global_カテゴリ_有効カテゴリ::カテゴリ名 ) ; $cnt )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">GetValue</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">List</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="global_カテゴリ_有効カテゴリ" id="8" name="カテゴリ名"/>
-							</Chunk>
-							<Chunk type="NoRef"> ) ; $cnt )</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[$cnt]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">$cnt</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$カテゴリ名</Name>
-				</Step>
-				<Step enable="True" id="72" name="Exit Loop If">
-					<StepText>Exit Loop If [ $max ≤ $cnt ]</StepText>
-					<Calculation><![CDATA[$max ≤ $cnt]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$max ≤ $cnt</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $cnt; 値:$cnt + 1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[$cnt + 1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">$cnt + 1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$cnt</Name>
-				</Step>
-				<Step enable="True" id="73" name="End Loop">
-					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $検索対象日; 値:Let ( 
-#a = Get ( 日付 );
-
-Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
-) ]</StepText>
-					<Value>
-						<Calculation><![CDATA[Let ( 
-#a = Get ( 日付 );
-
-Date ( Month ( #a ) -2 ; Day ( #a ) ; Year ( #a ) )
-)]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> ( 
-#a = </Chunk>
-							<Chunk type="FunctionRef">Get</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">日付</Chunk>
-							<Chunk type="NoRef"> );
-
-</Chunk>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">Month</Chunk>
-							<Chunk type="NoRef"> ( #a ) -2 ; </Chunk>
-							<Chunk type="FunctionRef">Day</Chunk>
-							<Chunk type="NoRef"> ( #a ) ; </Chunk>
-							<Chunk type="FunctionRef">Year</Chunk>
-							<Chunk type="NoRef"> ( #a ) )
-)</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$検索対象日</Name>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#===================================</StepText>
-					<Text>===================================</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#集計対象カテゴリレコード作成</StepText>
-					<Text>集計対象カテゴリレコード作成</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#===================================</StepText>
-					<Text>===================================</Text>
-				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「集計対象タグカテゴリ」 (集計タグカテゴリテーブル) ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="101" name="集計対象タグカテゴリ"/>
-				</Step>
-				<Step enable="True" id="23" name="全レコードを表示">
-					<StepText>全レコードを表示</StepText>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
-					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">対象レコード数</Chunk>
-						<Chunk type="NoRef"> ) &gt; 0</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="10" name="対象レコード削除">
-					<StepText>対象レコード削除
-[ ダイアログなし ]</StepText>
-					<NoInteract state="True"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
-				</Step>
-				<Step enable="True" id="7" name="新規レコード/検索条件">
-					<StepText>新規レコード/検索条件</StepText>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $cnt; 値:1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$cnt</Name>
-				</Step>
-				<Step enable="True" id="71" name="Loop">
-					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
-					<FlushType value="Defer"/>
-				</Step>
-				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;集計タグカテゴリテーブル::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); $カテゴリ名[$cnt] ]</StepText>
-					<Result>
-						<Calculation><![CDATA[$カテゴリ名[$cnt]]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">$カテゴリ名[$cnt]</Chunk>
-						</DisplayCalculation>
-					</Result>
-					<TargetName>
-						<Calculation><![CDATA["集計タグカテゴリテーブル::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;集計タグカテゴリテーブル::タグ&quot; &amp; </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
-						</DisplayCalculation>
-					</TargetName>
-				</Step>
-				<Step enable="True" id="72" name="Exit Loop If">
-					<StepText>Exit Loop If [ $max ≤ $cnt ]</StepText>
-					<Calculation><![CDATA[$max ≤ $cnt]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$max ≤ $cnt</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $cnt; 値:$cnt + 1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[$cnt + 1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">$cnt + 1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$cnt</Name>
-				</Step>
-				<Step enable="True" id="73" name="End Loop">
-					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#===================================</StepText>
-					<Text>===================================</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#目標集計レコード作成</StepText>
-					<Text>目標集計レコード作成</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#===================================</StepText>
-					<Text>===================================</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#目標集計レコード削除</StepText>
-					<Text>目標集計レコード削除</Text>
-				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「目標集計テーブル」 (目標集計テーブル) ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="87" name="目標集計テーブル"/>
-				</Step>
-				<Step enable="True" id="23" name="全レコードを表示">
-					<StepText>全レコードを表示</StepText>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
-					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">対象レコード数</Chunk>
-						<Chunk type="NoRef"> ) &gt; 0</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="10" name="対象レコード削除">
-					<StepText>対象レコード削除
-[ ダイアログなし ]</StepText>
-					<NoInteract state="True"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「MT.SV担当者入力データ月次」 (SV担当者入力データ月次) ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="61" name="MT.SV担当者入力データ月次"/>
-				</Step>
-				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>レコード/検索条件/ページへ移動
-[ ダイアログなし; 最初の ]</StepText>
-					<NoInteract state="True"/>
-					<RowPageLocation value="First"/>
-				</Step>
-				<Step enable="True" id="71" name="Loop">
-					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
-					<FlushType value="Defer"/>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
-not IsEmpty (SV担当者入力データ月次::年月) ]</StepText>
-					<Restore state="False"/>
-					<Calculation><![CDATA[not IsEmpty (SV担当者入力データ月次_加盟店セット_加盟店::加盟店名 ) and
-not IsEmpty (SV担当者入力データ月次::当月目標金額_月初_委託) and
-not IsEmpty (SV担当者入力データ月次::年月)]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">not</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> (</Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店セット_加盟店" id="9" name="加盟店名"/>
-						</Chunk>
-						<Chunk type="NoRef"> ) </Chunk>
-						<Chunk type="FunctionRef">and</Chunk>
-						<Chunk type="NoRef">
-</Chunk>
-						<Chunk type="FunctionRef">not</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> (</Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
-						</Chunk>
-						<Chunk type="NoRef">) </Chunk>
-						<Chunk type="FunctionRef">and</Chunk>
-						<Chunk type="NoRef">
-</Chunk>
-						<Chunk type="FunctionRef">not</Chunk>
-						<Chunk type="NoRef"> </Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> (</Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="18" name="年月"/>
-						</Chunk>
-						<Chunk type="NoRef">)</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店CD; SV担当者入力データ月次::加盟店CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::加盟店CD]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="6" name="加盟店CD"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店名; Let(
-
-#a = SV担当者入力データ月次_加盟店セット_加盟店::加盟店名_略称;
-
-Case(
-IsEmpty ( #a ) ; &quot;その他&quot; ;
-#a
-)
-) ]</StepText>
-					<Calculation><![CDATA[Let(
-
-#a = SV担当者入力データ月次_加盟店セット_加盟店::加盟店名_略称;
-
-Case(
-IsEmpty ( #a ) ; "その他" ;
-#a
-)
-)]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Let</Chunk>
-						<Chunk type="NoRef">(
-
-#a = </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店セット_加盟店" id="17" name="加盟店名_略称"/>
-						</Chunk>
-						<Chunk type="NoRef">;
-
-</Chunk>
-						<Chunk type="FunctionRef">Case</Chunk>
-						<Chunk type="NoRef">(
-</Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( #a ) ; &quot;その他&quot; ;
-#a
-)
-)</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="18" name="加盟店名"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人CD; SV担当者入力データ月次_加盟店セット::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次_加盟店セット::加盟店法人CD]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店セット" id="6" name="加盟店法人CD"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="19" name="加盟店法人CD"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
-
-#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; &quot;その他&quot; ;
-#a
-)
-) ]</StepText>
-					<Calculation><![CDATA[Let(
-
-#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; "その他" ;
-#a
-)
-)]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Let</Chunk>
-						<Chunk type="NoRef">(
-
-#a = </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
-						</Chunk>
-						<Chunk type="NoRef">;
-
-</Chunk>
-						<Chunk type="FunctionRef">Case</Chunk>
-						<Chunk type="NoRef">(
-</Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( #a ) ; &quot;その他&quot; ;
-#a
-)
-)</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::OK目標; SV担当者入力データ月次::当月目標金額_月初_委託 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初_委託]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="7" name="OK目標"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::売上目標; SV担当者入力データ月次::当月目標金額_月初_委託 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::当月目標金額_月初_委託]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="8" name="当月目標金額_月初_委託"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="26" name="売上目標"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::年月; SV担当者入力データ月次::年月 ]</StepText>
-					<Calculation><![CDATA[SV担当者入力データ月次::年月]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次" id="18" name="年月"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="8" name="年月"/>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $cnt; 値:1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$cnt</Name>
-				</Step>
-				<Step enable="True" id="71" name="Loop">
-					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
-					<FlushType value="Defer"/>
-				</Step>
-				<Step enable="False" id="147" name="フィールドを名前で設定">
-					<StepText>//  フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ( 
-#a = 
-ExecuteSQL ( 
-
-&quot;SELECT \&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; 
-WHERE \&quot;tagabble_id\&quot; = ?
-AND \&quot;カテゴリID\&quot; = ? &quot;;
-&quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::加盟店CD;
-$カテゴリID[$cnt]
-);
-
-Case(
-IsEmpty ( #a ); &quot;その他&quot;;
-#a
-)
-) ]</StepText>
-					<Result>
-						<Calculation><![CDATA[Let ( 
-#a = 
-ExecuteSQL ( 
-
-"SELECT \"タグ_表示用\"
-FROM \"tagging中間テーブル\" 
-WHERE \"tagabble_id\" = ?
-AND \"カテゴリID\" = ? ";
-"" ; "" ;
-SV担当者入力データ月次::加盟店CD;
-$カテゴリID[$cnt]
-);
-
-Case(
-IsEmpty ( #a ); "その他";
-#a
-)
-)]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> ( 
-#a = 
-</Chunk>
-							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
-							<Chunk type="NoRef"> ( 
-
-&quot;SELECT \&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; 
-WHERE \&quot;tagabble_id\&quot; = ?
-AND \&quot;カテゴリID\&quot; = ? &quot;;
-&quot;&quot; ; &quot;&quot; ;
-</Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
-							</Chunk>
-							<Chunk type="NoRef">;
-$カテゴリID[$cnt]
-);
-
-</Chunk>
-							<Chunk type="FunctionRef">Case</Chunk>
-							<Chunk type="NoRef">(
-</Chunk>
-							<Chunk type="FunctionRef">IsEmpty</Chunk>
-							<Chunk type="NoRef"> ( #a ); &quot;その他&quot;;
-#a
-)
-)</Chunk>
-						</DisplayCalculation>
-					</Result>
-					<TargetName>
-						<Calculation><![CDATA["SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
-						</DisplayCalculation>
-					</TargetName>
-				</Step>
-				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([
-#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
-#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
-
-#a = 
-ExecuteSQL ( 
-
-&quot;SELECT \&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; 
-WHERE \&quot;tagabble_id\&quot; = ?
-AND \&quot;カテゴリID\&quot; = ? 
-AND \&quot;適用期間_開始日\&quot; &lt;= ? 
-AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
-&quot;&quot; ; &quot;&quot; ;
-SV担当者入力データ月次::加盟店CD;
-$カテゴリID[$cnt];
-#start;
-#end
-)];
-
-Case(
-IsEmpty ( #a ); &quot;その他&quot;;
-#a
-)
-) ]</StepText>
-					<Result>
-						<Calculation><![CDATA[Let ([
-#start = Date ( SV担当者入力データ月次::月 ; 1 ; SV担当者入力データ月次::年 );
-#end = Date ( SV担当者入力データ月次::月 + 1 ; 1 ; SV担当者入力データ月次::年 ) -1 ;
-
-#a = 
-ExecuteSQL ( 
-
-"SELECT \"タグ_表示用\"
-FROM \"tagging中間テーブル\" 
-WHERE \"tagabble_id\" = ?
-AND \"カテゴリID\" = ? 
-AND \"適用期間_開始日\" <= ? 
-AND \"適用期間_連携用終了日\" >= ?";
-"" ; "" ;
-SV担当者入力データ月次::加盟店CD;
-$カテゴリID[$cnt];
-#start;
-#end
-)];
-
-Case(
-IsEmpty ( #a ); "その他";
-#a
-)
-)]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> ([
-#start = </Chunk>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="16" name="月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 1 ; </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="15" name="年"/>
-							</Chunk>
-							<Chunk type="NoRef"> );
-#end = </Chunk>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="16" name="月"/>
-							</Chunk>
-							<Chunk type="NoRef"> + 1 ; 1 ; </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="15" name="年"/>
-							</Chunk>
-							<Chunk type="NoRef"> ) -1 ;
-
-#a = 
-</Chunk>
-							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
-							<Chunk type="NoRef"> ( 
-
-&quot;SELECT \&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; 
-WHERE \&quot;tagabble_id\&quot; = ?
-AND \&quot;カテゴリID\&quot; = ? 
-AND \&quot;適用期間_開始日\&quot; &lt;= ? 
-AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
-&quot;&quot; ; &quot;&quot; ;
-</Chunk>
-							<Chunk type="FieldRef">
-								<Field table="SV担当者入力データ月次" id="7" name="加盟店CD"/>
-							</Chunk>
-							<Chunk type="NoRef">;
-$カテゴリID[$cnt];
-#start;
-#end
-)];
-
-</Chunk>
-							<Chunk type="FunctionRef">Case</Chunk>
-							<Chunk type="NoRef">(
-</Chunk>
-							<Chunk type="FunctionRef">IsEmpty</Chunk>
-							<Chunk type="NoRef"> ( #a ); &quot;その他&quot;;
-#a
-)
-)</Chunk>
-						</DisplayCalculation>
-					</Result>
-					<TargetName>
-						<Calculation><![CDATA["SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;SV担当者入力データ月次_目標集計テーブル｜作成許可::タグ&quot; &amp; </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
-						</DisplayCalculation>
-					</TargetName>
-				</Step>
-				<Step enable="True" id="72" name="Exit Loop If">
-					<StepText>Exit Loop If [ $max ≤ $cnt ]</StepText>
-					<Calculation><![CDATA[$max ≤ $cnt]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$max ≤ $cnt</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $cnt; 値:$cnt + 1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[$cnt + 1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">$cnt + 1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$cnt</Name>
-				</Step>
-				<Step enable="True" id="73" name="End Loop">
-					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
-				</Step>
-				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>レコード/検索条件/ページへ移動
-[ ダイアログなし; 次の; 最後まできたら終了 ]</StepText>
-					<NoInteract state="True"/>
-					<Exit state="True"/>
-					<RowPageLocation value="Next"/>
-				</Step>
-				<Step enable="True" id="73" name="End Loop">
-					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#===================================</StepText>
-					<Text>===================================</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#実績集計レコード作成</StepText>
-					<Text>実績集計レコード作成</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#===================================</StepText>
-					<Text>===================================</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#実績集計レコード削除</StepText>
-					<Text>実績集計レコード削除</Text>
-				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「実績集計テーブル」 (実績集計テーブル) ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="88" name="実績集計テーブル"/>
-				</Step>
-				<Step enable="True" id="23" name="全レコードを表示">
-					<StepText>全レコードを表示</StepText>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
-					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">対象レコード数</Chunk>
-						<Chunk type="NoRef"> ) &gt; 0</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="10" name="対象レコード削除">
-					<StepText>対象レコード削除
-[ ダイアログなし ]</StepText>
-					<NoInteract state="True"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「MT.物件別管理データ」 (物件別管理データ) ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="68" name="MT.物件別管理データ"/>
-				</Step>
-				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>レコード/検索条件/ページへ移動
-[ ダイアログなし; 最初の ]</StepText>
-					<NoInteract state="True"/>
-					<RowPageLocation value="First"/>
-				</Step>
-				<Step enable="True" id="71" name="Loop">
-					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
-					<FlushType value="Defer"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店CD; 物件別管理データ::加盟店CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::加盟店CD]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="18" name="加盟店CD"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="6" name="加盟店CD"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店名; Let(
-
-#a = 物件別管理データ_加盟店::加盟店名_略称;
-
-Case(
-IsEmpty ( #a ) ; &quot;その他&quot; ;
-#a
-)
-) ]</StepText>
-					<Calculation><![CDATA[Let(
-
-#a = 物件別管理データ_加盟店::加盟店名_略称;
-
-Case(
-IsEmpty ( #a ) ; "その他" ;
-#a
-)
-)]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Let</Chunk>
-						<Chunk type="NoRef">(
-
-#a = </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_加盟店" id="17" name="加盟店名_略称"/>
-						</Chunk>
-						<Chunk type="NoRef">;
-
-</Chunk>
-						<Chunk type="FunctionRef">Case</Chunk>
-						<Chunk type="NoRef">(
-</Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( #a ) ; &quot;その他&quot; ;
-#a
-)
-)</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="19" name="加盟店名"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人CD; 物件別管理データ::加盟店法人CD ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::加盟店法人CD]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="16" name="加盟店法人CD"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="20" name="加盟店法人CD"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::加盟店法人名; Let(
-
-#a = 物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; &quot;その他&quot; ;
-#a
-)
-) ]</StepText>
-					<Calculation><![CDATA[Let(
-
-#a = 物件別管理データ_加盟店_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; "その他" ;
-#a
-)
-)]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Let</Chunk>
-						<Chunk type="NoRef">(
-
-#a = </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ_加盟店_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
-						</Chunk>
-						<Chunk type="NoRef">;
-
-</Chunk>
-						<Chunk type="FunctionRef">Case</Chunk>
-						<Chunk type="NoRef">(
-</Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( #a ) ; &quot;その他&quot; ;
-#a
-)
-)</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="21" name="加盟店法人名"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ SV担当者入力データ月次_目標集計テーブル｜作成許可::加盟店法人名; Let(
-
-#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; &quot;その他&quot; ;
-#a
-)
-) ]</StepText>
-					<Calculation><![CDATA[Let(
-
-#a = SV担当者入力データ月次_加盟店セット_加盟店法人::加盟店法人名_略称;
-
-Case(
-IsEmpty ( #a ) ; "その他" ;
-#a
-)
-)]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Let</Chunk>
-						<Chunk type="NoRef">(
-
-#a = </Chunk>
-						<Chunk type="FieldRef">
-							<Field table="SV担当者入力データ月次_加盟店セット_加盟店法人" id="16" name="加盟店法人名_略称"/>
-						</Chunk>
-						<Chunk type="NoRef">;
-
-</Chunk>
-						<Chunk type="FunctionRef">Case</Chunk>
-						<Chunk type="NoRef">(
-</Chunk>
-						<Chunk type="FunctionRef">IsEmpty</Chunk>
-						<Chunk type="NoRef"> ( #a ) ; &quot;その他&quot; ;
-#a
-)
-)</Chunk>
-					</DisplayCalculation>
-					<Field table="SV担当者入力データ月次_目標集計テーブル｜作成許可" id="20" name="加盟店法人名"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::OK実績; 物件別管理データ::受注金額 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::受注金額]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="49" name="受注金額"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="7" name="OK実績"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::売上実績; 物件別管理データ::受注金額 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::受注金額]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="49" name="受注金額"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="27" name="売上実績"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::年月; 物件別管理データ::年月 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::年月]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="104" name="年月"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="28" name="年月"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::OK日; 物件別管理データ::ＯＫ日 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::ＯＫ日]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="28" name="ＯＫ日"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="32" name="OK日"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::売上日; 物件別管理データ::売上_計上日 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::売上_計上日]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="31" name="売上_計上日"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="33" name="売上日"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::キャンセル日; 物件別管理データ::キャンセル日 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::キャンセル日]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="33" name="キャンセル日"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="30" name="キャンセル日"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 物件別管理データ_実績集計テーブル｜作成許可::撤去日; 物件別管理データ::撤去日 ]</StepText>
-					<Calculation><![CDATA[物件別管理データ::撤去日]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FieldRef">
-							<Field table="物件別管理データ" id="34" name="撤去日"/>
-						</Chunk>
-					</DisplayCalculation>
-					<Field table="物件別管理データ_実績集計テーブル｜作成許可" id="31" name="撤去日"/>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $cnt; 値:1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$cnt</Name>
-				</Step>
-				<Step enable="True" id="71" name="Loop">
-					<StepText>Loop [ フラッシュ: 延期 ]</StepText>
-					<Restore state="False"/>
-					<FlushType value="Defer"/>
-				</Step>
-				<Step enable="False" id="147" name="フィールドを名前で設定">
-					<StepText>//  フィールドを名前で設定 [ &quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ( 
-#a = 
-ExecuteSQL ( 
-
-&quot;SELECT \&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; 
-WHERE \&quot;tagabble_id\&quot; = ?
-AND \&quot;カテゴリID\&quot; = ? &quot;;
-&quot;&quot; ; &quot;&quot; ;
-物件別管理データ::加盟店CD;
-$カテゴリID[$cnt]
-);
-
-Case(
-IsEmpty ( #a ); &quot;その他&quot;;
-#a
-)
-) ]</StepText>
-					<Result>
-						<Calculation><![CDATA[Let ( 
-#a = 
-ExecuteSQL ( 
-
-"SELECT \"タグ_表示用\"
-FROM \"tagging中間テーブル\" 
-WHERE \"tagabble_id\" = ?
-AND \"カテゴリID\" = ? ";
-"" ; "" ;
-物件別管理データ::加盟店CD;
-$カテゴリID[$cnt]
-);
-
-Case(
-IsEmpty ( #a ); "その他";
-#a
-)
-)]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> ( 
-#a = 
-</Chunk>
-							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
-							<Chunk type="NoRef"> ( 
-
-&quot;SELECT \&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; 
-WHERE \&quot;tagabble_id\&quot; = ?
-AND \&quot;カテゴリID\&quot; = ? &quot;;
-&quot;&quot; ; &quot;&quot; ;
-</Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
-							</Chunk>
-							<Chunk type="NoRef">;
-$カテゴリID[$cnt]
-);
-
-</Chunk>
-							<Chunk type="FunctionRef">Case</Chunk>
-							<Chunk type="NoRef">(
-</Chunk>
-							<Chunk type="FunctionRef">IsEmpty</Chunk>
-							<Chunk type="NoRef"> ( #a ); &quot;その他&quot;;
-#a
-)
-)</Chunk>
-						</DisplayCalculation>
-					</Result>
-					<TargetName>
-						<Calculation><![CDATA["物件別管理データ_実績集計テーブル｜作成許可::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
-						</DisplayCalculation>
-					</TargetName>
-				</Step>
-				<Step enable="True" id="147" name="フィールドを名前で設定">
-					<StepText>フィールドを名前で設定 [ &quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; Right ( &quot;00&quot; &amp; $cnt ; 2 ); Let ([ 
-#start =  Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
-#end =  Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1;
-
-#a = 
-ExecuteSQL ( 
-
-&quot;SELECT \&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; 
-WHERE \&quot;tagabble_id\&quot; = ?
-AND \&quot;カテゴリID\&quot; = ? 
-AND \&quot;適用期間_開始日\&quot; &lt;= ? 
-AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
-&quot;&quot; ; &quot;&quot; ;
-物件別管理データ::加盟店CD;
-$カテゴリID[$cnt];
-#start;
-#end
-)];
-
-Case(
-IsEmpty ( #a ); &quot;その他&quot;;
-#a
-)
-) ]</StepText>
-					<Result>
-						<Calculation><![CDATA[Let ([ 
-#start =  Date ( Right ( 物件別管理データ::年月 ; 2 ) ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) );
-#end =  Date ( Right ( 物件別管理データ::年月 ; 2 ) + 1 ; 1 ; Left ( 物件別管理データ::年月 ; 4 ) ) - 1;
-
-#a = 
-ExecuteSQL ( 
-
-"SELECT \"タグ_表示用\"
-FROM \"tagging中間テーブル\" 
-WHERE \"tagabble_id\" = ?
-AND \"カテゴリID\" = ? 
-AND \"適用期間_開始日\" <= ? 
-AND \"適用期間_連携用終了日\" >= ?";
-"" ; "" ;
-物件別管理データ::加盟店CD;
-$カテゴリID[$cnt];
-#start;
-#end
-)];
-
-Case(
-IsEmpty ( #a ); "その他";
-#a
-)
-)]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="FunctionRef">Let</Chunk>
-							<Chunk type="NoRef"> ([ 
-#start =  </Chunk>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="104" name="年月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 2 ) ; 1 ; </Chunk>
-							<Chunk type="FunctionRef">Left</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="104" name="年月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 4 ) );
-#end =  </Chunk>
-							<Chunk type="FunctionRef">Date</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="104" name="年月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 2 ) + 1 ; 1 ; </Chunk>
-							<Chunk type="FunctionRef">Left</Chunk>
-							<Chunk type="NoRef"> ( </Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="104" name="年月"/>
-							</Chunk>
-							<Chunk type="NoRef"> ; 4 ) ) - 1;
-
-#a = 
-</Chunk>
-							<Chunk type="FunctionRef">ExecuteSQL</Chunk>
-							<Chunk type="NoRef"> ( 
-
-&quot;SELECT \&quot;タグ_表示用\&quot;
-FROM \&quot;tagging中間テーブル\&quot; 
-WHERE \&quot;tagabble_id\&quot; = ?
-AND \&quot;カテゴリID\&quot; = ? 
-AND \&quot;適用期間_開始日\&quot; &lt;= ? 
-AND \&quot;適用期間_連携用終了日\&quot; &gt;= ?&quot;;
-&quot;&quot; ; &quot;&quot; ;
-</Chunk>
-							<Chunk type="FieldRef">
-								<Field table="物件別管理データ" id="18" name="加盟店CD"/>
-							</Chunk>
-							<Chunk type="NoRef">;
-$カテゴリID[$cnt];
-#start;
-#end
-)];
-
-</Chunk>
-							<Chunk type="FunctionRef">Case</Chunk>
-							<Chunk type="NoRef">(
-</Chunk>
-							<Chunk type="FunctionRef">IsEmpty</Chunk>
-							<Chunk type="NoRef"> ( #a ); &quot;その他&quot;;
-#a
-)
-)</Chunk>
-						</DisplayCalculation>
-					</Result>
-					<TargetName>
-						<Calculation><![CDATA["物件別管理データ_実績集計テーブル｜作成許可::タグ" & Right ( "00" & $cnt ; 2 )]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">&quot;物件別管理データ_実績集計テーブル｜作成許可::タグ&quot; &amp; </Chunk>
-							<Chunk type="FunctionRef">Right</Chunk>
-							<Chunk type="NoRef"> ( &quot;00&quot; &amp; $cnt ; 2 )</Chunk>
-						</DisplayCalculation>
-					</TargetName>
-				</Step>
-				<Step enable="True" id="72" name="Exit Loop If">
-					<StepText>Exit Loop If [ $max ≤ $cnt ]</StepText>
-					<Calculation><![CDATA[$max ≤ $cnt]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$max ≤ $cnt</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="141" name="変数を設定">
-					<StepText>変数を設定 [ $cnt; 値:$cnt  + 1 ]</StepText>
-					<Value>
-						<Calculation><![CDATA[$cnt  + 1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">$cnt  + 1</Chunk>
-						</DisplayCalculation>
-					</Value>
-					<Repetition>
-						<Calculation><![CDATA[1]]></Calculation>
-						<DisplayCalculation>
-							<Chunk type="NoRef">1</Chunk>
-						</DisplayCalculation>
-					</Repetition>
-					<Name>$cnt</Name>
-				</Step>
-				<Step enable="True" id="73" name="End Loop">
-					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="16" name="レコード/検索条件/ページへ移動">
-					<StepText>レコード/検索条件/ページへ移動
-[ ダイアログなし; 次の; 最後まできたら終了 ]</StepText>
-					<NoInteract state="True"/>
-					<Exit state="True"/>
-					<RowPageLocation value="Next"/>
-				</Step>
-				<Step enable="True" id="73" name="End Loop">
-					<StepText>End Loop</StepText>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#===================================</StepText>
-					<Text>===================================</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#稼働日情報レコード作成</StepText>
-					<Text>稼働日情報レコード作成</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#===================================</StepText>
-					<Text>===================================</Text>
-				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「稼働日情報テーブル」 (稼働日情報テーブル) ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="102" name="稼働日情報テーブル"/>
-				</Step>
-				<Step enable="True" id="23" name="全レコードを表示">
-					<StepText>全レコードを表示</StepText>
-				</Step>
-				<Step enable="True" id="68" name="If">
-					<StepText>If [ Get ( 対象レコード数 ) &gt; 0 ]</StepText>
-					<Restore state="False"/>
-					<Calculation><![CDATA[Get ( 対象レコード数 ) > 0]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">対象レコード数</Chunk>
-						<Chunk type="NoRef"> ) &gt; 0</Chunk>
-					</DisplayCalculation>
-				</Step>
-				<Step enable="True" id="10" name="対象レコード削除">
-					<StepText>対象レコード削除
-[ ダイアログなし ]</StepText>
-					<NoInteract state="True"/>
-				</Step>
-				<Step enable="True" id="70" name="End If">
-					<StepText>End If</StepText>
-				</Step>
-				<Step enable="True" id="7" name="新規レコード/検索条件">
-					<StepText>新規レコード/検索条件</StepText>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 稼働日情報テーブル::本日; Get ( 日付 ) ]</StepText>
-					<Calculation><![CDATA[Get ( 日付 )]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="FunctionRef">Get</Chunk>
-						<Chunk type="NoRef"> ( </Chunk>
-						<Chunk type="FunctionRef">日付</Chunk>
-						<Chunk type="NoRef"> )</Chunk>
-					</DisplayCalculation>
-					<Field table="稼働日情報テーブル" id="6" name="本日"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 稼働日情報テーブル::稼働日; $$稼働日 ]</StepText>
-					<Calculation><![CDATA[$$稼働日]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$稼働日</Chunk>
-					</DisplayCalculation>
-					<Field table="稼働日情報テーブル" id="7" name="稼働日"/>
-				</Step>
-				<Step enable="True" id="76" name="フィールド設定">
-					<StepText>フィールド設定 [ 稼働日情報テーブル::総稼働日数; $$総稼働日数 ]</StepText>
-					<Calculation><![CDATA[$$総稼働日数]]></Calculation>
-					<DisplayCalculation>
-						<Chunk type="NoRef">$$総稼働日数</Chunk>
-					</DisplayCalculation>
-					<Field table="稼働日情報テーブル" id="8" name="総稼働日数"/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="121" name="ウインドウを閉じる">
-					<StepText>ウインドウを閉じる [ 現在のウインドウ ]</StepText>
-					<LimitToWindowsOfCurrentFile state="True"/>
-					<Window value="Current"/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText/>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
-					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#◆更新情報◆</StepText>
-					<Text>◆更新情報◆</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#yyyy/mm/dd　更新者　更新内容</StepText>
-					<Text>yyyy/mm/dd　更新者　更新内容</Text>
-				</Step>
-				<Step enable="True" id="89" name="# (コメント)">
-					<StepText>#―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</StepText>
-					<Text>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</Text>
-				</Step>
-			</StepList>
-		</Script>
 		<Script includeInMenu="False" SiriShortcutVisible="False" runFullAccess="False" id="86" name="締処理ウインドウ_使用しない（削除可）">
 			<StepList>
 				<Step enable="True" id="89" name="# (コメント)">
@@ -46705,13 +46118,17 @@ $カテゴリID[$cnt];
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="True" id="1" name="スクリプト実行">
-					<StepText>スクリプト実行 [ 「N業バックアップ」; 引数: &quot;new&quot; ]</StepText>
+				<Step enable="True" id="89" name="# (コメント)">
+					<StepText>#バックアップは別途サーバースケジュールで実行する　岡田変更　2025/11/17</StepText>
+					<Text>バックアップは別途サーバースケジュールで実行する　岡田変更　2025/11/17</Text>
+				</Step>
+				<Step enable="False" id="1" name="スクリプト実行">
+					<StepText>//  スクリプト実行 [ 「SSS_N業バックアップ」; 引数: &quot;new&quot; ]</StepText>
 					<Calculation><![CDATA["new"]]></Calculation>
 					<DisplayCalculation>
 						<Chunk type="NoRef">&quot;new&quot;</Chunk>
 					</DisplayCalculation>
-					<Script id="167" name="N業バックアップ"/>
+					<Script id="167" name="SSS_N業バックアップ"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
