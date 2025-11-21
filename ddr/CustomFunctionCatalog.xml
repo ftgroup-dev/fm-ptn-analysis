@@ -260,4 +260,13 @@ v$return
 )</Chunk>
 		</DisplayCalculation>
 	</CustomFunction>
+	<CustomFunction id="3" functionArity="1" visible="True" parameters="key" name="ACL_show">
+		<Calculation><![CDATA[ValueCount ( FilterValues ( $$ACL ; key ) ) > 0]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="FunctionRef">ValueCount</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">FilterValues</Chunk>
+			<Chunk type="NoRef"> ( $$ACL ; key ) ) &gt; 0</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
 </CustomFunctionCatalog>

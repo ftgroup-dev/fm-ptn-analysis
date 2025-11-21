@@ -5,6 +5,7 @@
 		<PrivilegeSetList>
 			<PrivilegeSet id="1" name="[完全アクセス]"/>
 			<PrivilegeSet id="4" name="tableau"/>
+			<PrivilegeSet id="9" name="[Data Editor]"/>
 		</PrivilegeSetList>
 	</ExtendedPrivilege>
 	<ExtendedPrivilege id="3" comment="FileMaker ネットワークによるアクセス" name="fmapp">
@@ -14,6 +15,7 @@
 			<PrivilegeSet id="3" name="[閲覧のみアクセス]"/>
 			<PrivilegeSet id="4" name="tableau"/>
 			<PrivilegeSet id="5" name="一般入力者"/>
+			<PrivilegeSet id="9" name="[Data Editor]"/>
 		</PrivilegeSetList>
 	</ExtendedPrivilege>
 	<ExtendedPrivilege id="4" comment="スリープ/バックグラウンドで指定した時間を経過した場合再認証を要求します。" name="fmreauthenticate10">
@@ -25,6 +27,7 @@
 			<PrivilegeSet id="5" name="一般入力者"/>
 			<PrivilegeSet id="6" name="login"/>
 			<PrivilegeSet id="7" name="SV担当者制限"/>
+			<PrivilegeSet id="9" name="[Data Editor]"/>
 		</PrivilegeSetList>
 	</ExtendedPrivilege>
 	<ExtendedPrivilege id="5" comment="XML Web 公開でのアクセス - FMS のみ" name="fmxml"/>

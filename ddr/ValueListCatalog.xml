@@ -190,4 +190,61 @@ SV担当者
 		</SecondaryField>
 		<ShowRelated value="False"/>
 	</ValueList>
+	<ValueList id="22" name="Layout">
+		<Source value="Custom"/>
+		<CustomValues>
+			<Text>ALL
+TOP
+メンテナンス
+login
+物件別管理データ
+売上集計表
+受注残明細表
+売上明細表
+batExport
+SV担当者入力データ月次｜一覧
+SV担当者入力データ月次｜詳細
+カテゴリ
+タグ
+商品
+tagging中間テーブル
+加盟店法人
+加盟店
+加盟店セット
+ユーザーマスタ
+タグ用テーブルマスタ
+全テーブル情報
+休日マスタ
+目標集計テーブル｜作成用
+全テーブル情報｜tmp
+休日マスタ_処理用
+global_処理用
+締日処理
+ACL</Text>
+		</CustomValues>
+	</ValueList>
+	<ValueList id="23" name="Type">
+		<Source value="Custom"/>
+		<CustomValues>
+			<Text>BTN
+FLD
+POR
+TAB
+POP
+PNL
+LBL
+HDR
+IMG
+GRP</Text>
+		</CustomValues>
+	</ValueList>
+	<ValueList id="24" name="Roles">
+		<Source value="Custom"/>
+		<CustomValues>
+			<Text>[Full Access]
+[Data Entry Only]
+[Read-Only Access]
+[Data Editor]</Text>
+		</CustomValues>
+	</ValueList>
 </ValueListCatalog>
