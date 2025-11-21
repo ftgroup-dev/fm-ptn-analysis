@@ -5587,10 +5587,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="417" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -8233,10 +8230,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="399" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -10810,10 +10804,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="409" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -13527,10 +13518,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="418" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -15958,10 +15946,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="442" LabelKey="0" flags="65796" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -19509,10 +19494,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="363" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -25035,10 +25017,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="404" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -27407,10 +27386,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="427" LabelKey="0" flags="65796" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -29705,10 +29681,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="464" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -32478,10 +32451,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="405" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -34830,10 +34800,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="433" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -36970,10 +36937,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="425" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -39262,10 +39226,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="425" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -42674,10 +42635,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="422" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -45531,10 +45489,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="485" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -47947,10 +47902,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="400" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -52210,7 +52162,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </TextObj>
 </Object>
 </Layout>
-<Layout width="1024" quickFind="True" includeInMenu="True" id="61" name="MT.SV担当者入力データ月次">
+<Layout width="1024" quickFind="True" includeInMenu="False" id="61" name="MT.SV担当者入力データ月次">
 <Table id="1065107" name="SV担当者入力データ月次"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
@@ -81028,10 +80980,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="425" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="17.0000000" left="149.0000000" bottom="47.0000000" right="269.0000000"/>
@@ -86635,7 +86584,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 </Layout>
-</Group><Layout width="1281" quickFind="True" includeInMenu="True" id="112" name="SV担当者入力データ月次｜一覧_確認後削除">
+</Group><Layout width="1281" quickFind="True" includeInMenu="False" id="112" name="SV担当者入力データ月次｜一覧_確認後削除">
 <Table id="1065107" name="SV担当者入力データ月次"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
@@ -87092,10 +87041,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="442" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -90064,10 +90010,7 @@ self:normal .self&#10;{&#10;&#09;font-size: 11pt;&#10;}&#10;</LocalCSS>
 <Step enable="True" id="1" name="スクリプト実行"><StepText>スクリプト実行 [ 「検索」; 引数: &quot;全件表示&quot; ]</StepText><CurrentScript value="Pause"></CurrentScript><Calculation><![CDATA["全件表示"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;全件表示&quot;</Chunk></DisplayCalculation><Script id="6" name="検索"></Script></Step>
 </ButtonObj>
 <HideCondition findMode="True">
-<Calculation><![CDATA[If(
- Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0;
- 1
-)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
+<Calculation><![CDATA[If( Get( ウインドウモード ) = 0 and Get( レコード総数 ) ≠ Get( 対象レコード数 ); 0; 1)]]></Calculation><DisplayCalculation><Chunk type="FunctionRef">If</Chunk><Chunk type="NoRef">(&#13; </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">ウインドウモード</Chunk><Chunk type="NoRef"> ) = 0 </Chunk><Chunk type="FunctionRef">and</Chunk><Chunk type="NoRef"> </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">レコード総数</Chunk><Chunk type="NoRef"> ) ≠ </Chunk><Chunk type="FunctionRef">Get</Chunk><Chunk type="NoRef">( </Chunk><Chunk type="FunctionRef">対象レコード数</Chunk><Chunk type="NoRef"> ); 0;&#13; 1&#13;)</Chunk></DisplayCalculation></HideCondition>
 </Object>
 <Object type="Button" key="417" LabelKey="0" flags="65804" rotation="0">
 <Bounds top="78.0000000" left="148.0000000" bottom="108.0000000" right="268.0000000"/>
@@ -91970,7 +91913,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo-Bold
 </TextObj>
 </Object>
 </Layout>
-<Layout width="1024" quickFind="True" includeInMenu="True" id="119" name="メンテナンス">
+<Layout width="1024" quickFind="True" includeInMenu="False" id="119" name="メンテナンス">
 <Table id="1065216" name="メンテナンス"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
