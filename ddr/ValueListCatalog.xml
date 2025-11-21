@@ -247,4 +247,10 @@ GRP</Text>
 [Data Editor]</Text>
 		</CustomValues>
 	</ValueList>
+	<ValueList id="25" name="稼働拠点フラグ">
+		<Source value="Custom"/>
+		<CustomValues>
+			<Text>1</Text>
+		</CustomValues>
+	</ValueList>
 </ValueListCatalog>
