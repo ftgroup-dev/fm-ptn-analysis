@@ -52210,7 +52210,7 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </TextObj>
 </Object>
 </Layout>
-<Layout width="1024" quickFind="True" includeInMenu="True" id="61" name="MT.SV担当者入力データ月次">
+<Layout width="1024" quickFind="True" includeInMenu="False" id="61" name="MT.SV担当者入力データ月次">
 <Table id="1065107" name="SV担当者入力データ月次"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
@@ -86635,7 +86635,7 @@ self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#
 </FieldObj>
 </Object>
 </Layout>
-</Group><Layout width="1281" quickFind="True" includeInMenu="True" id="112" name="SV担当者入力データ月次｜一覧_確認後削除">
+</Group><Layout width="1281" quickFind="True" includeInMenu="False" id="112" name="SV担当者入力データ月次｜一覧_確認後削除">
 <Table id="1065107" name="SV担当者入力データ月次"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>
@@ -91970,7 +91970,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo-Bold
 </TextObj>
 </Object>
 </Layout>
-<Layout width="1024" quickFind="True" includeInMenu="True" id="119" name="メンテナンス">
+<Layout width="1024" quickFind="True" includeInMenu="False" id="119" name="メンテナンス">
 <Table id="1065216" name="メンテナンス"/>
 <CustomMenuSet id="0" name=""/>
 <LocalTheme>

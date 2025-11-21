@@ -4,7 +4,10 @@
 INPUT_FILE="PartnerManagementSystem_fmp12.xml"
 
 # UTF-16 BOM付き → UTF-8 に変換し、同じファイル名に上書き
-iconv -f UTF-16 -t UTF-8 "$INPUT_FILE" > "${INPUT_FILE}.tmp" && mv -f "${INPUT_FILE}.tmp" "$INPUT_FILE"
+iconv -f UTF-16 -t UTF-8 "$INPUT_FILE" \
+  | perl -pe 's/\x0D\x0A?/\x0A/g' \
+  > "${INPUT_FILE}.tmp" && mv -f "${INPUT_FILE}.tmp" "$INPUT_FILE"
+
 
 # 出力ディレクトリ
 OUTPUT_DIR="../ddr"
