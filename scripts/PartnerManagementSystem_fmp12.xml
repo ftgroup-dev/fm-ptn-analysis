@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<FMPReport link="概要.xml" creationTime="9:20:50" creationDate="2025/09/10" type="Report" version="21.1.1">
-<File name="PartnerManagementSystem.fmp12" path="C:\Users\327311\Desktop\新しいフォルダー (2)\作業後\">
+<FMPReport link="概要.xml" creationTime="10:31:13" creationDate="2025/08/27" type="Report" version="21.1.1">
+<File name="PartnerManagementSystem.fmp12" path="ftg.irca-fm.com">
 <BaseTableCatalog>
 	<BaseTable id="129" records="3" name="top">
 		<FieldCatalog>
@@ -135615,7 +135615,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo-Bold
 				<Shortcut key="67" modifier="4"/>
 			</MenuItem>
 			<MenuItem isSeparatorItem="False" isSubMenuItem="False" overrideAction="False" overrideShortcut="False" winPlatform="True" macPlatform="True" overrideName="False" specifyScript="True">
-				<Command name="貼り付け(&amp;P)	Ctrl+V" id="57637"/>
+				<Command name="貼り付け(&amp;P) 	Ctrl+V" id="57637"/>
 				<Conditions>
 					<Install>
 						<Calculation><![CDATA[1]]></Calculation>
