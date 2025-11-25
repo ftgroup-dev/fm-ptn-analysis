@@ -374,7 +374,7 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="130" name="MT.N業バックアップ">
+				<Layout id="130" name="MT.N業バックアップ_拠点別計画進捗">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
@@ -391,10 +391,6 @@
 					<DataAccess value="NoAccess"/>
 				</Layout>
 				<Layout id="135" name="計画進捗_Webビューア印刷用">
-					<LayoutAccess value="NoAccess"/>
-					<DataAccess value="NoAccess"/>
-				</Layout>
-				<Layout id="136" name="拠点別計画進捗｜バックアップ用">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
@@ -415,6 +411,18 @@
 					<DataAccess value="NoAccess"/>
 				</Layout>
 				<Layout id="143" name="-">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="146" name="稼働日重要指数｜バックアップ用">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="147" name="MT.N業バックアップ_稼働日重要指数">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="148" name="拠点別計画進捗｜バックアップ用">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
@@ -676,9 +684,6 @@
 				<Script runFullAccess="False" id="101" name="ユーザーマスタ_タグ消去">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="105" name="集計用データ作成_全レコード作成し直しVer_BK20250204">
-					<Access value="NoAccess"/>
-				</Script>
 				<Script runFullAccess="False" id="107" name="SV担当者入力">
 					<Access value="NoAccess"/>
 				</Script>
@@ -763,7 +768,7 @@
 				<Script runFullAccess="False" id="166" name="N業のみ計算値更新">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="167" name="N業バックアップ">
+				<Script runFullAccess="False" id="167" name="SSS_N業バックアップ">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="168" name="計画進捗レコード作成">
@@ -782,9 +787,6 @@
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="173" name="担当別進捗レコード作成">
-					<Access value="NoAccess"/>
-				</Script>
-				<Script runFullAccess="False" id="174" name="N業バックアップレコード作成">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="175" name="テスト用">
@@ -821,6 +823,12 @@
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="186" name="補修スクリプト">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="187" name="N業バックアップ_拠点別計画進捗レコード作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="188" name="N業バックアップ_稼働日重要指数レコード作成">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script name="[新規スクリプト]">
@@ -1105,7 +1113,14 @@
 					<Delete value="False"/>
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
-				<BaseTable id="181" comment="" name="N業バックアップ">
+				<BaseTable id="181" comment="" name="N業バックアップ_拠点別計画進捗">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="182" comment="" name="N業バックアップ_稼働日重要指数">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
@@ -1401,7 +1416,14 @@
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
-				<BaseTable id="181" comment="" name="N業バックアップ">
+				<BaseTable id="181" comment="" name="N業バックアップ_拠点別計画進捗">
+					<Create value="False"/>
+					<View value="True"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="All"/>
+				</BaseTable>
+				<BaseTable id="182" comment="" name="N業バックアップ_稼働日重要指数">
 					<Create value="False"/>
 					<View value="True"/>
 					<Edit value="False"/>
@@ -1759,7 +1781,7 @@
 					<LayoutAccess value="ViewOnly"/>
 					<DataAccess value="Modifiable"/>
 				</Layout>
-				<Layout id="130" name="MT.N業バックアップ">
+				<Layout id="130" name="MT.N業バックアップ_拠点別計画進捗">
 					<LayoutAccess value="ViewOnly"/>
 					<DataAccess value="Modifiable"/>
 				</Layout>
@@ -1776,10 +1798,6 @@
 					<DataAccess value="Modifiable"/>
 				</Layout>
 				<Layout id="135" name="計画進捗_Webビューア印刷用">
-					<LayoutAccess value="ViewOnly"/>
-					<DataAccess value="Modifiable"/>
-				</Layout>
-				<Layout id="136" name="拠点別計画進捗｜バックアップ用">
 					<LayoutAccess value="ViewOnly"/>
 					<DataAccess value="Modifiable"/>
 				</Layout>
@@ -1800,6 +1818,18 @@
 					<DataAccess value="Modifiable"/>
 				</Layout>
 				<Layout id="143" name="-">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="146" name="稼働日重要指数｜バックアップ用">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="147" name="MT.N業バックアップ_稼働日重要指数">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="148" name="拠点別計画進捗｜バックアップ用">
 					<LayoutAccess value="ViewOnly"/>
 					<DataAccess value="Modifiable"/>
 				</Layout>
