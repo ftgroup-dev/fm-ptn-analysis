@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<FMPReport link="概要.xml" creationTime="9:45:31" creationDate="2025/11/21" type="Report" version="22.0.2">
-<File name="PartnerManagementSystem.fmp12" path="C:\Users\327311\Desktop\旧\20251117_担当別進捗_微修正\作業後\">
+<FMPReport link="概要.xml" creationTime="14:54:48" creationDate="2025/11/28" type="Report" version="22.0.2">
+<File name="PartnerManagementSystem.fmp12" path="C:\Users\327311\Desktop\過去fmp12\20251120_データ復旧対応\4.FIX権限修正\">
 <BaseTableCatalog>
 	<BaseTable id="129" records="3" comment="" name="top">
 		<FieldCatalog>
@@ -509,7 +509,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="136" records="11279" comment="" name="物件別管理データ">
+	<BaseTable id="136" records="11512" comment="" name="物件別管理データ">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -1874,7 +1874,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="138" records="14061" comment="" name="売上集計表">
+	<BaseTable id="138" records="16558" comment="" name="売上集計表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2277,7 +2277,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="140" records="18015" comment="" name="受注残明細表">
+	<BaseTable id="140" records="14319" comment="" name="受注残明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -2899,7 +2899,7 @@
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="142" records="54403" comment="" name="売上明細表">
+	<BaseTable id="142" records="63186" comment="" name="売上明細表">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6527,7 +6527,7 @@ v$return
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="154" records="4831" comment="" name="tagging中間テーブル">
+	<BaseTable id="154" records="5039" comment="" name="tagging中間テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6606,7 +6606,7 @@ v$return
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="True" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="4838" generate="OnCreation"/>
+					<Serial increment="1" nextValue="5070" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -6849,7 +6849,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="155" records="3654" comment="" name="商品">
+	<BaseTable id="155" records="3862" comment="" name="商品">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -6928,7 +6928,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			<Field id="6" dataType="Number" fieldType="Normal" name="ID">
 				<Comment/>
 				<AutoEnter allowEditing="False" constant="False" furigana="False" lookup="False" calculation="False">
-					<Serial increment="1" nextValue="4602" generate="OnCreation"/>
+					<Serial increment="1" nextValue="4882" generate="OnCreation"/>
 					<ConstantData/>
 				</AutoEnter>
 				<Validation messageCalc="False" message="False" maxLength="False" valuelist="False" calculation="False" alwaysValidateCalculation="False" type="OnlyDuringDataEntry">
@@ -7936,7 +7936,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="165" records="941" comment="" name="loginLog">
+	<BaseTable id="165" records="966" comment="" name="loginLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -8092,7 +8092,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="162" records="5539" comment="" name="目標集計テーブル">
+	<BaseTable id="162" records="11376" comment="" name="目標集計テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -8439,7 +8439,7 @@ not IsEmpty ( 適用期間_開始日 ) and IsEmpty ( 適用期間_終了日 ) ; 
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="163" records="18292" comment="" name="実績集計テーブル">
+	<BaseTable id="163" records="19021" comment="" name="実績集計テーブル">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -9523,7 +9523,7 @@ Year ( #a ) & Right ( "00" & Month ( #a ) ; 2 )
 			</Field>
 		</FieldCatalog>
 	</BaseTable>
-	<BaseTable id="169" records="263" comment="" name="xlsxImportLog">
+	<BaseTable id="169" records="299" comment="" name="xlsxImportLog">
 		<FieldCatalog>
 			<Field id="1" dataType="Text" fieldType="Normal" name="主キー">
 				<Comment>このテーブル内の各レコードの固有の識別子</Comment>
@@ -55811,7 +55811,7 @@ self:normal .self&#10;{&#10;&#09;background-color: rgba(75.2941%,92.9412%,99.607
 <Theme name="FT" id="02"/>
 <Options showRecordIndicator="False" showFieldFramesCurrentRecord="False" showFieldFrames="False" saveRecord="True"/>
 <Object type="Field" key="265" LabelKey="266" flags="0" rotation="0">
-<Bounds top="152.0000000" left="247.0000000" bottom="182.0000000" right="538.0000000"/>
+<Bounds top="152.0000000" left="447.0000000" bottom="182.0000000" right="738.0000000"/>
 <FieldObj numOfReps="1" flags="1048804" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>加盟店セット::加盟店セット名</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -55839,7 +55839,7 @@ self:normal .self&#10;{&#10;&#09;background-color: rgba(75.2941%,92.9412%,99.607
 </FieldObj>
 </Object>
 <Object type="Text" key="266" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="247.0000000" bottom="152.0000000" right="538.0000000"/>
+<Bounds top="122.0000000" left="447.0000000" bottom="152.0000000" right="738.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -57757,7 +57757,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </GroupButtonObj>
 </Object>
 <Object type="Field" key="525" LabelKey="526" flags="0" rotation="0">
-<Bounds top="152.0000000" left="538.0000000" bottom="182.0000000" right="727.0000000"/>
+<Bounds top="152.0000000" left="738.0000000" bottom="182.0000000" right="927.0000000"/>
 <FieldObj numOfReps="1" flags="1048800" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>加盟店セット::加盟店セット名_略称</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -57785,7 +57785,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </FieldObj>
 </Object>
 <Object type="Text" key="526" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="538.0000000" bottom="152.0000000" right="727.0000000"/>
+<Bounds top="122.0000000" left="738.0000000" bottom="152.0000000" right="927.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -57945,7 +57945,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </TextObj>
 </Object>
 <Object type="Text" key="567" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="727.0000000" bottom="152.0000000" right="1107.0000000"/>
+<Bounds top="122.0000000" left="927.0000000" bottom="152.0000000" right="1307.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -57987,14 +57987,14 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo,Meiryo);&#1
 </TextObj>
 </Object>
 <Object type="Rect" key="568" LabelKey="0" flags="0" rotation="0">
-<Bounds top="152.0000000" left="1019.0000000" bottom="182.0000000" right="1107.0000000"/>
+<Bounds top="152.0000000" left="1219.0000000" bottom="182.0000000" right="1307.0000000"/>
 <Styles>
 <LocalCSS>
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(100%,100%,100%,0);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-top-color: rgba(0%,0%,0%,1);&#10;&#09;border-right-color: rgba(0%,0%,0%,1);&#10;&#09;border-bottom-color: rgba(0%,0%,0%,1);&#10;&#09;border-left-color: rgba(0%,0%,0%,1);&#10;&#09;box-shadow: 0pt 0pt 2pt 1pt rgba(0%,43.9216%,81.1765%,1);&#10;}&#10;self:normal .inner_border&#10;{&#10;&#09;padding-right: 5pt;&#10;&#09;padding-left: 5pt;&#10;}&#10;</LocalCSS>
 </Styles>
 <RenderFormat renderType="0"></RenderFormat></Object>
 <Object type="PopoverButton" key="569" LabelKey="0" flags="8" rotation="0">
-<Bounds top="153.0000000" left="1019.0000000" bottom="181.0000000" right="1104.0000000"/>
+<Bounds top="153.0000000" left="1219.0000000" bottom="181.0000000" right="1304.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="13" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -58996,7 +58996,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 </PopoverButtonObj>
 </Object>
 <Object type="Field" key="597" LabelKey="0" flags="0" rotation="0">
-<Bounds top="152.0000000" left="727.0000000" bottom="182.0000000" right="1018.0000000"/>
+<Bounds top="152.0000000" left="927.0000000" bottom="182.0000000" right="1218.0000000"/>
 <FieldObj numOfReps="1" flags="1048804" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>加盟店セット::タグ_表示用</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -59024,7 +59024,7 @@ self:normal .self&#10;{&#10;&#09;font-family: -fm-font-family(Meiryo UI,MeiryoUI
 </FieldObj>
 </Object>
 <Object type="Field" key="600" LabelKey="0" flags="1073741832" rotation="0">
-<Bounds top="152.0000000" left="1307.0000000" bottom="182.0000000" right="1757.0000000"/>
+<Bounds top="152.0000000" left="1507.0000000" bottom="182.0000000" right="1757.0000000"/>
 <FieldObj numOfReps="1" flags="1048800" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>加盟店セット::備考</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -59054,7 +59054,7 @@ self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Text" key="601" LabelKey="0" flags="1073741824" rotation="0">
-<Bounds top="122.0000000" left="1307.0000000" bottom="152.0000000" right="1757.0000000"/>
+<Bounds top="122.0000000" left="1507.0000000" bottom="152.0000000" right="1757.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -59098,7 +59098,7 @@ self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;}&#10;</LocalCSS>
 </TextObj>
 </Object>
 <Object type="Text" key="602" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="1107.0000000" bottom="152.0000000" right="1207.0000000"/>
+<Bounds top="122.0000000" left="1307.0000000" bottom="152.0000000" right="1407.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -59140,7 +59140,7 @@ self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;}&#10;</LocalCSS>
 </TextObj>
 </Object>
 <Object type="Text" key="603" LabelKey="0" flags="0" rotation="0">
-<Bounds top="122.0000000" left="1207.0000000" bottom="152.0000000" right="1307.0000000"/>
+<Bounds top="122.0000000" left="1407.0000000" bottom="152.0000000" right="1507.0000000"/>
 <TextObj flags="2">
 <ExtendedAttributes fontHeight="0" graphicFormat="0">
 <NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
@@ -59182,7 +59182,7 @@ self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;}&#10;</LocalCSS>
 </TextObj>
 </Object>
 <Object type="Field" key="604" LabelKey="0" flags="0" rotation="0">
-<Bounds top="152.0000000" left="1207.0000000" bottom="182.0000000" right="1307.0000000"/>
+<Bounds top="152.0000000" left="1407.0000000" bottom="182.0000000" right="1507.0000000"/>
 <FieldObj numOfReps="1" flags="1048800" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>加盟店セット::並び順</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
@@ -59210,14 +59210,14 @@ self:normal .self&#10;{&#10;&#09;border-right-style: none;&#10;}&#10;</LocalCSS>
 </FieldObj>
 </Object>
 <Object type="Rect" key="605" LabelKey="0" flags="0" rotation="0">
-<Bounds top="152.0000000" left="1106.0000000" bottom="182.0000000" right="1207.0000000"/>
+<Bounds top="152.0000000" left="1306.0000000" bottom="182.0000000" right="1407.0000000"/>
 <Styles>
 <LocalCSS>
 self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-color: rgba(0%,0%,0%,0);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;border-image-source: none;&#10;}&#10;</LocalCSS>
 </Styles>
 <RenderFormat renderType="0"></RenderFormat></Object>
 <Object type="Field" key="606" LabelKey="0" flags="0" rotation="0">
-<Bounds top="159.0000000" left="1145.0000000" bottom="175.0000000" right="1161.0000000"/>
+<Bounds top="159.0000000" left="1345.0000000" bottom="175.0000000" right="1361.0000000"/>
 <FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="3" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>加盟店セット::稼働拠点フラグ</Name>
 <ValueList>稼働拠点フラグ</ValueList>
@@ -59358,6 +59358,90 @@ self:normal .self&#10;{&#10;&#09;font-size: 12pt;&#10;}&#10;self:checked .self&#
 <Calculation><![CDATA["加盟店セットCD▼"]]></Calculation><DisplayCalculation><Chunk type="NoRef">&quot;加盟店セットCD▼&quot;</Chunk></DisplayCalculation></LabelCalc>
 </Object>
 </ButtonBarObj>
+</Object>
+<Object type="Text" key="612" LabelKey="0" flags="0" rotation="0">
+<Bounds top="122.0000000" left="247.0000000" bottom="152.0000000" right="447.0000000"/>
+<TextObj flags="2">
+<ExtendedAttributes fontHeight="0" graphicFormat="0">
+<NumFormat flags="0" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="0" decimalPoint="0" negativeColor="#0" decimalDigits="0" trueString="" falseString=""/>
+<DateFormat format="0" charStyle="0" monthStyle="0" dayStyle="0" separator="0">
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1"></DateElementSep>
+<DateElementSep index="2"></DateElementSep>
+<DateElementSep index="3"></DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="0" charStyle="0" hourStyle="0" minsecStyle="0" separator="0" amString="" pmString="" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<CustomStyles>
+<Name>テキスト_青_枠あり_横並び</Name></CustomStyles>
+</Styles>
+<CharacterStyleVector>
+<Style>
+<Data>運営会社</Data>
+<CharacterStyle mask="32695">
+<Font-family codeSet="Other" fontId="8" postScript="MeiryoUI">Meiryo UI</Font-family>
+<Font-size>11</Font-size>
+<Face>0</Face>
+<Color>#000000</Color>
+</CharacterStyle>
+</Style>
+</CharacterStyleVector>
+<ParagraphStyleVector>
+<Style>
+<Data>運営会社</Data>
+<ParagraphStyle mask="0">
+</ParagraphStyle>
+</Style>
+</ParagraphStyleVector>
+</TextObj>
+</Object>
+<Object type="Field" key="613" LabelKey="0" flags="8" rotation="0">
+<ScriptTriggers>
+<Trigger event="OnObjectExit" id="2" triggerFlags="1">
+<Script id="84" name="加盟店_その他タグセット">
+</Script>
+<TriggerText>&quot;加盟店_その他タグセット&quot;</TriggerText>
+</Trigger>
+<Trigger event="OnObjectKeystroke" id="5" triggerFlags="1">
+<Script id="39" name="コード入力_中間テーブルチェック">
+</Script>
+<TriggerText>&quot;コード入力_中間テーブルチェック&quot;</TriggerText>
+</Trigger>
+</ScriptTriggers>
+<Bounds top="152.0000000" left="247.0000000" bottom="182.0000000" right="447.0000000"/>
+<FieldObj numOfReps="1" flags="1048800" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<Name>加盟店セット::運営会社</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;text-align: left;&#10;}&#10;</LocalCSS>
+<CustomStyles>
+<Name>リスト　_フィールド_中</Name></CustomStyles>
+</Styles>
+<DDRInfo>
+<Field name="運営会社" id="23" repetition="1" maxRepetition="1" table="加盟店セット"/>
+</DDRInfo>
+</FieldObj>
 </Object>
 <Object type="Field" key="1992" LabelKey="0" flags="8320" rotation="0">
 <Bounds top="24.0000000" left="0.0000000" bottom="45.0000000" right="120.0000000"/>
@@ -81292,6 +81376,34 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </ParagraphStyleVector>
 </TextObj>
 </Object>
+<Object type="Field" key="67" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="22.0000000" left="3360.0000000" bottom="41.0000000" right="3480.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>売上集計表::締フラグ</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(80%,80%,80%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(80%,80%,80%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="締フラグ" id="30" repetition="1" maxRepetition="1" table="売上集計表"/>
+</DDRInfo>
+</FieldObj>
+</Object>
 </Layout>
 <Layout width="1024" quickFind="True" includeInMenu="False" id="70" name="MT.受注残明細表">
 <Table id="1065100" name="受注残明細表"/>
@@ -84360,6 +84472,34 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </Style>
 </ParagraphStyleVector>
 </TextObj>
+</Object>
+<Object type="Field" key="84" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="22.0000000" left="5010.0000000" bottom="41.0000000" right="5130.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>受注残明細表::締フラグ</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(80%,80%,80%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(80%,80%,80%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="締フラグ" id="46" repetition="1" maxRepetition="1" table="受注残明細表"/>
+</DDRInfo>
+</FieldObj>
 </Object>
 </Layout>
 <Layout width="1024" quickFind="True" includeInMenu="False" id="71" name="MT.売上明細表">
@@ -90353,6 +90493,34 @@ self:normal .self&#10;{&#10;&#09;text-align: right;&#10;&#09;-fm-text-vertical-a
 </Style>
 </ParagraphStyleVector>
 </TextObj>
+</Object>
+<Object type="Field" key="129" LabelKey="0" flags="8320" rotation="0">
+<Bounds top="22.0000000" left="9495.0000000" bottom="41.0000000" right="9615.0000000"/>
+<FieldObj numOfReps="1" flags="32" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="2" quickFind="1" pictFormat="5">
+<Name>売上明細表::締フラグ</Name>
+<ExtendedAttributes fontHeight="13" graphicFormat="5">
+<NumFormat flags="2304" charStyle="0" negativeStyle="0" currencySymbol="¥" thousandsSep="44" decimalPoint="46" negativeColor="#DD000000" decimalDigits="2" trueString="はい" falseString="いいえ"/>
+<DateFormat format="0" charStyle="0" monthStyle="1" dayStyle="1" separator="47">
+<DateElement>8</DateElement>
+<DateElement>4</DateElement>
+<DateElement>1</DateElement>
+<DateElement>0</DateElement>
+<DateElementSep index="0"></DateElementSep>
+<DateElementSep index="1">年</DateElementSep>
+<DateElementSep index="2">月</DateElementSep>
+<DateElementSep index="3">日</DateElementSep>
+<DateElementSep index="4"></DateElementSep>
+</DateFormat>
+<TimeFormat flags="159" charStyle="0" hourStyle="0" minsecStyle="1" separator="58" amString=" 午前" pmString=" 午後" ampmString=""/>
+</ExtendedAttributes>
+<Styles>
+<LocalCSS>
+self:normal .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-left-color: rgba(50%,50%,50%,1);&#10;&#09;border-top-style: none;&#10;&#09;border-left-style: none;&#10;&#09;-fm-borders-between-reps: true;&#10;}&#10;self:focus .self&#10;{&#10;&#09;border-right-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;}&#10;self:hover .icon&#10;{&#10;&#09;-fm-icon-color: rgba(80%,80%,80%,1);&#10;}&#10;self:focus .icon&#10;{&#10;&#09;-fm-icon-color: rgba(80%,80%,80%,1);&#10;}&#10;self:normal .repeat_border&#10;{&#10;&#09;border-bottom-color: rgba(50%,50%,50%,1);&#10;&#09;border-bottom-style: solid;&#10;&#09;border-bottom-width: 1pt;&#10;}&#10;</LocalCSS>
+</Styles>
+<DDRInfo>
+<Field name="締フラグ" id="89" repetition="1" maxRepetition="1" table="売上明細表"/>
+</DDRInfo>
+</FieldObj>
 </Object>
 </Layout>
 <Layout width="1024" quickFind="True" includeInMenu="False" id="73" name="MT.休日マスタ">
@@ -109268,7 +109436,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="883" LabelKey="0" flags="8" rotation="0">
 <Bounds top="140.0000000" left="720.0000000" bottom="160.0000000" right="760.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::併売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -109296,7 +109464,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="884" LabelKey="0" flags="8" rotation="0">
 <Bounds top="140.0000000" left="760.0000000" bottom="160.0000000" right="800.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::テレマ人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -119616,7 +119784,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1180" LabelKey="0" flags="8" rotation="0">
 <Bounds top="580.0000000" left="680.0000000" bottom="600.0000000" right="720.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::専売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -119644,7 +119812,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1181" LabelKey="0" flags="8" rotation="0">
 <Bounds top="580.0000000" left="720.0000000" bottom="600.0000000" right="760.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::併売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -119672,7 +119840,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1182" LabelKey="0" flags="8" rotation="0">
 <Bounds top="580.0000000" left="760.0000000" bottom="600.0000000" right="800.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::テレマ人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -119896,7 +120064,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1190" LabelKey="0" flags="8" rotation="0">
 <Bounds top="580.0000000" left="380.0000000" bottom="600.0000000" right="440.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗::当月目標</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12802" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -120534,7 +120702,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1214" LabelKey="0" flags="8" rotation="0">
 <Bounds top="780.0000000" left="680.0000000" bottom="800.0000000" right="720.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::専売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -120562,7 +120730,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1215" LabelKey="0" flags="8" rotation="0">
 <Bounds top="780.0000000" left="720.0000000" bottom="800.0000000" right="760.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::併売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -120590,7 +120758,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1216" LabelKey="0" flags="8" rotation="0">
 <Bounds top="780.0000000" left="760.0000000" bottom="800.0000000" right="800.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::テレマ人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -120814,7 +120982,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1224" LabelKey="0" flags="8" rotation="0">
 <Bounds top="780.0000000" left="380.0000000" bottom="800.0000000" right="440.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗::当月目標</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12802" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -121452,7 +121620,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1248" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1100.0000000" left="680.0000000" bottom="1120.0000000" right="720.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::専売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -121480,7 +121648,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1249" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1100.0000000" left="720.0000000" bottom="1120.0000000" right="760.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::併売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -121508,7 +121676,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1250" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1100.0000000" left="760.0000000" bottom="1120.0000000" right="800.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::テレマ人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -121732,7 +121900,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1258" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1100.0000000" left="380.0000000" bottom="1120.0000000" right="440.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗::当月目標</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12802" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -122370,7 +122538,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1282" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1380.0000000" left="680.0000000" bottom="1400.0000000" right="720.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::専売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -122398,7 +122566,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1283" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1380.0000000" left="720.0000000" bottom="1400.0000000" right="760.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::併売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -122426,7 +122594,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1284" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1380.0000000" left="760.0000000" bottom="1400.0000000" right="800.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::テレマ人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -122650,7 +122818,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1292" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1380.0000000" left="380.0000000" bottom="1400.0000000" right="440.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗::当月目標</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12802" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -126144,7 +126312,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1384" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1820.0000000" left="680.0000000" bottom="1840.0000000" right="720.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::専売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -126172,7 +126340,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1385" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1820.0000000" left="720.0000000" bottom="1840.0000000" right="760.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::併売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -126200,7 +126368,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1386" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1820.0000000" left="760.0000000" bottom="1840.0000000" right="800.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::テレマ人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -126424,7 +126592,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1394" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1820.0000000" left="380.0000000" bottom="1840.0000000" right="440.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗::当月目標</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12802" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -127776,7 +127944,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1435" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1980.0000000" left="680.0000000" bottom="2000.0000000" right="720.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::専売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -127804,7 +127972,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1436" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1980.0000000" left="720.0000000" bottom="2000.0000000" right="760.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::併売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -127832,7 +128000,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1437" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1980.0000000" left="760.0000000" bottom="2000.0000000" right="800.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::テレマ人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -128056,7 +128224,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1445" LabelKey="0" flags="8" rotation="0">
 <Bounds top="1980.0000000" left="380.0000000" bottom="2000.0000000" right="440.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗::当月目標</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12802" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -129408,7 +129576,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1486" LabelKey="0" flags="8" rotation="0">
 <Bounds top="2200.0000000" left="680.0000000" bottom="2220.0000000" right="720.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::専売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -129436,7 +129604,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1487" LabelKey="0" flags="8" rotation="0">
 <Bounds top="2200.0000000" left="720.0000000" bottom="2220.0000000" right="760.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::併売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -129464,7 +129632,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1488" LabelKey="0" flags="8" rotation="0">
 <Bounds top="2200.0000000" left="760.0000000" bottom="2220.0000000" right="800.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::テレマ人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -129688,7 +129856,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1496" LabelKey="0" flags="8" rotation="0">
 <Bounds top="2200.0000000" left="380.0000000" bottom="2220.0000000" right="440.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::当月目標金額_月初_卸売</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12802" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -131040,7 +131208,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1537" LabelKey="0" flags="8" rotation="0">
 <Bounds top="2480.0000000" left="680.0000000" bottom="2500.0000000" right="720.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::専売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -131068,7 +131236,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1538" LabelKey="0" flags="8" rotation="0">
 <Bounds top="2480.0000000" left="720.0000000" bottom="2500.0000000" right="760.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::併売人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -131096,7 +131264,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1539" LabelKey="0" flags="8" rotation="0">
 <Bounds top="2480.0000000" left="760.0000000" bottom="2500.0000000" right="800.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗_SV担当者入力データ月次::テレマ人数</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12299" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -131320,7 +131488,7 @@ self:normal .self&#10;{&#10;&#09;background-image: none;&#10;&#09;background-col
 </Object>
 <Object type="Field" key="1547" LabelKey="0" flags="8" rotation="0">
 <Bounds top="2480.0000000" left="380.0000000" bottom="2500.0000000" right="440.0000000"/>
-<FieldObj numOfReps="1" flags="1048612" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
+<FieldObj numOfReps="1" flags="1048608" inputMode="0" keyboardType="1" displayType="0" tableViewVisibility="0" quickFind="1" pictFormat="5">
 <Name>拠点別計画進捗::当月目標</Name>
 <ExtendedAttributes fontHeight="13" graphicFormat="5">
 <NumFormat flags="12802" charStyle="0" negativeStyle="0" currencySymbol="" thousandsSep="44" decimalPoint="46" negativeColor="#FF271200" decimalDigits="0" trueString="はい" falseString="いいえ"/>
@@ -222212,11 +222380,6 @@ Left ( Substitute ( Get ( 時刻 ) ; ":" ; "" ) & "00" ; 6 ) &
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 「計画進捗_ポータル印刷用」 (計画進捗) ]</StepText>
-					<LayoutDestination value="SelectedLayout"/>
-					<Layout id="132" name="計画進捗_ポータル印刷用"/>
-				</Step>
 				<Step enable="True" id="74" name="関連レコードへ移動">
 					<StepText>関連レコードへ移動 [ テーブル: 「計画進捗」; 使用するレイアウト: 「計画進捗_ポータル印刷用」 (計画進捗) ]
 [ 関連レコードのみを表示 ]</StepText>
@@ -222229,6 +222392,10 @@ Left ( Substitute ( Get ( 時刻 ) ; ":" ; "" ) & "00" ; 6 ) &
 					<Table id="1065229" name="計画進捗"/>
 					<Layout id="132" name="計画進捗_ポータル印刷用"/>
 				</Step>
+				<Step enable="True" id="41" name="プレビューモードに切り替え">
+					<StepText>プレビューモードに切り替え</StepText>
+					<Pause state="False"/>
+				</Step>
 				<Step enable="True" id="42" name="印刷設定">
 					<StepText>印刷設定 [ 印刷の向き 縦; 用紙サイズ: 27.83&quot; x 39.38&quot; ]
 [ 記憶する; ダイアログなし ]</StepText>
@@ -222238,10 +222405,6 @@ Left ( Substitute ( Get ( 時刻 ) ; ":" ; "" ) & "00" ; 6 ) &
 						<PlatformData PlatformType="W_PM">4D006900630072006F0073006F006600740020005000720069006E007400200074006F002000500044004600000000000000000000000000000000000000000001040306DC005814032F01000100A500722EDA206400010007005802020001005802030000002000370030003700780031003000300030006D006D0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000010000000200000001000000FFFFFFFF4749533400000000000000000000000044494E552200D0002C032C1197BD5339000000000000000000000000000000000000000000000000000000000500000000003200010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000D0000000534D544A000000001000C0007B00300038003400460030003100460041002D0045003600330034002D0034004400370037002D0038003300450045002D003000370034003800310037004300300033003500380031007D000000524553444C4C00556E69726573444C4C00506170657253697A650049534F4130004F7269656E746174696F6E00504F525452414954005265736F6C7574696F6E005265734F7074696F6E3100436F6C6F724D6F646500436F6C6F7200000000000000000000000000000000000000000000002C1100005634444D01000000000000009C0A70221C000000EC00000003000000FA014F0834E6774D83EE074817C03581D00000004C0000000300000000080000000000000000000003000000000800002A000000000800000300000040000000560000000010000044006F00630075006D0065006E0074005500730065007200500061007300730077006F0072006400000044006F00630075006D0065006E0074004F0077006E0065007200500061007300730077006F0072006400000044006F00630075006D0065006E0074004300720079007000740053006500630075007200690074007900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</PlatformData>
 						<PlatformData PlatformType="WMod">003F800000000000000000000044FA80004531300044FA800045313000</PlatformData>
 					</PageFormat>
-				</Step>
-				<Step enable="True" id="41" name="プレビューモードに切り替え">
-					<StepText>プレビューモードに切り替え</StepText>
-					<Pause state="False"/>
 				</Step>
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
@@ -222292,13 +222455,13 @@ Left ( Substitute ( Get ( 時刻 ) ; ":" ; "" ) & "00" ; 6 ) &
 				<Step enable="True" id="89" name="# (コメント)">
 					<StepText/>
 				</Step>
-				<Step enable="True" id="6" name="レイアウト切り替え">
-					<StepText>レイアウト切り替え [ 元のレイアウト ]</StepText>
-					<LayoutDestination value="OriginalLayout"/>
-				</Step>
 				<Step enable="True" id="55" name="ブラウズモードに切り替え">
 					<StepText>ブラウズモードに切り替え</StepText>
 					<Pause state="False"/>
+				</Step>
+				<Step enable="True" id="6" name="レイアウト切り替え">
+					<StepText>レイアウト切り替え [ 元のレイアウト ]</StepText>
+					<LayoutDestination value="OriginalLayout"/>
 				</Step>
 				<Step enable="True" id="87" name="カスタムダイアログを表示">
 					<StepText>カスタムダイアログを表示 [ タイトル: &quot;PDF出力完了&quot;; メッセージ: Get ( デスクトップパス ) &amp; &quot;に保存されました。&quot;; デフォルトボタン: 「OK」, 確定: 「はい」 ]</StepText>
@@ -263787,7 +263950,7 @@ WorkingDays (#b ; #c ; $休日リスト )
 		<ValueLists value="ViewOnly" allowCreation="False"/>
 		<Scripts value="NoAccess" allowCreation="False"/>
 	</PrivilegeSet>
-	<PrivilegeSet comment="" id="9" allowModifyPassword="False" manageAccounts="False" managedExtended="False" menu="Minimal" idleDisconnect="True" overrideValidationWarning="False" exporting="False" printing="False" name="[Data Editor]">
+	<PrivilegeSet comment="" id="9" allowModifyPassword="False" manageAccounts="False" managedExtended="False" menu="Minimal" idleDisconnect="True" overrideValidationWarning="False" exporting="False" printing="True" name="[Data Editor]">
 		<Records value="Custom">
 			<TableList>
 				<BaseTable id="129" comment="" name="top">
@@ -264031,21 +264194,21 @@ WorkingDays (#b ; #c ; $休日リスト )
 				<BaseTable id="176" comment="" name="拠点別計画進捗">
 					<Create value="False"/>
 					<View value="True"/>
-					<Edit value="False"/>
+					<Edit value="True"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
 				<BaseTable id="177" comment="" name="拠点別計画進捗集計">
 					<Create value="False"/>
 					<View value="True"/>
-					<Edit value="False"/>
+					<Edit value="True"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
 				<BaseTable id="178" comment="" name="稼働日重要指数">
 					<Create value="False"/>
 					<View value="True"/>
-					<Edit value="False"/>
+					<Edit value="True"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
