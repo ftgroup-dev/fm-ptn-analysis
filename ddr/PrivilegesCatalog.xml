@@ -1140,7 +1140,7 @@
 		<ValueLists value="ViewOnly" allowCreation="False"/>
 		<Scripts value="NoAccess" allowCreation="False"/>
 	</PrivilegeSet>
-	<PrivilegeSet comment="" id="9" allowModifyPassword="False" manageAccounts="False" managedExtended="False" menu="Minimal" idleDisconnect="True" overrideValidationWarning="False" exporting="False" printing="False" name="[Data Editor]">
+	<PrivilegeSet comment="" id="9" allowModifyPassword="False" manageAccounts="False" managedExtended="False" menu="Minimal" idleDisconnect="True" overrideValidationWarning="False" exporting="False" printing="True" name="[Data Editor]">
 		<Records value="Custom">
 			<TableList>
 				<BaseTable id="129" comment="" name="top">
@@ -1384,21 +1384,21 @@
 				<BaseTable id="176" comment="" name="拠点別計画進捗">
 					<Create value="False"/>
 					<View value="True"/>
-					<Edit value="False"/>
+					<Edit value="True"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
 				<BaseTable id="177" comment="" name="拠点別計画進捗集計">
 					<Create value="False"/>
 					<View value="True"/>
-					<Edit value="False"/>
+					<Edit value="True"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
 				<BaseTable id="178" comment="" name="稼働日重要指数">
 					<Create value="False"/>
 					<View value="True"/>
-					<Edit value="False"/>
+					<Edit value="True"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
