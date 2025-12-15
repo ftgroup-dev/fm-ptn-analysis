@@ -810,9 +810,6 @@
 				<Script runFullAccess="False" id="181" name="--">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="182" name="リリース用スクリプト">
-					<Access value="NoAccess"/>
-				</Script>
 				<Script runFullAccess="False" id="183" name="SSS_締処理実行_実績">
 					<Access value="NoAccess"/>
 				</Script>
