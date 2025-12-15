@@ -270,16 +270,45 @@ v$return
 		</DisplayCalculation>
 	</CustomFunction>
 	<CustomFunction id="4" functionArity="1" visible="True" parameters="yyyymm" name="MonthlyDaysCount">
-		<Calculation><![CDATA[Day ( Date ( Right ( yyyymm ; 2 ) - 1 ; 0 ; Left ( yyyymm ; 4 ) ) )]]></Calculation>
+		<Calculation><![CDATA[Day ( Date ( Right ( yyyymm ; 2 ) + 1 ; 0 ; Left ( yyyymm ; 4 ) ) )]]></Calculation>
 		<DisplayCalculation>
 			<Chunk type="FunctionRef">Day</Chunk>
 			<Chunk type="NoRef"> ( </Chunk>
 			<Chunk type="FunctionRef">Date</Chunk>
 			<Chunk type="NoRef"> ( </Chunk>
 			<Chunk type="FunctionRef">Right</Chunk>
-			<Chunk type="NoRef"> ( yyyymm ; 2 ) - 1 ; 0 ; </Chunk>
+			<Chunk type="NoRef"> ( yyyymm ; 2 ) + 1 ; 0 ; </Chunk>
 			<Chunk type="FunctionRef">Left</Chunk>
 			<Chunk type="NoRef"> ( yyyymm ; 4 ) ) )</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
+	<CustomFunction id="5" functionArity="1" visible="True" parameters="dateVal" name="GetYYYYMM">
+		<Calculation><![CDATA[Let ( 
+  _d = GetAsDate (dateVal)
+ ; 
+  Case (
+    _d = "?" ; "" ; 
+    Substitute ( Left ( _d ; 7 ) ; "/" ; "" )
+  )
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> ( 
+  _d = </Chunk>
+			<Chunk type="FunctionRef">GetAsDate</Chunk>
+			<Chunk type="NoRef"> (dateVal)
+ ; 
+  </Chunk>
+			<Chunk type="FunctionRef">Case</Chunk>
+			<Chunk type="NoRef"> (
+    _d = &quot;?&quot; ; &quot;&quot; ; 
+    </Chunk>
+			<Chunk type="FunctionRef">Substitute</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Left</Chunk>
+			<Chunk type="NoRef"> ( _d ; 7 ) ; &quot;/&quot; ; &quot;&quot; )
+  )
+)</Chunk>
 		</DisplayCalculation>
 	</CustomFunction>
 </CustomFunctionCatalog>

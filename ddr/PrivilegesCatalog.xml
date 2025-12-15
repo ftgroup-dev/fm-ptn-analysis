@@ -322,10 +322,6 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
-				<Layout id="112" name="SV担当者入力データ月次｜一覧_確認後削除">
-					<LayoutAccess value="NoAccess"/>
-					<DataAccess value="NoAccess"/>
-				</Layout>
 				<Layout id="114" name="集計確認用_目標">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
@@ -522,19 +518,10 @@
 				<Script runFullAccess="False" id="30" name="OBIC7_xlsx取込_ドキュメントパス取得">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="31" name="tesuto">
-					<Access value="NoAccess"/>
-				</Script>
 				<Script runFullAccess="False" id="32" name="レイアウト切替_SV担当者入力データ月次">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="33" name="改善中）OBIC7_csv取込_実行">
-					<Access value="NoAccess"/>
-				</Script>
 				<Script runFullAccess="False" id="34" name="ScriptFormat">
-					<Access value="NoAccess"/>
-				</Script>
-				<Script runFullAccess="False" id="35" name="改善中）OBIC7_csv取込_sub">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="True" id="36" name="新規レコード作成">
@@ -559,21 +546,6 @@
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="46" name="set_global">
-					<Access value="NoAccess"/>
-				</Script>
-				<Script runFullAccess="False" id="47" name="SV担当者入力データ｜加盟店カードを開く">
-					<Access value="NoAccess"/>
-				</Script>
-				<Script runFullAccess="False" id="48" name="SV担当者入力データ｜加盟店カード｜検索実行ボタン">
-					<Access value="NoAccess"/>
-				</Script>
-				<Script runFullAccess="False" id="49" name="SV担当者入力データ｜加盟店カードを閉じる">
-					<Access value="NoAccess"/>
-				</Script>
-				<Script runFullAccess="False" id="50" name="SV担当者入力データ｜加盟店カード｜グローバル設定">
-					<Access value="NoAccess"/>
-				</Script>
-				<Script runFullAccess="False" id="51" name="SV担当者入力データ｜加盟店カード｜選択">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="True" id="52" name="ポータル行削除">
@@ -702,9 +674,6 @@
 				<Script runFullAccess="False" id="113" name="--">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="119" name="SV担当者月次入力_検索切替 ★非公開中">
-					<Access value="NoAccess"/>
-				</Script>
 				<Script runFullAccess="False" id="120" name="SV担当者月次入力_担当絞込">
 					<Access value="NoAccess"/>
 				</Script>
@@ -745,9 +714,6 @@
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="158" name="差額チェック">
-					<Access value="NoAccess"/>
-				</Script>
-				<Script runFullAccess="False" id="159" name="検索_bk">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="161" name="検索_稼働拠点">
@@ -826,6 +792,9 @@
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="188" name="N業バックアップ_稼働日重要指数レコード作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="191" name="N業計算値手動更新">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script name="[新規スクリプト]">
@@ -1723,10 +1692,6 @@
 					<DataAccess value="Modifiable"/>
 				</Layout>
 				<Layout id="111" name="--">
-					<LayoutAccess value="ViewOnly"/>
-					<DataAccess value="Modifiable"/>
-				</Layout>
-				<Layout id="112" name="SV担当者入力データ月次｜一覧_確認後削除">
 					<LayoutAccess value="ViewOnly"/>
 					<DataAccess value="Modifiable"/>
 				</Layout>
