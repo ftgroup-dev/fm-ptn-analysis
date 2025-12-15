@@ -269,4 +269,17 @@ v$return
 			<Chunk type="NoRef"> ( $$ACL ; key ) ) &gt; 0</Chunk>
 		</DisplayCalculation>
 	</CustomFunction>
+	<CustomFunction id="4" functionArity="1" visible="True" parameters="yyyymm" name="MonthlyDaysCount">
+		<Calculation><![CDATA[Day ( Date ( Right ( yyyymm ; 2 ) - 1 ; 0 ; Left ( yyyymm ; 4 ) ) )]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="FunctionRef">Day</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Date</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Right</Chunk>
+			<Chunk type="NoRef"> ( yyyymm ; 2 ) - 1 ; 0 ; </Chunk>
+			<Chunk type="FunctionRef">Left</Chunk>
+			<Chunk type="NoRef"> ( yyyymm ; 4 ) ) )</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
 </CustomFunctionCatalog>
