@@ -455,7 +455,7 @@
 				<Script runFullAccess="True" id="8" name="SV担当者週次レコード一括作成">
 					<Access value="NoAccess"/>
 				</Script>
-				<Script runFullAccess="False" id="10" name="OBIC7_xlsx取込">
+				<Script runFullAccess="False" id="10" name="OBIC7_xlsx取込_過去年月対応時">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="True" id="11" name="全テーブル情報_データ更新">
@@ -795,6 +795,9 @@
 					<Access value="NoAccess"/>
 				</Script>
 				<Script runFullAccess="False" id="191" name="N業計算値手動更新">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="192" name="OBIC7_xlsx取込">
 					<Access value="NoAccess"/>
 				</Script>
 				<Script name="[新規スクリプト]">
