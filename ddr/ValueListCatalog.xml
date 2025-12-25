@@ -267,4 +267,11 @@ GRP</Text>
 		</PrimaryField>
 		<ShowRelated value="False"/>
 	</ValueList>
+	<ValueList id="28" name="年月_FC拠点別集計">
+		<Source value="Field"/>
+		<PrimaryField show="True" sort="True">
+			<Field table="FC拠点別集計" id="6" name="年月"/>
+		</PrimaryField>
+		<ShowRelated value="False"/>
+	</ValueList>
 </ValueListCatalog>
