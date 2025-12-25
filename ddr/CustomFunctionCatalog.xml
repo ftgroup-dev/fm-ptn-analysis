@@ -311,4 +311,131 @@ v$return
 )</Chunk>
 		</DisplayCalculation>
 	</CustomFunction>
+	<CustomFunction id="7" functionArity="1" visible="True" parameters="ym" name="GetBeforeYYYYMM">
+		<Calculation><![CDATA[Let ( [
+    y = Int ( Middle ( ym; 1 ; 4 ) ) ;
+    m = Int ( Middle ( ym; 5 ; 2 ) ) - 1
+] ;
+    Case (
+        m = 0 ;
+        (y - 1) * 100 + 12 ;
+        y * 100 + m
+    )
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> ( [
+    y = </Chunk>
+			<Chunk type="FunctionRef">Int</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Middle</Chunk>
+			<Chunk type="NoRef"> ( ym; 1 ; 4 ) ) ;
+    m = </Chunk>
+			<Chunk type="FunctionRef">Int</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Middle</Chunk>
+			<Chunk type="NoRef"> ( ym; 5 ; 2 ) ) - 1
+] ;
+    </Chunk>
+			<Chunk type="FunctionRef">Case</Chunk>
+			<Chunk type="NoRef"> (
+        m = 0 ;
+        (y - 1) * 100 + 12 ;
+        y * 100 + m
+    )
+)</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
+	<CustomFunction id="8" functionArity="1" visible="True" parameters="ym" name="GetAfterYYYYMM">
+		<Calculation><![CDATA[Let ( [
+    y = Int ( Middle ( ym; 1 ; 4 ) ) ;
+    m = Int ( Middle ( ym; 5 ; 2 ) ) + 1
+] ;
+    Case (
+        m = 13 ;
+        (y + 1) * 100 + 1 ;
+        y * 100 + m
+    )
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> ( [
+    y = </Chunk>
+			<Chunk type="FunctionRef">Int</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Middle</Chunk>
+			<Chunk type="NoRef"> ( ym; 1 ; 4 ) ) ;
+    m = </Chunk>
+			<Chunk type="FunctionRef">Int</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Middle</Chunk>
+			<Chunk type="NoRef"> ( ym; 5 ; 2 ) ) + 1
+] ;
+    </Chunk>
+			<Chunk type="FunctionRef">Case</Chunk>
+			<Chunk type="NoRef"> (
+        m = 13 ;
+        (y + 1) * 100 + 1 ;
+        y * 100 + m
+    )
+)</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
+	<CustomFunction id="9" functionArity="1" visible="True" parameters="num" name="FormatPrice">
+		<Calculation><![CDATA[Let (
+[
+    _num = Int ( num ) ;
+    _text = Abs ( _num ) & "" ;
+    _len = Length ( _text )
+] ;
+
+Let ( _result =
+    If ( _len > 3 ;
+        FormatPrice ( Left ( _text ; _len - 3 ) ) & "," & Right ( _text ; 3 ) ;
+        _text
+    )
+ ;
+
+If ( _num < 0 ; "-" & _result ; _result )
+)
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> (
+[
+    _num = </Chunk>
+			<Chunk type="FunctionRef">Int</Chunk>
+			<Chunk type="NoRef"> ( num ) ;
+    _text = </Chunk>
+			<Chunk type="FunctionRef">Abs</Chunk>
+			<Chunk type="NoRef"> ( _num ) &amp; &quot;&quot; ;
+    _len = </Chunk>
+			<Chunk type="FunctionRef">Length</Chunk>
+			<Chunk type="NoRef"> ( _text )
+] ;
+
+</Chunk>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> ( _result =
+    </Chunk>
+			<Chunk type="FunctionRef">If</Chunk>
+			<Chunk type="NoRef"> ( _len &gt; 3 ;
+        </Chunk>
+			<Chunk type="CustomFunctionRef">FormatPrice</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Left</Chunk>
+			<Chunk type="NoRef"> ( _text ; _len - 3 ) ) &amp; &quot;,&quot; &amp; </Chunk>
+			<Chunk type="FunctionRef">Right</Chunk>
+			<Chunk type="NoRef"> ( _text ; 3 ) ;
+        _text
+    )
+ ;
+
+</Chunk>
+			<Chunk type="FunctionRef">If</Chunk>
+			<Chunk type="NoRef"> ( _num &lt; 0 ; &quot;-&quot; &amp; _result ; _result )
+)
+)</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
 </CustomFunctionCatalog>

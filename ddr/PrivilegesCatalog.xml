@@ -422,6 +422,34 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
+				<Layout id="149" name="MT_FC拠点別集計">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="150" name="FC拠点別集計">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="151" name="--">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="152" name="FC拠点別集計">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="154" name="表示選択ウインドウ">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="155" name="FC拠点別集計 | レコード作成用">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="157" name="SV担当入力データ月次｜FC拠点別集計レコード作成用">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
 				<Layout name="[新規レイアウト]">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
@@ -800,6 +828,57 @@
 				<Script runFullAccess="False" id="192" name="OBIC7_xlsx取込">
 					<Access value="NoAccess"/>
 				</Script>
+				<Script runFullAccess="False" id="194" name="FC拠点別集計">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="195" name="テスト用 2">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="196" name="テスト実行用">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="197" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="198" name="sub_週次レコード自動一括作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="199" name="sub_カレンダー作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="200" name="sub_稼働日リスト作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="201" name="sub_週別稼働日リスト作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="202" name="trg_週次目標変更">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="203" name="btn_表示条件選択カード表示">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="204" name="btn_表示FC拠点変更">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="205" name="sub_表示中集計データ再計算">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="206" name="sub_FC拠点別集計レコード作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="207" name="sub_FC拠点別集計データ更新">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="208" name="btn_FC拠点別集計データ更新_現在のレコードのみ">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="209" name="btn_PDF印刷">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="210" name="--">
+					<Access value="NoAccess"/>
+				</Script>
 				<Script name="[新規スクリプト]">
 					<Access value="NoAccess"/>
 				</Script>
@@ -1090,6 +1169,13 @@
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
 				<BaseTable id="182" comment="" name="N業バックアップ_稼働日重要指数">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="183" comment="" name="FC拠点別集計">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
@@ -1393,6 +1479,13 @@
 					<FieldAccess value="All"/>
 				</BaseTable>
 				<BaseTable id="182" comment="" name="N業バックアップ_稼働日重要指数">
+					<Create value="False"/>
+					<View value="True"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="All"/>
+				</BaseTable>
+				<BaseTable id="183" comment="" name="FC拠点別集計">
 					<Create value="False"/>
 					<View value="True"/>
 					<Edit value="False"/>
@@ -1795,6 +1888,34 @@
 					<DataAccess value="Modifiable"/>
 				</Layout>
 				<Layout id="148" name="拠点別計画進捗｜バックアップ用">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="149" name="MT_FC拠点別集計">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="150" name="FC拠点別集計">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="151" name="--">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="152" name="FC拠点別集計">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="154" name="表示選択ウインドウ">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="155" name="FC拠点別集計 | レコード作成用">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="157" name="SV担当入力データ月次｜FC拠点別集計レコード作成用">
 					<LayoutAccess value="ViewOnly"/>
 					<DataAccess value="Modifiable"/>
 				</Layout>
