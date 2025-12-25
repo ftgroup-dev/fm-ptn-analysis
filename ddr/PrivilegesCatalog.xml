@@ -879,6 +879,15 @@
 				<Script runFullAccess="False" id="210" name="--">
 					<Access value="NoAccess"/>
 				</Script>
+				<Script runFullAccess="False" id="211" name="btn_集計画面計算値更新_再計算">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="212" name="sub_FC拠点別集計データ更新_all">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="213" name="btn_FC拠点別集計データ更新_全件再計算">
+					<Access value="NoAccess"/>
+				</Script>
 				<Script name="[新規スクリプト]">
 					<Access value="NoAccess"/>
 				</Script>
@@ -1488,7 +1497,7 @@
 				<BaseTable id="183" comment="" name="FC拠点別集計">
 					<Create value="False"/>
 					<View value="True"/>
-					<Edit value="False"/>
+					<Edit value="True"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
