@@ -450,6 +450,22 @@
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
 				</Layout>
+				<Layout id="158" name="レコード数表示用">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="159" name="MT.カレンダー">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="160" name="カレンダー設定">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
+				<Layout id="161" name="カレンダー設定">
+					<LayoutAccess value="NoAccess"/>
+					<DataAccess value="NoAccess"/>
+				</Layout>
 				<Layout name="[新規レイアウト]">
 					<LayoutAccess value="NoAccess"/>
 					<DataAccess value="NoAccess"/>
@@ -888,6 +904,51 @@
 				<Script runFullAccess="False" id="213" name="btn_FC拠点別集計データ更新_全件再計算">
 					<Access value="NoAccess"/>
 				</Script>
+				<Script runFullAccess="False" id="215" name="データ検索ロジック共通化案">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="216" name="btn_画面表示データ更新">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="217" name="sub_更新対象設定">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="218" name="sub_データ更新">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="219" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="220" name="カレンダーマスタ対応">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="221" name="trg_カレンダー設定画面表示用">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="222" name="trg_フラグ切り替え_祝日">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="223" name="trg_フラグ切り替え_実績">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="224" name="trg_フラグ切り替え_目標">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="225" name="カレンダーマスタ作成">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="226" name="--">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="227" name="trg_週次拠点目標変更">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="228" name="trg_当月拠点目標変更">
+					<Access value="NoAccess"/>
+				</Script>
+				<Script runFullAccess="False" id="229" name="trg_今年度拠点目標変更">
+					<Access value="NoAccess"/>
+				</Script>
 				<Script name="[新規スクリプト]">
 					<Access value="NoAccess"/>
 				</Script>
@@ -1185,6 +1246,27 @@
 					<FieldAccess value="NoAccess"/>
 				</BaseTable>
 				<BaseTable id="183" comment="" name="FC拠点別集計">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="184" comment="レコード数表示用" name="レコード数表示用">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="185" comment="" name="カレンダー">
+					<Create value="False"/>
+					<View value="False"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="NoAccess"/>
+				</BaseTable>
+				<BaseTable id="186" comment="" name="カレンダー設定">
 					<Create value="False"/>
 					<View value="False"/>
 					<Edit value="False"/>
@@ -1498,6 +1580,27 @@
 					<Create value="False"/>
 					<View value="True"/>
 					<Edit value="True"/>
+					<Delete value="False"/>
+					<FieldAccess value="All"/>
+				</BaseTable>
+				<BaseTable id="184" comment="レコード数表示用" name="レコード数表示用">
+					<Create value="False"/>
+					<View value="True"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="All"/>
+				</BaseTable>
+				<BaseTable id="185" comment="" name="カレンダー">
+					<Create value="False"/>
+					<View value="True"/>
+					<Edit value="False"/>
+					<Delete value="False"/>
+					<FieldAccess value="All"/>
+				</BaseTable>
+				<BaseTable id="186" comment="" name="カレンダー設定">
+					<Create value="False"/>
+					<View value="True"/>
+					<Edit value="False"/>
 					<Delete value="False"/>
 					<FieldAccess value="All"/>
 				</BaseTable>
@@ -1925,6 +2028,22 @@
 					<DataAccess value="Modifiable"/>
 				</Layout>
 				<Layout id="157" name="SV担当入力データ月次｜FC拠点別集計レコード作成用">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="158" name="レコード数表示用">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="159" name="MT.カレンダー">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="160" name="カレンダー設定">
+					<LayoutAccess value="ViewOnly"/>
+					<DataAccess value="Modifiable"/>
+				</Layout>
+				<Layout id="161" name="カレンダー設定">
 					<LayoutAccess value="ViewOnly"/>
 					<DataAccess value="Modifiable"/>
 				</Layout>

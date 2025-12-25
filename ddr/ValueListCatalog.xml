@@ -274,4 +274,11 @@ GRP</Text>
 		</PrimaryField>
 		<ShowRelated value="False"/>
 	</ValueList>
+	<ValueList id="29" name="カレンダー年月一覧">
+		<Source value="Field"/>
+		<PrimaryField show="True" sort="True">
+			<Field table="カレンダー" id="17" name="年月"/>
+		</PrimaryField>
+		<ShowRelated value="False"/>
+	</ValueList>
 </ValueListCatalog>
