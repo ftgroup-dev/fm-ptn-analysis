@@ -438,4 +438,73 @@ If ( _num < 0 ; "-" & _result ; _result )
 )</Chunk>
 		</DisplayCalculation>
 	</CustomFunction>
+	<CustomFunction id="10" functionArity="1" visible="True" parameters="d" name="MonthWeekNo">
+		<Calculation><![CDATA[Let (
+  [
+    _d = GetAsDate ( d ) ;
+    _firstDay = Date ( Month ( _d ) ; 1 ; Year ( _d ) ) ;
+    _dow = DayOfWeek ( _firstDay ) ;
+
+    /* その月の「第1週開始（月曜）」を求める */
+    _week1Mon =
+      Case (
+        _dow = 7 ; _firstDay + 2 ;        // 土曜なら次の月曜
+        _dow = 1 ; _firstDay + 1 ;        // 日曜なら次の月曜
+        _firstDay - ( _dow - 2 )          // それ以外は「その週の月曜（前月に戻ることもある）」
+      )
+  ] ;
+
+  /* 月初が土日で、その土日自身は第1週に含めない → 0 */
+  Case (
+    _d < _week1Mon ; 0 ;
+    1 + Int ( ( _d - _week1Mon ) / 7 )
+  )
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> (
+  [
+    _d = </Chunk>
+			<Chunk type="FunctionRef">GetAsDate</Chunk>
+			<Chunk type="NoRef"> ( d ) ;
+    _firstDay = </Chunk>
+			<Chunk type="FunctionRef">Date</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Month</Chunk>
+			<Chunk type="NoRef"> ( _d ) ; 1 ; </Chunk>
+			<Chunk type="FunctionRef">Year</Chunk>
+			<Chunk type="NoRef"> ( _d ) ) ;
+    _dow = </Chunk>
+			<Chunk type="FunctionRef">DayOfWeek</Chunk>
+			<Chunk type="NoRef"> ( _firstDay ) ;
+
+    /* その月の「第1週開始（月曜）」を求める */
+    _week1Mon =
+      </Chunk>
+			<Chunk type="FunctionRef">Case</Chunk>
+			<Chunk type="NoRef"> (
+        _dow = 7 ; _firstDay + 2 ;        </Chunk>
+			<Chunk type="FunctionRef">// 土曜なら次の月曜
+</Chunk>
+			<Chunk type="NoRef">        _dow = 1 ; _firstDay + 1 ;        </Chunk>
+			<Chunk type="FunctionRef">// 日曜なら次の月曜
+</Chunk>
+			<Chunk type="NoRef">        _firstDay - ( _dow - 2 )          </Chunk>
+			<Chunk type="FunctionRef">// それ以外は「その週の月曜（前月に戻ることもある）」
+</Chunk>
+			<Chunk type="NoRef">      )
+  ] ;
+
+  /* 月初が土日で、その土日自身は第1週に含めない → 0 */
+  </Chunk>
+			<Chunk type="FunctionRef">Case</Chunk>
+			<Chunk type="NoRef"> (
+    _d &lt; _week1Mon ; 0 ;
+    1 + </Chunk>
+			<Chunk type="FunctionRef">Int</Chunk>
+			<Chunk type="NoRef"> ( ( _d - _week1Mon ) / 7 )
+  )
+)</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
 </CustomFunctionCatalog>
