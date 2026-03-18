@@ -507,4 +507,348 @@ If ( _num < 0 ; "-" & _result ; _result )
 )</Chunk>
 		</DisplayCalculation>
 	</CustomFunction>
+	<CustomFunction id="11" functionArity="1" visible="True" parameters="targetDate" name="GetBizDays">
+		<Calculation><![CDATA[/*
+  関数名: GetBizDays
+  概要: dateからその日が月の何稼働日目か
+  引数:targetDate ( 例 : 2001/08/19 )
+  戻り値:Num
+  作成日: 2026-02-18
+  作成者: Myta
+*/
+
+Let (
+  [
+    d  = targetDate ;
+    yd  = Year ( d ) ;
+    md  = Month ( d ) ;
+    dd = Day ( d )
+  ] ;
+
+  GetAsNumber (
+    ExecuteSQL ("
+        SELECT \"c_月次稼働日数\"
+        FROM \"カレンダー\"
+        WHERE \"年\" = ?
+        AND \"月\" = ?
+        AND \"日\" = ?
+        " ;
+        "" ; "" ;
+        yd ; md ; dd
+    )
+  )
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="NoRef">/*
+  関数名: GetBizDays
+  概要: dateからその日が月の何稼働日目か
+  引数:targetDate ( 例 : 2001/08/19 )
+  戻り値:Num
+  作成日: 2026-02-18
+  作成者: Myta
+*/
+
+</Chunk>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> (
+  [
+    d  = targetDate ;
+    yd  = </Chunk>
+			<Chunk type="FunctionRef">Year</Chunk>
+			<Chunk type="NoRef"> ( d ) ;
+    md  = </Chunk>
+			<Chunk type="FunctionRef">Month</Chunk>
+			<Chunk type="NoRef"> ( d ) ;
+    dd = </Chunk>
+			<Chunk type="FunctionRef">Day</Chunk>
+			<Chunk type="NoRef"> ( d )
+  ] ;
+
+  </Chunk>
+			<Chunk type="FunctionRef">GetAsNumber</Chunk>
+			<Chunk type="NoRef"> (
+    </Chunk>
+			<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+			<Chunk type="NoRef"> (&quot;
+        SELECT \&quot;c_月次稼働日数\&quot;
+        FROM \&quot;カレンダー\&quot;
+        WHERE \&quot;年\&quot; = ?
+        AND \&quot;月\&quot; = ?
+        AND \&quot;日\&quot; = ?
+        &quot; ;
+        &quot;&quot; ; &quot;&quot; ;
+        yd ; md ; dd
+    )
+  )
+)</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
+	<CustomFunction id="12" functionArity="1" visible="True" parameters="年度" name="FYtoYMList">
+		<Calculation><![CDATA[/*
+  関数名: FYtoYMList
+  概要: YYYY形式の文字列からその年度に属する年月のリストを取得する
+  引数:
+    ym : YYYY（例: 2025）
+  戻り値:
+    YYYYMM¶YYYYMM...
+  作成日: 2026-02-25
+  作成者: Okada
+*/
+
+While (
+  [
+    i = 0 ;
+    ymlist = ""
+  ] ;
+  i < 12 ;
+  [
+    d = Date ( 4 + i ; 1 ; 年度 ) ;
+    ym = Year ( d ) & Right ( "0" & Month ( d ) ; 2 ) ;
+    ymlist = List ( ymlist ; ym ) ;
+    i = i + 1
+  ] ;
+  ymlist
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="NoRef">/*
+  関数名: FYtoYMList
+  概要: YYYY形式の文字列からその年度に属する年月のリストを取得する
+  引数:
+    ym : YYYY（例: 2025）
+  戻り値:
+    YYYYMM¶YYYYMM...
+  作成日: 2026-02-25
+  作成者: Okada
+*/
+
+</Chunk>
+			<Chunk type="FunctionRef">While</Chunk>
+			<Chunk type="NoRef"> (
+  [
+    i = 0 ;
+    ymlist = &quot;&quot;
+  ] ;
+  i &lt; 12 ;
+  [
+    d = </Chunk>
+			<Chunk type="FunctionRef">Date</Chunk>
+			<Chunk type="NoRef"> ( 4 + i ; 1 ; 年度 ) ;
+    ym = </Chunk>
+			<Chunk type="FunctionRef">Year</Chunk>
+			<Chunk type="NoRef"> ( d ) &amp; </Chunk>
+			<Chunk type="FunctionRef">Right</Chunk>
+			<Chunk type="NoRef"> ( &quot;0&quot; &amp; </Chunk>
+			<Chunk type="FunctionRef">Month</Chunk>
+			<Chunk type="NoRef"> ( d ) ; 2 ) ;
+    ymlist = </Chunk>
+			<Chunk type="FunctionRef">List</Chunk>
+			<Chunk type="NoRef"> ( ymlist ; ym ) ;
+    i = i + 1
+  ] ;
+  ymlist
+)</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
+	<CustomFunction id="13" functionArity="1" visible="True" parameters="d" name="IsBusinessDay">
+		<Calculation><![CDATA[/*
+  関数名: IsBusinessDay
+  概要: 指定日が稼働日か判定する
+  引数:
+    d : Date
+  戻り値:
+    1 = 稼働日
+    0 = 非稼働日
+*/
+
+Let (
+  [
+    v = ExecuteSQL ("
+        SELECT \"非稼働日フラグ\" 
+        FROM \"カレンダー\" 
+        WHERE \"年月日\" = ?
+        " ;
+        "" ; "" ; d
+    )
+  ] ;
+  Case (
+    IsEmpty ( v ) ; 0 ;      // マスタに無い日は非稼働扱い
+    Int ( v ) = 1 ; 0 ;        // 非稼働日フラグ=1 → 非稼働
+    1                                // それ以外は稼働日
+  )
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="NoRef">/*
+  関数名: IsBusinessDay
+  概要: 指定日が稼働日か判定する
+  引数:
+    d : Date
+  戻り値:
+    1 = 稼働日
+    0 = 非稼働日
+*/
+
+</Chunk>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> (
+  [
+    v = </Chunk>
+			<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+			<Chunk type="NoRef"> (&quot;
+        SELECT \&quot;非稼働日フラグ\&quot; 
+        FROM \&quot;カレンダー\&quot; 
+        WHERE \&quot;年月日\&quot; = ?
+        &quot; ;
+        &quot;&quot; ; &quot;&quot; ; d
+    )
+  ] ;
+  </Chunk>
+			<Chunk type="FunctionRef">Case</Chunk>
+			<Chunk type="NoRef"> (
+    </Chunk>
+			<Chunk type="FunctionRef">IsEmpty</Chunk>
+			<Chunk type="NoRef"> ( v ) ; 0 ;      </Chunk>
+			<Chunk type="FunctionRef">// マスタに無い日は非稼働扱い
+</Chunk>
+			<Chunk type="NoRef">    </Chunk>
+			<Chunk type="FunctionRef">Int</Chunk>
+			<Chunk type="NoRef"> ( v ) = 1 ; 0 ;        </Chunk>
+			<Chunk type="FunctionRef">// 非稼働日フラグ=1 → 非稼働
+</Chunk>
+			<Chunk type="NoRef">    1                                </Chunk>
+			<Chunk type="FunctionRef">// それ以外は稼働日
+</Chunk>
+			<Chunk type="NoRef">  )
+)</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
+	<CustomFunction id="14" functionArity="1" visible="True" parameters="targetDate" name="Biz_CountInMonth">
+		<Calculation><![CDATA[/*
+  関数名: Biz_CountInMonth
+  概要: dateからその日の月の稼働日数を取得
+  引数:targetDate ( 例 : 2001/08/19 )
+  戻り値:Num
+  作成日: 2026-02-18
+  作成者: fuji
+*/
+
+Let (
+  [
+    d  = targetDate ;
+    yd  = Year ( d ) ;
+    md  = Month ( d ) ;
+    dd = Day ( d )
+  ] ;
+
+  GetAsNumber (
+    ExecuteSQL ("
+        SELECT \"c_月次総稼働日数\"
+        FROM \"カレンダー\"
+        WHERE \"年\" = ?
+        AND \"月\" = ?
+        AND \"日\" = ?
+        " ;
+        "" ; "" ;
+        yd ; md ; dd
+    )
+  )
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="NoRef">/*
+  関数名: Biz_CountInMonth
+  概要: dateからその日の月の稼働日数を取得
+  引数:targetDate ( 例 : 2001/08/19 )
+  戻り値:Num
+  作成日: 2026-02-18
+  作成者: fuji
+*/
+
+</Chunk>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> (
+  [
+    d  = targetDate ;
+    yd  = </Chunk>
+			<Chunk type="FunctionRef">Year</Chunk>
+			<Chunk type="NoRef"> ( d ) ;
+    md  = </Chunk>
+			<Chunk type="FunctionRef">Month</Chunk>
+			<Chunk type="NoRef"> ( d ) ;
+    dd = </Chunk>
+			<Chunk type="FunctionRef">Day</Chunk>
+			<Chunk type="NoRef"> ( d )
+  ] ;
+
+  </Chunk>
+			<Chunk type="FunctionRef">GetAsNumber</Chunk>
+			<Chunk type="NoRef"> (
+    </Chunk>
+			<Chunk type="FunctionRef">ExecuteSQL</Chunk>
+			<Chunk type="NoRef"> (&quot;
+        SELECT \&quot;c_月次総稼働日数\&quot;
+        FROM \&quot;カレンダー\&quot;
+        WHERE \&quot;年\&quot; = ?
+        AND \&quot;月\&quot; = ?
+        AND \&quot;日\&quot; = ?
+        &quot; ;
+        &quot;&quot; ; &quot;&quot; ;
+        yd ; md ; dd
+    )
+  )
+)</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
+	<CustomFunction id="15" functionArity="1" visible="True" parameters="offset" name="GetYYYYMMOffset">
+		<Calculation><![CDATA[/*
+  関数名: GetYYYYMMOffset
+  概要: ログイン時に取得した本日日付から各年月を計算する関数
+  引数:
+    offset : ずらす月を数値で記載
+  戻り値:202602
+  作成日: 2026-02-25
+  作成者: fujisawa
+
+ GetYYYYMMOffset ( 0 )   // 今月
+ GetYYYYMMOffset ( -1 )  // 先月
+ GetYYYYMMOffset ( -2 )  // 先々月
+
+*/
+
+Let ( 
+  d = Date ( Month ( $$本日 ) + offset ; 1 ; Year ( $$本日 ) ) ;
+  Year ( d ) * 100 + Month ( d )
+)]]></Calculation>
+		<DisplayCalculation>
+			<Chunk type="NoRef">/*
+  関数名: GetYYYYMMOffset
+  概要: ログイン時に取得した本日日付から各年月を計算する関数
+  引数:
+    offset : ずらす月を数値で記載
+  戻り値:202602
+  作成日: 2026-02-25
+  作成者: fujisawa
+
+ GetYYYYMMOffset ( 0 )   // 今月
+ GetYYYYMMOffset ( -1 )  // 先月
+ GetYYYYMMOffset ( -2 )  // 先々月
+
+*/
+
+</Chunk>
+			<Chunk type="FunctionRef">Let</Chunk>
+			<Chunk type="NoRef"> ( 
+  d = </Chunk>
+			<Chunk type="FunctionRef">Date</Chunk>
+			<Chunk type="NoRef"> ( </Chunk>
+			<Chunk type="FunctionRef">Month</Chunk>
+			<Chunk type="NoRef"> ( $$本日 ) + offset ; 1 ; </Chunk>
+			<Chunk type="FunctionRef">Year</Chunk>
+			<Chunk type="NoRef"> ( $$本日 ) ) ;
+  </Chunk>
+			<Chunk type="FunctionRef">Year</Chunk>
+			<Chunk type="NoRef"> ( d ) * 100 + </Chunk>
+			<Chunk type="FunctionRef">Month</Chunk>
+			<Chunk type="NoRef"> ( d )
+)</Chunk>
+		</DisplayCalculation>
+	</CustomFunction>
 </CustomFunctionCatalog>

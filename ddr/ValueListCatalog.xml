@@ -244,7 +244,8 @@ GRP</Text>
 			<Text>[Full Access]
 [Data Entry Only]
 [Read-Only Access]
-[Data Editor]</Text>
+[Data Editor]
+[Stan Common]</Text>
 		</CustomValues>
 	</ValueList>
 	<ValueList id="25" name="稼働拠点フラグ">
@@ -278,6 +279,13 @@ GRP</Text>
 		<Source value="Field"/>
 		<PrimaryField show="True" sort="True">
 			<Field table="カレンダー" id="17" name="年月"/>
+		</PrimaryField>
+		<ShowRelated value="False"/>
+	</ValueList>
+	<ValueList id="30" name="年間事業計画年度選択">
+		<Source value="Field"/>
+		<PrimaryField show="True" sort="True">
+			<Field table="年間事業計画" id="10" name="年度"/>
 		</PrimaryField>
 		<ShowRelated value="False"/>
 	</ValueList>
