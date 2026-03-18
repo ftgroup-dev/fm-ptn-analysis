@@ -9,9 +9,6 @@
 	<Account id="3" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="ftadmin">
 		<Description/>
 	</Account>
-	<Account id="4" privilegeSet="tableau" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="tableau">
-		<Description/>
-	</Account>
 	<Account id="8" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="serverschedule">
 		<Description/>
 	</Account>
@@ -24,16 +21,16 @@
 	<Account id="21" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="327311">
 		<Description/>
 	</Account>
-	<Account id="23" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="008523">
+	<Account id="23" privilegeSet="[Stan Common]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="008523">
 		<Description/>
 	</Account>
-	<Account id="39" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="001034">
+	<Account id="39" privilegeSet="[Stan Common]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="001034">
 		<Description/>
 	</Account>
-	<Account id="40" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="323384">
+	<Account id="40" privilegeSet="[Stan Common]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="323384">
 		<Description/>
 	</Account>
-	<Account id="42" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="000119">
+	<Account id="42" privilegeSet="[Stan Common]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="000119">
 		<Description/>
 	</Account>
 	<Account id="44" privilegeSet="[Data Editor]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="002283">
@@ -42,10 +39,13 @@
 	<Account id="45" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="999999">
 		<Description/>
 	</Account>
-	<Account id="46" privilegeSet="[データ入力のみ]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="323391">
+	<Account id="46" privilegeSet="[Stan Common]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="323391">
 		<Description/>
 	</Account>
 	<Account id="47" privilegeSet="[完全アクセス]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="327226">
+		<Description/>
+	</Account>
+	<Account id="48" privilegeSet="[Stan Common]" emptyPassword="False" changePasswordOnNextLogin="False" managedBy="FileMaker" status="Active" name="006713">
 		<Description/>
 	</Account>
 </AccountCatalog>
